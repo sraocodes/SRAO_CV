@@ -1,0 +1,16 @@
+# data/header.yaml
+navbar:
+  - name: "Home"
+    link: "/"
+  - name: "Education"
+    link: "/education/"
+  - name: "Projects"
+    link: "/projects"
+  - name: "Publications"
+    link: "/publications"
+  - name: "Interests"
+    link: "/interests"
+  - name: "Blogs"
+    link: "/blogs"
+  - name: "Contact"
+    link: "/contact"

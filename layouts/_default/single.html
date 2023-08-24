@@ -1,0 +1,39 @@
+{{ define "main" }}
+{{ partial "intro.html" . }}
+
+<div class="container text-center mt-5">
+    {{ with .Params.sections }}
+        {{ range . }}
+            <div class="section {{ .title | urlize }}">
+                <h2>{{ .title }}</h2>
+                {{ range .items }}
+                    <div class="card mb-3">
+                        <div class="row g-0">
+                            <div class="col-md-4 text-center">
+                                <a href="{{ .link }}" target="_blank">
+                                    <img src="{{ .image | relURL }}" class="img-fluid my-3" alt="{{ .main_text }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">                                <h5 class="card-title">
+                                    <a href="{{ .link }}" class="emblem-link" target="_blank">{{ .emblem_text }}</a>
+                                </h5>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ .main_text }}</h5>
+                                    <p class="card-text">{{ .sub_text }}</p>
+                                    {{ with .optional }}
+                                        <ul class="list-unstyled">
+                                        {{ range . }}
+                                            <li>{{ . }}</li>
+                                        {{ end }}
+                                        </ul>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                {{ end }}
+            </div>
+        {{ end }}
+    {{ end }}
+</div>
+
+{{ end }}

@@ -1,0 +1,26 @@
+<section id="introduction" class="bg-primary text-white text-center py-5">
+    <div class="container">
+        <h1>{{ .Params.title }}</h1>
+        <p>{{ .Params.subtitle }}</p>
+    </div>
+</section>
+
+<section id="text-container" class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <p>{{ .Params.intro_text }}</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="image-section" class="py-5 text-center">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 mx-auto">
+                <img src="{{ .Params.image | relURL }}" alt="My Image" class="img-fluid" style="width: 50%; height: auto;">
+            </div>
+        </div>
+    </div>
+</section>

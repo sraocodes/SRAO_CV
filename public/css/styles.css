@@ -1,0 +1,17 @@
+.card-icon {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: yellow;  /* Temporarily setting a background color to visually confirm its presence */
+}
+.card-icon i {
+    font-size: 2rem;
+    color: red;  /* Setting a distinct color for visibility */
+}
+
+div.card-icon i.fab {
+    font-size: 2rem;
+    color: red;
+}
