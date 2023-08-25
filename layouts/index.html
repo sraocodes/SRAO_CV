@@ -9,8 +9,16 @@
             <div class="col-lg-4 col-md-6 mb-4">
                 <div class="card shadow-sm">
                     <div class="card-icon">
-                        <a href="{{ .link }}" target="_blank">
-                            <img src="{{ .icon | absURL }}" alt="{{ .title }} Icon" style="width: {{ .iconW }}; height: {{ .iconH }}; display: block; margin: 0 auto;">
+                        {{ $linkURL := .link }}
+                        {{ if not (strings.HasPrefix $linkURL "http") }}
+                            {{ $linkURL = printf "%s%s" $.Site.BaseURL $linkURL }}
+                        {{ end }}
+                        <a href="{{ $linkURL }}" target="_blank">
+                            {{ $iconURL := .icon }}
+                            {{ if not (strings.HasPrefix $iconURL "http") }}
+                                {{ $iconURL = printf "%s%s" $.Site.BaseURL $iconURL }}
+                            {{ end }}
+                            <img src="{{ $iconURL }}" alt="{{ .title }} Icon" style="width: {{ .iconW }}; height: {{ .iconH }}; display: block; margin: 0 auto;">
                         </a>
                     </div>
                     <div class="card-body">

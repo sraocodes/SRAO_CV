@@ -10,9 +10,18 @@
                     <div class="card mb-3">
                         <div class="row g-0">
                             <div class="col-md-4 text-center">
-                                <a href="{{ .link }}" target="_blank">
-                                    <img src="{{ .image | relURL }}" class="img-fluid my-3" alt="{{ .main_text }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">                                <h5 class="card-title">
-                                    <a href="{{ .link }}" class="emblem-link" target="_blank">{{ .emblem_text }}</a>
+                                {{ $linkURL := .link }}
+                                {{ if not (strings.HasPrefix $linkURL "http") }}
+                                    {{ $linkURL = printf "%s%s" $.Site.BaseURL $linkURL }}
+                                {{ end }}
+                                <a href="{{ $linkURL }}" target="_blank">
+                                    {{ $imageURL := .image }}
+                                    {{ if not (strings.HasPrefix $imageURL "http") }}
+                                        {{ $imageURL = printf "%s%s" $.Site.BaseURL $imageURL }}
+                                    {{ end }}
+                                    <img src="{{ $imageURL }}" class="img-fluid my-3" alt="{{ .main_text }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
+                                    <h5 class="card-title">
+                                    <a href="{{ $linkURL }}" class="emblem-link" target="_blank">{{ .emblem_text }}</a>
                                 </h5>
                             </div>
                             <div class="col-md-8">
@@ -35,5 +44,4 @@
         {{ end }}
     {{ end }}
 </div>
-
 {{ end }}

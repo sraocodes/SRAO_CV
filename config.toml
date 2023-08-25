@@ -2,3 +2,11 @@ baseURL = "https://sraocodes.github.io/SRAO_CV/"
 languageCode = "en-us"
 title = "SRAO_CV"
 
+[directories]
+contentDir = "content"
+publishDir = "docs"
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
