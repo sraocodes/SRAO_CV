@@ -7,10 +7,7 @@
         <ul class="navbar-nav">
             {{ range .Site.Data.header.navbar }}
                 <li class="nav-item">
-                    {{ $linkURL := .link }}
-                    {{ if not (strings.HasPrefix $linkURL "http") }}
-                        {{ $linkURL = printf "%s%s" $.Site.BaseURL $linkURL }}
-                    {{ end }}
+                    {{ $linkURL := printf "%s%s" $.Site.BaseURL .link }}
                     <a class="nav-link" href="{{ $linkURL }}" style="font-size: 1.2rem;">{{ .name }}</a>
                 </li>
             {{ end }}
