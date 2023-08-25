@@ -10,7 +10,7 @@
                 <div class="card shadow-sm">
                     <div class="card-icon">
                         <a href="{{ .link }}" target="_blank">
-                            <img src="{{ .icon | relURL }}" alt="{{ .title }} Icon" style="width: {{ .iconW }}; height: {{ .iconH }}; display: block; margin: 0 auto;">
+                            <img src="{{ .icon | absURL }}" alt="{{ .title }} Icon" style="width: {{ .iconW }}; height: {{ .iconH }}; display: block; margin: 0 auto;">
                         </a>
                     </div>
                     <div class="card-body">
