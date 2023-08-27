@@ -79,7 +79,7 @@ sections:
         optional:
           - "Field Experiments to collect Leaf Area Index and Soil Moisture data, Extract satellite backscatter, Model backscatter to soil moisture."
       - main_text: "Scientific Programmer in PhenoRob Project [2023-]"
-        sub_text: "Modeling Soil Moisture Retrieval from Satellite Backscatter"
+        sub_text: "Building project website using Hugo, HTML, CSS, Javascript and my AI friend ChatGPT"
         image: "/images/juelich.jpeg"
         imageWidth: "100px"
         imageHeight: "100px"      

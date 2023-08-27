@@ -31,7 +31,7 @@
                                     {{ with .optional }}
                                         <ul class="list-unstyled">
                                         {{ range . }}
-                                            <li>{{ . }}</li>
+                                            <li>{{ . | safeHTML }}</li>
                                         {{ end }}
                                         </ul>
                                     {{ end }}

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Welcome to My Personal Website on SRAO_CV</title>
+    <title>Welcome to Sathya&#39;s Realm on SRAO_CV</title>
     <link>https://sraocodes.github.io/SRAO_CV/</link>
-    <description>Recent content in Welcome to My Personal Website on SRAO_CV</description>
+    <description>Recent content in Welcome to Sathya&#39;s Realm on SRAO_CV</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     
@@ -11,11 +11,20 @@
     
     
     <item>
-      <title>Education/Training</title>
+      <title>My Projects: A Journey Through Innovation and Engineering</title>
       <link>https://sraocodes.github.io/SRAO_CV/education/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://sraocodes.github.io/SRAO_CV/education/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>My Projects: A Journey Through Innovation and Engineering</title>
+      <link>https://sraocodes.github.io/SRAO_CV/projects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://sraocodes.github.io/SRAO_CV/projects/</guid>
       <description></description>
     </item>
     
