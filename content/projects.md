@@ -113,5 +113,149 @@ sections:
             icon: "fa-vial"
             description: "Scientific Writing"
 
+      - main_text: "Teaching Physics101"
+        sub_text: "Research Assistant, Alabama A&M University, 2013-2014"
+        image: "/path/to/your/image.jpg"
+        imageWidth: "150px"
+        imageHeight: "100px"
+        description: |
+          At Alabama A&M, I balanced research and teaching, offering valuable experiences in both fields. My research involved photochemical deposition techniques, quantified using an atomic force microscope.
+          
+          **Key Achievements and Tasks:**
+          - Balanced dual responsibilities of research and teaching.
+          - Mastered atomic force microscopy techniques for precise material characterization.
+          - Developed strong communication skills through teaching.
+          - Developed a cost-effective, non-toxic substrate for biosensing applications.
+        skills:
+          - type: "font"
+            icon: "fa-microscope"
+            description: "Atomic Force Microscopy"
+          - type: "font"
+            icon: "fa-chalkboard-teacher"
+            description: "Teaching & Communication Skills"
+
+      - main_text: "Simulation of Excitonic Resonances"
+        sub_text: "Research Assistant, University of Paderborn, Germany, 2015-2016"
+        image: "/path/to/your/image.jpg"
+        imageWidth: "150px"
+        imageHeight: "100px"
+        description: |
+          At the Computational Optoelectronics Department, I focused on simulating excitonic resonances by solving Maxwell's bloch equations. My role involved developing Fortran codes from scratch and implementing the Runge-Kutta and finite difference time domain methods.
+          
+          **Key Achievements and Tasks:**
+          - Developed Fortran codes to simulate excitonic resonances.
+          - Employed approximations like the rotated wave to simulate photon delays.
+          - Matched simulations with experimental data, enhancing the accuracy of our models.
+        skills:
+          - type: "font"
+            icon: "fa-code"
+            description: "Fortran"
+          - type: "font"
+            icon: "fa-wave-square"
+            description: "Maxwell's Equations"
+          - type: "font"
+            icon: "fa-calculator"
+            description: "Quantum Mechanics & Nanophotonics"
+
+      - main_text: "Electrical Signatures of Plant Roots: Advanced Modeling"
+        sub_text: "PhD & FNRS Research Fellow, University of Louvain, Belgium, 2016-2020"
+        image: "/path/to/your/image.jpg"
+        imageWidth: "150px"
+        imageHeight: "100px"
+        description: |
+          Building upon the foundation laid during my PhD research, this project involved the sophisticated modeling of plant roots' electrical signatures. By employing finite element analysis, I developed intricate models that were rigorously validated through specific experiments.
+          
+          **Key Achievements and Tasks:**
+          - Advanced the art of modeling plant root electrical signatures through finite element analysis.
+          - Conducted specialized experiments for model validation, ensuring the reliability of our findings.
+          - Developed a distinctive methodology to characterize electrical properties of plant roots, a vital step forward for the field.
+          - **Publication:** Extensive insights and discoveries were documented in a [research paper](https://acsess.onlinelibrary.wiley.com/doi/full/10.2136/vzj2019.04.0037), contributing to the scientific community's growing understanding.
+        skills:
+          - type: "font"
+            icon: "fa-seedling"
+            description: "Plant Biology"
+          - type: "font"
+            icon: "fa-project-diagram"
+            description: "Finite Element Analysis"
+          - type: "font"
+            icon: "fa-chart-line"
+            description: "Data Analysis"
+
+      - main_text: "Field-Scale ERT Experiments"
+        sub_text: "Research Collaborator, 2016-2020"
+        image: "/path/to/your/image.jpg"
+        imageWidth: "150px"
+        imageHeight: "100px"
+        description: |
+          This project was centered around taking quantifying signatures of roots in ERT at the field scale. The overarching goal was to understand and leverage ERT's capabilities in large-scale root phenotyping.
+          
+          **Key Achievements and Tasks:**
+          - Collaborated with a multidisciplinary team, ensuring comprehensive insights from various expertise domains.
+          - **Publication:** The outcomes and findings from these experiments were shared with the wider scientific community through a [published article](https://link.springer.com/article/10.1007/s11104-020-04748-1).
+        skills:
+          - type: "font"
+            icon: "fa-tractor"
+            description: "Agricultural Engineering"
+          - type: "font"
+            icon: "fa-bolt"
+            description: "Electrical Resistivity Tomography (ERT)"
+          - type: "font"
+            icon: "fa-users"
+            description: "Collaborative Research"
+
+      - main_text: "Modeling Electrical Anisotropy in Plant Roots"
+        sub_text: "Research Contributor, University of Bonn, Germany, Date 2016-2020"
+        image: "/path/to/your/image.jpg"
+        imageWidth: "150px"
+        imageHeight: "100px"
+        description: |
+          This initiative explored the potential of electrical anisotropy as a root phenotyping parameter under the guidance of Prof. Andreas Kemna at Bonn. The research aimed to establish innovative computational methods to better understand signatures of plant roots in its electrical characteristics.
+          
+          **Key Achievements and Tasks:**
+          - Modeled the concept of using electrical anisotropy for root phenotyping.
+          - Advanced the understanding of plant root architecture through non-invasive electrical measurements.
+          - **Publication:** Significant findings and methodologies were shared in a [research conference](https://orbi.uliege.be/handle/2268/252233) to benefit the broader scientific community.
+        skills:
+          - type: "font"
+            icon: "fa-seedling"
+            description: "high performance computing"
+          - type: "font"
+            icon: "fa-bolt"
+            description: "root phenotyping"
+          - type: "font"
+            icon: "fa-brain"
+            description: "Innovative Research"
+          - type: "font"
+            icon: "fa-project-diagram"
+            description: "Finite Element Analysis"
+
+      - main_text: "Satellite-based Soil Moisture Estimation"
+        sub_text: "Research Associate, Indian Institute of Science, 2022-2023"
+        image: "/path/to/your/image.jpg" # Replace this with the path to your project image if you have one
+        imageWidth: "150px"
+        imageHeight: "100px"
+        description: |
+            As a Research Associate at the Indian Institute of Science, I'm delved deep into the intricacies of estimating soil moisture using satellite-based remote sensing data. My primary focus was to understand and model the backscatter signatures from the soil and vegetation. 
+
+            **Ongoing Contributions and Tasks:**
+            - Developing models to estimate soil moisture from the backscatter signatures of the soil.
+            - Leveraging remote sensing data for in-depth soil moisture level analysis.
+            - Incorporating machine learning algorithms to enhance the accuracy of soil moisture estimations.
+            - Actively collaborating with a PhD student, providing guidance and expertise, with an aim to co-author a paper elucidating our findings.
+            - Physically visited fields to gather essential real-world data, reinforcing the practicality and validity of the research.
+
+        skills:
+          - type: "font"
+            icon: "fa-satellite"
+            description: "Satellite-based Remote Sensing"
+          - type: "font"
+            icon: "fa-seedling"
+            description: "Soil & Vegetation Analysis"
+          - type: "font"
+            icon: "fa-brain"
+            description: "Machine Learning Algorithms"
+          - type: "font"
+            icon: "fa-chart-line"
+            description: "Data Analysis & Interpretation"
 ---
 
