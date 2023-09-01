@@ -9,9 +9,10 @@ sections:
 
       - main_text: "Vehicular Robot Prototype for Collision Avoidance"
         sub_text: "B.Eng in Electronics and Communication, 2010"
-        image: "/path/to/your/image.jpg" # Replace this with the path to your project image if you have one
-        imageWidth: "120px"
-        imageHeight: "120px"
+        image: "images/BE_project.jpeg" # Replace this with the path to your project image if you have one
+        imageWidth: "300px"
+        imageHeight: "300px"
+        image_caption: "Vehicular Robot, BE Project, 2010"
         description: |
           As a capstone for my Bachelor of Engineering degree, I undertook a project that involved the development of a prototype for a vehicular robot. The primary objective was to ensure collision avoidance using advanced electronic components and programming methodologies. 
           
@@ -33,9 +34,10 @@ sections:
 
       - main_text: "Simulation of Plasma Thruster Dynamics"
         sub_text: "Research Assistant, 2010-2012"
-        image: "/path/to/your/image.jpg"
-        imageWidth: "150px"
-        imageHeight: "100px"
+        image: "images/MSEE.jpg"
+        imageWidth: "300px"
+        imageHeight: "500px"
+        image_caption: "NSF Funded, MS Thesis, 2012"
         description: |
             I undertook a significant role in simulating particle-in-cell dynamics of a plasma thruster during my tenure as a research assistant at the University of Alabama. Under the guidance of Late Prof. Nagendra Singh, I delved deep into several technical aspects of plasma dynamics and thruster simulation. The following highlights capture the essence of my work and contributions:
             - **Key Achievements and Tasks:**
@@ -59,9 +61,10 @@ sections:
             
       - main_text: "Generation of Turbulence via Alfvén Waves: A Particle-in-Cell Simulation Approach"
         sub_text: "Research Assistant, 2011-2012"
-        image: "/path/to/your/image.jpg" # Please replace with your image path if you have one
-        imageWidth: "150px"
-        imageHeight: "100px"
+        image: "images/turbulence.jpg"
+        imageWidth: "300px"
+        imageHeight: "500px"
+        image_caption: "NASA grant funded, 2012"
         description: |
             During this period, I was deeply involved in a project centered on electromagnetic particle-in-cell simulation with a focus on Alfvén wave. The core aim was to decipher the Alfvén wave structures, a pivotal phenomenon with applications in understanding solar dynamics.
             
@@ -93,9 +96,10 @@ sections:
 
       - main_text: "Electrostatic Waves in Helicon Plasma Device"
         sub_text: "Research Assistant, 2012-2013"
-        image: "/path/to/your/image.jpg" # Replace this with the path to your project image if you have one
-        imageWidth: "150px"
-        imageHeight: "100px"
+        image: "images/waves.png"
+        imageWidth: "300px"
+        imageHeight: "300px"
+        image_caption: "NSF grant funded, 2013"
         description: |
           Collaborating with Late Prof. Nagendra Singh at the University of Alabama in Huntsville, I utilized the electrostatic particle-in-cell code from my earlier projects to delve into the fascinating phenomena of electrostatic waves in a helicon plasma device. 
 
@@ -116,8 +120,10 @@ sections:
       - main_text: "Teaching Physics101"
         sub_text: "Research Assistant, Alabama A&M University, 2013-2014"
         image: "/path/to/your/image.jpg"
-        imageWidth: "150px"
-        imageHeight: "100px"
+        image: "images/afm.png"
+        imageWidth: "200px"
+        imageHeight: "200px"
+        image_caption: "Research Assistant, 2013"
         description: |
           At Alabama A&M, I balanced research and teaching, offering valuable experiences in both fields. My research involved photochemical deposition techniques, quantified using an atomic force microscope.
           

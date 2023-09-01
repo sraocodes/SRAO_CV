@@ -9,9 +9,15 @@
                 {{ range .items }}
                     <div class="card mb-4">
                         <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="{{ .image }}" class="card-img" alt="{{ .main_text }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
+                            <div class="col-md-4 d-flex flex-column align-items-center justify-content-center"> <!-- Modified to flex-column -->
+                                {{ $imageURL := .image }}
+                                {{ if not (strings.HasPrefix $imageURL "http") }}
+                                    {{ $imageURL = printf "%s%s" $.Site.BaseURL $imageURL }}
+                                {{ end }}
+                                <img src="{{ $imageURL }}" class="card-img mb-2" alt="{{ .main_text }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
+                                <div class="image-caption mt-2">{{ .image_caption }}</div>
                             </div>
+                            
                             <div class="col-md-8">
                                 <div class="card-body">
                                     <h5 class="card-title">{{ .main_text }}</h5>
