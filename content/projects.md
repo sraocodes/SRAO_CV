@@ -19,7 +19,7 @@ sections:
           **Key Achievements and Tasks:**
           - Development and integration of the 8051 microcontroller, which was programmed using Assembly language and HDL Verilog.
           - Hands-on design and assembly of the circuit, which required meticulous soldering techniques to ensure the system's durability and functionality.
-          - Active collaboration with my project partner, <a href="https://www.linkedin.com/in/praveenranganath/" target="_blank">Praveen</a>, fostering an environment of teamwork.
+          - Active collaboration with my project team member <a href="https://www.linkedin.com/in/praveenranganath/" target="_blank">Praveen</a> and external member   Iranna Chatter from Bharath Electronics Ltd., fostering an environment of teamwork.
           - Successful demonstration of the prototype in real-world scenarios.
         skills:
           - type: "font"
@@ -119,10 +119,9 @@ sections:
 
       - main_text: "Teaching Physics101"
         sub_text: "Research Assistant, Alabama A&M University, 2013-2014"
-        image: "/path/to/your/image.jpg"
-        image: "images/afm.png"
-        imageWidth: "200px"
-        imageHeight: "200px"
+        image: "images/physicsteach.png"
+        imageWidth: "300px"
+        imageHeight: "300px"
         image_caption: "Research Assistant, 2013"
         description: |
           At Alabama A&M, I balanced research and teaching, offering valuable experiences in both fields. My research involved photochemical deposition techniques, quantified using an atomic force microscope.
@@ -142,11 +141,12 @@ sections:
 
       - main_text: "Simulation of Excitonic Resonances"
         sub_text: "Research Assistant, University of Paderborn, Germany, 2015-2016"
-        image: "/path/to/your/image.jpg"
-        imageWidth: "150px"
-        imageHeight: "100px"
+        image: "images/bloch2level.jpg"
+        imageWidth: "300px"
+        imageHeight: "300px"
+        image_caption: "DFG Funded TVL-E13 Position"
         description: |
-          At the Computational Optoelectronics Department, I focused on simulating excitonic resonances by solving Maxwell's bloch equations. My role involved developing Fortran codes from scratch and implementing the Runge-Kutta and finite difference time domain methods.
+          The Maxwell-Bloch equations are a set of mathematical formulas that describe how light (electromagnetic fields) interacts with materials at the quantum level, especially with atoms that have two energy states. In simpler terms, they help us understand and predict how certain materials will behave when exposed to light, which is crucial in fields like laser physics and quantum optics. At the Computational Optoelectronics Department, I focused on simulating excitonic resonances by solving Maxwell's bloch equations. My role involved developing Fortran codes from scratch and implementing the Runge-Kutta and finite difference time domain methods.
           
           **Key Achievements and Tasks:**
           - Developed Fortran codes to simulate excitonic resonances.
@@ -165,9 +165,9 @@ sections:
 
       - main_text: "Electrical Signatures of Plant Roots: Advanced Modeling"
         sub_text: "PhD & FNRS Research Fellow, University of Louvain, Belgium, 2016-2020"
-        image: "/path/to/your/image.jpg"
-        imageWidth: "150px"
-        imageHeight: "100px"
+        image: "images/currentlines.png"
+        imageWidth: "350px"
+        imageHeight: "300px"
         description: |
           Building upon the foundation laid during my PhD research, this project involved the sophisticated modeling of plant roots' electrical signatures. By employing finite element analysis, I developed intricate models that were rigorously validated through specific experiments.
           
@@ -189,15 +189,19 @@ sections:
 
       - main_text: "Field-Scale ERT Experiments"
         sub_text: "Research Collaborator, 2016-2020"
-        image: "/path/to/your/image.jpg"
-        imageWidth: "150px"
-        imageHeight: "100px"
+        image: "images/eroot1.png"
+        imageWidth: "350px"
+        imageHeight: "300px"
         description: |
-          This project was centered around taking quantifying signatures of roots in ERT at the field scale. The overarching goal was to understand and leverage ERT's capabilities in large-scale root phenotyping.
-          
+          This project delved into the quantification of root signatures using ERT at the field scale. Beyond the experimental aspects, it demanded a deep understanding of computational techniques to optimize the results. I explored regularization, inverse problems, and image processing to refine our ERT solutions.
+
           **Key Achievements and Tasks:**
           - Collaborated with a multidisciplinary team, ensuring comprehensive insights from various expertise domains.
+          - Mastered the L-curve method to optimize the regularization parameter, enhancing the accuracy of our ERT solutions.
+          - Employed statistical tests, like the similarity index, to compare and validate ERT images.
+          - Deepened my understanding of inverse problems, which was pivotal in defining minima functions and other computational tasks.
           - **Publication:** The outcomes and findings from these experiments were shared with the wider scientific community through a [published article](https://link.springer.com/article/10.1007/s11104-020-04748-1).
+
         skills:
           - type: "font"
             icon: "fa-tractor"
@@ -208,38 +212,56 @@ sections:
           - type: "font"
             icon: "fa-users"
             description: "Collaborative Research"
+          - type: "font"
+            icon: "fa-brain"
+            description: "Regularization & Inverse Problems"
+          - type: "font"
+            icon: "fa-image"
+            description: "Image Processing"
+          - type: "font"
+            icon: "fa-calculator"
+            description: "Computational Techniques & Linear Algebra"
+
 
       - main_text: "Modeling Electrical Anisotropy in Plant Roots"
-        sub_text: "Research Contributor, University of Bonn, Germany, Date 2016-2020"
-        image: "/path/to/your/image.jpg"
-        imageWidth: "150px"
-        imageHeight: "100px"
+        sub_text: "Research Contributor, University of Bonn, Germany, 2016-2020"
+        image: "images/aniso.png"
+        imageWidth: "350px"
+        imageHeight: "300px"
         description: |
-          This initiative explored the potential of electrical anisotropy as a root phenotyping parameter under the guidance of Prof. Andreas Kemna at Bonn. The research aimed to establish innovative computational methods to better understand signatures of plant roots in its electrical characteristics.
-          
+          Collaborating with Prof. Andreas Kemna at the University of Bonn, I embarked on a journey to explore the potential of electrical anisotropy as a root phenotyping parameter. This research was not just about understanding plant roots but also about leveraging computational techniques to interpret their electrical characteristics.
+
           **Key Achievements and Tasks:**
-          - Modeled the concept of using electrical anisotropy for root phenotyping.
-          - Advanced the understanding of plant root architecture through non-invasive electrical measurements.
-          - **Publication:** Significant findings and methodologies were shared in a [research conference](https://orbi.uliege.be/handle/2268/252233) to benefit the broader scientific community.
+          - Advanced the concept of using electrical anisotropy for root phenotyping, aiming to decipher the unique electrical signatures of plant roots.
+          - Utilized computational methods to analyze the electrical characteristics of roots, emphasizing the importance of electrical anisotropy in the phenotyping process.
+          - Engaged in numerical studies, particularly focusing on root water uptake and its impact on electrical properties.
+          - **Publication:** Our innovative methodologies and findings were shared with the global scientific community through a [research conference](https://orbi.uliege.be/handle/2268/252233).
+
         skills:
           - type: "font"
             icon: "fa-seedling"
-            description: "high performance computing"
+            description: "Root Phenotyping"
           - type: "font"
             icon: "fa-bolt"
-            description: "root phenotyping"
+            description: "Electrical Anisotropy Analysis"
           - type: "font"
             icon: "fa-brain"
-            description: "Innovative Research"
+            description: "Computational Research"
           - type: "font"
             icon: "fa-project-diagram"
-            description: "Finite Element Analysis"
+            description: "Numerical Studies on Root Water Uptake"
+          - type: "font"
+            icon: "fa-image"
+            description: "Image Analysis & Comparison"
+          - type: "font"
+            icon: "fa-calculator"
+            description: "Statistical Analysis & Data Interpretation"
 
       - main_text: "Satellite-based Soil Moisture Estimation"
-        sub_text: "Research Associate, Indian Institute of Science, 2022-2023"
-        image: "/path/to/your/image.jpg" # Replace this with the path to your project image if you have one
-        imageWidth: "150px"
-        imageHeight: "100px"
+        sub_text: "Research Associate, Indian Institute of Science, Sept 2022-June 2023"
+        image: "images/satellite.png"
+        imageWidth: "300px"
+        imageHeight: "300px"
         description: |
             As a Research Associate at the Indian Institute of Science, I'm delved deep into the intricacies of estimating soil moisture using satellite-based remote sensing data. My primary focus was to understand and model the backscatter signatures from the soil and vegetation. 
 
@@ -263,5 +285,39 @@ sections:
           - type: "font"
             icon: "fa-chart-line"
             description: "Data Analysis & Interpretation"
+
+      - main_text: "Phenorob Digital Agriculture Avatar Project"
+        sub_text: "Scientific Developer, Forschungszentrum Jülich, Germany, June 2023-Present"
+        image: "images/DAA.png"
+        imageWidth: "300px"
+        imageHeight: "300px"
+        description: |
+            As a Scientific Developer at Forschungszentrum Jülich, I play a pivotal role in the Phenorob Digital Agriculture Avatar project. Our long-term vision is to develop a digital twin of field sites across Germany. While this overarching goal encompasses various facets, my primary involvement lies in the software domain. I am responsible for crafting the project website, which will serve as a central hub for our digital twin initiative, showcasing simulations, videos, and more.
+
+            **Ongoing Contributions and Tasks:**
+            - Leading the development of the project website, ensuring it's comprehensive and engaging.
+            - Planning to showcase YouTube videos of simulations from different software tools on the website.
+            - Learning and implementing interfaces for coupling various tools.
+            - Gaining expertise in using these tools for agronomical problems, such as fertilizer optimization.
+            - Actively learning Java and other relevant languages to enhance the project's capabilities.
+            - Check the project website that I am developing using HUGO and Bootstrap [here](https://sraocodes.github.io/Phenorob-DAA/).
+
+        skills:
+          - type: "font"
+            icon: "fa-code"
+            description: "JavaScript"
+          - type: "font"
+            icon: "fa-file-code"
+            description: "HTML & CSS"
+          - type: "font"
+            icon: "fa-laptop-code"
+            description: "Web Development"
+          - type: "font"
+            icon: "fa-code-branch"
+            description: "Hugo Static Site Developer"
+          - type: "font"
+            icon: "fa-cogs"
+            description: "FORTRAN"
+
 ---
 
