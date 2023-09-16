@@ -1,4 +1,14 @@
 {{ define "main" }}
+
+<style>
+    li {
+        line-height: 1.75;  /* Adjust as needed */
+    }
+    h2 {
+        line-height: 2;  /* Adjust as needed */
+    }
+</style>
+
 <div class="container mt-5" style="max-width: 210mm;">
 
     <!-- Header Section -->
@@ -10,7 +20,7 @@
         <!-- Summary and Position -->
         <div class="col-md-9 py-4">
             <h1>{{ .Params.name }}</h1>
-            <h3>{{ .Params.current_position }}</h3>
+            <h4>{{ .Params.current_position }}</h4>
             <p>
                 {{ .Params.summary }}
             </p>
@@ -18,6 +28,7 @@
                 <div>🏠 {{ .Params.address }}</div>
                 <div>📧 {{ .Params.email }}</div>
                 <div>📞 {{ .Params.phone }}</div>
+                <div>🌐 {{ .Params.web }}</div>
             </address>                               
         </div>
     </div>
@@ -26,12 +37,13 @@
 
     <!-- Two-column section -->
     <div class="row">
+
         <!-- Left column (30%) -->
         <div class="col-md-3" style="background-color: white;">
             {{ with .Params.left_column }}
             {{ range . }}
-            <h4>{{ .title }}</h4>
-            <ul>
+            <h4 class="mb-3">{{ .title }}</h4>
+            <ul class="mb-3">
                 {{ range .items }}
                 <li>{{ . }}</li>
                 {{ end }}
@@ -45,16 +57,16 @@
             {{ with .Params.right_column }}
             {{ range . }}
             <div class="my-3">
-                <h3>{{ .title }}</h3>
+                <h3 class="mb-3">{{ .title }}</h3>
                 {{ with .subsections }}
                 {{ range . }}
                 <!-- Added first subtitle section here -->
                 {{ with .subtitle1 }}
-                <h4 style="font-size: 90%; font-weight: bold;">{{ . }}</h4>
+                <h4 class="mb-2" style="font-size: 90%; font-weight: bold;">{{ . }}</h4>
                 {{ end }}
                 <!-- Added second subtitle section here -->
                 {{ with .subtitle2 }}
-                <h5 style="font-size: 80%; font-style: italic; font-weight: normal; color: grey;">{{ . }}</h5>
+                <h5 class="mb-2" style="font-size: 80%; font-style: italic; font-weight: normal; color: grey;">{{ . }}</h5>
                 {{ end }}
                 <ul>
                     {{ range .items }}
