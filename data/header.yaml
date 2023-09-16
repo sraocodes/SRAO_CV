@@ -12,5 +12,5 @@ navbar:
     link: "/interests"
   - name: "Blogs"
     link: "/blogs"
-  - name: "Contact"
-    link: "/contact"
+  - name: "CV"
+    link: "/cv"

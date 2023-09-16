@@ -188,7 +188,7 @@ sections:
             description: "Data Analysis"
 
       - main_text: "Field-Scale ERT Experiments"
-        sub_text: "Research Collaborator, 2016-2020"
+        sub_text: "Research Collaborator, 2017-2021"
         image: "images/eroot1.png"
         imageWidth: "350px"
         imageHeight: "300px"
