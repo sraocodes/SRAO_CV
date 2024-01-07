@@ -1,17 +1,14 @@
 {{ define "header" }}
-<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+<nav class="navbar navbar-expand-lg navbar-light">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-        <ul class="navbar-nav">
+    <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
             {{ range .Site.Data.header.navbar }}
-                <li class="nav-item">
-                    {{ $linkURL := printf "%s%s" $.Site.BaseURL .link }}
-                    <a class="nav-link" href="{{ $linkURL }}" style="font-size: 1.2rem;">{{ .name }}</a>
-                </li>
+                <a class="nav-item nav-link btn btn-primary mx-1" href="{{ printf "%s%s" $.Site.BaseURL .link }}" style="font-size: 1.2em;">{{ .name }}</a>
             {{ end }}
-        </ul>
+        </div>
     </div>
 </nav>
 {{ end }}

@@ -5,6 +5,10 @@
     <link>https://sraocodes.github.io/SRAO_CV/categories/</link>
     <description>Recent content in Categories on SRAO_CV</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="https://sraocodes.github.io/SRAO_CV/categories/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    
+	<atom:link href="https://sraocodes.github.io/SRAO_CV/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
   </channel>
 </rss>

@@ -2,12 +2,22 @@
 
 {{ partial "intro.html" . }}
 
+<section id="image-section" class="py-5 text-center">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-4 col-sm-3 col-md-2"> <!-- Adjust the column sizes as needed -->
+                <img src="{{ .Params.image | relURL }}" alt="My Image" class="img-fluid rounded-circle shadow" style="max-width: 200px; height: auto;">
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="cards" class="py-5">
     <div class="container">
         <div class="row">
             {{ range .Params.cards }}
-            <div class="col-lg-4 col-md-6 mb-4">
-                <div class="card shadow-sm">
+            <div class="col-lg-4 col-md-6 mb-4 d-flex align-items-stretch">
+                <div class="card shadow-sm w-100">
                     <div class="card-icon">
                         {{ $linkURL := .link }}
                         {{ if not (strings.HasPrefix $linkURL "http") }}
@@ -31,4 +41,5 @@
         </div>
     </div>
 </section>
+
 {{ end }}

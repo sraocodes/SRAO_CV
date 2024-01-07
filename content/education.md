@@ -3,6 +3,8 @@ title: "Education/Training"
 subtitle: "A Journey Through Academic and Professional Excellence."
 intro_text: "From my early days in Electronics and Communication Engineering to my PhD in Computational Engineering, my academic and professional journey has spanned various reputed institutions across the world. Here's a detailed look at my educational and training milestones."
 image: "images/sathya.jpg"
+background_image: "images/background.png" 
+
 sections:
   - title: "Academic Degrees"
     items:

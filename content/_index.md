@@ -1,7 +1,8 @@
 ---
-title: "Welcome to Sathya's Realm"
+title: "Dr. Sathyanarayan Rao"
 subtitle: "This is a space where I share my experiences, journey, professional projects and interests."
 intro_text: "Hi there! I'm Sathya, a passionate scientific software developer navigating the intersections of computational engineering and agriculture. My expertise lies in modeling, machine learning, and data assimiliation, complemented by a diverse educational background from institutions across the globe. Here, I share my professional experiences, academic milestones, blogs and projects that delve deep into the realms of computational modeling, agriculture and everything in between. Dive in to discover more about my journey!"
+background_image: "images/background.png" 
 image: "images/sathya.jpg"
 cards:
   - title: "LinkedIn"

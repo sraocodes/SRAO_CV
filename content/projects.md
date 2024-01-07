@@ -3,6 +3,8 @@ layout: "project"
 title: "My Projects: A Journey Through Innovation and Engineering"
 subtitle: "A collection of projects that showcase my expertise, skills, and dedication to the field of engineering and technology."
 image: "images/sathya.jpg"
+background_image: "images/background.png" 
+
 sections:
   - title: "Engineering Projects"
     items:

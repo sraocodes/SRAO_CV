@@ -10,7 +10,7 @@ summary:   "Scientific Programmer & Software Developer | Kaggle Master (Top 2%) 
 Email: "dr.srao89[at]gmail[dot]com"
 Phone: "+49 1758800122"
 
-left_column:
+practical:
   - title: "Skills"
     items:
       - "Computational Engineering"
@@ -22,33 +22,7 @@ left_column:
       - "HTML, CSS"
       - "Chat GPT, AI/ML"
 
-  - title: "Selected Publications"
-    items:
-      - "Numerical simulation of current-free double layers created in a helicon plasma device, Physics of Plasmas, 2012."
-      - "Sensing the electrical properties of roots: A review, Vadose Zone Journal, 2020."
-      - "Impact of maize roots on soil–root electrical conductivity: a simulation study, Vadose zone journal, 2019."
-      - "Waves generated in the plasma plume of helicon magnetic nozzle, Physics of Plasmas, 2013."
-      - "Imaging plant responses to water deficit using electrical resistivity tomography, Plant and Soil, 2020."
-      - "A new method for characterizing the complex electrical properties of root segments, 2018."
-      - "Plasma turbulence driven by transversely large-scale standing shear Alfvén waves, Physics of Plasmas, 2012."
-      - "Investigation of Electrical anisotropy as a root phenotyping parameter: Numerical study with root water uptake, Geophysical Research Abstracts, 2019."
-      - "Tree root system mise-à-la-masse (MALM) forward modelling with explicit representation of root structure, Geophysical Research Abstracts, 2019."
-  - title: "Statistics"
-    items:
-      - "Total Citations: 147"
-      - "h-index: 6"
-      - "i10-index: 5"
-  - title: "Courses & Trainings"
-    items:
-      - "Basics of Remote Sensing, EO College, European Space Agency, Nov. 2022"
-      - "French Language - A1, University of Louvain, Belgium, June 2018"
-      - "Hydro-geophysical Process Simulation, University of Bonn, Germany, June 2018"
-      - "Summer School for Flow and Transport in Terrestrial Systems, TU Clausthal, Germany, September 2016"
-      - "Practical Numerical Methods with Python, Digital Badge, George Washington University, December 2014"
-      - "Introduction to Linux, Edx, Linux FoundationX, November 2014"
-
-
-right_column:
+traditional:
   - title: "Education"
     subsections:
       - subtitle1: "PhD in Engineering Sciences"
@@ -170,6 +144,34 @@ right_column:
         - "Designed and assembled the circuit with meticulous soldering techniques."
         - "Collaborated actively with team members and external experts from Bharath Electronics Ltd."
         - "Successfully demonstrated the prototype in real-world scenarios."
+
+  - title: "Selected Publications"
+    items:
+      - "Numerical simulation of current-free double layers created in a helicon plasma device, Physics of Plasmas, 2012."
+      - "Sensing the electrical properties of roots: A review, Vadose Zone Journal, 2020."
+      - "Impact of maize roots on soil–root electrical conductivity: a simulation study, Vadose zone journal, 2019."
+      - "Waves generated in the plasma plume of helicon magnetic nozzle, Physics of Plasmas, 2013."
+      - "Imaging plant responses to water deficit using electrical resistivity tomography, Plant and Soil, 2020."
+      - "A new method for characterizing the complex electrical properties of root segments, 2018."
+      - "Plasma turbulence driven by transversely large-scale standing shear Alfvén waves, Physics of Plasmas, 2012."
+      - "Investigation of Electrical anisotropy as a root phenotyping parameter: Numerical study with root water uptake, Geophysical Research Abstracts, 2019."
+      - "Tree root system mise-à-la-masse (MALM) forward modelling with explicit representation of root structure, Geophysical Research Abstracts, 2019."
+
+  - title: "Statistics"
+    items:
+      - "Total Citations: 147"
+      - "h-index: 6"
+      - "i10-index: 5"
+      
+  - title: "Courses & Trainings"
+    items:
+      - "Basics of Remote Sensing, EO College, European Space Agency, Nov. 2022"
+      - "French Language - A1, University of Louvain, Belgium, June 2018"
+      - "Hydro-geophysical Process Simulation, University of Bonn, Germany, June 2018"
+      - "Summer School for Flow and Transport in Terrestrial Systems, TU Clausthal, Germany, September 2016"
+      - "Practical Numerical Methods with Python, Digital Badge, George Washington University, December 2014"
+      - "Introduction to Linux, Edx, Linux FoundationX, November 2014"
+
 
 ---
 

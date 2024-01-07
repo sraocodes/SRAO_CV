@@ -2,10 +2,17 @@
 
 <style>
     li {
-        line-height: 1.75;  /* Adjust as needed */
+        line-height: 1.75;
     }
-    h2 {
-        line-height: 2;  /* Adjust as needed */
+    h2, h3, h4 {
+        line-height: 2;
+    }
+    @media print {
+        /* Page break styles for printing */
+        .page-break {
+            display: block;
+            page-break-before: always;
+        }
     }
 </style>
 
@@ -14,72 +21,71 @@
     <!-- Header Section -->
     <div class="row mb-4" style="background-color: #f5f5f5;">
         <!-- Profile Picture -->
-        <div class="col-md-3 text-center py-4">
-            <img src="{{ $.Site.BaseURL }}{{ .Params.picture }}" class="img-fluid rounded-circle mb-3" alt="{{ .Params.name }}">
-        </div>
-        <!-- Summary and Position -->
-        <div class="col-md-9 py-4">
+        <div class="col text-center py-4">
+            <img src="{{ $.Site.BaseURL }}{{ .Params.picture }}" class="img-fluid rounded-circle mb-3" alt="{{ .Params.name }}" style="max-width: 200px;">
             <h1>{{ .Params.name }}</h1>
             <h4>{{ .Params.current_position }}</h4>
-            <p>
-                {{ .Params.summary }}
-            </p>
+            <p>{{ .Params.summary }}</p>
             <address>
                 <div>🏠 {{ .Params.address }}</div>
                 <div>📧 {{ .Params.email }}</div>
                 <div>📞 {{ .Params.phone }}</div>
                 <div>🌐 {{ .Params.web }}</div>
-            </address>                               
+            </address>
         </div>
     </div>
 
-    
-
-    <!-- Two-column section -->
-    <div class="row">
-
-        <!-- Left column (30%) -->
-        <div class="col-md-3" style="background-color: white;">
-            {{ with .Params.left_column }}
-            {{ range . }}
-            <h4 class="mb-3">{{ .title }}</h4>
-            <ul class="mb-3">
-                {{ range .items }}
-                <li>{{ . }}</li>
-                {{ end }}
-            </ul>
-            {{ end }}
-            {{ end }}
+    <!-- Practical Skills Section -->
+    {{ with .Params.practical }}
+        {{ range . }}
+        <div class="row">
+            <div class="col">
+                <h4 class="mb-3">{{ .title }}</h4>
+                <ul class="mb-3">
+                    {{ range $index, $element := .items }}
+                    <li>
+                        {{ $symbols := slice "🤖" "🌾" "💻" "🔧" "🌟" }}
+                        {{ $symbolIndex := mod $index (len $symbols) }}
+                        {{ index $symbols $symbolIndex }} {{ $element }}
+                    </li>
+                    {{ end }}
+                </ul>
+            </div>
         </div>
+        {{ end }}
+    {{ end }}
 
-        <!-- Right column (70%) -->
-        <div class="col-md-9" style="background-color: skyblue;">
-            {{ with .Params.right_column }}
-            {{ range . }}
-            <div class="my-3">
-                <h3 class="mb-3">{{ .title }}</h3>
-                {{ with .subsections }}
-                {{ range . }}
-                <!-- Added first subtitle section here -->
-                {{ with .subtitle1 }}
-                <h4 class="mb-2" style="font-size: 90%; font-weight: bold;">{{ . }}</h4>
-                {{ end }}
-                <!-- Added second subtitle section here -->
-                {{ with .subtitle2 }}
-                <h5 class="mb-2" style="font-size: 80%; font-style: italic; font-weight: normal; color: grey;">{{ . }}</h5>
-                {{ end }}
+
+
+    <!-- Education, Research/Professional Experience, Projects, Publications -->
+    {{ with .Params.traditional }}
+    {{ range . }}
+    <div class="row page-break">
+        <div class="col">
+            <h3 class="mb-3">{{ .title }}</h3>
+            {{ if .subsections }}
+                {{ range .subsections }}
+                <h4 class="mb-2">{{ .subtitle1 }}</h4>
+                <h5 class="mb-2" style="font-style: italic; color: grey;">{{ .subtitle2 }}</h5>
                 <ul>
                     {{ range .items }}
                     <li>{{ . }}</li>
                     {{ end }}
                 </ul>
                 {{ end }}
-                {{ end }}
-            </div>
-            {{ end }}
+            {{ else if .items }}
+                <ul>
+                    {{ range .items }}
+                    <li>{{ . }}</li>
+                    {{ end }}
+                </ul>
             {{ end }}
         </div>
     </div>
+    {{ end }}
+    {{ end }}
+
+
 </div>
 <button id="download">Download as PDF</button>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
