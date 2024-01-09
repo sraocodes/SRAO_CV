@@ -4,7 +4,7 @@ title: "CV"
 name: "Dr. Sathyanarayan Rao"
 picture: "images/sathya.jpg"
 address: "20 Ellbachstraße, Jülich 52428, Germany"
-web: "https://sraocodes.github.io/SRAO_CV/"
+web: "https:www.drsrao.com"
 current_position: "Scientific Software Engineer, PhenoRob Project, Research Center, Juelich, Germany"
 summary:   "Scientific Programmer & Software Developer | Kaggle Master (Top 2%) | Expertise in Computational Simulations, Data Analytics, & Engineering | Silver Kaggle Medals: Random Forest & XGBoost | Proficient: Python, MATLAB, FORTRAN | Frontend Dev: HTML & CSS | PhD: Computational Modeling of Plant Roots | Published Researcher | Innovator in Tech Solutions"
 Email: "dr.srao89[at]gmail[dot]com"
@@ -13,25 +13,38 @@ Phone: "+49 1758800122"
 practical:
   - title: "Skills"
     items:
-      - "Computational Engineering"
-      - "Machine Learning and Data Science"
-      - "Digital Agrosphere"
-      - "Remote Sensing"
-      - "Python, Fortran"
-      - "Algo Trading"
-      - "HTML, CSS"
-      - "Chat GPT, AI/ML"
+      - "Advanced Computational Engineering & Simulation Analysis"
+      - "Advanced Machine Learning & Predictive Data Analytics"
+      - "Precision Agriculture Modeling & Environmental Systems Analysis"
+      - "Agricultural Remote Sensing & Satellite Data Interpretation"
+      - "Expertise in Python, Fortran, & C++ Programming for Scientific Computing"
+      - "Algorithmic Trading Strategies & Financial Market Analysis"
+      - "Front-End Development with HTML5, CSS3, and Responsive Design"
+      - "AI/ML Development & GPT Models"
 
-traditional:
+educational:
   - title: "Education"
     subsections:
-      - subtitle1: "PhD in Engineering Sciences"
-        subtitle2: "Europe | USA | India"
-        items:
-          - "PhD in Computational Engineering, University of Louvain, Belgium, 2020"
-          - "MS in Physics, Alabama A&M University, USA, 2014"
-          - "MS in Electrical and Computer Engineering, University of Alabama in Huntsville, USA, 2012"
-          - "B.Eng in Electronics and Communication, BMS Institute of Technology, Bengaluru, India, 2010"
+    - subtitle1: "PhD in Computational Modeling"
+      subtitle2: "Belgium | USA | India"
+      items:
+        - "PhD in Computational Engineering, University of Louvain, Belgium, 2020
+          - FNRS Fellowship, 2016-2020
+          - Thesis: Computational Modeling of Electrical Signatures of Plant Roots
+          - Thesis Advisor: Prof. Mathieu Javaux"
+        - "MS in Physics, Alabama A&M University, USA, 2014
+          - GPA: 4/4, Graduate Teaching and Research Assistantship
+          - Selected Courses: Thermodynamics, Classical and Quantum Mechanics, Optics, Laser Physics, Statistical Mechanics, Nanophotonics"
+        - "MS in Electrical and Computer Engineering, University of Alabama in Huntsville, USA, 2012
+          - GPA: 3.9/4, Presidential Scholarship, Graduate Research Assistantship
+          - Selected Courses: Computational Methods, Computational Electromagnetics, Signal Processing, Advanced Radar Engineering, Space Plasma Physics, Stochastic and Random Processes
+          - Thesis Advisor: Late Distinguished Prof. Nagendra Singh"
+        - "B.Eng in Electronics and Communication, BMS Institute of Technology, Bengaluru, India, 2010
+          - First Class with Distinction, 2006-2010
+          - Project in Microcontrollers and Robotics at Bharath Electronics Limited
+          - Selected Courses: Engineering Mathematics, Electromagnetics, Satellite Communication, Antenna Engineering, Signal Processing, Linear Integrated Circuits"
+
+experience:
   - title: "Research/Professional Experience"
     subsections:
       - subtitle1: "2012 to 2023 [11 years]"
@@ -42,6 +55,8 @@ traditional:
           - "Research Assistant, Paderborn University, Germany, 2015-2016"
           - "Research Assistant, Alabama A&M, USA, 2013-2014"
           - "Research Assistant, University of Alabama, USA, 2011-2013"
+
+projects:
   - title: "Projects"
     subsections:
       - subtitle1: "Digital Agricultural Avatar| Phenorob [June 2023-present]"  
@@ -98,7 +113,6 @@ traditional:
         items:
             - "Balanced research and teaching responsibilities effectively."
             - "Mastered atomic force microscopy techniques for material characterization."
-            - 
             - "Honed communication skills through teaching responsibilities."
             - "Created a cost-effective, non-toxic substrate for biosensing applications."
 
@@ -128,7 +142,6 @@ traditional:
         subtitle2: "Master's thesis, University of Alabama in Huntsville, USA"
         items:
         - "Developed and tailored FORTRAN codes for plasma simulations."
-        - 
         - "Implemented advanced algorithms for solving Poisson's equations."
         - "Tracked particle movements in self-generated electrostatic fields innovatively."
         - "Studied the formation of electric double layers in helicon plasma devices."
@@ -137,7 +150,7 @@ traditional:
         - "Publication: Presented findings in the Physics of Plasmas journal."
 
       - subtitle1: "Vehicular Robot Prototype for Collision Avoidance [2010]"
-        subtitle2: "B.Eng thesis, VTU, Belgaum, India"
+        subtitle2: "B.Eng thesis, BMS Institute of Technology, India"
         items:
         - "Developed a prototype vehicular robot ensuring collision avoidance."
         - "Integrated and programmed the 8051 microcontroller using Assembly language and HDL Verilog."
@@ -145,17 +158,19 @@ traditional:
         - "Collaborated actively with team members and external experts from Bharath Electronics Ltd."
         - "Successfully demonstrated the prototype in real-world scenarios."
 
+pubs:
   - title: "Selected Publications"
     items:
-      - "Numerical simulation of current-free double layers created in a helicon plasma device, Physics of Plasmas, 2012."
-      - "Sensing the electrical properties of roots: A review, Vadose Zone Journal, 2020."
-      - "Impact of maize roots on soil–root electrical conductivity: a simulation study, Vadose zone journal, 2019."
-      - "Waves generated in the plasma plume of helicon magnetic nozzle, Physics of Plasmas, 2013."
       - "Imaging plant responses to water deficit using electrical resistivity tomography, Plant and Soil, 2020."
-      - "A new method for characterizing the complex electrical properties of root segments, 2018."
-      - "Plasma turbulence driven by transversely large-scale standing shear Alfvén waves, Physics of Plasmas, 2012."
+      - "Sensing the electrical properties of roots: A review, Vadose Zone Journal, 2020."
       - "Investigation of Electrical anisotropy as a root phenotyping parameter: Numerical study with root water uptake, Geophysical Research Abstracts, 2019."
+      - "Impact of maize roots on soil–root electrical conductivity: a simulation study, Vadose zone journal, 2019."
       - "Tree root system mise-à-la-masse (MALM) forward modelling with explicit representation of root structure, Geophysical Research Abstracts, 2019."
+      - "A new method for characterizing the complex electrical properties of root segments, 2018."
+      - "Waves generated in the plasma plume of helicon magnetic nozzle, Physics of Plasmas, 2013."
+      - "Plasma turbulence driven by transversely large-scale standing shear Alfvén waves, Physics of Plasmas, 2012."
+      - "Numerical simulation of current-free double layers created in a helicon plasma device, Physics of Plasmas, 2012."
+
 
   - title: "Statistics"
     items:

@@ -37,46 +37,57 @@
 
     <!-- Practical Skills Section -->
     {{ with .Params.practical }}
-        {{ range . }}
-        <div class="row">
-            <div class="col">
-                <h4 class="mb-3">{{ .title }}</h4>
-                <ul class="mb-3">
-                    {{ range $index, $element := .items }}
-                    <li>
-                        {{ $symbols := slice "🤖" "🌾" "💻" "🔧" "🌟" }}
-                        {{ $symbolIndex := mod $index (len $symbols) }}
-                        {{ index $symbols $symbolIndex }} {{ $element }}
-                    </li>
-                    {{ end }}
-                </ul>
-            </div>
+    {{ range . }}
+    <div class="row">
+        <div class="col">
+            <h4 class="mb-3" style="color: #17a2b8;"><i class="fas fa-tools"></i> {{ .title }}</h4>
+            <ul class="list-group mb-3">
+                {{ range $index, $element := .items }}
+                <li class="list-group-item">
+                    {{ $symbols := slice "🤖" "🌾" "💻" "🔧" "🌟" }}
+                    {{ $symbolIndex := mod $index (len $symbols) }}
+                    <span>{{ index $symbols $symbolIndex }}</span> <span class="ml-2">{{ $element }}</span>
+                </li>
+                {{ end }}
+            </ul>
         </div>
-        {{ end }}
+    </div>
     {{ end }}
+    {{ end }}
+    
+    
 
-
-
-    <!-- Education, Research/Professional Experience, Projects, Publications -->
-    {{ with .Params.traditional }}
+    <!-- Education -->
+    {{ with .Params.educational }}
     {{ range . }}
     <div class="row page-break">
         <div class="col">
-            <h3 class="mb-3">{{ .title }}</h3>
+            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-graduation-cap"></i> {{ .title }}</h3>
             {{ if .subsections }}
                 {{ range .subsections }}
-                <h4 class="mb-2">{{ .subtitle1 }}</h4>
-                <h5 class="mb-2" style="font-style: italic; color: grey;">{{ .subtitle2 }}</h5>
-                <ul>
-                    {{ range .items }}
-                    <li>{{ . }}</li>
-                    {{ end }}
-                </ul>
+                <div class="mb-4 card border-primary">
+                    <div class="card-header" style="background-color: #17a2b8; color: white;">
+                        <h4 class="mb-0">{{ .subtitle1 }} <span class="badge badge-light">{{ .subtitle2 }}</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            {{ range .items }}
+                            <li class="list-group-item">
+                                <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                                <span class="ml-2">{{ . }}</span>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
                 {{ end }}
             {{ else if .items }}
-                <ul>
+                <ul class="list-group">
                     {{ range .items }}
-                    <li>{{ . }}</li>
+                    <li class="list-group-item">
+                        <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                        <span class="ml-2">{{ . }}</span>
+                    </li>
                     {{ end }}
                 </ul>
             {{ end }}
@@ -85,7 +96,84 @@
     {{ end }}
     {{ end }}
 
+    <!-- Experience -->
+    {{ with .Params.experience }}
+    <div class="row">
+        <div class="col">
+            {{ range . }}
+            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-briefcase"></i> {{ .title }}</h3>
+            {{ range .subsections }}
+            <div class="mb-4 card border-secondary">
+                <div class="card-header" style="background-color: #17a2b8; color: white;">
+                    <h4 class="mb-0">{{ .subtitle1 }}</h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        {{ range .items }}
+                        <li class="list-group-item">
+                            <i class="fa fa-caret-right text-secondary" aria-hidden="true"></i>
+                            <span class="ml-2">{{ . }}</span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
 
+    <!-- Projects Section -->
+    {{ with .Params.projects }}
+    <div class="row">
+        <div class="col">
+            {{ range . }}
+            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-project-diagram"></i> {{ .title }}</h3>
+            {{ range .subsections }}
+            <div class="mb-4 card border-info"> <!-- Changed to border-info for a different color -->
+                <div class="card-header" style="background-color: #17a2b8; color: white;">
+                    <h4 class="mb-0">{{ .subtitle1 }} <span class="badge badge-light">{{ .subtitle2 }}</span></h4>
+                </div>
+                <div class="card-body">
+                    <ul class="list-group list-group-flush">
+                        {{ range .items }}
+                        <li class="list-group-item">
+                            <i class="fa fa-check-circle text-info" aria-hidden="true"></i> <!-- Changed icon to fa-check-circle -->
+                            <span class="ml-2">{{ . }}</span>
+                        </li>
+                        {{ end }}
+                    </ul>
+                </div>
+            </div>
+            {{ end }}
+            {{ end }}
+        </div>
+    </div>
+    {{ end }}
+
+    <!-- Publications Section -->
+    <div class="container mt-4">
+        <!-- Publication List -->
+        {{ with .Params.pubs }}
+        {{ range . }}
+        {{ if eq .title "Selected Publications" }}
+        <div class="mb-4">
+            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-book-reader"></i> {{ .title }}</h3>
+            <ul class="list-group">
+                {{ range .items }}
+                <li class="list-group-item"><i class="fas fa-file-alt"></i> {{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+        {{ end }}
+        {{ end }}
+        
+    </div>
+
+      
+    
 </div>
 <button id="download">Download as PDF</button>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
