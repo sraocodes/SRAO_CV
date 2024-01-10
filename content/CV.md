@@ -6,7 +6,7 @@ picture: "images/sathya.jpg"
 address: "20 Ellbachstraße, Jülich 52428, Germany"
 web: "https:www.drsrao.com"
 current_position: "Scientific Software Engineer, PhenoRob Project, Research Center, Juelich, Germany"
-summary:   "Scientific Programmer & Software Developer | Kaggle Master (Top 2%) | Expertise in Computational Simulations, Data Analytics, & Engineering | Silver Kaggle Medals: Random Forest & XGBoost | Proficient: Python, MATLAB, FORTRAN | Frontend Dev: HTML & CSS | PhD: Computational Modeling of Plant Roots | Published Researcher | Innovator in Tech Solutions"
+summary:   "Scientific Programmer & Software Developer | Kaggle Master (Top 2%) | Expertise in Computational Simulations, Data Analytics, & Engineering | Silver Kaggle Medals: Random Forest & XGBoost | Proficient: Python, MATLAB, FORTRAN | Frontend Dev: HTML & CSS | PhD: Computational Modeling of Plant Roots | Researcher"
 Email: "dr.srao89[at]gmail[dot]com"
 Phone: "+49 1758800122"
 
