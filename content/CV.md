@@ -47,7 +47,7 @@ educational:
 experience:
   - title: "Research/Professional Experience"
     subsections:
-      - subtitle1: "2012 to 2023 [11 years]"
+      - subtitle1: "2012 to 2024 [12 years]"
         items:
           - "Scientific Software Engineer, PhenoRob Project, Research Center, Juelich, Germany, 2023-"
           - "Research Associate, Indian Institute of Science, Bengaluru, India, 2022-2023"
@@ -62,10 +62,11 @@ projects:
       - subtitle1: "Digital Agricultural Avatar| Phenorob [June 2023-present]"  
         subtitle2: "Scientific Software Engineer, Research Center Juelich, Germany" 
         items:
-            - "Leading the project website development."
-            - "Integrating YouTube videos and simulations."
-            - "Coupling interfaces for diverse crop modeling tools."
-            - "Expanding skills in modeling tools for agronomic issues like fertilizer optimization."
+            - "Spearheading the development of a comprehensive project website using Hugo, JavaScript, CSS, and HTML, focusing on enhancing user experience and interactive features for agricultural modeling tools."
+            - "Creating and integrating instructive YouTube content for broad audience outreach and training, including screen-recorded tutorials for tool installation and usage, thereby facilitating easier adoption of agricultural models."
+            - "Developing synchronization mechanisms for crop modeling tools across various programming languages (Java, Python, C++), including the implementation of Python wrappers to standardize time steps and facilitate efficient coupling processes."
+            - "Enhancing proficiency in diverse modeling tools to optimize agricultural practices such as irrigation management, utilizing these tools for varied applications in agriculture to promote sustainable practices."
+
       - subtitle1: "Remote Sensing based Soil Moisture Retrieval [2022-present]"
         subtitle2: "Research Associate, Indian Institute of Science, Bengaluru, India"
         items:
@@ -73,23 +74,24 @@ projects:
             - "Leveraging remote sensing data for in-depth soil moisture level analysis."
             - "Incorporating machine learning algorithms (XGBoost, Random Forest) to enhance the accuracy of soil moisture estimations"
             - "Plans to continue colloborations with Prof. Sekhar Muddu at IISc sometime in the future regarding web application development for the usage of farmers in Berambadi watershed."
+
       - subtitle1: "Modeling Electrical Anisotropy in Plant Roots [2016-2020]"
         subtitle2: "Research Contributor, University of Bonn, Germany"
         items:
             - "Used computational techniques to analyze root electrical signatures in Geo-electric measurements."
             - "Conducted numerical studies on root water uptake and its impact on electrical signatures."
             - "Publication: Hypothesized electrical anisotropy as a phenotyping parameter at a research conference."
-            - "Plans to continue colloborations with Prof. Andreas Kemna at Bonn in near future regarding code development."
+            - "Plans to continue working with Prof. Andreas Kemna at Bonn in the future regarding code development."
 
-      - subtitle1: "ForDrought: Field-Scale ERT Experiments [2017-2021]"
+      - subtitle1: "ForDrought: Field-Scale Resistivity Tomography Experiments [2017-2021]"
         subtitle2: "Research Contributor, University of Louvain, Belgium"
         items:
-            - "Collaborated with scientists at TU Wien, Bonn for comprehensive insights."
-            - "Optimized ERT inversions using the L-curve method (regularization)."
-            - "Applied statistical tests like similarity index for ERT image validation."
-            - "Deepened expertise in inverse problems for tomography experiments."
-            - "Publication: Shared outcomes and findings in a Plant and Soil journal."
-            - "Plans to continue colloborations with Prof. Mathieu Javaux at Louvain in near future regarding publishing a pending work in ForDrought project."
+            - "Engaged in collaborative research with leading scientists at TU Wien and Bonn, gaining in-depth insights into crop imaging using Resistivity Tomography Method."
+            - "I optimizated Electrical Resistivity Tomography (ERT) inversions by using information from synthetic experiments or computer simulations."
+            - "Utilized statistical tests, including similarity indices, to validate ERT images, enhancing the accuracy and reliability of tomography experiments."
+            - "Deepened technical expertise in solving inverse problems specific to tomography experiments, contributing to advancements in agricultural imaging methodologies."
+            - "Authored and published research on 'Imaging plant responses to water deficit using electrical resistivity tomography' in the renowned Plant and Soil journal, demonstrating significant findings in the field."
+            - "Planning future collaborations with Prof. Mathieu Javaux at Louvain for the publication of pending work related to the ForDrought project, aiming to contribute further to the field."
 
       - subtitle1: "Electrical Signatures of Plant Roots: Advanced Modeling [2016-2020]"
         subtitle2: "PhD & FNRS Research Fellow, University of Louvain, Belgium"
@@ -112,14 +114,14 @@ projects:
         subtitle2: "Research Assistant, Alabama A&M University, USA"
         items:
             - "Balanced research and teaching responsibilities effectively."
-            - "Mastered atomic force microscopy techniques for material characterization."
+            - "Mastered atomic force microscopy and optical test bench usage for photonics research."
             - "Honed communication skills through teaching responsibilities."
-            - "Created a cost-effective, non-toxic substrate for biosensing applications."
+            - "Fabricated a cost-effective, non-toxic photo sensitive substrate for biosensing applications."
 
       - subtitle1: "Electrostatic Waves in Helicon Plasma Device [2012-2013]"
         subtitle2: "Research Assistant, NSF Funded, University of Alabama in Huntsville, USA"
         items:
-        - "Collaborated with Prof. Nagendra Singh to explore electrostatic waves in helicon plasma devices."
+        - "Collaborated with Late Prof. Nagendra Singh to explore electrostatic waves in helicon plasma devices."
         - "Utilized the electrostatic particle-in-cell code for detailed analysis."
         - "Discovered a distinct conical structure in plasma density measurements."
         - "Revealed generation of ion Bernstein modes in high-density regions."
@@ -156,7 +158,7 @@ projects:
         - "Integrated and programmed the 8051 microcontroller using Assembly language and HDL Verilog."
         - "Designed and assembled the circuit with meticulous soldering techniques."
         - "Collaborated actively with team members and external experts from Bharath Electronics Ltd."
-        - "Successfully demonstrated the prototype in real-world scenarios."
+        - "Successfully demonstrated the prototype in simulated real-world scenarios."
 
 pubs:
   - title: "Selected Publications"
