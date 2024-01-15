@@ -1,27 +1,26 @@
 document.getElementById('download').addEventListener('click', function() {
-  var content = document.querySelector('.container'); // Original content
+  var content = document.querySelector('.container'); // Ensure this selects the correct content
 
-  // Clone the content
-  var clonedContent = content.cloneNode(true);
-  document.body.appendChild(clonedContent);
-  clonedContent.style.visibility = 'hidden'; // Hide the clone
-  clonedContent.style.position = 'absolute'; // Avoid affecting layout
-  clonedContent.style.left = '-9999px'; // Move it off-screen
+  if (!content) {
+      console.error('Content not found');
+      return;
+  }
 
-  // Reduce font size in the clone
-  clonedContent.style.fontSize = '6px'; // Adjust this value as needed
+  // Apply reduced font size for the content
+  content.style.fontSize = '7px'; // Adjust the font size as needed
 
   var opt = {
-    margin:       10,
-    filename:     'myfile.pdf',
-    image:        { type: 'jpeg', quality: 0.98 },
-    html2canvas:  { scale: 1 },
-    jsPDF:        { unit: 'mm', format: 'a4', orientation: 'portrait' }
+      margin: [20, 25], // Increased side margins for better layout
+      filename: 'myfile.pdf',
+      image: { type: 'jpeg', quality: 0.98 }, // High quality images
+      html2canvas: { 
+          scale: 2, // Higher scale for better quality
+          logging: true, // Optional: for debugging
+          pagebreak: { mode: ['css', 'legacy'] } // Better control of page breaks
+      },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
   };
 
-  // Generate PDF from the cloned content
-  html2pdf().from(clonedContent).set(opt).save().then(function() {
-      // Remove the cloned content after saving PDF
-      document.body.removeChild(clonedContent);
-  });
+  // Generate PDF directly from the original content
+  html2pdf().from(content).set(opt).save();
 });

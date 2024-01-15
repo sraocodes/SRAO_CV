@@ -45,17 +45,45 @@
     h2, h3, h4 {
         line-height: 2;
     }
+
+    .page-break-control {
+    page-break-before: auto;
+    page-break-after: auto;
+    }
+
+    .gap {
+        display: block;
+        height: 30px;  
+        clear: both;
+    }
+
+
     @media print {
-         
-        .page-break {
+        .gap {
             display: block;
-            page-break-before: always;
+            margin-top: 30px;  
+            margin-bottom: 30px;
+            min-height: 30px;  
+            height: auto;  
         }
     }
+
+
+
+    @media print {
+         
+        .container {
+            font-size: 10px;  
+        }
+        .container h1, .container h2, .container h3, .container h4 {
+            font-size: 12px;  
+        }
+        .list-group-item {
+            font-size: 10px;  
+        }
 </style>
 
 <div class="container mt-5" style="max-width: 210mm;">
-
     
     <div class="row mb-4" style="background-color: #f5f5f5;">
         
@@ -76,7 +104,7 @@
     
     
     
-    <div class="row">
+    <div class="row page-break">
         <div class="col">
             <h4 class="mb-3" style="color: #17a2b8;"><i class="fas fa-tools"></i> Skills</h4>
             <ul class="list-group mb-3">
@@ -182,16 +210,21 @@
     
     
 
+    <div class="gap"></div> 
+    <div class="gap"></div> 
+    <div class="gap"></div> 
+    <div class="gap"></div> 
+
     
     
-    <div class="row">
+    <div class="row page-break">
         <div class="col">
             
             <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-briefcase"></i> Research/Professional Experience</h3>
             
             <div class="mb-4 card border-secondary">
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
-                    <h4 class="mb-0">2012 to 2023 [11 years]</h4>
+                    <h4 class="mb-0">2012 to 2024 [12 years]</h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
@@ -235,9 +268,12 @@
     </div>
     
 
+    <div class="gap"></div> 
+    <div class="gap"></div> 
+
     
     
-    <div class="row">
+    <div class="row page-break">
         <div class="col">
             
             <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-project-diagram"></i> Projects</h3>
@@ -337,39 +373,39 @@
             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
-                    <h4 class="mb-0">ForDrought: Field-Scale ERT Experiments [2017-2021] <span class="badge badge-light">Research Contributor, University of Louvain, Belgium</span></h4>
+                    <h4 class="mb-0">ForDrought: Field-Scale Resistivity Tomography Experiments [2017-2021] <span class="badge badge-light">Research Contributor, University of Louvain, Belgium</span></h4>
                 </div>
                 <div class="card-body">
                     <ul class="list-group list-group-flush">
                         
                         <li class="list-group-item">
                             <i class="fa fa-check-circle text-info" aria-hidden="true"></i> 
-                            <span class="ml-2">Collaborated with scientists at TU Wien, Bonn for comprehensive insights.</span>
+                            <span class="ml-2">Engaged in collaborative research with leading scientists at TU Wien and Bonn, gaining in-depth insights into crop imaging using Resistivity Tomography Method.</span>
                         </li>
                         
                         <li class="list-group-item">
                             <i class="fa fa-check-circle text-info" aria-hidden="true"></i> 
-                            <span class="ml-2">Optimized ERT inversions using the L-curve method (regularization).</span>
+                            <span class="ml-2">I optimizated Electrical Resistivity Tomography (ERT) inversions by using information from synthetic experiments or computer simulations.</span>
                         </li>
                         
                         <li class="list-group-item">
                             <i class="fa fa-check-circle text-info" aria-hidden="true"></i> 
-                            <span class="ml-2">Applied statistical tests like similarity index for ERT image validation.</span>
+                            <span class="ml-2">Utilized statistical tests, including similarity indices, to validate ERT images, enhancing the accuracy and reliability of tomography experiments.</span>
                         </li>
                         
                         <li class="list-group-item">
                             <i class="fa fa-check-circle text-info" aria-hidden="true"></i> 
-                            <span class="ml-2">Deepened expertise in inverse problems for tomography experiments.</span>
+                            <span class="ml-2">Deepened technical expertise in solving inverse problems specific to tomography experiments, contributing to advancements in agricultural imaging methodologies.</span>
                         </li>
                         
                         <li class="list-group-item">
                             <i class="fa fa-check-circle text-info" aria-hidden="true"></i> 
-                            <span class="ml-2">Publication: Shared outcomes and findings in a Plant and Soil journal.</span>
+                            <span class="ml-2">Authored and published research on &#39;Imaging plant responses to water deficit using electrical resistivity tomography&#39; in the renowned Plant and Soil journal, demonstrating significant findings in the field.</span>
                         </li>
                         
                         <li class="list-group-item">
                             <i class="fa fa-check-circle text-info" aria-hidden="true"></i> 
-                            <span class="ml-2">Plans to continue colloborations with Prof. Mathieu Javaux at Louvain in near future regarding publishing a pending work in ForDrought project.</span>
+                            <span class="ml-2">Planning future collaborations with Prof. Mathieu Javaux at Louvain for the publication of pending work related to the ForDrought project, aiming to contribute further to the field.</span>
                         </li>
                         
                     </ul>
@@ -636,13 +672,16 @@
                         
                         <li class="list-group-item">
                             <i class="fa fa-check-circle text-info" aria-hidden="true"></i> 
-                            <span class="ml-2">Successfully demonstrated the prototype in real-world scenarios.</span>
+                            <span class="ml-2">Successfully demonstrated the prototype in simulated real-world scenarios.</span>
                         </li>
                         
                     </ul>
                 </div>
             </div>
             
+            
+            <div class="gap"></div>
+            <div class="gap"></div>
             
         </div>
     </div>

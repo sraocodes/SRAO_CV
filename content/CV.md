@@ -54,9 +54,10 @@ experience:
           - "Visiting Researcher, University of Bonn, Germany, 2018-2019"
           - "Research Assistant, Paderborn University, Germany, 2015-2016"
           - "Research Assistant, Alabama A&M, USA, 2013-2014"
-          - "Research Assistant, University of Alabama, USA, 2011-2013"
+          - "Research Assistant, University of Alabama, USA, 2011-2013"  
 
 projects:
+
   - title: "Projects"
     subsections:
       - subtitle1: "Digital Agricultural Avatar| Phenorob [June 2023-present]"  
