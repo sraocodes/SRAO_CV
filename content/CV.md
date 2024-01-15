@@ -162,17 +162,27 @@ projects:
         - "Successfully demonstrated the prototype in simulated real-world scenarios."
 
 pubs:
-  - title: "Selected Publications"
+  - title: "Publications"
     items:
-      - "Imaging plant responses to water deficit using electrical resistivity tomography, Plant and Soil, 2020."
+      - "Correction to: Imaging plant responses to water deficit using electrical resistivity tomography, Plant and Soil, 2021."
+      - "Imaging plant responses to water deficit using electrical resistivity tomography (vol 454, pg 261, 2020), PLANT AND SOIL, 2020."
       - "Sensing the electrical properties of roots: A review, Vadose Zone Journal, 2020."
-      - "Investigation of Electrical anisotropy as a root phenotyping parameter: Numerical study with root water uptake, Geophysical Research Abstracts, 2019."
-      - "Impact of maize roots on soil–root electrical conductivity: a simulation study, Vadose zone journal, 2019."
+      - "Imaging plant responses to water deficit using electrical resistivity tomography, Plant and Soil, 2020."
+      - "Investigating plant root signatures using geo-electrical methods, UCL-Université Catholique de Louvain, 2020."
       - "Tree root system mise-à-la-masse (MALM) forward modelling with explicit representation of root structure, Geophysical Research Abstracts, 2019."
+      - "Investigation of Electrical anisotropy as a root phenotyping parameter: Numerical study with root water uptake, Geophysical Research Abstracts, 2019."
+      - "Relationship between electrical anisotropy of soil-root continuum and geometrical architecture of root system, NATIONAL SYMPOSIUM FOR APPLIED BIOLOGICAL SCIENCES, 2019."
+      - "Impact of maize roots on soil–root electrical conductivity: a simulation study, Vadose zone journal, 2019."
       - "A new method for characterizing the complex electrical properties of root segments, 2018."
+      - "Towards an effective characterization of root electrical properties: a spectroscopic approach, 5th International Workshop on Induced Polarization, 2018."
+      - "Understanding the electrical signature of root systems at different scales to improve agrogeophysical applications, AGU Fall Meeting Abstracts, 2018."
+      - "Modeling Effective Electrical Properties of Soil-Root Continuum to Discriminate Root Traits, AGU Fall Meeting Abstracts, 2018."
+      - "Investigation of anisotropy in induced polarization signatures of maize root–soil continuum: A virtual rhizotron study, Poster presented at International Conference on Terrestrial Systems Research, 2018."
+      - "A forward model for electrical conduction in soil-root continuum: a virtual rhizotron study, 4th International Workshop on Geoelectrical Monitoring (GELMON), 2017."
+      - "Characterizing root system characteristics with Electrical resistivity Tomography: a virtual rhizotron simulation, EGU General Assembly Conference Abstracts, 2017."
       - "Waves generated in the plasma plume of helicon magnetic nozzle, Physics of Plasmas, 2013."
+      - "Numerical simulation of current-free double layers created in a helicon plasma device, Physics of Plasmas, 2012"
       - "Plasma turbulence driven by transversely large-scale standing shear Alfvén waves, Physics of Plasmas, 2012."
-      - "Numerical simulation of current-free double layers created in a helicon plasma device, Physics of Plasmas, 2012."
 
 
   - title: "Statistics"
