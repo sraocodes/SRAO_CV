@@ -38,51 +38,53 @@
 
     
 
-<style>
-    li {
-        line-height: 1.75;
-    }
-    h2, h3, h4 {
-        line-height: 2;
-    }
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        li {
+            line-height: 1.75;
+        }
+        h2, h3, h4 {
+            line-height: 2;
+        }
 
-    .page-break-control {
-    page-break-before: auto;
-    page-break-after: auto;
-    }
+        .page-break-control {
+            page-break-before: auto;
+            page-break-after: auto;
+        }
 
-    .gap {
-        display: block;
-        height: 30px;  
-        clear: both;
-    }
-
-
-    @media print {
         .gap {
             display: block;
-            margin-top: 30px;  
-            margin-bottom: 30px;
-            min-height: 30px;  
-            height: auto;  
+            height: 30px; 
+            clear: both;
+            background-color: red; 
         }
-    }
 
+        @media print {
+            .gap {
+                display: block;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                min-height: 30px; 
+                height: auto; 
+            }
 
-
-    @media print {
-         
-        .container {
-            font-size: 10px;  
+            .container {
+                font-size: 12px;
+            }
+            .container h1, .container h2, .container h3, .container h4 {
+                font-size: 14px; 
+            }
+            .list-group-item {
+                font-size: 12px; 
+                line-height: 1.6;
+            }
         }
-        .container h1, .container h2, .container h3, .container h4 {
-            font-size: 12px;  
-        }
-        .list-group-item {
-            font-size: 10px;  
-        }
-</style>
+    </style>
+</head>
 
+<body>
 <div class="container mt-5" style="max-width: 210mm;">
     
     <div class="row mb-4" style="background-color: #f5f5f5;">
@@ -210,11 +212,6 @@
     
     
 
-    <div class="gap"></div> 
-    <div class="gap"></div> 
-    <div class="gap"></div> 
-    <div class="gap"></div> 
-
     
     
     <div class="row page-break">
@@ -278,6 +275,7 @@
             
             <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-project-diagram"></i> Projects</h3>
             
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">Digital Agricultural Avatar| Phenorob [June 2023-present] <span class="badge badge-light">Scientific Software Engineer, Research Center Juelich, Germany</span></h4>
@@ -309,6 +307,8 @@
                 </div>
             </div>
             
+            
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">Remote Sensing based Soil Moisture Retrieval [2022-present] <span class="badge badge-light">Research Associate, Indian Institute of Science, Bengaluru, India</span></h4>
@@ -340,6 +340,8 @@
                 </div>
             </div>
             
+            
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">Modeling Electrical Anisotropy in Plant Roots [2016-2020] <span class="badge badge-light">Research Contributor, University of Bonn, Germany</span></h4>
@@ -371,6 +373,8 @@
                 </div>
             </div>
             
+            
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">ForDrought: Field-Scale Resistivity Tomography Experiments [2017-2021] <span class="badge badge-light">Research Contributor, University of Louvain, Belgium</span></h4>
@@ -412,6 +416,8 @@
                 </div>
             </div>
             
+            
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">Electrical Signatures of Plant Roots: Advanced Modeling [2016-2020] <span class="badge badge-light">PhD &amp; FNRS Research Fellow, University of Louvain, Belgium</span></h4>
@@ -448,6 +454,8 @@
                 </div>
             </div>
             
+            
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">Simulation of Excitonic Resonances [2015-2016] <span class="badge badge-light">DFG Funded (TVL-E13) Researcher, University of Paderborn, Germany</span></h4>
@@ -479,6 +487,8 @@
                 </div>
             </div>
             
+            
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">Teaching Physics101 [2013-2014] <span class="badge badge-light">Research Assistant, Alabama A&amp;M University, USA</span></h4>
@@ -510,6 +520,8 @@
                 </div>
             </div>
             
+            
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">Electrostatic Waves in Helicon Plasma Device [2012-2013] <span class="badge badge-light">Research Assistant, NSF Funded, University of Alabama in Huntsville, USA</span></h4>
@@ -551,6 +563,8 @@
                 </div>
             </div>
             
+            
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">Generation of Turbulence via Alfvén Waves: A Particle-in-Cell Simulation Approach [2011-2012] <span class="badge badge-light">Research Assistant, NASA funded Project, University of Alabama in Huntsville, USA</span></h4>
@@ -597,6 +611,8 @@
                 </div>
             </div>
             
+            
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">Simulation of Plasma Thruster Dynamics [2010-2012] <span class="badge badge-light">Master&#39;s thesis, University of Alabama in Huntsville, USA</span></h4>
@@ -643,6 +659,8 @@
                 </div>
             </div>
             
+            
+             
             <div class="mb-4 card border-info"> 
                 <div class="card-header" style="background-color: #17a2b8; color: white;">
                     <h4 class="mb-0">Vehicular Robot Prototype for Collision Avoidance [2010] <span class="badge badge-light">B.Eng thesis, BMS Institute of Technology, India</span></h4>
@@ -680,12 +698,33 @@
             </div>
             
             
-            <div class="gap"></div>
-            <div class="gap"></div>
+             
+            <div class="gap" style="height: 20px;"></div>
+            
             
         </div>
     </div>
     
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="gap"></div> 
+    <div class="gap"></div> 
+    <div class="gap"></div> 
+    <div class="gap"></div> 
 
     
     <div class="container mt-4">
@@ -694,45 +733,287 @@
         
         
         <div class="mb-4">
-            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-book-reader"></i> Selected Publications</h3>
-            <ul class="list-group">
+            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-book-reader"></i> Publications</h3>
+            <ol class="list-group list-group-numbered">
                 
-                <li class="list-group-item"><i class="fas fa-file-alt"></i> Imaging plant responses to water deficit using electrical resistivity tomography, Plant and Soil, 2020.</li>
+                <li class="list-group-item">
+                    <span class="fw-bold">[1]</span> Correction to: Imaging plant responses to water deficit using electrical resistivity tomography, Plant and Soil, 2021.
+                </li>
                 
-                <li class="list-group-item"><i class="fas fa-file-alt"></i> Sensing the electrical properties of roots: A review, Vadose Zone Journal, 2020.</li>
+                <li class="list-group-item">
+                    <span class="fw-bold">[2]</span> Imaging plant responses to water deficit using electrical resistivity tomography (vol 454, pg 261, 2020), PLANT AND SOIL, 2020.
+                </li>
                 
-                <li class="list-group-item"><i class="fas fa-file-alt"></i> Investigation of Electrical anisotropy as a root phenotyping parameter: Numerical study with root water uptake, Geophysical Research Abstracts, 2019.</li>
+                <li class="list-group-item">
+                    <span class="fw-bold">[3]</span> Sensing the electrical properties of roots: A review, Vadose Zone Journal, 2020.
+                </li>
                 
-                <li class="list-group-item"><i class="fas fa-file-alt"></i> Impact of maize roots on soil–root electrical conductivity: a simulation study, Vadose zone journal, 2019.</li>
+                <li class="list-group-item">
+                    <span class="fw-bold">[4]</span> Imaging plant responses to water deficit using electrical resistivity tomography, Plant and Soil, 2020.
+                </li>
                 
-                <li class="list-group-item"><i class="fas fa-file-alt"></i> Tree root system mise-à-la-masse (MALM) forward modelling with explicit representation of root structure, Geophysical Research Abstracts, 2019.</li>
+                <li class="list-group-item">
+                    <span class="fw-bold">[5]</span> Investigating plant root signatures using geo-electrical methods, UCL-Université Catholique de Louvain, 2020.
+                </li>
                 
-                <li class="list-group-item"><i class="fas fa-file-alt"></i> A new method for characterizing the complex electrical properties of root segments, 2018.</li>
+                <li class="list-group-item">
+                    <span class="fw-bold">[6]</span> Tree root system mise-à-la-masse (MALM) forward modelling with explicit representation of root structure, Geophysical Research Abstracts, 2019.
+                </li>
                 
-                <li class="list-group-item"><i class="fas fa-file-alt"></i> Waves generated in the plasma plume of helicon magnetic nozzle, Physics of Plasmas, 2013.</li>
+                <li class="list-group-item">
+                    <span class="fw-bold">[7]</span> Investigation of Electrical anisotropy as a root phenotyping parameter: Numerical study with root water uptake, Geophysical Research Abstracts, 2019.
+                </li>
                 
-                <li class="list-group-item"><i class="fas fa-file-alt"></i> Plasma turbulence driven by transversely large-scale standing shear Alfvén waves, Physics of Plasmas, 2012.</li>
+                <li class="list-group-item">
+                    <span class="fw-bold">[8]</span> Relationship between electrical anisotropy of soil-root continuum and geometrical architecture of root system, NATIONAL SYMPOSIUM FOR APPLIED BIOLOGICAL SCIENCES, 2019.
+                </li>
                 
-                <li class="list-group-item"><i class="fas fa-file-alt"></i> Numerical simulation of current-free double layers created in a helicon plasma device, Physics of Plasmas, 2012.</li>
+                <li class="list-group-item">
+                    <span class="fw-bold">[9]</span> Impact of maize roots on soil–root electrical conductivity: a simulation study, Vadose zone journal, 2019.
+                </li>
                 
-            </ul>
+                <li class="list-group-item">
+                    <span class="fw-bold">[10]</span> A new method for characterizing the complex electrical properties of root segments, 2018.
+                </li>
+                
+                <li class="list-group-item">
+                    <span class="fw-bold">[11]</span> Towards an effective characterization of root electrical properties: a spectroscopic approach, 5th International Workshop on Induced Polarization, 2018.
+                </li>
+                
+                <li class="list-group-item">
+                    <span class="fw-bold">[12]</span> Understanding the electrical signature of root systems at different scales to improve agrogeophysical applications, AGU Fall Meeting Abstracts, 2018.
+                </li>
+                
+                <li class="list-group-item">
+                    <span class="fw-bold">[13]</span> Modeling Effective Electrical Properties of Soil-Root Continuum to Discriminate Root Traits, AGU Fall Meeting Abstracts, 2018.
+                </li>
+                
+                <li class="list-group-item">
+                    <span class="fw-bold">[14]</span> Investigation of anisotropy in induced polarization signatures of maize root–soil continuum: A virtual rhizotron study, Poster presented at International Conference on Terrestrial Systems Research, 2018.
+                </li>
+                
+                <li class="list-group-item">
+                    <span class="fw-bold">[15]</span> A forward model for electrical conduction in soil-root continuum: a virtual rhizotron study, 4th International Workshop on Geoelectrical Monitoring (GELMON), 2017.
+                </li>
+                
+                <li class="list-group-item">
+                    <span class="fw-bold">[16]</span> Characterizing root system characteristics with Electrical resistivity Tomography: a virtual rhizotron simulation, EGU General Assembly Conference Abstracts, 2017.
+                </li>
+                
+                <li class="list-group-item">
+                    <span class="fw-bold">[17]</span> Waves generated in the plasma plume of helicon magnetic nozzle, Physics of Plasmas, 2013.
+                </li>
+                
+                <li class="list-group-item">
+                    <span class="fw-bold">[18]</span> Numerical simulation of current-free double layers created in a helicon plasma device, Physics of Plasmas, 2012
+                </li>
+                
+                <li class="list-group-item">
+                    <span class="fw-bold">[19]</span> Plasma turbulence driven by transversely large-scale standing shear Alfvén waves, Physics of Plasmas, 2012.
+                </li>
+                
+            </ol>
         </div>
-        
-        
-        
-        
-        
         
         
         
     </div>
 
-      
     
+    
+    <div class="row page-break">
+        <div class="col">
+            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-chalkboard-teacher"></i> Courses &amp; Trainings</h3>
+            <ul class="list-group">
+                
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">High-Performance Scientific Computing in Terrestrial Systems (HPSC TerrSys) Fall School, University of Bonn, Sept 2023</span>
+                </li>
+                
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">IEEE GRSS International Soil Moisture School (ISMS), IIT Bombay, March 2023</span>
+                </li>
+                
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">Basics of Remote Sensing, EO College, European Space Agency, Nov. 2022</span>
+                </li>
+                
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">French Language - A1, University of Louvain, Belgium, June 2018</span>
+                </li>
+                
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">Hydro-geophysical Process Simulation, University of Bonn, Germany, June 2018</span>
+                </li>
+                
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">Summer School for Flow and Transport in Terrestrial Systems, TU Clausthal, Germany, September 2016</span>
+                </li>
+                
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">Practical Numerical Methods with Python, Digital Badge, George Washington University, December 2014</span>
+                </li>
+                
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">Nanophotonic Modeling, nanohub-U, Purdue University, October 2014</span>
+                </li>
+                
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">Introduction to Linux, Edx, Linux FoundationX, November 2014</span>
+                </li>
+                
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">Greatest Unsolved Mysteries of the Universe, Edx, ANUx, November 2014</span>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    
+
+<div class="gap"></div> 
+
+
+
+<div class="row page-break">
+    <div class="col">
+        <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-award"></i> Awards &amp; Acknowledgements</h3>
+        <ul class="list-group">
+            
+            <li class="list-group-item">
+                <i class="fa fa-trophy text-warning" aria-hidden="true"></i>
+                <span class="ml-2">NSF fellowship (fee waiver and stipend) for pursuing my MS thesis at the University of Alabama in Huntsville (2011 to 2012)  [accepted].</span>
+            </li>
+            
+            <li class="list-group-item">
+                <i class="fa fa-trophy text-warning" aria-hidden="true"></i>
+                <span class="ml-2">FNRS doctoral fellowship for pursuing my PhD at the University of Louvain, Belgium (2016 to 2020) [accepted].</span>
+            </li>
+            
+            <li class="list-group-item">
+                <i class="fa fa-trophy text-warning" aria-hidden="true"></i>
+                <span class="ml-2">Post-doctoral fellowship, Hebrew University Jerusalem, Israel (March 2022) [could not accept].</span>
+            </li>
+            
+            <li class="list-group-item">
+                <i class="fa fa-trophy text-warning" aria-hidden="true"></i>
+                <span class="ml-2">Post-doctoral fellowship, KAUST, Saudi Arabia – $60k (March 2022) [could not accept].</span>
+            </li>
+            
+        </ul>
+    </div>
 </div>
+
+
+<div class="gap"></div> 
+
+
+<div class="container mt-4">
+    <div class="row">
+        
+        
+        <div class="col-md-4">
+            <h3>Publication Statistics</h3>
+            <ul class="list-group mb-3">
+                
+                <li class="list-group-item">Total Citations: 147</li>
+                
+                <li class="list-group-item">h-index: 6</li>
+                
+                <li class="list-group-item">i10-index: 5</li>
+                
+            </ul>
+        </div>
+        
+
+        
+        
+        <div class="col-md-4">
+            <h3>Matlab File Exchange</h3>
+            <div class="list-group mb-3">
+                <div class="list-group-item">Rank: 164 of 19,325</div>
+                <div class="list-group-item">Reputation: 7,493</div>
+                <div class="list-group-item">Average Rating: 4.40</div>
+                <div class="list-group-item">Contributions: 56 Files</div>
+                <div class="list-group-item">Recent Downloads: 254</div>
+                <div class="list-group-item">All Time Downloads: 70,339</div>
+            </div>
+        </div>
+        
+
+        
+        
+        <div class="col-md-4">
+            <h3>Kaggle Profile</h3>
+            <div class="list-group">
+                <strong>Datasets</strong>
+                <ul class="list-group mb-2">
+                    
+                    <li class="list-group-item">Expert Rank: 568 of 114,003 (Highest: 374)</li>
+                    
+                    <li class="list-group-item">Silver Medals: 2</li>
+                    
+                    <li class="list-group-item">Bronze Medals: 3</li>
+                    
+                </ul>
+                <strong>Notebooks</strong>
+                <ul class="list-group mb-2">
+                    
+                    <li class="list-group-item">Master Rank: 649 of 322,985 (Highest: 350)</li>
+                    
+                    <li class="list-group-item">Silver Medals: 10</li>
+                    
+                    <li class="list-group-item">Bronze Medals: 10</li>
+                    
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+</div>
+<div class="gap"></div> 
+   
+</div>
+
 <button id="download">Download as PDF</button>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-<script src="https://sraocodes.github.io/SRAO_CV//js/main.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById('download').addEventListener('click', function() {
+            var content = document.querySelector('.container'); 
+
+            if (!content) {
+                console.error('Content not found');
+                return;
+            }
+
+            var opt = {
+                margin: [20, 25], 
+                filename: 'myfile.pdf',
+                image: { type: 'jpeg', quality: 0.98 }, 
+                html2canvas: {
+                    scale: 2, 
+                    logging: true, 
+                    pagebreak: { mode: ['css', 'legacy'] }, 
+                },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+            };
+
+            
+            html2pdf().from(content).set(opt).save();
+        });
+    </script>
+</body>
 
 
     

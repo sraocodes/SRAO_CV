@@ -1,52 +1,51 @@
 {{ define "main" }}
 
-<style>
-    li {
-        line-height: 1.75;
-    }
-    h2, h3, h4 {
-        line-height: 2;
-    }
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        li {
+            line-height: 1.75;
+        }
+        h2, h3, h4 {
+            line-height: 2;
+        }
 
-    .page-break-control {
-    page-break-before: auto;
-    page-break-after: auto;
-    }
+        .page-break-control {
+            page-break-before: auto;
+            page-break-after: auto;
+        }
 
-    .gap {
-        display: block;
-        height: 30px; /* Adjust as needed */
-        clear: both;
-    }
-
-
-    @media print {
         .gap {
             display: block;
-            margin-top: 30px; /* Increased margin */
-            margin-bottom: 30px;
-            min-height: 30px; /* Add minimum height */
-            height: auto; /* Adjust for print */
-        }
-    }
-
-
-
-    @media print {
-        /* Reduced font sizes for printing the CV */
-        .container {
-            font-size: 10px; /* Adjust this value as needed */
-        }
-        .container h1, .container h2, .container h3, .container h4 {
-            font-size: 12px; /* Smaller headings for print */
-        }
-        .list-group-item {
-            font-size: 10px; /* Smaller font for list items */
+            height: 30px; 
+            clear: both;
         }
 
+        @media print {
+            .gap {
+                display: block;
+                margin-top: 30px;
+                margin-bottom: 30px;
+                min-height: 30px; 
+                height: auto; 
+            }
 
-</style>
+            .container {
+                font-size: 12px;
+            }
+            .container h1, .container h2, .container h3, .container h4 {
+                font-size: 14px; 
+            }
+            .list-group-item {
+                font-size: 12px; 
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
 
+<body>
 <div class="container mt-5" style="max-width: 210mm;">
     <!-- Header Section -->
     <div class="row mb-4" style="background-color: #f5f5f5;">
@@ -126,11 +125,6 @@
     {{ end }}
     {{ end }}
 
-    <div class="gap"></div> <!-- This is the gap between sections -->
-    <div class="gap"></div> <!-- This is the gap between sections -->
-    <div class="gap"></div> <!-- This is the gap between sections -->
-    <div class="gap"></div> <!-- This is the gap between sections -->
-
     <!-- Experience -->
     {{ with .Params.experience }}
     <div class="row page-break">
@@ -161,40 +155,43 @@
 
     <div class="gap"></div> <!-- This is the gap between sections -->
     <div class="gap"></div> <!-- This is the gap between sections -->
+    <div class="gap"></div> <!-- This is the gap between sections -->
+    <div class="gap"></div> <!-- This is the gap between sections -->
+    <div class="gap"></div> <!-- This is the gap between sections -->
 
     <!-- Projects Section -->
     {{ with .Params.projects }}
     <div class="row page-break">
         <div class="col">
-            {{ range . }}
-            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-project-diagram"></i> {{ .title }}</h3>
-            {{ range .subsections }}
-            <div class="mb-4 card border-info"> <!-- Changed to border-info for a different color -->
-                <div class="card-header" style="background-color: #17a2b8; color: white;">
-                    <h4 class="mb-0">{{ .subtitle1 }} <span class="badge badge-light">{{ .subtitle2 }}</span></h4>
+            {{ range $index, $project := . }}
+            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-project-diagram"></i> {{ $project.title }}</h3>
+                {{ range $subIndex, $subsection := $project.subsections }}
+                <div class="mb-4 card border-info">
+                    <div class="card-header" style="background-color: #17a2b8; color: white;">
+                        <h4 class="mb-0">{{ $subsection.subtitle1 }} <span class="badge badge-light">{{ $subsection.subtitle2 }}</span></h4>
+                    </div>
+                    <div class="card-body">
+                        <ul class="list-group list-group-flush">
+                            {{ range $subsection.items }}
+                            <li class="list-group-item">
+                                <i class="fa fa-check-circle text-info" aria-hidden="true"></i>
+                                <span class="ml-2">{{ . }}</span>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
                 </div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        {{ range .items }}
-                        <li class="list-group-item">
-                            <i class="fa fa-check-circle text-info" aria-hidden="true"></i> <!-- Changed icon to fa-check-circle -->
-                            <span class="ml-2">{{ . }}</span>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </div>
-            </div>
-            <br> <!-- This is the gap within a section -->
-            {{ end }}
+                {{ if and (eq $index 0) (eq $subIndex 0) }} <!-- Add a gap after the first subsection of the first project -->
+                <div class="gap"></div>
+                <div class="gap"></div>
+                <div class="gap"></div>
+                <div class="gap"></div>
+                {{ end }}
+                {{ end }}
             {{ end }}
         </div>
     </div>
     {{ end }}
-
-    <div class="gap"></div> <!-- This is the gap between sections -->
-    <div class="gap"></div> <!-- This is the gap between sections -->
-    <div class="gap"></div> <!-- This is the gap between sections -->
-    <div class="gap"></div> <!-- This is the gap between sections -->
 
     <!-- Publications Section -->
     <div class="container mt-4">
@@ -206,7 +203,7 @@
             <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-book-reader"></i> {{ .title }}</h3>
             <ol class="list-group list-group-numbered">
                 {{ range $index, $element := .items }}
-                <li class="list-group-item">
+                <li class="list-group-item" style="line-height: 2;"> <!-- Increased line spacing -->
                     <span class="fw-bold">[{{ add $index 1 }}]</span> {{ $element }}
                 </li>
                 {{ end }}
@@ -218,13 +215,130 @@
     </div>
 
 
+    <!-- Courses & Trainings Section -->
+    {{ with .Params.courses_and_trainings }}
+    <div class="row page-break">
+        <div class="col">
+            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-chalkboard-teacher"></i> {{ .title }}</h3>
+            <ul class="list-group">
+                {{ range .items }}
+                <li class="list-group-item">
+                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
+                    <span class="ml-2">{{ . }}</span>
+                </li>
+                {{ end }}
+            </ul>
+        </div>
+    </div>
+    {{ end }}
 
-
-      
-    
+<!-- Awards & Acknowledgements Section -->
+{{ with .Params.awards_and_acknowledgements }}
+<div class="row page-break">
+    <div class="col">
+        <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-award"></i> {{ .title }}</h3>
+        <ul class="list-group">
+            {{ range .items }}
+            <li class="list-group-item">
+                <i class="fa fa-trophy text-warning" aria-hidden="true"></i>
+                <span class="ml-2">{{ . }}</span>
+            </li>
+            {{ end }}
+        </ul>
+    </div>
 </div>
+{{ end }}
+
+<div class="gap"></div> <!-- This is the gap between sections -->
+<div class="gap"></div> <!-- This is the gap between sections -->
+<div class="gap"></div> <!-- This is the gap between sections -->
+<div class="gap"></div> <!-- This is the gap between sections -->
+<div class="gap"></div> <!-- This is the gap between sections -->
+
+<!-- Professional Statistics Section -->
+<div class="container mt-4">
+    <div class="row">
+        <!-- Publication Statistics -->
+        {{ with .Params.publication_stats }}
+        <div class="col-md-4">
+            <h3>{{ .title }}</h3>
+            <ul class="list-group mb-3">
+                {{ range .items }}
+                <li class="list-group-item">{{ . }}</li>
+                {{ end }}
+            </ul>
+        </div>
+        {{ end }}
+
+        <!-- Matlab File Exchange Statistics -->
+        {{ with .Params.matlab_stats }}
+        <div class="col-md-4">
+            <h3>{{ .title }}</h3>
+            <div class="list-group mb-3">
+                <div class="list-group-item">Rank: {{ .rank }}</div>
+                <div class="list-group-item">Reputation: {{ .reputation }}</div>
+                <div class="list-group-item">Average Rating: {{ .average_rating }}</div>
+                <div class="list-group-item">Contributions: {{ .contributions }}</div>
+                <div class="list-group-item">Recent Downloads: {{ .downloads }}</div>
+                <div class="list-group-item">All Time Downloads: {{ .all_time_downloads }}</div>
+            </div>
+        </div>
+        {{ end }}
+
+        <!-- Kaggle Profile Statistics -->
+        {{ with .Params.kaggle_profile }}
+        <div class="col-md-4">
+            <h3>{{ .title }}</h3>
+            <div class="list-group">
+                <strong>Datasets</strong>
+                <ul class="list-group mb-2">
+                    {{ range .datasets }}
+                    <li class="list-group-item">{{ . }}</li>
+                    {{ end }}
+                </ul>
+                <strong>Notebooks</strong>
+                <ul class="list-group mb-2">
+                    {{ range .notebooks }}
+                    <li class="list-group-item">{{ . }}</li>
+                    {{ end }}
+                </ul>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+<div class="gap"></div> <!-- This is the gap between sections -->
+   
+</div>
+
 <button id="download">Download as PDF</button>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-<script src="{{ $.Site.BaseURL }}/js/main.js" defer></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+    <script>
+        document.getElementById('download').addEventListener('click', function() {
+            var content = document.querySelector('.container'); // Ensure this selects the correct content
+
+            if (!content) {
+                console.error('Content not found');
+                return;
+            }
+
+            var opt = {
+                margin: [20, 25], // Increased side margins for better layout
+                filename: 'myfile.pdf',
+                image: { type: 'jpeg', quality: 0.98 }, // High-quality images
+                html2canvas: {
+                    scale: 2, // Higher scale for better quality
+                    logging: true, // Optional: for debugging
+                    pagebreak: { mode: ['css', 'legacy'] }, // Better control of page breaks
+                },
+                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+            };
+
+            // Generate PDF directly from the original content
+            html2pdf().from(content).set(opt).save();
+        });
+    </script>
+</body>
 
 {{ end }}

@@ -184,22 +184,53 @@ pubs:
       - "Numerical simulation of current-free double layers created in a helicon plasma device, Physics of Plasmas, 2012"
       - "Plasma turbulence driven by transversely large-scale standing shear Alfvén waves, Physics of Plasmas, 2012."
 
+courses_and_trainings:
+  title: "Courses & Trainings"
+  items:
+    - "High-Performance Scientific Computing in Terrestrial Systems (HPSC TerrSys) Fall School, University of Bonn, Sept 2023"
+    - "IEEE GRSS International Soil Moisture School (ISMS), IIT Bombay, March 2023"
+    - "Basics of Remote Sensing, EO College, European Space Agency, Nov. 2022"
+    - "French Language - A1, University of Louvain, Belgium, June 2018"
+    - "Hydro-geophysical Process Simulation, University of Bonn, Germany, June 2018"
+    - "Summer School for Flow and Transport in Terrestrial Systems, TU Clausthal, Germany, September 2016"
+    - "Practical Numerical Methods with Python, Digital Badge, George Washington University, December 2014"
+    - "Nanophotonic Modeling, nanohub-U, Purdue University, October 2014"
+    - "Introduction to Linux, Edx, Linux FoundationX, November 2014"
+    - "Greatest Unsolved Mysteries of the Universe, Edx, ANUx, November 2014"
 
-  - title: "Statistics"
-    items:
-      - "Total Citations: 147"
-      - "h-index: 6"
-      - "i10-index: 5"
-      
-  - title: "Courses & Trainings"
-    items:
-      - "Basics of Remote Sensing, EO College, European Space Agency, Nov. 2022"
-      - "French Language - A1, University of Louvain, Belgium, June 2018"
-      - "Hydro-geophysical Process Simulation, University of Bonn, Germany, June 2018"
-      - "Summer School for Flow and Transport in Terrestrial Systems, TU Clausthal, Germany, September 2016"
-      - "Practical Numerical Methods with Python, Digital Badge, George Washington University, December 2014"
-      - "Introduction to Linux, Edx, Linux FoundationX, November 2014"
+awards_and_acknowledgements:
+  title: "Awards & Acknowledgements"
+  items:
+    - "NSF fellowship (fee waiver and stipend) for pursuing my MS thesis at the University of Alabama in Huntsville (2011 to 2012)  [accepted]."
+    - "FNRS doctoral fellowship for pursuing my PhD at the University of Louvain, Belgium (2016 to 2020) [accepted]."
+    - "Post-doctoral fellowship, Hebrew University Jerusalem, Israel (March 2022) [could not accept]."
+    - "Post-doctoral fellowship, KAUST, Saudi Arabia – $60k (March 2022) [could not accept]."
 
+publication_stats:
+  title: "Publication Statistics"
+  items:
+    - "Total Citations: 147"
+    - "h-index: 6"
+    - "i10-index: 5"
 
+matlab_stats:
+  title: "Matlab File Exchange"
+  rank: "164 of 19,325"
+  reputation: "7,493"
+  average_rating: "4.40"
+  contributions: "56 Files"
+  downloads: "254"
+  all_time_downloads: "70,339"
+
+kaggle_profile:
+  title: "Kaggle Profile"
+  datasets:
+    - "Expert Rank: 568 of 114,003 (Highest: 374)"
+    - "Silver Medals: 2"
+    - "Bronze Medals: 3"
+  notebooks:
+    - "Master Rank: 649 of 322,985 (Highest: 350)"
+    - "Silver Medals: 10"
+    - "Bronze Medals: 10"
 ---
 
