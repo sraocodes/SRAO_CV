@@ -64,6 +64,10 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
+      - name: Compile LaTeX Document
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: /content/CV.tex
 
   # Deployment job
   deploy:
