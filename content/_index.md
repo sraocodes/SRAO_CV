@@ -1,7 +1,7 @@
 ---
 title: "Dr. Sathyanarayan Rao"
 subtitle: "This is a space where I share my experiences, journey, professional projects and interests."
-intro_text: "Hi there! I'm Sathya, a passionate scientific software developer navigating the intersections of computational engineering and agriculture. My expertise lies in modeling, machine learning, and data assimiliation, complemented by a diverse educational background from institutions across the globe. Here, I share my professional experiences, academic milestones, blogs and projects that delve deep into the realms of computational modeling, agriculture and everything in between. Dive in to discover more about my journey!"
+intro_text: "Hi there! I'm Dr.Sathyanarayan Rao, a passionate scientific software developer navigating the intersections of computational engineering and agriculture. My expertise lies in modeling, machine learning, and data assimiliation, complemented by a diverse educational background from institutions across the globe. Here, I share my professional experiences, academic milestones, blogs and projects that delve deep into the realms of computational modeling, agriculture and everything in between. Dive in to discover more about my journey!"
 background_image: "images/background.png" 
 image: "images/sathya.jpg"
 cards:
@@ -16,6 +16,7 @@ cards:
     icon: "/images/github.png"
     iconH: "60px"
     iconW: "60px"
+    link: "https://github.com/sraocodes"
   - title: "Kaggle"
     description: "Explore my kernels, and datasets on Kaggle."
     icon: "/images/kaggle.png"
@@ -34,16 +35,18 @@ cards:
     iconH: "50px"
     iconW: "50px"
     link: "https://www.mathworks.com/matlabcentral/profile/authors/2686490"
-  - title: "Substack"
-    description: "Read and subscribe to my blogs on Digital Agriculture and Data Sciences."
-    icon: "/images/substack.png"
+  - title: "Digital Agricultural Avatar"
+    description: "Feel free to check out channel that I am currently maintaining that deal with the project Digital Agricultural Avatar, where we share videos regarding advanced software modeling in the areas of agricultural research in colloboration with other
+    researchers in the field, as a part of my role as a Scientific Programmer within IBG-3 at Forschungszentrum Juelich"
+    link: "https://www.youtube.com/channel/UC50qNP1SHZfyiz1ZSsooGgw"
+    icon: "/images/youtube.png"
     iconH: "70px"
-    iconW: "70px"
-    link: "https://datacrop.substack.com/"
-  - title: "YouTube"
+    iconW: "60px"
+  - title: "Explorative Eye"
     description: "Watch my random videos on Youtube related to my childhood (also current) interestes such as Trains, Buses, Food and Travel."
     link: "https://www.youtube.com/channel/UCZCL5sDEDxJmZyYUhQapNlA"
     icon: "/images/youtube.png"
     iconH: "70px"
     iconW: "60px"
+
 ---

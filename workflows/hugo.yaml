@@ -64,8 +64,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           path: ./public
-      - name: Compile LaTeX Document
-        run: pdflatex ./content/CV.tex
+
 
   # Deployment job
   deploy:
