@@ -42,11 +42,4 @@ cards:
     icon: "/images/youtube.png"
     iconH: "70px"
     iconW: "60px"
-  - title: "Explorative Eye"
-    description: "Watch my random videos on Youtube related to my childhood (also current) interestes such as Trains, Buses, Food and Travel."
-    link: "https://www.youtube.com/channel/UCZCL5sDEDxJmZyYUhQapNlA"
-    icon: "/images/youtube.png"
-    iconH: "70px"
-    iconW: "60px"
-
 ---
