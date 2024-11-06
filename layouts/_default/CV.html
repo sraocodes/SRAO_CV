@@ -1,344 +1,166 @@
 {{ define "main" }}
-
-<!DOCTYPE html>
-<html>
-<head>
-    <style>
-        li {
-            line-height: 1.75;
-        }
-        h2, h3, h4 {
-            line-height: 2;
-        }
-
-        .page-break-control {
-            page-break-before: auto;
-            page-break-after: auto;
-        }
-
-        .gap {
-            display: block;
-            height: 30px; 
-            clear: both;
-        }
-
-        @media print {
-            .gap {
-                display: block;
-                margin-top: 30px;
-                margin-bottom: 30px;
-                min-height: 30px; 
-                height: auto; 
-            }
-
-            .container {
-                font-size: 12px;
-            }
-            .container h1, .container h2, .container h3, .container h4 {
-                font-size: 14px; 
-            }
-            .list-group-item {
-                font-size: 12px; 
-                line-height: 1.6;
-            }
-        }
-    </style>
-</head>
-
-<body>
-<div class="container mt-5" style="max-width: 210mm;">
-    <!-- Header Section -->
-    <div class="row mb-4" style="background-color: #f5f5f5;">
-        <!-- Profile Picture -->
-        <div class="col text-center py-4">
-            <img src="{{ $.Site.BaseURL }}{{ .Params.picture }}" class="img-fluid rounded-circle mb-3" alt="{{ .Params.name }}" style="max-width: 200px;">
-            <h1>{{ .Params.name }}</h1>
-            <h4>{{ .Params.current_position }}</h4>
-            <p>{{ .Params.summary }}</p>
-            <address>
-                <div>🏠 {{ .Params.address }}</div>
-                <div>📧 {{ .Params.email }}</div>
-                <div>📞 {{ .Params.phone }}</div>
-                <div>🌐 {{ .Params.web }}</div>
-            </address>
-        </div>
-    </div>
-
-    <!-- Practical Skills Section -->
-    {{ with .Params.practical }}
-    {{ range . }}
-    <div class="row page-break">
-        <div class="col">
-            <h4 class="mb-3" style="color: #17a2b8;"><i class="fas fa-tools"></i> {{ .title }}</h4>
-            <ul class="list-group mb-3">
-                {{ range $index, $element := .items }}
-                <li class="list-group-item">
-                    {{ $symbols := slice "🤖" "🌾" "💻" "🔧" "🌟" }}
-                    {{ $symbolIndex := mod $index (len $symbols) }}
-                    <span>{{ index $symbols $symbolIndex }}</span> <span class="ml-2">{{ $element }}</span>
-                </li>
-                {{ end }}
-            </ul>
-        </div>
-    </div>
-    {{ end }}
-    {{ end }}
-    
-    
-
-    <!-- Education -->
-    {{ with .Params.educational }}
-    {{ range . }}
-    <div class="row page-break">
-        <div class="col">
-            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-graduation-cap"></i> {{ .title }}</h3>
-            {{ if .subsections }}
-                {{ range .subsections }}
-                <div class="mb-4 card border-primary">
-                    <div class="card-header" style="background-color: #17a2b8; color: white;">
-                        <h4 class="mb-0">{{ .subtitle1 }} <span class="badge badge-light">{{ .subtitle2 }}</span></h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            {{ range .items }}
-                            <li class="list-group-item">
-                                <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
-                                <span class="ml-2">{{ . }}</span>
-                            </li>
-                            {{ end }}
-                        </ul>
-                    </div>
-                </div>
-                {{ end }}
-            {{ else if .items }}
-                <ul class="list-group">
-                    {{ range .items }}
-                    <li class="list-group-item">
-                        <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
-                        <span class="ml-2">{{ . }}</span>
-                    </li>
-                    {{ end }}
-                </ul>
-            {{ end }}
-        </div>
-    </div>
-    {{ end }}
-    {{ end }}
-
-    <!-- Experience -->
-    {{ with .Params.experience }}
-    <div class="row page-break">
-        <div class="col">
-            {{ range . }}
-            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-briefcase"></i> {{ .title }}</h3>
-            {{ range .subsections }}
-            <div class="mb-4 card border-secondary">
-                <div class="card-header" style="background-color: #17a2b8; color: white;">
-                    <h4 class="mb-0">{{ .subtitle1 }}</h4>
-                </div>
-                <div class="card-body">
-                    <ul class="list-group list-group-flush">
-                        {{ range .items }}
-                        <li class="list-group-item">
-                            <i class="fa fa-caret-right text-secondary" aria-hidden="true"></i>
-                            <span class="ml-2">{{ . }}</span>
-                        </li>
-                        {{ end }}
-                    </ul>
-                </div>
+<div class="container py-5">
+  <!-- Profile Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <div class="row align-items-center">
+      <div class="col-md-3 text-center">
+        <img 
+          src="{{ .Params.image | relURL }}" 
+          alt="{{ .Params.title }}" 
+          class="rounded-circle img-fluid border shadow-sm"
+          style="width: 200px; height: 200px; object-fit: cover;"
+        >
+      </div>
+        <div class="col-md-9">
+          <h1 class="display-4">{{ .Params.title }}</h1>
+          <h2 class="h4 text-muted">{{ .Params.role }}</h2>
+          <p class="lead">{{ .Params.summary }}</p>
+          <div class="row mt-3">
+            {{ range .Params.contact }}
+            <div class="col-md-6 col-lg-3 mb-2">
+              <a href="{{ .link }}" class="text-decoration-none text-dark">
+                <i class="{{ .icon }} fa-fw"></i> {{ .info }}
+              </a>
             </div>
             {{ end }}
-            {{ end }}
+          </div>
         </div>
+      </div>
     </div>
-    {{ end }}
+  </div>
 
-    <div class="gap"></div> <!-- This is the gap between sections -->
-    <div class="gap"></div> <!-- This is the gap between sections -->
-    <div class="gap"></div> <!-- This is the gap between sections -->
-    <div class="gap"></div> <!-- This is the gap between sections -->
-    <div class="gap"></div> <!-- This is the gap between sections -->
-
-    <!-- Projects Section -->
-    {{ with .Params.projects }}
-    <div class="row page-break">
-        <div class="col">
-            {{ range $index, $project := . }}
-            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-project-diagram"></i> {{ $project.title }}</h3>
-                {{ range $subIndex, $subsection := $project.subsections }}
-                <div class="mb-4 card border-info">
-                    <div class="card-header" style="background-color: #17a2b8; color: white;">
-                        <h4 class="mb-0">{{ $subsection.subtitle1 }} <span class="badge badge-light">{{ $subsection.subtitle2 }}</span></h4>
-                    </div>
-                    <div class="card-body">
-                        <ul class="list-group list-group-flush">
-                            {{ range $subsection.items }}
-                            <li class="list-group-item">
-                                <i class="fa fa-check-circle text-info" aria-hidden="true"></i>
-                                <span class="ml-2">{{ . }}</span>
-                            </li>
-                            {{ end }}
-                        </ul>
-                    </div>
-                </div>
-                {{ if and (eq $index 0) (eq $subIndex 0) }} <!-- Add a gap after the first subsection of the first project -->
-                <div class="gap"></div>
-                <div class="gap"></div>
-                <div class="gap"></div>
-                <div class="gap"></div>
-                {{ end }}
-                {{ end }}
-            {{ end }}
-        </div>
-    </div>
-    {{ end }}
-
-    <!-- Publications Section -->
-    <div class="container mt-4">
-        <!-- Publication List -->
-        {{ with .Params.pubs }}
-        {{ range . }}
-        {{ if eq .title "Publications" }}
-        <div class="mb-4">
-            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-book-reader"></i> {{ .title }}</h3>
-            <ol class="list-group list-group-numbered">
-                {{ range $index, $element := .items }}
-                <li class="list-group-item" style="line-height: 2;"> <!-- Increased line spacing -->
-                    <span class="fw-bold">[{{ add $index 1 }}]</span> {{ $element }}
-                </li>
-                {{ end }}
-            </ol>
+  <!-- Expertise Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h2 class="h3 mb-4">Expertise</h2>
+      <div class="row">
+        {{ range .Params.expertise }}
+        <div class="col-md-4 mb-4">
+          <h3 class="h5 mb-3">{{ .category }}</h3>
+          {{ range .skills }}
+          <span class="badge badge-primary mr-2 mb-2 p-2">{{ . }}</span>
+          {{ end }}
         </div>
         {{ end }}
-        {{ end }}
-        {{ end }}
+      </div>
     </div>
+  </div>
 
-
-    <!-- Courses & Trainings Section -->
-    {{ with .Params.courses_and_trainings }}
-    <div class="row page-break">
-        <div class="col">
-            <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-chalkboard-teacher"></i> {{ .title }}</h3>
-            <ul class="list-group">
-                {{ range .items }}
-                <li class="list-group-item">
-                    <i class="fa fa-chevron-right text-success" aria-hidden="true"></i>
-                    <span class="ml-2">{{ . }}</span>
-                </li>
-                {{ end }}
-            </ul>
+  <!-- Experience Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h2 class="h3 mb-4">Experience</h2>
+      {{ range .Params.experience }}
+      <div class="mb-4">
+        <div class="d-flex justify-content-between align-items-start mb-2">
+          <div>
+            <h3 class="h5 mb-1">{{ .role }}</h3>
+            <p class="text-muted mb-1">{{ .company }}</p>
+          </div>
+          <div class="text-right">
+            <span class="badge badge-light">{{ .period }}</span>
+            <div class="small text-muted">{{ .location }}</div>
+          </div>
         </div>
-    </div>
-    {{ end }}
-
-<!-- Awards & Acknowledgements Section -->
-{{ with .Params.awards_and_acknowledgements }}
-<div class="row page-break">
-    <div class="col">
-        <h3 class="mb-3" style="color: #17a2b8;"><i class="fas fa-award"></i> {{ .title }}</h3>
-        <ul class="list-group">
-            {{ range .items }}
-            <li class="list-group-item">
-                <i class="fa fa-trophy text-warning" aria-hidden="true"></i>
-                <span class="ml-2">{{ . }}</span>
-            </li>
+        
+        <!-- External Links -->
+        {{ with .links }}
+        <div class="mb-3">
+          {{ range . }}
+          <a href="{{ .url }}" 
+            target="_blank" 
+            class="btn btn-sm btn-outline-primary mr-2">
+            {{ if eq .type "youtube" }}
+            <i class="fab fa-youtube mr-1"></i>
+            {{ else }}
+            <i class="fas fa-globe mr-1"></i>
             {{ end }}
+            {{ .text }}
+          </a>
+          {{ end }}
+        </div>
+        {{ end }}
+
+        <!-- Highlights -->
+        <ul class="pl-3">
+          {{ range .highlights }}
+          <li>{{ . | markdownify }}</li>
+          {{ end }}
         </ul>
+      </div>
+      {{ end }}
     </div>
-</div>
-{{ end }}
+  </div>
 
-<div class="gap"></div> <!-- This is the gap between sections -->
-<div class="gap"></div> <!-- This is the gap between sections -->
-<div class="gap"></div> <!-- This is the gap between sections -->
-<div class="gap"></div> <!-- This is the gap between sections -->
-<div class="gap"></div> <!-- This is the gap between sections -->
-
-<!-- Professional Statistics Section -->
-<div class="container mt-4">
-    <div class="row">
-        <!-- Publication Statistics -->
-        {{ with .Params.publication_stats }}
-        <div class="col-md-4">
-            <h3>{{ .title }}</h3>
-            <ul class="list-group mb-3">
-                {{ range .items }}
-                <li class="list-group-item">{{ . }}</li>
-                {{ end }}
-            </ul>
+  <!-- Education Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h2 class="h3 mb-4">Education</h2>
+      {{ range .Params.education }}
+      <div class="mb-4">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h3 class="h5 mb-1">{{ .degree }}</h3>
+            <p class="text-muted mb-1">{{ .school }}</p>
+            {{ with .thesis }}<p class="small">{{ . }}</p>{{ end }}
+            {{ with .gpa }}<p class="small text-primary">GPA: {{ . }}</p>{{ end }}
+          </div>
+          <div class="text-right">
+            <span class="badge badge-light">{{ .year }}</span>
+            <div class="small text-muted">{{ .location }}</div>
+          </div>
         </div>
-        {{ end }}
-
-        <!-- Matlab File Exchange Statistics -->
-        {{ with .Params.matlab_stats }}
-        <div class="col-md-4">
-            <h3>{{ .title }}</h3>
-            <div class="list-group mb-3">
-                <div class="list-group-item">Rank: {{ .rank }}</div>
-                <div class="list-group-item">Reputation: {{ .reputation }}</div>
-                <div class="list-group-item">Average Rating: {{ .average_rating }}</div>
-                <div class="list-group-item">Contributions: {{ .contributions }}</div>
-                <div class="list-group-item">Recent Downloads: {{ .downloads }}</div>
-                <div class="list-group-item">All Time Downloads: {{ .all_time_downloads }}</div>
-            </div>
-        </div>
-        {{ end }}
-
-        <!-- Kaggle Profile Statistics -->
-        {{ with .Params.kaggle_profile }}
-        <div class="col-md-4">
-            <h3>{{ .title }}</h3>
-            <div class="list-group">
-                <strong>Datasets</strong>
-                <ul class="list-group mb-2">
-                    {{ range .datasets }}
-                    <li class="list-group-item">{{ . }}</li>
-                    {{ end }}
-                </ul>
-                <strong>Notebooks</strong>
-                <ul class="list-group mb-2">
-                    {{ range .notebooks }}
-                    <li class="list-group-item">{{ . }}</li>
-                    {{ end }}
-                </ul>
-            </div>
-        </div>
-        {{ end }}
+      </div>
+      {{ end }}
     </div>
+  </div>
+
+  <!-- Publications Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h2 class="h3 mb-4">Selected Publications</h2>
+      {{ range .Params.publications }}
+      <div class="mb-3">
+        <h3 class="h6 mb-1">{{ .title }}</h3>
+        <p class="small text-muted">{{ .journal }} ({{ .year }})</p>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Achievements Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h2 class="h3 mb-4">Achievements</h2>
+      <div class="row">
+        {{ range .Params.achievements }}
+        <div class="col-md-4 mb-4">
+          <h3 class="h5 mb-3">{{ .title }}</h3>
+          <ul class="pl-3 mb-0">
+            {{ range .details }}
+            <li>{{ . }}</li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- Print Button -->
+  <div class="text-center d-print-none">
+    <button onclick="window.print()" class="btn btn-primary">
+      <i class="fas fa-download mr-2"></i>Download PDF
+    </button>
+  </div>
 </div>
-<div class="gap"></div> <!-- This is the gap between sections -->
-   
-</div>
 
-<button id="download">Download as PDF</button>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
-    <script>
-        document.getElementById('download').addEventListener('click', function() {
-            var content = document.querySelector('.container'); // Ensure this selects the correct content
-
-            if (!content) {
-                console.error('Content not found');
-                return;
-            }
-
-            var opt = {
-                margin: [20, 25], // Increased side margins for better layout
-                filename: 'myfile.pdf',
-                image: { type: 'jpeg', quality: 0.98 }, // High-quality images
-                html2canvas: {
-                    scale: 2, // Higher scale for better quality
-                    logging: true, // Optional: for debugging
-                    pagebreak: { mode: ['css', 'legacy'] }, // Better control of page breaks
-                },
-                jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
-            };
-
-            // Generate PDF directly from the original content
-            html2pdf().from(content).set(opt).save();
-        });
-    </script>
-</body>
-
+<style>
+@media print {
+  .card { border: none !important; }
+  .shadow-sm { box-shadow: none !important; }
+  a { text-decoration: none !important; color: inherit !important; }
+}
+</style>
 {{ end }}
