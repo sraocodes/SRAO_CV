@@ -1,7 +1,7 @@
 ---
 title: "Dr. Sathyanarayan Rao"
 layout: "CV"
-image: "/images/sathya.jpg"
+image: "images/sathya.jpg"
 role: "Scientific Software Engineer, PhenoRob Project"
 location: "Jülich, Germany"
 summary: "Scientific Programmer & Software Developer | Kaggle Master (Top 2%) | Expertise in Computational Simulations, Data Analytics, & Agricultural Modeling"

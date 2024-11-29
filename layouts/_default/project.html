@@ -1,45 +1,173 @@
 {{ define "main" }}
-{{ partial "intro.html" . }}
+<div class="min-h-screen bg-gradient-to-b from-gray-50 to-white">
+    <!-- Hero Section with better spacing -->
+    <header class="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
+        <div class="container mx-auto px-4 max-w-4xl text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">{{ .Title }}</h1>
+            <p class="text-xl text-blue-100">{{ .Params.subtitle }}</p>
+        </div>
+    </header>
 
-<div class="container mt-5">
-    {{ with .Params.sections }}
-        {{ range . }}
-            <div class="section mb-5">
-                <h2>{{ .title }}</h2>
+    <!-- Centered Navigation with elegant spacing -->
+    <nav class="sticky top-0 bg-white/95 backdrop-blur-sm shadow-md z-50">
+        <div class="container mx-auto px-4 py-4 max-w-4xl">
+            <div class="flex justify-center flex-wrap gap-3">
+                <button class="category-btn active" data-filter="all">All Projects</button>
+                <button class="category-btn" data-filter="web-development">Web Development</button>
+                <button class="category-btn" data-filter="scientific-software">Scientific Software</button>
+                <button class="category-btn" data-filter="ai-machine-learning">AI & ML</button>
+                <button class="category-btn" data-filter="engineering-projects">Engineering Projects</button>
+                <button class="category-btn" data-filter="content-creation">Content Creation</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Centered Projects Grid with elegant cards -->
+    <main class="container mx-auto px-4 py-16 max-w-4xl">
+        <div class="space-y-10">
+            {{ range .Params.sections }}
                 {{ range .items }}
-                    <div class="card mb-4">
-                        <div class="row no-gutters">
-                            <div class="col-md-4 d-flex flex-column align-items-center justify-content-center"> <!-- Modified to flex-column -->
-                                {{ $imageURL := .image }}
-                                {{ if not (strings.HasPrefix $imageURL "http") }}
-                                    {{ $imageURL = printf "%s%s" $.Site.BaseURL $imageURL }}
-                                {{ end }}
-                                <img src="{{ $imageURL }}" class="card-img mb-2" alt="{{ .main_text }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
-                                <div class="image-caption mt-2">{{ .image_caption }}</div>
-                            </div>
-                            
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ .main_text }}</h5>
-                                    <p class="card-text">{{ .sub_text }}</p>
-                                    <div class="project-description">{{ .description | markdownify }}</div>
+                <article class="project-card" data-category="{{ .category | urlize }}">
+                    <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
+                        <div class="p-8">
+                            <!-- Project Header -->
+                            <div class="flex justify-between items-start mb-6">
+                                <div>
+                                    <h3 class="text-2xl font-bold text-gray-900">{{ .main_text }}</h3>
+                                    <p class="text-gray-600 mt-2">{{ .sub_text }}</p>
                                 </div>
-                            </div>                            
-                        </div>
-                        <div class="card-footer">
-                            <h6>Skills:</h6>
-                            {{ range .skills }}
-                                {{ if eq .type "font" }}
-                                    <i class="fa {{ .icon }}"></i> {{ .description }}
-                                {{ else if eq .type "image" }}
-                                    <img src="/path/to/emoji/{{ .icon }}.png" alt="{{ .description }}" width="20"> {{ .description }}
+                                <span class="px-4 py-1.5 rounded-full text-sm font-medium bg-blue-100 text-blue-800">
+                                    {{ .category }}
+                                </span>
+                            </div>
+
+                            <!-- Project Content -->
+                            <div class="prose prose-lg max-w-none mb-8">
+                                {{ .description | markdownify }}
+                            </div>
+
+                            <!-- Video Section -->
+                            {{ if .videos }}
+                                {{ if .videos.daa_channel }}
+                                <div class="mb-6">
+                                    <h4 class="text-lg font-semibold mb-3 text-gray-900">Digital Agricultural Avatar Channel</h4>
+                                    <div class="space-y-2">
+                                        {{ range .videos.daa_channel }}
+                                        <a href="https://youtube.com/watch?v={{ .id }}" 
+                                           class="group flex items-center text-gray-700 hover:text-blue-600 transition-colors py-1"
+                                           target="_blank">
+                                            <i class="fas fa-play-circle mr-3 text-blue-500 group-hover:text-blue-600"></i>
+                                            <span class="group-hover:underline">{{ .title }}</span>
+                                        </a>
+                                        {{ end }}
+                                    </div>
+                                </div>
+                                {{ end }}
+
+                                {{ if .videos.compute_channel }}
+                                <div class="mb-6">
+                                    <h4 class="text-lg font-semibold mb-3 text-gray-900">Compute Stories Channel</h4>
+                                    <div class="space-y-2">
+                                        {{ range .videos.compute_channel }}
+                                        <a href="https://youtube.com/watch?v={{ .id }}" 
+                                           class="group flex items-center text-gray-700 hover:text-blue-600 transition-colors py-1"
+                                           target="_blank">
+                                            <i class="fas fa-play-circle mr-3 text-blue-500 group-hover:text-blue-600"></i>
+                                            <span class="group-hover:underline">{{ .title }}</span>
+                                        </a>
+                                        {{ end }}
+                                    </div>
+                                </div>
                                 {{ end }}
                             {{ end }}
+
+                            <!-- Skills -->
+                            <div class="border-t border-gray-100 pt-6 mt-6">
+                                <div class="flex flex-wrap gap-2">
+                                    {{ range .skills }}
+                                    <span class="inline-flex items-center px-3.5 py-1.5 rounded-full text-sm 
+                                               bg-gradient-to-r from-gray-50 to-gray-100
+                                               text-gray-700 hover:from-gray-100 hover:to-gray-200 
+                                               transition-colors duration-200">
+                                        <i class="fas {{ .icon }} mr-2 text-gray-500"></i>
+                                        {{ .description }}
+                                    </span>
+                                    {{ end }}
+                                </div>
+                            </div>
                         </div>
                     </div>
+                </article>
                 {{ end }}
-            </div>
-        {{ end }}
-    {{ end }}
+            {{ end }}
+        </div>
+    </main>
 </div>
+
+<style>
+.category-btn {
+    @apply px-4 py-2 rounded-lg text-gray-600 font-medium transition-all duration-200;
+    @apply hover:bg-gray-100 hover:text-gray-900;
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+}
+
+.category-btn.active {
+    @apply bg-blue-600 text-white hover:bg-blue-700 hover:text-white;
+}
+
+.project-card {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.prose a {
+    @apply text-blue-600 hover:text-blue-800 transition-colors no-underline;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const filterButtons = document.querySelectorAll('.category-btn');
+    const projects = document.querySelectorAll('.project-card');
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Update active button
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Filter projects with animation
+            const filter = button.dataset.filter;
+            projects.forEach(project => {
+                project.style.animation = 'none';
+                project.offsetHeight; // Trigger reflow
+                
+                if (filter === 'all' || project.dataset.category === filter) {
+                    project.style.display = '';
+                    project.style.animation = 'fadeInUp 0.5s ease forwards';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+</script>
 {{ end }}
