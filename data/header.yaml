@@ -2,8 +2,6 @@
 navbar:
   - name: "Home"
     link: "/"
-  - name: "Education"
-    link: "/education/"
   - name: "Projects"
     link: "/projects"
   - name: "CV"
