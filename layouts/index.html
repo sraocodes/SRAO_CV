@@ -1,4 +1,6 @@
 {{ define "main" }}
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
+
 <div class="container py-5">
     <!-- Main Profile Card -->
     <div class="card mb-5 border-0 shadow-sm">
@@ -7,8 +9,8 @@
             <div class="col-md-4 bg-light text-center">
                 <div class="p-4" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
                     <img src="{{ .Params.image | relURL }}" alt="Profile Image" class="rounded-circle shadow-sm mb-3" style="width: 200px; height: 200px; object-fit: cover;">
-                    <h1 class="h2 mb-2">{{ .Params.title }}</h1>
-                    <h4 class="h5 text-muted mb-3">{{ .Params.subtitle }}</h4>
+                    <h1 class="name-title mb-2">{{ .Params.title }}</h1>
+                    <h4 class="subtitle mb-3">{{ .Params.subtitle }}</h4>
                 </div>
             </div>
             
@@ -16,8 +18,9 @@
             <div class="col-md-8">
                 <div class="card-body">
                     <div class="intro-text mb-4">
-                        {{ range split .Params.intro_text "  " }}
-                            <p>{{ . }}</p>
+                        {{ $paragraphs := split .Params.intro_text "\n\n" }}
+                        {{ range $paragraphs }}
+                            <p class="mb-4">{{ . }}</p>
                         {{ end }}
                     </div>
                     
@@ -32,7 +35,7 @@
                                     {{ else }}
                                     <img src="{{ .icon | relURL }}" alt="{{ .title }}" class="social-icon" style="width: {{ .iconW }}; height: {{ .iconH }};">
                                     {{ end }}
-                                    <div class="small text-muted mt-2">{{ .title }}</div>
+                                    <div class="link-title mt-2">{{ .title }}</div>
                                 </div>
                             </a>
                         </div>
@@ -45,6 +48,41 @@
 </div>
 
 <style>
+/* Typography */
+.name-title {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 2rem;
+    color: #2c3e50;
+}
+
+.subtitle {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    color: #576574;
+}
+
+.intro-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+}
+
+.intro-text p {
+    margin-bottom: 1.2rem;
+}
+
+.link-title {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #576574;
+    transition: color 0.3s ease;
+}
+
 /* Link and Card Styling */
 .social-link {
     text-decoration: none !important;
@@ -59,8 +97,8 @@
     transform: translateY(-2px);
 }
 
-.social-link:hover .text-muted {
-    color: #007bff !important;
+.social-link:hover .link-title {
+    color: #007bff;
 }
 
 .social-icon {
@@ -82,14 +120,6 @@
 
 .social-link:hover .emoji-container {
     transform: scale(1.1);
-}
-
-.intro-text {
-    line-height: 1.8;
-}
-
-.intro-text p {
-    margin-bottom: 1.2rem;
 }
 
 .card {
