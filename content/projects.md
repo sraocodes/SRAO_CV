@@ -114,20 +114,29 @@ sections:
             Creating educational content on computational science and agricultural modeling.
         videos:
           daa_channel:
-            - title: "Introduction to AgroC Crop Modeling"
-              id: "videoID1"
-            - title: "Using CPlantBox for Root Architecture"
-              id: "videoID2"
+            - title: "Running CPlantBox with Docker"
+              id: "UN6D1_cXeT8"
+            - title: "AgroC Crop Model:Installation Guide"
+              id: "1E9nW_TAp0c"
           compute_channel:
-            - title: "Scientific Computing with Python"
-              id: "videoID3"
-            - title: "HPC Tutorial Series"
-              id: "videoID4"
+            - title: "Canonical Correspondence Analysis"
+              id: "AmmajDBSLFM&t=92s"
+            - title: "Potential Natural Vegetation"
+              id: "k0-Fa0LtOFs&t=57s"
+            - title: "Statistical Arbritage in Trading"
+              id: "ZkhP0Vdlkok&t=37s"
+            - title: "Soil Moisture"
+              id: "9GOKTmn8tO0&t=324s"
+            - title: "Algo Trading Pipeline"
+              id: "kMeOeY1kvLw"
         skills:
           - type: "font"
             icon: "fa-video"
             description: "Video Production"
           - type: "font"
-            icon: "fa-youtube"
+            icon: "fa-video"
             description: "YouTube"
+          - type: "font"
+            icon: "fa-video"
+            description: "Final Cut Pro"
 ---

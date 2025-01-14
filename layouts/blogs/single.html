@@ -1,0 +1,28 @@
+{{ define "main" }}
+<div class="container py-5">
+    <article class="row justify-content-center">
+        <div class="col-lg-8">
+            <header class="text-center mb-5">
+                <h1 class="display-4">{{ .Title }}</h1>
+                <p class="text-muted">{{ .Date.Format "January 2, 2006" }}</p>
+            </header>
+
+            <div class="content">
+                {{ .Content }}
+            </div>
+
+            <div class="text-center mt-5">
+                <!-- Fixed the back button URL to include base URL -->
+                <a href="{{ .Site.BaseURL }}blogs" class="btn btn-primary">&larr; Back to Blog</a>
+            </div>
+        </div>
+    </article>
+</div>
+
+<style>
+    .content {
+        font-size: 1.1rem;
+        line-height: 1.8;
+    }
+</style>
+{{ end }}

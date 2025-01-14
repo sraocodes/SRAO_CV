@@ -6,3 +6,5 @@ navbar:
     link: "/projects"
   - name: "CV"
     link: "/cv"
+  - name: "Blogs"
+    link: "/blogs"

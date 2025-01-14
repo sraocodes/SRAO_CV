@@ -25,10 +25,11 @@
 
     <!-- Centered Projects Grid with elegant cards -->
     <main class="container mx-auto px-4 py-16 max-w-4xl">
-        <div class="space-y-10">
+        <div class="space-y-0">
             {{ range .Params.sections }}
                 {{ range .items }}
-                <article class="project-card" data-category="{{ .category | urlize }}">
+                <!-- Update article margin/padding -->
+                <article class="project-card mb-4" data-category="{{ .category | urlize }}">
                     <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300">
                         <div class="p-8">
                             <!-- Project Header -->

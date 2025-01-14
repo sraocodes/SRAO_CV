@@ -1,0 +1,82 @@
+{{ define "main" }}
+<div class="container py-5">
+    <header class="text-center mb-5">
+        <!-- Use the title from blogs.md -->
+        <h1 class="display-4 mb-3" style="font-family: 'Playfair Display', serif;">{{ .Title }}</h1>
+        <div class="w-50 mx-auto">
+            <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Search posts...">
+        </div>
+    </header>
+
+    <div class="row g-4" id="blogPosts">
+        {{ range (where .Site.RegularPages "Section" "blogs") }}
+        <div class="col-md-6 blog-card" data-title="{{ .Title | lower }}">
+            <!-- Adding href to make entire card clickable -->
+            <a href="{{ .RelPermalink }}" class="text-decoration-none text-dark">
+                <div class="card h-100 border-0 shadow-sm blog-hover">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between mb-3">
+                            <span class="badge bg-light text-dark">
+                                {{ .Date.Format "January 2, 2006" }}
+                            </span>
+                        </div>
+                        <h2 class="card-title h4 mb-3" style="font-family: 'Playfair Display', serif;">{{ .Title }}</h2>
+                        <div class="card-text blog-content">
+                            {{ .Content }}
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+        {{ end }}
+    </div>
+</div>
+
+<style>
+    .blog-hover {
+        transition: all 0.3s ease;
+    }
+    
+    .blog-hover:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+    }
+    
+    .blog-content {
+        max-height: 200px;
+        overflow: hidden;
+        position: relative;
+    }
+    
+    .blog-content::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        background: linear-gradient(transparent, white);
+    }
+    
+    .badge {
+        font-weight: normal;
+        padding: 0.5rem 1rem;
+    }
+</style>
+
+<script>
+document.getElementById('searchInput').addEventListener('input', function(e) {
+    const searchTerm = e.target.value.toLowerCase();
+    const cards = document.getElementsByClassName('blog-card');
+    
+    Array.from(cards).forEach(card => {
+        const title = card.dataset.title;
+        if (title.includes(searchTerm)) {
+            card.style.display = '';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+});
+</script>
+{{ end }}
