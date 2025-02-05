@@ -1,4 +1,4 @@
-name: Deploy Hugo site to Pages
+name: Deploy Hugo Site to GitHub Pages
 
 on:
   push:
@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 jobs:
@@ -21,45 +21,44 @@ jobs:
     env:
       HUGO_VERSION: 0.115.1
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          submodules: recursive
-          fetch-depth: 0
+      - name: Checkout Repository
+        uses: actions/checkout@v4
 
-      - name: Configure Pages
+      - name: Set Up Pages
         id: pages
         uses: actions/configure-pages@v5
 
-      - name: Install Hugo CLI
+      - name: Install Hugo
         run: |
           wget -O ${{ runner.temp }}/hugo.deb \
             https://github.com/gohugoio/hugo/releases/download/v${{ env.HUGO_VERSION }}/hugo_extended_${{ env.HUGO_VERSION }}_linux-amd64.deb
           sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
-      - name: Install Dart Sass
-        run: sudo snap install dart-sass
-
-      - name: Install Node.js dependencies
-        run: |
-          if [[ -f package-lock.json || -f npm-shrinkwrap.json ]]; then npm ci; fi
-
-      - name: Build with Hugo
+      - name: Build Site
         env:
           HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
-        run: |
-          hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
+        run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Package Site
+        run: |
+          tar -czf site.tar.gz -C public .
+
+      - name: Upload Artifact
+        uses: actions/upload-artifact@v4
         with:
-          path: ./public
+          name: github-pages
+          path: site.tar.gz
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
+      - name: Download Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: github-pages
+
       - name: Deploy to GitHub Pages
-        id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          path: github-pages/site.tar.gz
