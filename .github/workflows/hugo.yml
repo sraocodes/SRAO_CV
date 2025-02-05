@@ -5,21 +5,10 @@ on:
     branches: ["main"]
   workflow_dispatch:
 
-# Enhanced permissions block
 permissions:
   contents: read
   pages: write
   id-token: write
-  packages: read
-  pull-requests: write
-
-env:
-  ACTIONS_RUNNER_DEBUG: true
-  ACTIONS_STEP_DEBUG: true
-
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
 
 jobs:
   build:
@@ -27,53 +16,49 @@ jobs:
     env:
       HUGO_VERSION: 0.121.0
     steps:
-      - name: Install Hugo CLI
-        run: |
-          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
-          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
-          hugo version
-
-      - name: Checkout
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
         with:
           submodules: recursive
-          token: ${{ secrets.GITHUB_TOKEN }}
+      
+      - name: Setup Hugo
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Setup Pages
-        id: pages
         uses: actions/configure-pages@v4
 
-      - name: List files before build
-        run: ls -la
+      - name: Build
+        run: hugo --minify
 
-      - name: Build with Hugo
-        env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
+      - name: Prepare artifact
         run: |
-          hugo \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
-
-      - name: List files after build
-        run: ls -la public/
+          tar -czf artifact.tar.gz public/
+          mkdir dist
+          mv artifact.tar.gz dist/
 
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
           name: github-pages
-          path: ./public
-          retention-days: 90
+          path: dist/artifact.tar.gz
 
   deploy:
+    needs: build
+    runs-on: ubuntu-latest
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
     steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+      - name: Download artifact
+        uses: actions/download-artifact@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          name: github-pages
+
+      - name: Extract artifact
+        run: |
+          tar xf artifact.tar.gz
+          rm artifact.tar.gz
+
+      - name: Deploy
+        uses: actions/deploy-pages@v4
