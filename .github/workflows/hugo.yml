@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.115.1
@@ -35,7 +35,7 @@ jobs:
           HUGO_ENVIRONMENT: production
         run: hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name: Remove Unsupported Files
+      - name: Ensure Directory Is Clean
         run: |
           find public/ -type l -exec rm -f {} \;
 
@@ -44,15 +44,6 @@ jobs:
         with:
           name: github-pages
           path: public/
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    steps:
-      - name: Download Artifact
-        uses: actions/download-artifact@v4
-        with:
-          name: github-pages
 
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
