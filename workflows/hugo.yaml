@@ -50,20 +50,23 @@ jobs:
         run: |
           hugo --gc --minify --baseURL "${{ steps.pages.outputs.base_url }}/"
 
-      - name: Upload artifact
+      - name: Upload public folder as artifact
         uses: actions/upload-artifact@v4
         with:
           name: public
           path: ./public
+          overwrite: true
+          include-hidden-files: true
 
   deploy:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifact
+      - name: Download public folder artifact
         uses: actions/download-artifact@v4
         with:
           name: public
+          path: ./public
 
       - name: Deploy to GitHub Pages
         id: deployment
