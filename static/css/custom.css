@@ -12,4 +12,28 @@
     text-decoration: underline; /* Underline on hover */
 }
 
+/* Custom styling for Funded Projects */
+.fproject-card {
+    border-radius: 12px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border-left: 4px solid #007bff;
+}
 
+.fproject-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.2)!important;
+}
+
+.fproject-card h3 {
+    font-weight: bold;
+    color: #0056b3;
+}
+
+.fproject-card ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.fproject-card ul li {
+    margin-bottom: 5px;
+}

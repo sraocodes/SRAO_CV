@@ -9,11 +9,11 @@
     <lastBuildDate>Tue, 04 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/SRAO_CV/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>The Two Minds Future: Reflections on AI Progress and Digital Twins</title>
+      <title>2125: The Two Minds Future</title>
       <link>http://localhost:1313/SRAO_CV/blogs/2/</link>
       <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/SRAO_CV/blogs/2/</guid>
-      <description>&lt;h3 id=&#34;the-two-minds-future&#34;&gt;The Two Minds Future&lt;/h3&gt;&#xA;&lt;p&gt;As AI becomes increasingly intelligent, I often find myself fast-forwarding to imagine where this trajectory would leads us. We see CEOs and Gen Z bigballs putting in 120-140 hours per week, pushing the boundaries of what&amp;rsquo;s achievable. In my own work on digital twins for agricultural fields, I&amp;rsquo;ve noticed how the pace of progress is tied to our human limitations. In a typical academic setting from a postdoc perspective, certain developments such as a digital twin of a agri field might take more than a year – not because they&amp;rsquo;re technically impossible, but because we have lives apart from work, families, children, hobbies, and other aspects that make us one of the living organism on earth made by nature or grand universal order.&lt;/p&gt;</description>
+      <description>&lt;h3 id=&#34;2125-the-two-minds-future&#34;&gt;2125: The Two Minds Future&lt;/h3&gt;&#xA;&lt;p&gt;As AI becomes increasingly intelligent, I sometimes fast forward to imagine where this interesting trajectory can lead us. I often see these CEOs and Gen Z&#xA;entrepreneurs putting in like 120-140 hours per week or at least advocating it for their employees (I&amp;rsquo;m not certain if it is possible to work 140 hrs a week and stay mentally&#xA;healthy). In a academic environment, a typical work such as for example creating a digital twin for an agricultural test field can take well over two years with collaborations and other administrative tasks, because our work is&#xA;often tied to our human limitations. For example, building something like a digital twin of an agri field might take more than two years – not because it&amp;rsquo;s technically impossible,&#xA;but because we actually have lives outside work and most are still employees! Employees have got families, kids, hobbies, and all these other things that make us living&#xA;organisms on this earth shaped by nature or the grand universal order.&lt;/p&gt;</description>
     </item>
     <item>
       <title>My Academic Journey until 2020</title>
@@ -28,6 +28,13 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/SRAO_CV/cv/</guid>
       <description>Scientific Programmer &amp;amp; Software Developer | Kaggle Master (Top 2%) | Expertise in Computational Simulations, Data Analytics, &amp;amp; Agricultural Modeling</description>
+    </item>
+    <item>
+      <title>Funded Research Projects</title>
+      <link>http://localhost:1313/SRAO_CV/fprojects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/SRAO_CV/fprojects/</guid>
+      <description></description>
     </item>
     <item>
       <title>Research &amp; Engineering Projects</title>

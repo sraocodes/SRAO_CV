@@ -3,7 +3,11 @@ navbar:
   - name: "Home"
     link: "/"
   - name: "Projects"
-    link: "/projects"
+    dropdown:
+      - name: "Funded Projects"
+        link: "/fprojects"
+      - name: "Technical Projects"
+        link: "/projects"
   - name: "CV"
     link: "/cv"
   - name: "Blogs"

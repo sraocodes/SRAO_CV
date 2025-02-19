@@ -1,0 +1,38 @@
+{{ define "main" }}
+<div class="container py-5">
+    <header class="text-center mb-5">
+        <h1 class="display-4">{{ .Title }}</h1>
+        <p class="text-muted">{{ .Params.subtitle }}</p>
+    </header>
+
+    <!-- Project List -->
+    <div class="row">
+        {{ range .Params.projects }}
+        <div class="col-md-6 mb-4">
+            <div class="card shadow-lg fproject-card">
+                <div class="card-body">
+                    <h3 class="h5 text-primary">{{ .title }}</h3>
+                    <p class="small text-muted">
+                        <strong>Principal Investigator:</strong> {{ .investigator.principal }}<br>
+                        <strong>Co-Principal Investigator:</strong> {{ .investigator.co_principal }}<br>
+                        <strong>Funding Agency:</strong> {{ .funding.agency }}<br>
+                        <strong>Funding Amount:</strong> {{ .funding.amount }}
+                    </p>
+                    <p>{{ .description | markdownify }}</p>
+                    
+                    <!-- Publications -->
+                    {{ if .publications }}
+                    <h6 class="mt-3">Publications:</h6>
+                    <ul>
+                        {{ range .publications }}
+                        <li><a href="{{ .link }}" class="text-primary" target="_blank">{{ .title }} - <em>{{ .journal }}</em></a></li>
+                        {{ end }}
+                    </ul>
+                    {{ end }}
+                </div>
+            </div>
+        </div>
+        {{ end }}
+    </div>
+</div>
+{{ end }}

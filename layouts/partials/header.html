@@ -6,7 +6,20 @@
     <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
         <div class="navbar-nav">
             {{ range .Site.Data.header.navbar }}
-                <a class="nav-item nav-link btn btn-primary mx-1" href="{{ printf "%s%s" $.Site.BaseURL .link }}" style="font-size: 1.2em;">{{ .name }}</a>
+                {{ if .dropdown }}
+                    <div class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle btn btn-primary mx-1" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="font-size: 1.2em;">
+                            {{ .name }}
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            {{ range .dropdown }}
+                                <a class="dropdown-item" href="{{ printf "%s%s" $.Site.BaseURL .link }}">{{ .name }}</a>
+                            {{ end }}
+                        </div>
+                    </div>
+                {{ else }}
+                    <a class="nav-item nav-link btn btn-primary mx-1" href="{{ printf "%s%s" $.Site.BaseURL .link }}" style="font-size: 1.2em;">{{ .name }}</a>
+                {{ end }}
             {{ end }}
         </div>
     </div>
