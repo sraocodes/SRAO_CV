@@ -47,69 +47,131 @@
     </div>
 </div>
 
-<style>
-/* Typography */
-.name-title {
-    font-family: 'Lora', serif;
-    font-weight: 600;
-    font-size: 2rem;
-    color: #2c3e50;
-}
+<!-- Map Section with Details Window -->
+<div class="container py-5">
+    <h2 class="mb-4">Places I've Lived & Worked</h2>
+    <div id="map" style="height: 500px;"></div>
+    <!-- Dedicated message window for marker details -->
+    <div id="markerDetails" class="mt-4 p-3 border rounded" style="background-color: #f8f9fa;">
+      <p>Click on a marker to see details here.</p>
+    </div>
+</div>
 
-.subtitle {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1.1rem;
-    color: #576574;
-}
+<!-- Leaflet Map Initialization Script -->
+<script>
+    // Initialize the map with fixed interactions (no zooming or scrolling)
+    var map = L.map('map', {
+      center: [20, 0],
+      zoom: 2,
+      zoomControl: false,
+      dragging: false,
+      scrollWheelZoom: false,
+      doubleClickZoom: false,
+      boxZoom: false,
+      keyboard: false,
+      tap: false
+    });
+  
+    // Load OpenStreetMap tiles
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+  
+    // Define custom marker icons with an additional CSS class for interactivity
+    var blueIcon = L.divIcon({
+      html: '<div class="custom-marker" style="background-color: blue; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white;"></div>',
+      className: ''
+    });
+    var pinkIcon = L.divIcon({
+      html: '<div class="custom-marker" style="background-color: pink; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white;"></div>',
+      className: ''
+    });
+  
+    // Function to update the dedicated details window
+    function onMarkerClick(detailsHtml) {
+      document.getElementById('markerDetails').innerHTML = detailsHtml;
+    }
+  
+    // Loop through markers defined in the markdown front matter
+    {{ range .Params.markers }}
+      (function() {
+        var markerIcon = {{ if eq .type "transit" }}pinkIcon{{ else }}blueIcon{{ end }};
+        var marker = L.marker([{{ .lat }}, {{ .lng }}], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          // Build the HTML for the marker details (customize as needed)
+          var detailsHtml = "<h4>{{ .title }}</h4><p>{{ .details }}</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    {{ end }}
+  </script>
+  
+  <style>
+  /* Styling for interactive custom markers */
+  .custom-marker {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+  }
+  .custom-marker:hover {
+      transform: scale(1.1);
+  }
+  
+  /* Existing typography and card styles */
+  .name-title {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 2rem;
+      color: #2c3e50;
+  }
+  
+  .subtitle {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #576574;
+  }
+  
+  .intro-text {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #2c3e50;
+  }
+  
+  .intro-text p {
+      margin-bottom: 1.2rem;
+  }
+  
+  .link-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #576574;
+      transition: color 0.3s ease;
+  }
 
-.intro-text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #2c3e50;
-}
-
-.intro-text p {
-    margin-bottom: 1.2rem;
-}
-
-.link-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #576574;
-    transition: color 0.3s ease;
-}
-
-/* Link and Card Styling */
+/* Social links and card hover effects */
 .social-link {
     text-decoration: none !important;
 }
-
 .link-card {
     transition: all 0.3s ease;
 }
-
 .social-link:hover .link-card {
     background-color: rgba(0, 123, 255, 0.1);
     transform: translateY(-2px);
 }
-
 .social-link:hover .link-title {
     color: #007bff;
 }
-
 .social-icon {
     transition: all 0.3s ease;
 }
-
 .social-link:hover .social-icon {
     filter: brightness(1.2) saturate(1.2);
     transform: scale(1.05);
 }
-
 .emoji-container {
     display: flex;
     justify-content: center;
@@ -117,13 +179,19 @@
     min-height: 60px;
     transition: transform 0.3s ease;
 }
-
 .social-link:hover .emoji-container {
     transform: scale(1.1);
 }
 
 .card {
     border-radius: .5rem;
+}
+
+/* Styling for the dedicated marker details window */
+#markerDetails {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #2c3e50;
 }
 </style>
 {{ end }}

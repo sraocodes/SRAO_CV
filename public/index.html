@@ -10,10 +10,11 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
+<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 
 
 <body>
@@ -196,69 +197,221 @@
     </div>
 </div>
 
-<style>
- 
-.name-title {
-    font-family: 'Lora', serif;
-    font-weight: 600;
-    font-size: 2rem;
-    color: #2c3e50;
-}
 
-.subtitle {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1.1rem;
-    color: #576574;
-}
+<div class="container py-5">
+    <h2 class="mb-4">Places I've Lived & Worked</h2>
+    <div id="map" style="height: 500px;"></div>
+    
+    <div id="markerDetails" class="mt-4 p-3 border rounded" style="background-color: #f8f9fa;">
+      <p>Click on a marker to see details here.</p>
+    </div>
+</div>
 
-.intro-text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #2c3e50;
-}
 
-.intro-text p {
-    margin-bottom: 1.2rem;
-}
-
-.link-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.9rem;
-    font-weight: 400;
-    color: #576574;
-    transition: color 0.3s ease;
-}
+<script>
+    
+    var map = L.map('map', {
+      center: [20, 0],
+      zoom: 2,
+      zoomControl: false,
+      dragging: false,
+      scrollWheelZoom: false,
+      doubleClickZoom: false,
+      boxZoom: false,
+      keyboard: false,
+      tap: false
+    });
+  
+    
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+  
+    
+    var blueIcon = L.divIcon({
+      html: '<div class="custom-marker" style="background-color: blue; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white;"></div>',
+      className: ''
+    });
+    var pinkIcon = L.divIcon({
+      html: '<div class="custom-marker" style="background-color: pink; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white;"></div>',
+      className: ''
+    });
+  
+    
+    function onMarkerClick(detailsHtml) {
+      document.getElementById('markerDetails').innerHTML = detailsHtml;
+    }
+  
+    
+    
+      (function() {
+        var markerIcon = blueIcon;
+        var marker = L.marker([ 12.9716 ,  77.5946 ], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          
+          var detailsHtml = "<h4>Bengaluru, India</h4><p>Birth until 2010 and 2020 to 2023 in Bengaluru, Karnataka.</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    
+      (function() {
+        var markerIcon = blueIcon;
+        var marker = L.marker([ 32.806671 ,  -86.79113 ], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          
+          var detailsHtml = "<h4>Alabama, USA</h4><p>Lived in Alabama from 2010-2014.</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    
+      (function() {
+        var markerIcon = blueIcon;
+        var marker = L.marker([ 51.165691 ,  10.451526 ], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          
+          var detailsHtml = "<h4>Germany</h4><p>Worked in Germany from 2015-2016 \u0026 2023 to 2025.</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    
+      (function() {
+        var markerIcon = blueIcon;
+        var marker = L.marker([ 50.503887 ,  4.469936 ], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          
+          var detailsHtml = "<h4>Belgium</h4><p>Worked in Belgium from 2016-2020.</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    
+      (function() {
+        var markerIcon = blueIcon;
+        var marker = L.marker([ 47.516231 ,  14.550072 ], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          
+          var detailsHtml = "<h4>Austria</h4><p>Visited as a student in 2018.</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    
+      (function() {
+        var markerIcon = pinkIcon;
+        var marker = L.marker([ 41.87194 ,  12.56738 ], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          
+          var detailsHtml = "<h4>Italy</h4><p>Visited Italy on a Vacation.</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    
+      (function() {
+        var markerIcon = pinkIcon;
+        var marker = L.marker([ 46.603354 ,  1.888334 ], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          
+          var detailsHtml = "<h4>France</h4><p>Visited France on a Vacation.</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    
+      (function() {
+        var markerIcon = pinkIcon;
+        var marker = L.marker([ 38.963745 ,  35.243322 ], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          
+          var detailsHtml = "<h4>Turkey</h4><p>Visited Turkey for an interview in 2015.</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    
+      (function() {
+        var markerIcon = pinkIcon;
+        var marker = L.marker([ 23.424076 ,  53.847818 ], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          
+          var detailsHtml = "<h4>United Arab Emirates</h4><p>Transit stop at Airport.</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    
+      (function() {
+        var markerIcon = pinkIcon;
+        var marker = L.marker([ 25.354826 ,  51.183884 ], { icon: markerIcon }).addTo(map);
+        marker.on('click', function() {
+          
+          var detailsHtml = "<h4>Qatar</h4><p>Transit stop at Airport.</p>";
+          onMarkerClick(detailsHtml);
+        });
+      })();
+    
+  </script>
+  
+  <style>
+   
+  .custom-marker {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+  }
+  .custom-marker:hover {
+      transform: scale(1.1);
+  }
+  
+   
+  .name-title {
+      font-family: 'Lora', serif;
+      font-weight: 600;
+      font-size: 2rem;
+      color: #2c3e50;
+  }
+  
+  .subtitle {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #576574;
+  }
+  
+  .intro-text {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 300;
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #2c3e50;
+  }
+  
+  .intro-text p {
+      margin-bottom: 1.2rem;
+  }
+  
+  .link-title {
+      font-family: 'Roboto', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 400;
+      color: #576574;
+      transition: color 0.3s ease;
+  }
 
  
 .social-link {
     text-decoration: none !important;
 }
-
 .link-card {
     transition: all 0.3s ease;
 }
-
 .social-link:hover .link-card {
     background-color: rgba(0, 123, 255, 0.1);
     transform: translateY(-2px);
 }
-
 .social-link:hover .link-title {
     color: #007bff;
 }
-
 .social-icon {
     transition: all 0.3s ease;
 }
-
 .social-link:hover .social-icon {
     filter: brightness(1.2) saturate(1.2);
     transform: scale(1.05);
 }
-
 .emoji-container {
     display: flex;
     justify-content: center;
@@ -266,13 +419,19 @@
     min-height: 60px;
     transition: transform 0.3s ease;
 }
-
 .social-link:hover .emoji-container {
     transform: scale(1.1);
 }
 
 .card {
     border-radius: .5rem;
+}
+
+ 
+#markerDetails {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    color: #2c3e50;
 }
 </style>
 
@@ -282,6 +441,11 @@
         <p class="text-center">
             &copy; 2025 Sathyanarayan Rao. All rights reserved. Powered by coffee ☕.
             <br>Website styled with <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a>.
+        </p>
+        <p class="text-center">
+            <a href="https://info.flagcounter.com/wmwB">
+                <img src="https://s01.flagcounter.com/count2/wmwB/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
+            </a>
         </p>
     </div>
 </footer>
