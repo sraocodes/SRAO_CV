@@ -11,6 +11,11 @@
     <loc>http://localhost:1313/SRAO_CV/blogs/1/</loc>
     <lastmod>2025-01-14T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://localhost:1313/SRAO_CV/photodiary/</loc>
+    <lastmod>2023-09-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/SRAO_CV/blogs/</loc>
+  </url><url>
     <loc>http://localhost:1313/SRAO_CV/categories/</loc>
   </url><url>
     <loc>http://localhost:1313/SRAO_CV/cv/</loc>
@@ -18,8 +23,6 @@
     <loc>http://localhost:1313/SRAO_CV/fprojects/</loc>
   </url><url>
     <loc>http://localhost:1313/SRAO_CV/projects/</loc>
-  </url><url>
-    <loc>http://localhost:1313/SRAO_CV/blogs/</loc>
   </url><url>
     <loc>http://localhost:1313/SRAO_CV/tags/</loc>
   </url>

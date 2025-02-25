@@ -1,4 +1,4 @@
 ---
-title: "Research Blog"
+title: "Blog from my Nueral Activity"
 layout: "blogs"
 ---

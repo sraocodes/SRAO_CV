@@ -1,0 +1,55 @@
+{{ define "main" }}
+<div class="container my-5">
+  <h1 class="mb-4">{{ .Title }}</h1>
+  <div class="row">
+    {{ range .Params.photos }}
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow-sm">
+          <!-- Wrap the image in a link that triggers the modal -->
+          <a href="#" class="photo-preview" data-image="{{ .file | relURL }}" data-caption="{{ .caption }}">
+            <img src="{{ .file | relURL }}" class="card-img-top" alt="{{ .caption }}" style="max-height:200px; object-fit:cover;">
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{{ .caption }}</h5>
+            <p class="card-text">{{ .details }}</p>
+          </div>
+          <div class="card-footer">
+            <small class="text-muted">Taken on: {{ .taken }}</small>
+          </div>
+        </div>
+      </div>
+    {{ end }}
+  </div>
+</div>
+
+<!-- Bootstrap Modal for Full Image Display -->
+<div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-body p-0">
+        <img src="" id="modalImage" class="img-fluid" alt="">
+      </div>
+      <div class="modal-footer">
+        <h5 id="modalCaption" class="modal-title"></h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery to bind click event for modal -->
+<script>
+$(document).ready(function(){
+  $('.photo-preview').on('click', function(e){
+    e.preventDefault();
+    var imgSrc = $(this).data('image');
+    var caption = $(this).data('caption');
+    $('#modalImage').attr('src', imgSrc);
+    $('#modalCaption').text(caption);
+    $('#photoModal').modal('show');
+  });
+});
+</script>
+{{ end }}

@@ -1,0 +1,18 @@
+---
+title: "Some of my Best Photography"
+date: "2023-09-22"
+layout: "photodiary"
+photos:
+  - file: "images/photos/photo1.jpg"
+    caption: "Bird view of Cologne City"
+    taken: "1/9/2024 2:17 PM"
+    details: "I captured this on a nice afternoon in Cologne city from a cable car."
+  - file: "images/photos/photo2.jpg"
+    caption: "Male Lion at Cologne Zoo"
+    taken: "29/9/2024 4:17PM"
+    details: "I captured this Lion photo at Cologne Zoo"
+  - file: "images/photos/photo3.jpg"
+    caption: "Little Diesel Locomotive"
+    taken: "7/9/2024 11:25AM"
+    details: "Thomas the tank at Duren, Germany"
+---

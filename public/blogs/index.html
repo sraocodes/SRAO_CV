@@ -4,7 +4,7 @@
 
 <script src="/SRAO_CV/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=SRAO_CV/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Research Blog</title>
+<title>Blog from my Nueral Activity</title>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
@@ -64,11 +64,21 @@
               
           
               
-                  <li class="nav-item">
-                      <a class="nav-link btn btn-primary mx-1" 
-                         href="http://localhost:1313/SRAO_CV//blogs" style="font-size: 1.2em;">
-                         Blogs
+                  <li class="nav-item dropdown">
+                      <a class="nav-link dropdown-toggle btn btn-primary mx-1" href="#" 
+                         id="navbarDropdown_Personal" role="button" data-toggle="dropdown" 
+                         aria-haspopup="true" aria-expanded="false" style="font-size: 1.2em;">
+                          Personal
                       </a>
+                      <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown_Personal">
+                          
+                              <a class="dropdown-item" href="http://localhost:1313/SRAO_CV//blogs">Blog</a>
+                          
+                              <a class="dropdown-item" href="http://localhost:1313/SRAO_CV//photodiary">Photography</a>
+                          
+                              <a class="dropdown-item" href="http://localhost:1313/SRAO_CV//videos">Hobby Videos</a>
+                          
+                      </div>
                   </li>
               
           
@@ -92,7 +102,7 @@ $(document).ready(function () {
 <div class="container py-5">
     <header class="text-center mb-5">
         
-        <h1 class="display-4 mb-3" style="font-family: 'Playfair Display', serif;">Research Blog</h1>
+        <h1 class="display-4 mb-3" style="font-family: 'Playfair Display', serif;">Blog from my Nueral Activity</h1>
         <div class="w-50 mx-auto">
             <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Search posts...">
         </div>

@@ -10,5 +10,11 @@ navbar:
         link: "/projects"
   - name: "CV"
     link: "/cv"
-  - name: "Blogs"
-    link: "/blogs"
+  - name: "Personal"
+    dropdown:
+      - name: "Blog"
+        link: "/blogs"
+      - name: "Photography"
+        link: "/photodiary"   
+      - name: "Hobby Videos"
+        link: "/videos"
