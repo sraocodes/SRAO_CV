@@ -59,53 +59,57 @@
 
 <!-- Leaflet Map Initialization Script -->
 <script>
-    // Initialize the map with fixed interactions (no zooming or scrolling)
-    var map = L.map('map', {
-      center: [20, 0],
-      zoom: 2,
-      zoomControl: false,
-      dragging: false,
-      scrollWheelZoom: false,
-      doubleClickZoom: false,
-      boxZoom: false,
-      keyboard: false,
-      tap: false
-    });
-  
-    // Load OpenStreetMap tiles
-    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-    }).addTo(map);
-  
-    // Define custom marker icons with an additional CSS class for interactivity
-    var blueIcon = L.divIcon({
-      html: '<div class="custom-marker" style="background-color: blue; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white;"></div>',
-      className: ''
-    });
-    var pinkIcon = L.divIcon({
-      html: '<div class="custom-marker" style="background-color: pink; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white;"></div>',
-      className: ''
-    });
-  
-    // Function to update the dedicated details window
-    function onMarkerClick(detailsHtml) {
-      document.getElementById('markerDetails').innerHTML = detailsHtml;
-    }
-  
-    // Loop through markers defined in the markdown front matter
-    {{ range .Params.markers }}
-      (function() {
-        var markerIcon = {{ if eq .type "transit" }}pinkIcon{{ else }}blueIcon{{ end }};
-        var marker = L.marker([{{ .lat }}, {{ .lng }}], { icon: markerIcon }).addTo(map);
-        marker.on('click', function() {
-          // Build the HTML for the marker details (customize as needed)
-          var detailsHtml = "<h4>{{ .title }}</h4><p>{{ .details }}</p>";
-          onMarkerClick(detailsHtml);
+    // Use a short timeout to ensure Bootstrap initialization completes first
+    $(document).ready(function() {
+      // Small delay to make sure Bootstrap dropdowns are fully initialized
+      setTimeout(function() {
+        // Initialize the map with fixed interactions
+        var map = L.map('map', {
+          center: [20, 0],
+          zoom: 2,
+          zoomControl: false,
+          dragging: false,
+          scrollWheelZoom: false,
+          doubleClickZoom: false,
+          boxZoom: false,
+          keyboard: false,
+          tap: false
         });
-      })();
-    {{ end }}
+        
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            attribution: '&copy; OpenStreetMap contributors'
+        }).addTo(map);
+        
+        // Define custom marker icons with an additional CSS class for interactivity
+        var blueIcon = L.divIcon({
+          html: '<div class="custom-marker" style="background-color: blue; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white;"></div>',
+          className: ''
+        });
+        var pinkIcon = L.divIcon({
+          html: '<div class="custom-marker" style="background-color: pink; width: 20px; height: 20px; border-radius: 50%; border: 2px solid white;"></div>',
+          className: ''
+        });
+      
+        // Function to update the dedicated details window
+        function onMarkerClick(detailsHtml) {
+          document.getElementById('markerDetails').innerHTML = detailsHtml;
+        }
+      
+        // Loop through markers defined in the markdown front matter
+        {{ range .Params.markers }}
+          (function() {
+            var markerIcon = {{ if eq .type "transit" }}pinkIcon{{ else }}blueIcon{{ end }};
+            var marker = L.marker([{{ .lat }}, {{ .lng }}], { icon: markerIcon }).addTo(map);
+            marker.on('click', function() {
+              // Build the HTML for the marker details
+              var detailsHtml = "<h4>{{ .title }}</h4><p>{{ .details }}</p>";
+              onMarkerClick(detailsHtml);
+            });
+          })();
+        {{ end }}
+      }, 100); // Small delay of 100ms
+    });
   </script>
-  
   <style>
   /* Styling for interactive custom markers */
   .custom-marker {
