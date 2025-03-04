@@ -49,6 +49,40 @@ sections:
             - title: "Algo Trading Pipeline"
               id: "kMeOeY1kvLw"
 
+      - main_text: "Docker Containers for Agricultural Modeling"
+        sub_text: "2024-Present"
+        category: "Scientific Software"
+        description: |
+            **CPlantBox GUI Docker**  
+            - Created a comprehensive Docker image for **CPlantBox plant modeling framework**  
+            - Integrated **VNC viewer** for plot visualization and 3D renderings  
+            - Built with Ubuntu 20.04, Python 3, and scientific packages (NumPy, SciPy, Matplotlib, VTK)  
+            - Included Eigen3 and Boost libraries for high-performance computing  
+            - Simplified deployment with ready-to-use example scripts  
+            - Repository: [satraox/cplantbox-gui](https://hub.docker.com/r/satraox/cplantbox-gui)  
+
+            **DuMuX-ROSI-Jupyter Docker**  
+            - Developed specialized Docker image for **agricultural modeling and simulation**  
+            - Pre-configured **Jupyter environment** for seamless simulations  
+            - Integrated DuMuX for multi-phase flow simulation in porous media  
+            - Incorporated ROSI (Root System Integration) model for plant-soil interactions  
+            - Set up CPlantBox for 3D root architecture modeling  
+            - Repository: [satraox/dumux-rosi-jupyter](https://hub.docker.com/r/satraox/dumux-rosi-jupyter)  
+        videos:
+          daa_channel:
+            - title: "Running CPlantBox with Docker"
+              id: "UN6D1_cXeT8"
+        skills:
+          - type: "font"
+            icon: "fa-docker"
+            description: "Docker"
+          - type: "font"
+            icon: "fa-server"
+            description: "Containerization"
+          - type: "font"
+            icon: "fa-cloud"
+            description: "DevOps"
+
       - main_text: "High-Performance Scientific Computing"
         sub_text: "2010-Present"
         category: "Scientific Software"
@@ -64,9 +98,9 @@ sections:
             - Applied **rotated wave approximation techniques**  
 
             **Root Electrical Modeling (2016-2020)**  
-            - Created **MATLAB software** for plant root imaging  
-            - Automated **field-scale simulations** using Python  
-            - Published in Vadose Zone Journal  
+            - Created **MATLAB codes** for plant root water uptake modeling  
+            - Automated **field-scale simulations of plant dynamics** using Python  
+            - Published in Vadose Zone and Plant Soil Journal  
 
         skills:
           - type: "font"
