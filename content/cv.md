@@ -76,6 +76,15 @@ experience:
       - "Conducted numerical studies on root water uptake"
       - "Collaborated with Prof. Andreas Kemna on geo-electric modeling"
 
+  - role: "Freelancer / Consultant"
+    company: "Self-employed"
+    period: "2020 - 2023"
+    location: "Remote"
+    highlights:
+      - "Developed algorithmic trading strategies for clients, including stock selection and intraday trading automation using Python, with integration to stockbroker APIs like Angel Broking and Zerodha."
+      - "Designed and implemented machine learning architecture for a healthcare application, advising on library selection and developing an MVP using Gradio."
+
+
   - role: "Research Contributor"
     company: "ForDrought Project, UCLouvain & TU Vienna"
     period: "2018 - 2020"
