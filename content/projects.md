@@ -131,6 +131,9 @@ sections:
             - Built specialized **GPTs for agricultural applications**  
             - Developing AI tools for **crop modeling**  
 
+            **Healthcare App Machine Learning Architecture**  
+            - As a freelancer, advised on machine learning library selection and developed an MVP using Gradio for a client's healthcare application.
+
         skills:
           - type: "font"
             icon: "fa-brain"
@@ -141,6 +144,27 @@ sections:
           - type: "font"
             icon: "fa-chart-line"
             description: "Data Analysis"
+
+      - main_text: "Algorithmic Trading Pipeline"
+        sub_text: "2020-2023"
+        category: "Engineering Projects"
+        description: |
+            **Intraday Stock Trading Automation**  
+            - As a freelancer, developed algorithmic trading strategies for clients using Python.  
+            - Implemented websocket to retrieve tick data from stock exchanges.
+            - Implemented trading strategies based on moving averages, integrating with stockbroker APIs like Angel Broking and Zerodha.  
+            - Successfully automated stock selection and trading execution, resulting in enhanced trading performance for a client.
+
+        skills:
+          - type: "font"
+            icon: "fa-chart-line"
+            description: "Algorithm Development"
+          - type: "font"
+            icon: "fa-python"
+            description: "Python"
+          - type: "font"
+            icon: "fa-balance-scale"
+            description: "web socket"
 
       - main_text: "Vehicular Robot Prototype"
         sub_text: "2010"
