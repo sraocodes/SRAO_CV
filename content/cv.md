@@ -52,6 +52,9 @@ experience:
       - "Developing coupling mechanisms across crop modeling tools in Fortran, C++ and Python"
       - "Managed monthly group meetings of the Digital Agricultural Avatar project members"
       - "Contributing to review article on Model Coupling in Agricultural Modeling"
+      - Published a [book chapter](https://link.springer.com/chapter/10.1007/978-3-031-75968-0_19) on the role of LLM's in Agriculture
+      - Developed Specialized [Docker](https://hub.docker.com/r/satraox/dumux-rosi-jupyter) images for agricultural modeling tools.  
+
 
   - role: "Research Associate"
     company: "Indian Institute of Science"
@@ -62,6 +65,7 @@ experience:
       - "Implemented [LSTM](https://www.kaggle.com/code/sathyanarayanrao89/lstm-for-soil-moisture-prediction) networks for missing soil data prediction"
       - "Managed field visits and trained researchers on data collection"
       - "Used GIS libraries for digitizing farm boundaries in Berambadi watershed"
+      - Developing web application for easy water shed data access
 
   - role: "Visiting Researcher"
     company: "University of Bonn"

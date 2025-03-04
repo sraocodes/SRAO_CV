@@ -11,7 +11,7 @@ sections:
         category: "Web Development"
         description: |
             **Project Overview**  
-            Leading the development of the **PhenoRob Digital Agricultural Avatar** project website and crop modeling tools integration.  
+            Worked on the development of the **PhenoRob Digital Agricultural Avatar** project website and crop modeling tools integration.  
             
             **Key Features:**  
             - Interactive documentation for agricultural modeling tools  
@@ -125,6 +125,7 @@ sections:
             **Achievements:**  
             - Kaggle **Master** (Top 2%, Rank 649/322,985)  
             - 10 Silver & 10 Bronze Medals  
+            - Published a [book chapter](https://link.springer.com/chapter/10.1007/978-3-031-75968-0_19) on the role of LLM's in Agriculture
 
             **Custom GPT Development**  
             - Built specialized **GPTs for agricultural applications**  
