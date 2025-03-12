@@ -13,9 +13,14 @@
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 
 <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 
 <body>
@@ -101,135 +106,242 @@ $(document).ready(function () {
     
 <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Lora:wght@400;500;600&display=swap" rel="stylesheet">
 
+
+<div class="hero-section py-5">
+  <div class="container">
+    
+    <div class="profile-container">
+      
+      <div class="profile-image-container" data-aos="fade-right" data-aos-duration="1200">
+        <div class="profile-image-wrapper">
+          <img src="/SRAO_CV/images/sathya.jpg" alt="Profile Image" class="profile-image">
+          <div class="image-backdrop"></div>
+        </div>
+      </div>
+      
+      
+      <div class="profile-content" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="200">
+        <h1 class="profile-name" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+          Dr. Sathyanarayan Rao
+        </h1>
+        <h4 class="profile-role" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
+          Computational Scientist | Researcher | Creator | Explorer of Ideas &amp; Worlds 
+        </h4>
+        
+        <div class="profile-text">
+          
+          
+            <p class="paragraph-animate" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
+              Welcome! I&#39;m Dr. Sathyanarayan Rao, a scientific software developer passionate about bridging computational engineering and Machine Learning/ AI. Through my doctoral research on dynamic root water uptake modeling and subsequent work, I&#39;ve developed expertise in scientific modeling, machine learning, inverse problems and data assimilation techniques.
+            </p>
+          
+            <p class="paragraph-animate" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
+              My journey spans multiple continents and institutions, contributing to my unique perspective on computational approaches in physical sciences. Currently, at Forschungszentrum Jülich, I&#39;m advancing the Digital Agricultural Avatar project, where we&#39;re revolutionizing our understanding of plant-soil interactions through advanced computational modeling.
+            </p>
+          
+            <p class="paragraph-animate" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
+              On this site, you&#39;ll find my research contributions, technical projects, and insights from my research interests. Feel free to explore my online presence through these platforms:
+
+            </p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container py-5">
     
-    <div class="card mb-5 border-0 shadow-sm">
-        <div class="row g-0">
-            
-            <div class="col-md-4 bg-light text-center">
-                <div class="p-4" style="background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);">
-                    <img src="/SRAO_CV/images/sathya.jpg" alt="Profile Image" class="rounded-circle shadow-sm mb-3" style="width: 200px; height: 200px; object-fit: cover;">
-                    <h1 class="name-title mb-2">Dr. Sathyanarayan Rao</h1>
-                    <h4 class="subtitle mb-3">Research Engineer at Phenorob Project, Germany</h4>
+    <div class="row mb-5">
+        
+        <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
+            <div class="card h-100 shadow-sm hover-lift">
+                <div class="card-header bg-gradient-primary text-white">
+                    <h4 class="card-title mb-0"><i class="fas fa-graduation-cap mr-2"></i>Academic</h4>
                 </div>
-            </div>
-            
-            
-            <div class="col-md-8">
                 <div class="card-body">
-                    <div class="intro-text mb-4">
+                    <div class="row g-3">
                         
+                            
                         
-                            <p class="mb-4">Welcome! I&#39;m Dr. Sathyanarayan Rao, a scientific software developer passionate about bridging computational engineering and Machine Learning/ AI. Through my doctoral research on dynamic root water uptake modeling and subsequent work, I&#39;ve developed expertise in scientific modeling, machine learning, inverse problems and data assimilation techniques.</p>
+                            
                         
-                            <p class="mb-4">My journey spans multiple continents and institutions, contributing to my unique perspective on computational approaches in physical sciences. Currently, at Forschungszentrum Jülich, I&#39;m advancing the Digital Agricultural Avatar project, where we&#39;re revolutionizing our understanding of plant-soil interactions through advanced computational modeling.</p>
+                            
                         
-                            <p class="mb-4">On this site, you&#39;ll find my research contributions, technical projects, and insights from my research interests. Feel free to explore my online presence through these platforms:
-</p>
+                            
+                            <div class="col-6 text-center mb-3">
+                                <a href="https://scholar.google.co.uk/citations?user=9yc3jiIAAAAJ&amp;hl=en" target="_blank" class="social-link" title="Google Scholar">
+                                    <div class="link-card p-2 rounded">
+                                        
+                                        <img src="/SRAO_CV/images/googlescholar.png" alt="Google Scholar" class="social-icon" style="width: 50px; height: 50px;">
+                                        
+                                        <div class="link-title mt-2">Google Scholar</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                            <div class="col-6 text-center mb-3">
+                                <a href="https://orcid.org/0000-0002-0071-5167" target="_blank" class="social-link" title="Orcid">
+                                    <div class="link-card p-2 rounded">
+                                        
+                                        <img src="/SRAO_CV/images/orcid.png" alt="Orcid" class="social-icon" style="width: 60px; height: 70px;">
+                                        
+                                        <div class="link-title mt-2">Orcid</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        
+                            
+                            <div class="col-6 text-center mb-3">
+                                <a href="https://dial.uclouvain.be/pr/boreal/object/boreal:239364" target="_blank" class="social-link" title="PhD Thesis">
+                                    <div class="link-card p-2 rounded">
+                                        
+                                        <div class="emoji-container" style="font-size: 3rem;">🎓</div>
+                                        
+                                        <div class="link-title mt-2">PhD Thesis</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        
+                            
+                            <div class="col-6 text-center mb-3">
+                                <a href="https://louis.uah.edu/uah-theses/579/" target="_blank" class="social-link" title="MS Thesis">
+                                    <div class="link-card p-2 rounded">
+                                        
+                                        <div class="emoji-container" style="font-size: 3rem;">🎓</div>
+                                        
+                                        <div class="link-title mt-2">MS Thesis</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
                         
                     </div>
-                    
-                    
-                    <div class="row row-cols-3 row-cols-sm-6 g-3">
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+            <div class="card h-100 shadow-sm hover-lift">
+                <div class="card-header bg-gradient-info text-white">
+                    <h4 class="card-title mb-0"><i class="fas fa-code mr-2"></i>Coding & Technical</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
                         
-                        <div class="col text-center">
-                            <a href="https://www.linkedin.com/in/sathyanarayanrao1/" target="_blank" class="social-link" title="LinkedIn">
-                                <div class="link-card p-2 rounded">
-                                    
-                                    <img src="/SRAO_CV/images/linkedin.png" alt="LinkedIn" class="social-icon" style="width: 80px; height: 80px;">
-                                    
-                                    <div class="link-title mt-2">LinkedIn</div>
-                                </div>
-                            </a>
-                        </div>
+                            
                         
-                        <div class="col text-center">
-                            <a href="https://github.com/sraocodes" target="_blank" class="social-link" title="GitHub">
-                                <div class="link-card p-2 rounded">
-                                    
-                                    <img src="/SRAO_CV/images/github.png" alt="GitHub" class="social-icon" style="width: 60px; height: 60px;">
-                                    
-                                    <div class="link-title mt-2">GitHub</div>
-                                </div>
-                            </a>
-                        </div>
+                            
+                            <div class="col-6 text-center mb-3">
+                                <a href="https://github.com/sraocodes" target="_blank" class="social-link" title="GitHub">
+                                    <div class="link-card p-2 rounded">
+                                        
+                                        <img src="/SRAO_CV/images/github.png" alt="GitHub" class="social-icon" style="width: 60px; height: 60px;">
+                                        
+                                        <div class="link-title mt-2">GitHub</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
                         
-                        <div class="col text-center">
-                            <a href="https://www.kaggle.com/sathyanarayanrao89" target="_blank" class="social-link" title="Kaggle">
-                                <div class="link-card p-2 rounded">
-                                    
-                                    <img src="/SRAO_CV/images/kaggle.png" alt="Kaggle" class="social-icon" style="width: 120px; height: 60px;">
-                                    
-                                    <div class="link-title mt-2">Kaggle</div>
-                                </div>
-                            </a>
-                        </div>
+                            
+                            <div class="col-6 text-center mb-3">
+                                <a href="https://www.kaggle.com/sathyanarayanrao89" target="_blank" class="social-link" title="Kaggle">
+                                    <div class="link-card p-2 rounded">
+                                        
+                                        <img src="/SRAO_CV/images/kaggle.png" alt="Kaggle" class="social-icon" style="width: 120px; height: 60px;">
+                                        
+                                        <div class="link-title mt-2">Kaggle</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
                         
-                        <div class="col text-center">
-                            <a href="https://scholar.google.co.uk/citations?user=9yc3jiIAAAAJ&amp;hl=en" target="_blank" class="social-link" title="Google Scholar">
-                                <div class="link-card p-2 rounded">
-                                    
-                                    <img src="/SRAO_CV/images/googlescholar.png" alt="Google Scholar" class="social-icon" style="width: 50px; height: 50px;">
-                                    
-                                    <div class="link-title mt-2">Google Scholar</div>
-                                </div>
-                            </a>
-                        </div>
+                            
                         
-                        <div class="col text-center">
-                            <a href="https://www.mathworks.com/matlabcentral/profile/authors/2686490" target="_blank" class="social-link" title="MATLAB files">
-                                <div class="link-card p-2 rounded">
-                                    
-                                    <img src="/SRAO_CV/images/matlab.png" alt="MATLAB files" class="social-icon" style="width: 50px; height: 50px;">
-                                    
-                                    <div class="link-title mt-2">MATLAB files</div>
-                                </div>
-                            </a>
-                        </div>
+                            
+                            <div class="col-6 text-center mb-3">
+                                <a href="https://www.mathworks.com/matlabcentral/profile/authors/2686490" target="_blank" class="social-link" title="MATLAB files">
+                                    <div class="link-card p-2 rounded">
+                                        
+                                        <img src="/SRAO_CV/images/matlab.png" alt="MATLAB files" class="social-icon" style="width: 50px; height: 50px;">
+                                        
+                                        <div class="link-title mt-2">MATLAB files</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
                         
-                        <div class="col text-center">
-                            <a href="https://www.youtube.com/@ComputeStories" target="_blank" class="social-link" title="Compute Stories">
-                                <div class="link-card p-2 rounded">
-                                    
-                                    <img src="/SRAO_CV/images/youtube.png" alt="Compute Stories" class="social-icon" style="width: 60px; height: 70px;">
-                                    
-                                    <div class="link-title mt-2">Compute Stories</div>
-                                </div>
-                            </a>
-                        </div>
+                            
                         
-                        <div class="col text-center">
-                            <a href="https://orcid.org/0000-0002-0071-5167" target="_blank" class="social-link" title="Orcid">
-                                <div class="link-card p-2 rounded">
-                                    
-                                    <img src="/SRAO_CV/images/orcid.png" alt="Orcid" class="social-icon" style="width: 60px; height: 70px;">
-                                    
-                                    <div class="link-title mt-2">Orcid</div>
-                                </div>
-                            </a>
-                        </div>
+                            
                         
-                        <div class="col text-center">
-                            <a href="https://dial.uclouvain.be/pr/boreal/object/boreal:239364" target="_blank" class="social-link" title="PhD Thesis">
-                                <div class="link-card p-2 rounded">
-                                    
-                                    <div class="emoji-container" style="font-size: 3rem;">🎓</div>
-                                    
-                                    <div class="link-title mt-2">PhD Thesis</div>
-                                </div>
-                            </a>
-                        </div>
+                            
                         
-                        <div class="col text-center">
-                            <a href="https://louis.uah.edu/uah-theses/579/" target="_blank" class="social-link" title="MS Thesis">
-                                <div class="link-card p-2 rounded">
-                                    
-                                    <div class="emoji-container" style="font-size: 3rem;">🎓</div>
-                                    
-                                    <div class="link-title mt-2">MS Thesis</div>
-                                </div>
-                            </a>
-                        </div>
+                            
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
+        <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
+            <div class="card h-100 shadow-sm hover-lift">
+                <div class="card-header bg-gradient-success text-white">
+                    <h4 class="card-title mb-0"><i class="fas fa-share-alt mr-2"></i>Connect & Media</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        
+                            
+                            <div class="col-6 text-center mb-3">
+                                <a href="https://www.linkedin.com/in/sathyanarayanrao1/" target="_blank" class="social-link" title="LinkedIn">
+                                    <div class="link-card p-2 rounded">
+                                        
+                                        <img src="/SRAO_CV/images/linkedin.png" alt="LinkedIn" class="social-icon" style="width: 80px; height: 80px;">
+                                        
+                                        <div class="link-title mt-2">LinkedIn</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                            <div class="col-6 text-center mb-3">
+                                <a href="https://www.youtube.com/@ComputeStories" target="_blank" class="social-link" title="Compute Stories">
+                                    <div class="link-card p-2 rounded">
+                                        
+                                        <img src="/SRAO_CV/images/youtube.png" alt="Compute Stories" class="social-icon" style="width: 60px; height: 70px;">
+                                        
+                                        <div class="link-title mt-2">Compute Stories</div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
                         
                     </div>
                 </div>
@@ -239,7 +351,7 @@ $(document).ready(function () {
 </div>
 
 
-<div class="container py-5">
+<div class="container py-5" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
     <h2 class="mb-4">Places I've Travelled or lived or Worked including transit at airports</h2>
     <div id="map" style="height: 500px;"></div>
     
@@ -390,8 +502,217 @@ $(document).ready(function () {
         
       }, 100); 
     });
-  </script>
-  <style>
+
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init({
+        once: true,
+        disable: 'phone' 
+      });
+    });
+</script>
+
+<style>
+   
+  .hero-section {
+    padding: 80px 0 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(245,247,250,0.2) 0%, rgba(195,207,226,0.1) 100%);
+    z-index: -1;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  @media (min-width: 992px) {
+    .profile-container {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+   
+  .profile-image-container {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .profile-image-wrapper {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 16px 30px rgba(0,0,0,0.1);
+    border: 6px solid white;
+    position: relative;
+    z-index: 2;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .profile-image:hover {
+    border-radius: 50%;
+    transform: scale(1.03);
+  }
+
+  .image-backdrop {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(135deg, rgba(66,133,244,0.1) 0%, rgba(219,68,55,0.1) 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: 1;
+    animation: morph 8s ease-in-out infinite;
+  }
+
+  @keyframes morph {
+    0% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    25% {
+      border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+      border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+    75% {
+      border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+    100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .profile-image-container {
+      flex: 0 0 40%;
+      margin-bottom: 0;
+    }
+  }
+
+   
+  .profile-content {
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  @media (min-width: 992px) {
+    .profile-content {
+      flex: 0 0 60%;
+      text-align: left;
+      padding: 0 30px;
+    }
+  }
+
+  .profile-name {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .profile-name::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4e73df, #224abe);
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  @media (min-width: 992px) {
+    .profile-name::after {
+      left: 0;
+      transform: none;
+    }
+  }
+
+  .profile-role {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #576574;
+    margin-bottom: 25px;
+    opacity: 0.9;
+  }
+
+  .profile-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 992px) {
+    .profile-text {
+      margin: 0;
+    }
+  }
+
+  .profile-text p {
+    margin-bottom: 1.2rem;
+  }
+
+  .paragraph-animate {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .paragraph-animate:hover {
+    transform: translateX(5px);
+  }
+
+   
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+  }
+  .bg-gradient-info {
+    background: linear-gradient(135deg, #36b9cc 0%, #1a8997 100%);
+  }
+  .bg-gradient-success {
+    background: linear-gradient(135deg, #1cc88a 0%, #13855c 100%);
+  }
+
+   
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+  }
+
    
   .custom-marker {
       cursor: pointer;
@@ -402,82 +723,47 @@ $(document).ready(function () {
   }
   
    
-  .name-title {
-      font-family: 'Lora', serif;
-      font-weight: 600;
-      font-size: 2rem;
+  .social-link {
+      text-decoration: none !important;
+  }
+  .link-card {
+      transition: all 0.3s ease;
+  }
+  .social-link:hover .link-card {
+      background-color: rgba(0, 123, 255, 0.1);
+      transform: translateY(-2px);
+  }
+  .social-link:hover .link-title {
+      color: #007bff;
+  }
+  .social-icon {
+      transition: all 0.3s ease;
+  }
+  .social-link:hover .social-icon {
+      filter: brightness(1.2) saturate(1.2);
+      transform: scale(1.05);
+  }
+  .emoji-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 60px;
+      transition: transform 0.3s ease;
+  }
+  .social-link:hover .emoji-container {
+      transform: scale(1.1);
+  }
+
+  .card {
+      border-radius: .5rem;
+  }
+
+   
+  #markerDetails {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
       color: #2c3e50;
   }
-  
-  .subtitle {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
-      font-size: 1.1rem;
-      color: #576574;
-  }
-  
-  .intro-text {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 300;
-      font-size: 1.1rem;
-      line-height: 1.8;
-      color: #2c3e50;
-  }
-  
-  .intro-text p {
-      margin-bottom: 1.2rem;
-  }
-  
-  .link-title {
-      font-family: 'Roboto', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 400;
-      color: #576574;
-      transition: color 0.3s ease;
-  }
-
- 
-.social-link {
-    text-decoration: none !important;
-}
-.link-card {
-    transition: all 0.3s ease;
-}
-.social-link:hover .link-card {
-    background-color: rgba(0, 123, 255, 0.1);
-    transform: translateY(-2px);
-}
-.social-link:hover .link-title {
-    color: #007bff;
-}
-.social-icon {
-    transition: all 0.3s ease;
-}
-.social-link:hover .social-icon {
-    filter: brightness(1.2) saturate(1.2);
-    transform: scale(1.05);
-}
-.emoji-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60px;
-    transition: transform 0.3s ease;
-}
-.social-link:hover .emoji-container {
-    transform: scale(1.1);
-}
-
-.card {
-    border-radius: .5rem;
-}
-
- 
-#markerDetails {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1rem;
-    color: #2c3e50;
-}
 </style>
 
     

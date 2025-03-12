@@ -15,3 +15,255 @@ div.card-icon i.fab {
     font-size: 2rem;
     color: red;
 }
+
+  /* Hero Section and Profile Container */
+  .hero-section {
+    padding: 80px 0 40px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(245,247,250,0.2) 0%, rgba(195,207,226,0.1) 100%);
+    z-index: -1;
+  }
+
+  .profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+  }
+
+  @media (min-width: 992px) {
+    .profile-container {
+      flex-direction: row;
+      align-items: center;
+    }
+  }
+
+  /* Profile Image Styling */
+  .profile-image-container {
+    position: relative;
+    margin-bottom: 40px;
+  }
+
+  .profile-image-wrapper {
+    position: relative;
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .profile-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    box-shadow: 0 16px 30px rgba(0,0,0,0.1);
+    border: 6px solid white;
+    position: relative;
+    z-index: 2;
+    transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+
+  .profile-image:hover {
+    border-radius: 50%;
+    transform: scale(1.03);
+  }
+
+  .image-backdrop {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: linear-gradient(135deg, rgba(66,133,244,0.1) 0%, rgba(219,68,55,0.1) 100%);
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    z-index: 1;
+    animation: morph 8s ease-in-out infinite;
+  }
+
+  @keyframes morph {
+    0% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    25% {
+      border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+    }
+    50% {
+      border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+    }
+    75% {
+      border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+    }
+    100% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+  }
+
+  @media (min-width: 992px) {
+    .profile-image-container {
+      flex: 0 0 40%;
+      margin-bottom: 0;
+    }
+  }
+
+  /* Profile Content Styling */
+  .profile-content {
+    text-align: center;
+    padding: 0 15px;
+  }
+
+  @media (min-width: 992px) {
+    .profile-content {
+      flex: 0 0 60%;
+      text-align: left;
+      padding: 0 30px;
+    }
+  }
+
+  .profile-name {
+    font-family: 'Lora', serif;
+    font-weight: 600;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 10px;
+    position: relative;
+  }
+
+  .profile-name::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(90deg, #4e73df, #224abe);
+    transform: translateX(-50%);
+    border-radius: 2px;
+  }
+
+  @media (min-width: 992px) {
+    .profile-name::after {
+      left: 0;
+      transform: none;
+    }
+  }
+
+  .profile-role {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 1.3rem;
+    color: #576574;
+    margin-bottom: 25px;
+    opacity: 0.9;
+  }
+
+  .profile-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #2c3e50;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 992px) {
+    .profile-text {
+      margin: 0;
+    }
+  }
+
+  .profile-text p {
+    margin-bottom: 1.2rem;
+  }
+
+  .paragraph-animate {
+    position: relative;
+    transition: all 0.3s ease;
+  }
+
+  .paragraph-animate:hover {
+    transform: translateX(5px);
+  }
+
+  /* Background gradients for card headers */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+  }
+  .bg-gradient-info {
+    background: linear-gradient(135deg, #36b9cc 0%, #1a8997 100%);
+  }
+  .bg-gradient-success {
+    background: linear-gradient(135deg, #1cc88a 0%, #13855c 100%);
+  }
+
+  /* Hover lift effect for cards */
+  .hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+  }
+
+  /* Styling for interactive custom markers */
+  .custom-marker {
+      cursor: pointer;
+      transition: transform 0.3s ease;
+  }
+  .custom-marker:hover {
+      transform: scale(1.1);
+  }
+  
+  /* Social links and card hover effects */
+  .social-link {
+      text-decoration: none !important;
+  }
+  .link-card {
+      transition: all 0.3s ease;
+  }
+  .social-link:hover .link-card {
+      background-color: rgba(0, 123, 255, 0.1);
+      transform: translateY(-2px);
+  }
+  .social-link:hover .link-title {
+      color: #007bff;
+  }
+  .social-icon {
+      transition: all 0.3s ease;
+  }
+  .social-link:hover .social-icon {
+      filter: brightness(1.2) saturate(1.2);
+      transform: scale(1.05);
+  }
+  .emoji-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 60px;
+      transition: transform 0.3s ease;
+  }
+  .social-link:hover .emoji-container {
+      transform: scale(1.1);
+  }
+
+  .card {
+      border-radius: .5rem;
+  }
+
+  /* Styling for the dedicated marker details window */
+  #markerDetails {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1rem;
+      color: #2c3e50;
+  }
