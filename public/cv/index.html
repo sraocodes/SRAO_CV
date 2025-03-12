@@ -106,38 +106,49 @@ $(document).ready(function () {
     
 <div class="container py-5">
   
-  <div class="card mb-4 shadow-sm">
+  <div class="card mb-4 shadow-sm profile-card" data-aos="fade-up" data-aos-duration="1000">
     <div class="card-body">
       <div class="row align-items-center">
-      <div class="col-md-3 text-center">
-        <img 
-          src="/SRAO_CV/images/sathya.jpg" 
-          alt="Dr. Sathyanarayan Rao" 
-          class="rounded-circle img-fluid border shadow-sm"
-          style="width: 200px; height: 200px; object-fit: cover;"
-        >
-      </div>
-        <div class="col-md-9">
-          <h1 class="display-4">Dr. Sathyanarayan Rao</h1>
-          <h2 class="h4 text-muted">Scientist — Interdisciplinary Researcher — Computational Modeler</h2>
-          <p class="lead">Scientific Programmer &amp; Software Developer | Kaggle Master (Top 2%) | Expertise in Computational Simulations, Data Analytics, &amp; Agricultural Modeling</p>
-          <div class="row mt-3">
+        <div class="col-md-3 text-center" data-aos="fade-right" data-aos-delay="200">
+          <div class="profile-image-container">
+            <img 
+              src="/SRAO_CV/images/sathya.jpg" 
+              alt="Dr. Sathyanarayan Rao" 
+              class="profile-image"
+            >
+            <div class="image-backdrop"></div>
+          </div>
+        </div>
+        <div class="col-md-9" data-aos="fade-left" data-aos-delay="300">
+          <h1 class="display-4 mb-3 animated-title">Dr. Sathyanarayan Rao</h1>
+          <h2 class="h4 text-muted mb-3 slide-in">Scientist — Interdisciplinary Researcher — Computational Modeler</h2>
+          <p class="lead slide-in" data-aos-delay="400">Scientific Programmer &amp; Software Developer | Kaggle Master (Top 2%) | Expertise in Computational Simulations, Data Analytics, &amp; Agricultural Modeling</p>
+          <div class="row mt-4">
             
-            <div class="col-md-6 col-lg-3 mb-2">
-              <a href="" class="text-decoration-none text-dark">
-                <i class="fas fa-envelope fa-fw"></i> satraox[at]google&#39;s mail[dot]com
+            <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="500">
+              <a href="" class="contact-link text-decoration-none">
+                <div class="contact-item p-2">
+                  <i class="fas fa-envelope fa-fw contact-icon"></i> 
+                  <span class="contact-text">satraox[at]google&#39;s mail[dot]com</span>
+                </div>
               </a>
             </div>
             
-            <div class="col-md-6 col-lg-3 mb-2">
-              <a href="https://www.drsrao.com" class="text-decoration-none text-dark">
-                <i class="fas fa-globe fa-fw"></i> www.drsrao.com
+            <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="600">
+              <a href="https://www.drsrao.com" class="contact-link text-decoration-none">
+                <div class="contact-item p-2">
+                  <i class="fas fa-globe fa-fw contact-icon"></i> 
+                  <span class="contact-text">www.drsrao.com</span>
+                </div>
               </a>
             </div>
             
-            <div class="col-md-6 col-lg-3 mb-2">
-              <a href="" class="text-decoration-none text-dark">
-                <i class="fas fa-map-marker-alt fa-fw"></i> Jülich, Germany
+            <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="700">
+              <a href="" class="contact-link text-decoration-none">
+                <div class="contact-item p-2">
+                  <i class="fas fa-map-marker-alt fa-fw contact-icon"></i> 
+                  <span class="contact-text">Jülich, Germany</span>
+                </div>
               </a>
             </div>
             
@@ -148,115 +159,127 @@ $(document).ready(function () {
   </div>
 
   
-  <div class="card mb-4 shadow-sm">
+  <div class="card mb-4 shadow-sm" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
     <div class="card-body">
-      <h2 class="h3 mb-4">Expertise</h2>
+      <h2 class="h3 mb-4 section-title">Expertise</h2>
       <div class="row">
         
-        <div class="col-md-4 mb-4">
-          <h3 class="h5 mb-3">Programming &amp; Development</h3>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Python</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Fortran</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">C&#43;&#43;</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">MATLAB</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">HTML/CSS</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">JavaScript</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Flask</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Gradio</span>
-          
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="h5 mb-3 category-title">Programming &amp; Development</h3>
+          <div class="skills-container">
+            
+            <span class="skill-badge">Python</span>
+            
+            <span class="skill-badge">Fortran</span>
+            
+            <span class="skill-badge">C&#43;&#43;</span>
+            
+            <span class="skill-badge">MATLAB</span>
+            
+            <span class="skill-badge">HTML/CSS</span>
+            
+            <span class="skill-badge">JavaScript</span>
+            
+            <span class="skill-badge">Flask</span>
+            
+            <span class="skill-badge">Gradio</span>
+            
+          </div>
         </div>
         
-        <div class="col-md-4 mb-4">
-          <h3 class="h5 mb-3">Scientific Computing</h3>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">High Performance Computing</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Model Coupling</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Computational Modeling</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Data Analytics</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Data Visualization</span>
-          
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+          <h3 class="h5 mb-3 category-title">Scientific Computing</h3>
+          <div class="skills-container">
+            
+            <span class="skill-badge">High Performance Computing</span>
+            
+            <span class="skill-badge">Model Coupling</span>
+            
+            <span class="skill-badge">Computational Modeling</span>
+            
+            <span class="skill-badge">Data Analytics</span>
+            
+            <span class="skill-badge">Data Visualization</span>
+            
+          </div>
         </div>
         
-        <div class="col-md-4 mb-4">
-          <h3 class="h5 mb-3">AI/ML</h3>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Scikit-learn</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">PyTorch</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">TensorFlow</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Neural Networks</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">LSTM</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Regression Models</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Classification</span>
-          
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+          <h3 class="h5 mb-3 category-title">AI/ML</h3>
+          <div class="skills-container">
+            
+            <span class="skill-badge">Scikit-learn</span>
+            
+            <span class="skill-badge">PyTorch</span>
+            
+            <span class="skill-badge">TensorFlow</span>
+            
+            <span class="skill-badge">Neural Networks</span>
+            
+            <span class="skill-badge">LSTM</span>
+            
+            <span class="skill-badge">Regression Models</span>
+            
+            <span class="skill-badge">Classification</span>
+            
+          </div>
         </div>
         
-        <div class="col-md-4 mb-4">
-          <h3 class="h5 mb-3">Web Development</h3>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Hugo</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">HTML</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">CSS</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Tailwind CSS</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Jekyll</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">SVG Animations</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Frontend Development</span>
-          
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+          <h3 class="h5 mb-3 category-title">Web Development</h3>
+          <div class="skills-container">
+            
+            <span class="skill-badge">Hugo</span>
+            
+            <span class="skill-badge">HTML</span>
+            
+            <span class="skill-badge">CSS</span>
+            
+            <span class="skill-badge">Tailwind CSS</span>
+            
+            <span class="skill-badge">Jekyll</span>
+            
+            <span class="skill-badge">SVG Animations</span>
+            
+            <span class="skill-badge">Frontend Development</span>
+            
+          </div>
         </div>
         
-        <div class="col-md-4 mb-4">
-          <h3 class="h5 mb-3">Software Tools</h3>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Git</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">CI/CD Pipeline</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">GitHub Actions</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Jira</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Slack</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Microsoft Teams</span>
-          
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="600">
+          <h3 class="h5 mb-3 category-title">Software Tools</h3>
+          <div class="skills-container">
+            
+            <span class="skill-badge">Git</span>
+            
+            <span class="skill-badge">CI/CD Pipeline</span>
+            
+            <span class="skill-badge">GitHub Actions</span>
+            
+            <span class="skill-badge">Jira</span>
+            
+            <span class="skill-badge">Slack</span>
+            
+            <span class="skill-badge">Microsoft Teams</span>
+            
+          </div>
         </div>
         
-        <div class="col-md-4 mb-4">
-          <h3 class="h5 mb-3">Domain Knowledge</h3>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Electromagnetics</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">AgroEcosystem Modeling</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Computational Engineering</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Remote Sensing</span>
-          
-          <span class="badge badge-primary mr-2 mb-2 p-2">Computing</span>
-          
+        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="700">
+          <h3 class="h5 mb-3 category-title">Domain Knowledge</h3>
+          <div class="skills-container">
+            
+            <span class="skill-badge">Electromagnetics</span>
+            
+            <span class="skill-badge">AgroEcosystem Modeling</span>
+            
+            <span class="skill-badge">Computational Engineering</span>
+            
+            <span class="skill-badge">Remote Sensing</span>
+            
+            <span class="skill-badge">Computing</span>
+            
+          </div>
         </div>
         
       </div>
@@ -264,20 +287,20 @@ $(document).ready(function () {
   </div>
 
   
-  <div class="card mb-4 shadow-sm">
+  <div class="card mb-4 shadow-sm" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
     <div class="card-body p-4">
-      <h2 class="h3 mb-4 text-center">CV Format Options</h2>
+      <h2 class="h3 mb-4 text-center section-title">CV Format Options</h2>
       
       <div class="row mb-4">
         <div class="col-lg-10 mx-auto">
-          <p class="lead text-center">
+          <p class="lead text-center" data-aos="fade-up" data-aos-delay="300">
             Much like wave-particle duality in quantum physics, my professional profile exists simultaneously in academic and industry dimensions.
           </p>
-          <p class="text-center">
+          <p class="text-center" data-aos="fade-up" data-aos-delay="400">
             While my research experience aligns perfectly with industry collobs, the translation isn't always straightforward. 
             The skills, challenges, and achievements remain constant - only the language changes.
           </p>
-          <p class="text-center mb-4">
+          <p class="text-center mb-4" data-aos="fade-up" data-aos-delay="500">
             I've prepared tailored versions of my CV for different audiences. The person behind them is the same; 
             the perspective is what differs. Choose the format that best serves our collab:
           </p>
@@ -285,15 +308,17 @@ $(document).ready(function () {
       </div>
       
       <div class="row justify-content-center">
-        <div class="col-md-5 mb-3">
-          <a href="/SRAO_CV/files/cv1.pdf" class="btn btn-primary btn-lg btn-block py-3">
-            <i class="fas fa-graduation-cap mr-2"></i>Academic CV
+        <div class="col-md-5 mb-3" data-aos="fade-right" data-aos-delay="600">
+          <a href="/SRAO_CV/files/cv1.pdf" class="cv-button academic">
+            <i class="fas fa-graduation-cap button-icon"></i>
+            <span>Academic CV</span>
           </a>
         </div>
         
-        <div class="col-md-5 mb-3">
-          <a href="/SRAO_CV/files/cv2.pdf" class="btn btn-primary btn-lg btn-block py-3">
-            <i class="fas fa-briefcase mr-2"></i>Industry CV
+        <div class="col-md-5 mb-3" data-aos="fade-left" data-aos-delay="600">
+          <a href="/SRAO_CV/files/cv2.pdf" class="cv-button industry">
+            <i class="fas fa-briefcase button-icon"></i>
+            <span>Industry CV</span>
           </a>
         </div>
       </div>
@@ -301,82 +326,433 @@ $(document).ready(function () {
   </div>
 
   
-  <div class="card mb-4 shadow-sm">
+  <div class="card mb-4 shadow-sm" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
     <div class="card-body">
-      <h2 class="h3 mb-4">Education</h2>
+      <h2 class="h3 mb-4 section-title">Education</h2>
       
-      <div class="mb-4">
+      <div class="education-item mb-4" data-aos="fade-up" data-aos-delay="400">
         <div class="d-flex justify-content-between align-items-start">
           <div>
-            <h3 class="h5 mb-1">PhD in Engineering Sciences</h3>
-            <p class="text-muted mb-1">University of Louvain (UCLouvain)</p>
-            <p class="small">Computational Modeling of Electrical Signatures of Plant Roots</p>
+            <h3 class="h5 mb-1 degree-title">PhD in Engineering Sciences</h3>
+            <p class="text-muted mb-1 school-name">University of Louvain (UCLouvain)</p>
+            <p class="small thesis-text">Computational Modeling of Electrical Signatures of Plant Roots</p>
             
           </div>
           <div class="text-right">
-            <span class="badge badge-light">2020</span>
-            <div class="small text-muted">Belgium</div>
+            <span class="year-badge">2020</span>
+            <div class="small text-muted location-text">Belgium</div>
           </div>
         </div>
       </div>
       
-      <div class="mb-4">
+      <div class="education-item mb-4" data-aos="fade-up" data-aos-delay="500">
         <div class="d-flex justify-content-between align-items-start">
           <div>
-            <h3 class="h5 mb-1">MS in Optical Physics</h3>
-            <p class="text-muted mb-1">Alabama A&amp;M University</p>
+            <h3 class="h5 mb-1 degree-title">MS in Optical Physics</h3>
+            <p class="text-muted mb-1 school-name">Alabama A&amp;M University</p>
             
-            <p class="small text-primary">GPA: 4.0/4.0</p>
+            <p class="small text-primary gpa-text">GPA: 4.0/4.0</p>
           </div>
           <div class="text-right">
-            <span class="badge badge-light">2014</span>
-            <div class="small text-muted">USA</div>
+            <span class="year-badge">2014</span>
+            <div class="small text-muted location-text">USA</div>
           </div>
         </div>
       </div>
       
-      <div class="mb-4">
+      <div class="education-item mb-4" data-aos="fade-up" data-aos-delay="600">
         <div class="d-flex justify-content-between align-items-start">
           <div>
-            <h3 class="h5 mb-1">MS in Electrical Engineering</h3>
-            <p class="text-muted mb-1">University of Alabama in Huntsville</p>
+            <h3 class="h5 mb-1 degree-title">MS in Electrical Engineering</h3>
+            <p class="text-muted mb-1 school-name">University of Alabama in Huntsville</p>
             
-            <p class="small text-primary">GPA: 3.9/4.0</p>
+            <p class="small text-primary gpa-text">GPA: 3.9/4.0</p>
           </div>
           <div class="text-right">
-            <span class="badge badge-light">2012</span>
-            <div class="small text-muted">USA</div>
+            <span class="year-badge">2012</span>
+            <div class="small text-muted location-text">USA</div>
           </div>
         </div>
       </div>
       
-      <div class="mb-4">
+      <div class="education-item mb-4" data-aos="fade-up" data-aos-delay="700">
         <div class="d-flex justify-content-between align-items-start">
           <div>
-            <h3 class="h5 mb-1">B.Eng in Electronics and Communication</h3>
-            <p class="text-muted mb-1">Visvesvaraya Technological University</p>
+            <h3 class="h5 mb-1 degree-title">B.Eng in Electronics and Communication</h3>
+            <p class="text-muted mb-1 school-name">Visvesvaraya Technological University</p>
             
             
           </div>
           <div class="text-right">
-            <span class="badge badge-light">2010</span>
-            <div class="small text-muted">India</div>
+            <span class="year-badge">2010</span>
+            <div class="small text-muted location-text">India</div>
           </div>
         </div>
       </div>
       
     </div>
   </div>
-
-
+</div>
 
 <style>
+ 
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes morphBackground {
+  0% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+  25% {
+    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
+  }
+  50% {
+    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
+  }
+  75% {
+    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
+  }
+  100% {
+    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  }
+}
+
+ 
+.card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+ 
+.profile-card {
+  position: relative;
+  background: linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
+  border-top: 5px solid #4e73df;
+}
+
+ 
+.profile-image-container {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  border: 5px solid white;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  position: relative;
+  z-index: 2;
+  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.profile-image:hover {
+  border-radius: 50%;
+  transform: scale(1.05);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.image-backdrop {
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  right: -10px;
+  bottom: -10px;
+  background: linear-gradient(135deg, rgba(78,115,223,0.1) 0%, rgba(219,68,55,0.1) 100%);
+  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  z-index: 1;
+  animation: morphBackground 8s ease-in-out infinite;
+}
+
+ 
+.animated-title {
+  position: relative;
+  padding-bottom: 10px;
+  color: #2c3e50;
+  animation: fadeIn 1s ease forwards;
+}
+
+.animated-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #4e73df, #224abe);
+  border-radius: 2px;
+}
+
+.section-title {
+  position: relative;
+  color: #2c3e50;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 50px;
+  height: 3px;
+  background: linear-gradient(90deg, #4e73df, #224abe);
+  border-radius: 2px;
+}
+
+.slide-in {
+  animation: slideInFromLeft 0.7s ease forwards;
+}
+
+.category-title {
+  color: #3a3f51;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 15px;
+}
+
+.category-title:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: #4e73df;
+  border-radius: 50%;
+}
+
+.degree-title {
+  color: #2c3e50;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.school-name {
+  transition: color 0.3s ease;
+}
+
+.education-item:hover .degree-title {
+  color: #4e73df;
+}
+
+.education-item:hover .school-name {
+  color: #333 !important;
+}
+
+ 
+.contact-link {
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.02);
+}
+
+.contact-icon {
+  margin-right: 10px;
+  color: #4e73df;
+  transition: transform 0.3s ease;
+}
+
+.contact-text {
+  transition: color 0.3s ease;
+}
+
+.contact-link:hover {
+  color: #4e73df;
+  text-decoration: none;
+}
+
+.contact-link:hover .contact-item {
+  background-color: rgba(78,115,223,0.08);
+  transform: translateX(5px);
+}
+
+.contact-link:hover .contact-icon {
+  transform: scale(1.2);
+}
+
+ 
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  color: #495057;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(0,0,0,0.05);
+}
+
+.skill-badge:hover {
+  background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+ 
+.cv-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  text-decoration: none;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.cv-button.academic {
+  background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+}
+
+.cv-button.industry {
+  background: linear-gradient(135deg, #36b9cc 0%, #1a8997 100%);
+}
+
+.button-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.cv-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  color: white;
+  text-decoration: none;
+}
+
+.cv-button:hover .button-icon {
+  transform: scale(1.2);
+}
+
+ 
+.year-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  background-color: #f8f9fa;
+  color: #495057;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.education-item:hover .year-badge {
+  background-color: #4e73df;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.location-text {
+  transition: all 0.3s ease;
+}
+
+.education-item:hover .location-text {
+  color: #4e73df !important;
+}
+
+ 
 @media print {
-  .card { border: none !important; }
-  .shadow-sm { box-shadow: none !important; }
-  a { text-decoration: none !important; color: inherit !important; }
+  .card { 
+    border: none !important; 
+    box-shadow: none !important;
+  }
+  .shadow-sm { 
+    box-shadow: none !important; 
+  }
+  a { 
+    text-decoration: none !important; 
+    color: inherit !important; 
+  }
+  .profile-image {
+    border-radius: 50% !important;
+  }
+  .animated-title:after,
+  .section-title:after {
+    display: none !important;
+  }
 }
 </style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  
+  if (typeof AOS !== 'undefined') {
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true,
+      mirror: false
+    });
+  }
+  
+  
+  else {
+    const fadeElements = document.querySelectorAll('.animated-title, .slide-in');
+    fadeElements.forEach(el => {
+      el.style.opacity = '0';
+      setTimeout(() => {
+        el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
+        el.style.opacity = '1';
+        if (el.classList.contains('slide-in')) {
+          el.style.transform = 'translateX(0)';
+        }
+      }, 300);
+    });
+  }
+});
+</script>
 
     
 <footer class="bg-dark text-white text-center py-3">

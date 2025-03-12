@@ -1,28 +1,33 @@
 {{ define "main" }}
 <div class="container py-5">
-    <header class="text-center mb-5">
-        <!-- Use the title from blogs.md -->
-        <h1 class="display-4 mb-3" style="font-family: 'Playfair Display', serif;">{{ .Title }}</h1>
-        <div class="w-50 mx-auto">
-            <input type="text" id="searchInput" class="form-control form-control-lg" placeholder="Search posts...">
+    <!-- Animated Header -->
+    <header class="blog-header text-center mb-5">
+        <h1 class="blog-title display-4 mb-4" data-aos="fade-down" data-aos-duration="800">{{ .Title }}</h1>
+        <div class="search-container w-50 mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+            <input type="text" id="searchInput" class="form-control form-control-lg search-input" placeholder="Search posts...">
         </div>
     </header>
 
+    <!-- Blog Posts Grid -->
     <div class="row g-4" id="blogPosts">
-        {{ range (where .Site.RegularPages "Section" "blogs") }}
-        <div class="col-md-6 blog-card" data-title="{{ .Title | lower }}">
-            <!-- Adding href to make entire card clickable -->
+        {{ range $index, $element := (where .Site.RegularPages "Section" "blogs") }}
+        <div class="col-md-6 blog-card" data-title="{{ .Title | lower }}" data-aos="fade-up" data-aos-duration="600" data-aos-delay="{{ mul $index 100 }}">
             <a href="{{ .RelPermalink }}" class="text-decoration-none text-dark">
-                <div class="card h-100 border-0 shadow-sm blog-hover">
+                <div class="card h-100 border-0 shadow-sm blog-card-inner">
                     <div class="card-body p-4">
-                        <div class="d-flex justify-content-between mb-3">
-                            <span class="badge bg-light text-dark">
+                        <div class="card-meta d-flex justify-content-between mb-3">
+                            <span class="post-date">
+                                <i class="far fa-calendar-alt me-1"></i>
                                 {{ .Date.Format "January 2, 2006" }}
                             </span>
                         </div>
-                        <h2 class="card-title h4 mb-3" style="font-family: 'Playfair Display', serif;">{{ .Title }}</h2>
+                        <h2 class="card-title h4 mb-3">{{ .Title }}</h2>
                         <div class="card-text blog-content">
                             {{ .Content }}
+                        </div>
+                        <div class="read-more">
+                            <span>Read More</span>
+                            <i class="fas fa-arrow-right ms-2"></i>
                         </div>
                     </div>
                 </div>
@@ -30,22 +35,123 @@
         </div>
         {{ end }}
     </div>
+    
+    <!-- Empty State Message -->
+    <div id="emptyStateMessage" class="text-center py-5 d-none">
+        <i class="fas fa-search fa-3x text-muted mb-3"></i>
+        <h3>No matching posts found</h3>
+        <p class="text-muted">Try adjusting your search term</p>
+    </div>
 </div>
 
 <style>
-    .blog-hover {
+    /* Blog Page Animation & Styling */
+    .blog-title {
+        font-family: 'Playfair Display', serif;
+        position: relative;
+        padding-bottom: 15px;
+        display: inline-block;
+    }
+    
+    .blog-title:after {
+        content: '';
+        position: absolute;
+        width: 80px;
+        height: 4px;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: linear-gradient(to right, #4e73df, #224abe);
+        border-radius: 2px;
+    }
+    
+    .search-container {
+        position: relative;
+        margin-bottom: 40px;
+    }
+    
+    .search-input {
+        border-radius: 50px;
+        padding-left: 20px;
+        border: 1px solid rgba(0,0,0,0.1);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.05);
         transition: all 0.3s ease;
     }
     
-    .blog-hover:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 0.5rem 1rem rgba(0,0,0,.15)!important;
+    .search-input:focus {
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        transform: translateY(-2px);
+        border-color: rgba(78,115,223,0.5);
+    }
+    
+    .blog-card-inner {
+        border-radius: 12px;
+        overflow: hidden;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        position: relative;
+        z-index: 1;
+    }
+    
+    .blog-card-inner:before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(to right, rgba(78,115,223,0.1), rgba(35,75,180,0.1));
+        border-radius: 12px;
+        transform: scale(0.8);
+        opacity: 0;
+        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+    
+    .blog-card:hover .blog-card-inner {
+        transform: translateY(-15px) scale(1.02);
+        box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+    }
+    
+    .blog-card:hover .blog-card-inner:before {
+        transform: scale(1);
+        opacity: 1;
+    }
+    
+    .post-date {
+        display: inline-flex;
+        align-items: center;
+        background-color: #f8f9fa;
+        color: #495057;
+        padding: 5px 12px;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        transition: all 0.3s ease;
+    }
+    
+    .blog-card:hover .post-date {
+        background-color: #4e73df;
+        color: white;
+    }
+    
+    .card-title {
+        font-family: 'Playfair Display', serif;
+        font-weight: 600;
+        color: #2c3e50;
+        transition: all 0.3s ease;
+        position: relative;
+        display: inline-block;
+    }
+    
+    .blog-card:hover .card-title {
+        color: #4e73df;
     }
     
     .blog-content {
-        max-height: 200px;
+        max-height: 140px;
         overflow: hidden;
         position: relative;
+        color: #6c757d;
+        transition: color 0.3s ease;
     }
     
     .blog-content::after {
@@ -54,27 +160,103 @@
         bottom: 0;
         left: 0;
         right: 0;
-        height: 60px;
-        background: linear-gradient(transparent, white);
+        height: 80px;
+        background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,1));
     }
     
-    .badge {
-        font-weight: normal;
-        padding: 0.5rem 1rem;
+    .read-more {
+        display: inline-flex;
+        align-items: center;
+        margin-top: 15px;
+        color: #4e73df;
+        font-weight: 500;
+        opacity: 0;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+    }
+    
+    .read-more i {
+        transition: transform 0.3s ease;
+    }
+    
+    .blog-card:hover .read-more {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+    .blog-card:hover .read-more i {
+        transform: translateX(5px);
+    }
+    
+    /* Staggered entrance animation for cards */
+    @keyframes fadeInStagger {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    /* Empty state styling */
+    #emptyStateMessage {
+        animation: fadeIn 0.5s ease;
+    }
+    
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
     }
 </style>
 
 <script>
-document.getElementById('searchInput').addEventListener('input', function(e) {
-    const searchTerm = e.target.value.toLowerCase();
-    const cards = document.getElementsByClassName('blog-card');
+document.addEventListener('DOMContentLoaded', function() {
+    // Initialize AOS if available
+    if (typeof AOS !== 'undefined') {
+        AOS.init({
+            duration: 800,
+            easing: 'ease-out',
+            once: true
+        });
+    } else {
+        // Fallback animation if AOS is not available
+        const blogCards = document.querySelectorAll('.blog-card');
+        blogCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.animation = `fadeInStagger 0.5s ease ${index * 0.1}s forwards`;
+        });
+    }
     
-    Array.from(cards).forEach(card => {
-        const title = card.dataset.title;
-        if (title.includes(searchTerm)) {
-            card.style.display = '';
+    // Enhance search functionality
+    const searchInput = document.getElementById('searchInput');
+    const blogCards = document.getElementsByClassName('blog-card');
+    const emptyStateMessage = document.getElementById('emptyStateMessage');
+    
+    searchInput.addEventListener('input', function(e) {
+        const searchTerm = e.target.value.toLowerCase();
+        let hasVisibleCards = false;
+        
+        Array.from(blogCards).forEach(card => {
+            const title = card.dataset.title;
+            if (title.includes(searchTerm)) {
+                card.style.display = '';
+                hasVisibleCards = true;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Show/hide empty state message
+        if (hasVisibleCards) {
+            emptyStateMessage.classList.add('d-none');
         } else {
-            card.style.display = 'none';
+            emptyStateMessage.classList.remove('d-none');
         }
     });
 });
