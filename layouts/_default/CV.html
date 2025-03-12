@@ -47,49 +47,40 @@
     </div>
   </div>
 
-  <!-- Experience Section -->
+  <!-- CV Options Section -->
   <div class="card mb-4 shadow-sm">
-    <div class="card-body">
-      <h2 class="h3 mb-4">Experience</h2>
-      {{ range .Params.experience }}
-      <div class="mb-4">
-        <div class="d-flex justify-content-between align-items-start mb-2">
-          <div>
-            <h3 class="h5 mb-1">{{ .role }}</h3>
-            <p class="text-muted mb-1">{{ .company }}</p>
-          </div>
-          <div class="text-right">
-            <span class="badge badge-light">{{ .period }}</span>
-            <div class="small text-muted">{{ .location }}</div>
-          </div>
+    <div class="card-body p-4">
+      <h2 class="h3 mb-4 text-center">CV Format Options</h2>
+      
+      <div class="row mb-4">
+        <div class="col-lg-10 mx-auto">
+          <p class="lead text-center">
+            Much like wave-particle duality in quantum physics, my professional profile exists simultaneously in academic and industry dimensions.
+          </p>
+          <p class="text-center">
+            While my research experience aligns perfectly with industry collobs, the translation isn't always straightforward. 
+            The skills, challenges, and achievements remain constant - only the language changes.
+          </p>
+          <p class="text-center mb-4">
+            I've prepared tailored versions of my CV for different audiences. The person behind them is the same; 
+            the perspective is what differs. Choose the format that best serves our collab:
+          </p>
+        </div>
+      </div>
+      
+      <div class="row justify-content-center">
+        <div class="col-md-5 mb-3">
+          <a href="{{ "files/cv1.pdf" | relURL }}" class="btn btn-primary btn-lg btn-block py-3">
+            <i class="fas fa-graduation-cap mr-2"></i>Academic CV
+          </a>
         </div>
         
-        <!-- External Links -->
-        {{ with .links }}
-        <div class="mb-3">
-          {{ range . }}
-          <a href="{{ .url }}" 
-            target="_blank" 
-            class="btn btn-sm btn-outline-primary mr-2">
-            {{ if eq .type "youtube" }}
-            <i class="fab fa-youtube mr-1"></i>
-            {{ else }}
-            <i class="fas fa-globe mr-1"></i>
-            {{ end }}
-            {{ .text }}
+        <div class="col-md-5 mb-3">
+          <a href="{{ "files/cv2.pdf" | relURL }}" class="btn btn-primary btn-lg btn-block py-3">
+            <i class="fas fa-briefcase mr-2"></i>Industry CV
           </a>
-          {{ end }}
         </div>
-        {{ end }}
-
-        <!-- Highlights -->
-        <ul class="pl-3">
-          {{ range .highlights }}
-          <li>{{ . | markdownify }}</li>
-          {{ end }}
-        </ul>
       </div>
-      {{ end }}
     </div>
   </div>
 
@@ -116,45 +107,7 @@
     </div>
   </div>
 
-  <!-- Publications Section -->
-  <div class="card mb-4 shadow-sm">
-    <div class="card-body">
-      <h2 class="h3 mb-4">Selected Publications</h2>
-      {{ range .Params.publications }}
-      <div class="mb-3">
-        <h3 class="h6 mb-1">{{ .title }}</h3>
-        <p class="small text-muted">{{ .journal }} ({{ .year }})</p>
-      </div>
-      {{ end }}
-    </div>
-  </div>
 
-  <!-- Achievements Section -->
-  <div class="card mb-4 shadow-sm">
-    <div class="card-body">
-      <h2 class="h3 mb-4">Achievements</h2>
-      <div class="row">
-        {{ range .Params.achievements }}
-        <div class="col-md-4 mb-4">
-          <h3 class="h5 mb-3">{{ .title }}</h3>
-          <ul class="pl-3 mb-0">
-            {{ range .details }}
-            <li>{{ . }}</li>
-            {{ end }}
-          </ul>
-        </div>
-        {{ end }}
-      </div>
-    </div>
-  </div>
-
-  <!-- Print Button -->
-  <div class="text-center d-print-none">
-    <a href="{{ "files/CV.pdf" | relURL }}" class="btn btn-primary">
-        <i class="fas fa-download mr-2"></i>Download PDF
-    </a>
-</div>
-</div>
 
 <style>
 @media print {
