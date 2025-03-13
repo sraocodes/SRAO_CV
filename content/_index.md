@@ -25,18 +25,25 @@ categories:
     icon: "fas fa-share-alt"
     gradient: "bg-gradient-success"
   - name: "hobby"
-    title: "Hobbies & Personal"
+    title: "Hobbies"
     icon: "fas fa-camera-retro"
     gradient: "bg-gradient-danger"
 
 # Cards with category assignments
 cards:
-  - title: "LinkedIn"
+  - title: "Connect me on LinkedIn"
     icon: "images/linkedin.png"
     iconH: "80px"
     iconW: "80px"
     link: "https://www.linkedin.com/in/sathyanarayanrao1/"
     category: "connect"
+
+  - title: "Follow me on X"
+    icon: "images/X.png"
+    iconH: "80px"
+    iconW: "80px"
+    link: "https://x.com/DrSathyan10"
+    category: "connect"  
     
   - title: "GitHub"
     icon: "images/github.png"
