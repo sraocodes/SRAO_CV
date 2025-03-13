@@ -37,96 +37,64 @@
 </div>
 
 <div class="container py-5">
-    <!-- Categorized Cards Section -->
-    <div class="row mb-5">
-        <!-- Academic Category -->
-        <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-duration="1000" data-aos-delay="100">
-            <div class="card h-100 shadow-sm hover-lift">
-                <div class="card-header bg-gradient-primary text-white">
-                    <h4 class="card-title mb-0"><i class="fas fa-graduation-cap mr-2"></i>Academic</h4>
-                </div>
-                <div class="card-body">
-                    <div class="row g-3">
-                        {{ range .Params.cards }}
-                            {{ if or (in .title "PhD") (in .title "MS") (in .title "Google Scholar") (in .title "Orcid") }}
-                            <div class="col-6 text-center mb-3">
-                                <a href="{{ .link }}" target="_blank" class="social-link" title="{{ .title }}">
-                                    <div class="link-card p-2 rounded">
-                                        {{ if .emoji }}
-                                        <div class="emoji-container" style="font-size: {{ default "2rem" .emojiSize }};">{{ .emoji }}</div>
-                                        {{ else }}
-                                        <img src="{{ .icon | relURL }}" alt="{{ .title }}" class="social-icon" style="width: {{ .iconW }}; height: {{ .iconH }};">
-                                        {{ end }}
-                                        <div class="link-title mt-2">{{ .title }}</div>
-                                    </div>
-                                </a>
-                            </div>
-                            {{ end }}
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Coding & Technical Category -->
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-            <div class="card h-100 shadow-sm hover-lift">
-                <div class="card-header bg-gradient-info text-white">
-                    <h4 class="card-title mb-0"><i class="fas fa-code mr-2"></i>Coding & Technical</h4>
-                </div>
-                <div class="card-body">
-                    <div class="row g-3">
-                        {{ range .Params.cards }}
-                            {{ if or (in .title "GitHub") (in .title "MATLAB") (in .title "Kaggle") }}
-                            <div class="col-6 text-center mb-3">
-                                <a href="{{ .link }}" target="_blank" class="social-link" title="{{ .title }}">
-                                    <div class="link-card p-2 rounded">
-                                        {{ if .emoji }}
-                                        <div class="emoji-container" style="font-size: {{ default "2rem" .emojiSize }};">{{ .emoji }}</div>
-                                        {{ else }}
-                                        <img src="{{ .icon | relURL }}" alt="{{ .title }}" class="social-icon" style="width: {{ .iconW }}; height: {{ .iconH }};">
-                                        {{ end }}
-                                        <div class="link-title mt-2">{{ .title }}</div>
-                                    </div>
-                                </a>
-                            </div>
-                            {{ end }}
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Media & Connect Category -->
-        <div class="col-md-4 mb-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="300">
-            <div class="card h-100 shadow-sm hover-lift">
-                <div class="card-header bg-gradient-success text-white">
-                    <h4 class="card-title mb-0"><i class="fas fa-share-alt mr-2"></i>Connect & Media</h4>
-                </div>
-                <div class="card-body">
-                    <div class="row g-3">
-                        {{ range .Params.cards }}
-                            {{ if or (in .title "LinkedIn") (in .title "Compute Stories") }}
-                            <div class="col-6 text-center mb-3">
-                                <a href="{{ .link }}" target="_blank" class="social-link" title="{{ .title }}">
-                                    <div class="link-card p-2 rounded">
-                                        {{ if .emoji }}
-                                        <div class="emoji-container" style="font-size: {{ default "2rem" .emojiSize }};">{{ .emoji }}</div>
-                                        {{ else }}
-                                        <img src="{{ .icon | relURL }}" alt="{{ .title }}" class="social-icon" style="width: {{ .iconW }}; height: {{ .iconH }};">
-                                        {{ end }}
-                                        <div class="link-title mt-2">{{ .title }}</div>
-                                    </div>
-                                </a>
-                            </div>
-                            {{ end }}
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<!-- Dynamically Generated Category Cards Section -->
+<div class="row mb-5">
+  <!-- First, group cards by category -->
+  {{ $groupedCards := dict }}
+  {{ range .Params.cards }}
+      {{ $category := .category }}
+      {{ $existingCards := index $groupedCards $category | default slice }}
+      {{ $updatedCards := $existingCards | append . }}
+      {{ $groupedCards = merge $groupedCards (dict $category $updatedCards) }}
+  {{ end }}
+  
+  <!-- Loop through categories and create cards -->
+  {{ $delay := 100 }}
+  {{ range $categoryName, $cards := $groupedCards }}
+      <!-- Find category info from categories array if it exists -->
+      {{ $categoryTitle := humanize $categoryName }}
+      {{ $categoryIcon := "fas fa-folder" }}
+      {{ $categoryGradient := "bg-gradient-secondary" }}
+      
+      {{ range $.Params.categories }}
+          {{ if eq .name $categoryName }}
+              {{ if .title }}{{ $categoryTitle = .title }}{{ end }}
+              {{ if .icon }}{{ $categoryIcon = .icon }}{{ end }}
+              {{ if .gradient }}{{ $categoryGradient = .gradient }}{{ end }}
+          {{ end }}
+      {{ end }}
+      
+      <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="{{ $delay }}">
+          <div class="card h-100 shadow-sm hover-lift">
+              <div class="card-header {{ $categoryGradient }} text-white">
+                  <h4 class="card-title mb-0"><i class="{{ $categoryIcon }} mr-2"></i>{{ $categoryTitle }}</h4>
+              </div>
+              <div class="card-body">
+                  <div class="row g-3">
+                      {{ range $cards }}
+                      <div class="col-6 text-center mb-3">
+                          <a href="{{ .link }}" target="_blank" class="social-link" title="{{ .title }}">
+                              <div class="link-card p-2 rounded">
+                                  {{ if .emoji }}
+                                  <div class="emoji-container" style="font-size: {{ default "2rem" .emojiSize }};">{{ .emoji }}</div>
+                                  {{ else }}
+                                  <img src="{{ .icon | relURL }}" alt="{{ .title }}" class="social-icon" style="width: {{ .iconW }}; height: {{ .iconH }};">
+                                  {{ end }}
+                                  <div class="link-title mt-2">{{ .title }}</div>
+                              </div>
+                          </a>
+                      </div>
+                      {{ end }}
+                  </div>
+              </div>
+          </div>
+      </div>
+      {{ $delay = $delay | add 100 }}
+  {{ end }}
 </div>
+</div>
+
+
 
 <!-- Map Section with Details Window -->
 <div class="container py-5" data-aos="zoom-in" data-aos-duration="1000" data-aos-delay="400">
@@ -391,6 +359,10 @@
   .bg-gradient-success {
     background: linear-gradient(135deg, #1cc88a 0%, #13855c 100%);
   }
+
+  .bg-gradient-danger {
+  background: linear-gradient(135deg, #e74a3b 0%, #c0392b 100%);
+}
 
   /* Hover lift effect for cards */
   .hover-lift {

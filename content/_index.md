@@ -1,6 +1,6 @@
 ---
 title: "Dr. Sathyanarayan Rao"
-subtitle: "Computational Scientist | Researcher | Creator | Explorer of Ideas & Worlds "
+subtitle: "Computational Scientist | Researcher | Creator | Explorer of Ideas & Worlds"
 intro_text: |
   Welcome! I'm Dr. Sathyanarayan Rao, a scientific software developer passionate about bridging computational engineering and Machine Learning/ AI. Through my doctoral research on dynamic root water uptake modeling and subsequent work, I've developed expertise in scientific modeling, machine learning, inverse problems and data assimilation techniques.
 
@@ -9,6 +9,27 @@ intro_text: |
   On this site, you'll find my research contributions, technical projects, and insights from my research interests. Feel free to explore my online presence through these platforms:
 background_image: "images/background.png" 
 image: "images/sathya.jpg"
+
+# Define categories with their visual properties
+categories:
+  - name: "academic"
+    title: "Academic" 
+    icon: "fas fa-graduation-cap"
+    gradient: "bg-gradient-primary"
+  - name: "coding"
+    title: "Coding & Technical"
+    icon: "fas fa-code"
+    gradient: "bg-gradient-info"
+  - name: "connect"
+    title: "Connect"
+    icon: "fas fa-share-alt"
+    gradient: "bg-gradient-success"
+  - name: "hobby"
+    title: "Hobbies & Personal"
+    icon: "fas fa-camera-retro"
+    gradient: "bg-gradient-danger"
+
+# Cards with category assignments
 cards:
   - title: "LinkedIn"
     icon: "images/linkedin.png"
@@ -16,52 +37,75 @@ cards:
     iconW: "80px"
     link: "https://www.linkedin.com/in/sathyanarayanrao1/"
     category: "connect"
+    
   - title: "GitHub"
     icon: "images/github.png"
     iconH: "60px"
     iconW: "60px"
     link: "https://github.com/sraocodes"
     category: "coding"
+    
   - title: "Kaggle"
     icon: "images/kaggle.png"
     iconH: "60px"
     iconW: "120px"
     link: "https://www.kaggle.com/sathyanarayanrao89"
     category: "coding"
+    
   - title: "Google Scholar"
     icon: "images/googlescholar.png"
     iconH: "50px"
     iconW: "50px"
     link: "https://scholar.google.co.uk/citations?user=9yc3jiIAAAAJ&hl=en"
     category: "academic"
+    
   - title: "MATLAB files"
     icon: "images/matlab.png"
     iconH: "50px"
     iconW: "50px"
     link: "https://www.mathworks.com/matlabcentral/profile/authors/2686490"
     category: "coding"
+
   - title: "Compute Stories"
     link: "https://www.youtube.com/@ComputeStories"
     icon: "images/youtube.png"
     iconH: "70px"
     iconW: "60px"
-    category: "connect"
+    category: "coding"
+
   - title: "Orcid"
     link: "https://orcid.org/0000-0002-0071-5167"
     icon: "images/orcid.png"
     iconH: "70px"
     iconW: "60px"
     category: "academic"
+
   - title: "PhD Thesis"
     link: "https://dial.uclouvain.be/pr/boreal/object/boreal:239364"
     emoji: "🎓"
     emojiSize: "3rem"
     category: "academic"
+    
   - title: "MS Thesis"
     link: "https://louis.uah.edu/uah-theses/579/"
     emoji: "🎓"
     emojiSize: "3rem"
     category: "academic"
+
+  - title: "Shutterstock"
+    icon: "images/shutterstock.png"  
+    iconH: "60px"
+    iconW: "60px"
+    link: "https://www.shutterstock.com/g/sathyanarayanrao"  
+    category: "hobby"  
+
+  - title: "Explorative Eye"
+    icon: "images/youtube.png"  
+    iconH: "70px"
+    iconW: "60px"
+    link: "https://www.youtube.com/@ExplorativeEye"  
+    category: "hobby"  
+       
 markers:
   - lat: 12.9716
     lng: 77.5946
