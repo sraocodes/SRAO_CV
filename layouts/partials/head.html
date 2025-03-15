@@ -2,20 +2,37 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{{ .Title }}</title>
+
+<!-- Critical CSS first -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<!-- Use the bundle version to include Popper.js -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+<!-- Preload fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- Leaflet CSS -->
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-<!-- Leaflet JS -->
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<!-- Defer non-critical CSS -->
+<link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="print" onload="this.media='all'">
 
-<!-- AOS (Animate On Scroll) Library for animations -->
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<!-- Conditionally load page-specific resources -->
+{{ if eq .Layout "map" }}
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+{{ end }}
+
+{{ if .Params.animate }}
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+{{ end }}
+
+<!-- Move scripts to the end of body or use defer -->
+<script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+{{ if eq .Layout "map" }}
+  <script defer src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+{{ end }}
+
+{{ if .Params.animate }}
+  <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
+{{ end }}
 {{ end }}

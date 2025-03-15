@@ -5,9 +5,10 @@
     {{ range .Params.photos }}
       <div class="col-md-4 mb-4">
         <div class="card h-100 shadow-sm">
-          <!-- Wrap the image in a link that triggers the modal -->
+          <!-- Use data attributes to store the full image path instead of loading it -->
           <a href="#" class="photo-preview" data-image="{{ .file | relURL }}" data-caption="{{ .caption }}">
-            <img src="{{ .file | relURL }}" class="card-img-top" alt="{{ .caption }}" style="max-height:200px; object-fit:cover;">
+            <img src="{{ .file | relURL }}" class="card-img-top lazy-load" alt="{{ .caption }}" 
+                 style="max-height:200px; object-fit:cover;">
           </a>
           <div class="card-body">
             <h5 class="card-title">{{ .caption }}</h5>
@@ -24,9 +25,10 @@
 
 <!-- Bootstrap Modal for Full Image Display -->
 <div class="modal fade" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
+  <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
       <div class="modal-body p-0">
+        <!-- Modal image is loaded only when needed -->
         <img src="" id="modalImage" class="img-fluid" alt="">
       </div>
       <div class="modal-footer">
@@ -39,17 +41,43 @@
   </div>
 </div>
 
-<!-- jQuery to bind click event for modal -->
+<!-- Deferred script to bind click event for modal -->
 <script>
-$(document).ready(function(){
-  $('.photo-preview').on('click', function(e){
-    e.preventDefault();
-    var imgSrc = $(this).data('image');
-    var caption = $(this).data('caption');
-    $('#modalImage').attr('src', imgSrc);
-    $('#modalCaption').text(caption);
-    $('#photoModal').modal('show');
+  // Wait for document ready and ensure jQuery is loaded
+  document.addEventListener('DOMContentLoaded', function() {
+    // Check if jQuery is loaded
+    if (typeof $ !== 'undefined') {
+      initializeGallery();
+    } else {
+      // If jQuery isn't loaded yet, wait for it
+      var checkJQuery = setInterval(function() {
+        if (typeof $ !== 'undefined') {
+          clearInterval(checkJQuery);
+          initializeGallery();
+        }
+      }, 100);
+    }
+    
+    function initializeGallery() {
+      // Initialize modal trigger
+      $('.photo-preview').on('click', function(e) {
+        e.preventDefault();
+        var imgSrc = $(this).data('image');
+        var caption = $(this).data('caption');
+        
+        // Set modal content
+        $('#modalImage').attr('src', imgSrc);
+        $('#modalCaption').text(caption);
+        
+        // Show modal
+        $('#photoModal').modal('show');
+      });
+      
+      // Make sure dropdown functionality is initialized as well
+      if (typeof $.fn.dropdown === 'function') {
+        $('.dropdown-toggle').dropdown();
+      }
+    }
   });
-});
-</script>
+  </script>
 {{ end }}

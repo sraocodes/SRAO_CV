@@ -33,15 +33,40 @@
   </div>
 </nav>
 
-<!-- Ensure jQuery and Bootstrap JS are correctly loaded -->
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-<!-- Manually initialize the dropdown in case Bootstrap auto-init fails -->
+<!-- Scripts for Bootstrap dropdown function -->
 <script>
-$(document).ready(function () {
-    $('.dropdown-toggle').dropdown();
+// Wait for document ready
+document.addEventListener('DOMContentLoaded', function() {
+  // Check if jQuery is loaded
+  if (typeof $ === 'undefined') {
+    // If jQuery is not yet loaded, add necessary scripts
+    loadScript('https://code.jquery.com/jquery-3.6.0.min.js', function() {
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', function() {
+        loadScript('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', function() {
+          // Initialize dropdowns after scripts are loaded
+          $('.dropdown-toggle').dropdown();
+        });
+      });
+    });
+  } else {
+    // If jQuery is already loaded, make sure the dropdowns are initialized
+    if (typeof $.fn.dropdown !== 'undefined') {
+      $('.dropdown-toggle').dropdown();
+    } else if (typeof bootstrap !== 'undefined' && typeof bootstrap.Dropdown !== 'undefined') {
+      // Try using Bootstrap 5 approach if available
+      document.querySelectorAll('.dropdown-toggle').forEach(function(element) {
+        new bootstrap.Dropdown(element);
+      });
+    }
+  }
 });
+
+// Helper function to load scripts dynamically
+function loadScript(url, callback) {
+  var script = document.createElement('script');
+  script.src = url;
+  script.onload = callback;
+  document.head.appendChild(script);
+}
 </script>
 {{ end }}

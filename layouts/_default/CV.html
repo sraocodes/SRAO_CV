@@ -1,26 +1,23 @@
 {{ define "main" }}
 <div class="container py-5">
-  <!-- Profile Section with Animation -->
-  <div class="card mb-4 shadow-sm profile-card" data-aos="fade-up" data-aos-duration="1000">
+  <!-- Profile Section -->
+  <div class="card mb-4 shadow-sm">
     <div class="card-body">
       <div class="row align-items-center">
-        <div class="col-md-3 text-center" data-aos="fade-right" data-aos-delay="200">
-          <div class="profile-image-container">
-            <img 
-              src="{{ .Params.image | relURL }}" 
-              alt="{{ .Params.title }}" 
-              class="profile-image"
-            >
-            <div class="image-backdrop"></div>
-          </div>
+        <div class="col-md-3 text-center">
+          <img 
+            src="{{ .Params.image | relURL }}" 
+            alt="{{ .Params.title }}" 
+            class="profile-image"
+          >
         </div>
-        <div class="col-md-9" data-aos="fade-left" data-aos-delay="300">
-          <h1 class="display-4 mb-3 animated-title">{{ .Params.title }}</h1>
-          <h2 class="h4 text-muted mb-3 slide-in">{{ .Params.role }}</h2>
-          <p class="lead slide-in" data-aos-delay="400">{{ .Params.summary }}</p>
+        <div class="col-md-9">
+          <h1 class="display-4 mb-3">{{ .Params.title }}</h1>
+          <h2 class="h4 text-muted mb-3">{{ .Params.role }}</h2>
+          <p class="lead">{{ .Params.summary }}</p>
           <div class="row mt-4">
-            {{ range $index, $contact := .Params.contact }}
-            <div class="col-md-6 col-lg-3 mb-3" data-aos="fade-up" data-aos-delay="{{ mul $index 100 | add 500 }}">
+            {{ range .Params.contact }}
+            <div class="col-md-6 col-lg-3 mb-3">
               <a href="{{ .link }}" class="contact-link text-decoration-none">
                 <div class="contact-item p-2">
                   <i class="{{ .icon }} fa-fw contact-icon"></i> 
@@ -35,13 +32,13 @@
     </div>
   </div>
 
-  <!-- Expertise Section with Animation -->
-  <div class="card mb-4 shadow-sm" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+  <!-- Expertise Section -->
+  <div class="card mb-4 shadow-sm">
     <div class="card-body">
       <h2 class="h3 mb-4 section-title">Expertise</h2>
       <div class="row">
-        {{ range $index, $expertise := .Params.expertise }}
-        <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="{{ mul $index 100 | add 200 }}">
+        {{ range .Params.expertise }}
+        <div class="col-md-4 mb-4">
           <h3 class="h5 mb-3 category-title">{{ .category }}</h3>
           <div class="skills-container">
             {{ range .skills }}
@@ -54,36 +51,31 @@
     </div>
   </div>
 
-  <!-- CV Options Section with Animation -->
-  <div class="card mb-4 shadow-sm" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+  <!-- CV Options Section -->
+  <div class="card mb-4 shadow-sm">
     <div class="card-body p-4">
       <h2 class="h3 mb-4 text-center section-title">CV Format Options</h2>
       
       <div class="row mb-4">
         <div class="col-lg-10 mx-auto">
-          <p class="lead text-center" data-aos="fade-up" data-aos-delay="300">
+          <p class="lead text-center">
             Much like wave-particle duality in quantum physics, my professional profile exists simultaneously in academic and industry dimensions.
           </p>
-          <p class="text-center" data-aos="fade-up" data-aos-delay="400">
-            While my research experience aligns perfectly with industry collabs, the translation isn't always straightforward. 
-            The skills, challenges, and achievements remain constant - only the language changes.
-          </p>
-          <p class="text-center mb-4" data-aos="fade-up" data-aos-delay="500">
-            I've prepared tailored versions of my CV for different audiences. The person behind them is the same; 
-            the perspective is what differs. Choose the format that best serves our collabs and needs:
+          <p class="text-center">
+            Choose the format that best serves our collaboration needs:
           </p>
         </div>
       </div>
       
       <div class="row justify-content-center">
-        <div class="col-md-5 mb-3" data-aos="fade-right" data-aos-delay="600">
+        <div class="col-md-5 mb-3">
           <a href="{{ "files/cv2.pdf" | relURL }}" class="cv-button academic">
             <i class="fas fa-graduation-cap button-icon"></i>
             <span>Academic CV</span>
           </a>
         </div>
         
-        <div class="col-md-5 mb-3" data-aos="fade-left" data-aos-delay="600">
+        <div class="col-md-5 mb-3">
           <a href="{{ "files/cv1.pdf" | relURL }}" class="cv-button industry">
             <i class="fas fa-briefcase button-icon"></i>
             <span>Industry CV</span>
@@ -93,12 +85,12 @@
     </div>
   </div>
 
-  <!-- Education Section with Animation -->
-  <div class="card mb-4 shadow-sm" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+  <!-- Education Section -->
+  <div class="card mb-4 shadow-sm">
     <div class="card-body">
       <h2 class="h3 mb-4 section-title">Education</h2>
-      {{ range $index, $education := .Params.education }}
-      <div class="education-item mb-4" data-aos="fade-up" data-aos-delay="{{ mul $index 100 | add 400 }}">
+      {{ range .Params.education }}
+      <div class="education-item mb-4">
         <div class="d-flex justify-content-between align-items-start">
           <div>
             <h3 class="h5 mb-1 degree-title">{{ .degree }}</h3>
@@ -118,123 +110,25 @@
 </div>
 
 <style>
-/* Animation Keyframes */
-@keyframes slideInFromLeft {
-  0% {
-    transform: translateX(-30px);
-    opacity: 0;
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-}
-
-@keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-
-@keyframes morphBackground {
-  0% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  }
-  25% {
-    border-radius: 58% 42% 75% 25% / 76% 46% 54% 24%;
-  }
-  50% {
-    border-radius: 50% 50% 33% 67% / 55% 27% 73% 45%;
-  }
-  75% {
-    border-radius: 33% 67% 58% 42% / 63% 68% 32% 37%;
-  }
-  100% {
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  }
-}
-
-/* Card Styling */
+/* Basic Styling - Simplified version */
 .card {
   border-radius: 12px;
   border: none;
   box-shadow: 0 6px 15px rgba(0,0,0,0.05);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
-}
-
-/* Profile Card Styling */
-.profile-card {
-  position: relative;
-  background: linear-gradient(to right, rgba(255,255,255,0.95), rgba(255,255,255,0.98));
-  border-top: 5px solid #4e73df;
 }
 
 /* Profile Image Styling */
-.profile-image-container {
-  position: relative;
+.profile-image {
   width: 200px;
   height: 200px;
-  margin: 0 auto;
-}
-
-.profile-image {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+  border-radius: 50%;
   border: 5px solid white;
   box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  position: relative;
-  z-index: 2;
-  transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-}
-
-.profile-image:hover {
-  border-radius: 50%;
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-}
-
-.image-backdrop {
-  position: absolute;
-  top: -10px;
-  left: -10px;
-  right: -10px;
-  bottom: -10px;
-  background: linear-gradient(135deg, rgba(78,115,223,0.1) 0%, rgba(219,68,55,0.1) 100%);
-  border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-  z-index: 1;
-  animation: morphBackground 8s ease-in-out infinite;
 }
 
 /* Typography Styling */
-.animated-title {
-  position: relative;
-  padding-bottom: 10px;
-  color: #2c3e50;
-  animation: fadeIn 1s ease forwards;
-}
-
-.animated-title:after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 70px;
-  height: 4px;
-  background: linear-gradient(90deg, #4e73df, #224abe);
-  border-radius: 2px;
-}
-
 .section-title {
   position: relative;
   color: #2c3e50;
@@ -249,12 +143,8 @@
   left: 0;
   width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, #4e73df, #224abe);
+  background: #4e73df;
   border-radius: 2px;
-}
-
-.slide-in {
-  animation: slideInFromLeft 0.7s ease forwards;
 }
 
 .category-title {
@@ -276,34 +166,14 @@
   border-radius: 50%;
 }
 
-.degree-title {
-  color: #2c3e50;
-  font-weight: 600;
-  transition: color 0.3s ease;
-}
-
-.school-name {
-  transition: color 0.3s ease;
-}
-
-.education-item:hover .degree-title {
-  color: #4e73df;
-}
-
-.education-item:hover .school-name {
-  color: #333 !important;
-}
-
 /* Contact Items Styling */
 .contact-link {
   color: #555;
-  transition: all 0.3s ease;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
-  transition: all 0.3s ease;
   border-radius: 8px;
   background-color: rgba(0,0,0,0.02);
 }
@@ -311,25 +181,11 @@
 .contact-icon {
   margin-right: 10px;
   color: #4e73df;
-  transition: transform 0.3s ease;
-}
-
-.contact-text {
-  transition: color 0.3s ease;
 }
 
 .contact-link:hover {
   color: #4e73df;
   text-decoration: none;
-}
-
-.contact-link:hover .contact-item {
-  background-color: rgba(78,115,223,0.08);
-  transform: translateX(5px);
-}
-
-.contact-link:hover .contact-icon {
-  transform: scale(1.2);
 }
 
 /* Skills Badges Styling */
@@ -342,19 +198,16 @@
 .skill-badge {
   display: inline-block;
   padding: 6px 12px;
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  background: #f8f9fa;
   color: #495057;
   border-radius: 20px;
   font-size: 0.85rem;
-  transition: all 0.3s ease;
   border: 1px solid rgba(0,0,0,0.05);
 }
 
 .skill-badge:hover {
-  background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+  background: #4e73df;
   color: white;
-  transform: translateY(-3px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* CV Buttons Styling */
@@ -366,35 +219,28 @@
   border-radius: 10px;
   color: white;
   font-weight: 500;
-  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
   text-decoration: none;
   text-align: center;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .cv-button.academic {
-  background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
+  background: #4e73df;
 }
 
 .cv-button.industry {
-  background: linear-gradient(135deg, #36b9cc 0%, #1a8997 100%);
+  background: #36b9cc;
 }
 
 .button-icon {
   margin-right: 10px;
   font-size: 1.2rem;
-  transition: transform 0.3s ease;
 }
 
 .cv-button:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  opacity: 0.9;
   color: white;
   text-decoration: none;
-}
-
-.cv-button:hover .button-icon {
-  transform: scale(1.2);
 }
 
 /* Year Badge Styling */
@@ -407,22 +253,6 @@
   font-size: 0.9rem;
   font-weight: 500;
   box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-.education-item:hover .year-badge {
-  background-color: #4e73df;
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.location-text {
-  transition: all 0.3s ease;
-}
-
-.education-item:hover .location-text {
-  color: #4e73df !important;
 }
 
 /* Print Styles */
@@ -438,42 +268,6 @@
     text-decoration: none !important; 
     color: inherit !important; 
   }
-  .profile-image {
-    border-radius: 50% !important;
-  }
-  .animated-title:after,
-  .section-title:after {
-    display: none !important;
-  }
 }
 </style>
-
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  // Initialize AOS if it's available
-  if (typeof AOS !== 'undefined') {
-    AOS.init({
-      duration: 800,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
-  }
-  
-  // Fallback animations if AOS is not available
-  else {
-    const fadeElements = document.querySelectorAll('.animated-title, .slide-in');
-    fadeElements.forEach(el => {
-      el.style.opacity = '0';
-      setTimeout(() => {
-        el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-        el.style.opacity = '1';
-        if (el.classList.contains('slide-in')) {
-          el.style.transform = 'translateX(0)';
-        }
-      }, 300);
-    });
-  }
-});
-</script>
 {{ end }}

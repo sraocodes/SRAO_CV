@@ -1,17 +1,17 @@
 {{ define "main" }}
 <div class="container py-5">
-    <!-- Animated Header -->
+    <!-- Header -->
     <header class="blog-header text-center mb-5">
-        <h1 class="blog-title display-4 mb-4" data-aos="fade-down" data-aos-duration="800">{{ .Title }}</h1>
-        <div class="search-container w-50 mx-auto" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+        <h1 class="blog-title display-4 mb-4">{{ .Title }}</h1>
+        <div class="search-container w-50 mx-auto">
             <input type="text" id="searchInput" class="form-control form-control-lg search-input" placeholder="Search posts...">
         </div>
     </header>
 
     <!-- Blog Posts Grid -->
     <div class="row g-4" id="blogPosts">
-        {{ range $index, $element := (where .Site.RegularPages "Section" "blogs") }}
-        <div class="col-md-6 blog-card" data-title="{{ .Title | lower }}" data-aos="fade-up" data-aos-duration="600" data-aos-delay="{{ mul $index 100 }}">
+        {{ range (where .Site.RegularPages "Section" "blogs") }}
+        <div class="col-md-6 blog-card" data-title="{{ .Title | lower }}">
             <a href="{{ .RelPermalink }}" class="text-decoration-none text-dark">
                 <div class="card h-100 border-0 shadow-sm blog-card-inner">
                     <div class="card-body p-4">
@@ -45,7 +45,7 @@
 </div>
 
 <style>
-    /* Blog Page Animation & Styling */
+    /* Blog Page Styling */
     .blog-title {
         font-family: 'Playfair Display', serif;
         position: relative;
@@ -87,34 +87,12 @@
     .blog-card-inner {
         border-radius: 12px;
         overflow: hidden;
-        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
-        position: relative;
-        z-index: 1;
-    }
-    
-    .blog-card-inner:before {
-        content: '';
-        position: absolute;
-        z-index: -1;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background: linear-gradient(to right, rgba(78,115,223,0.1), rgba(35,75,180,0.1));
-        border-radius: 12px;
-        transform: scale(0.8);
-        opacity: 0;
-        transition: all 0.5s cubic-bezier(0.165, 0.84, 0.44, 1);
+        transition: all 0.3s ease;
     }
     
     .blog-card:hover .blog-card-inner {
-        transform: translateY(-15px) scale(1.02);
-        box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
-    }
-    
-    .blog-card:hover .blog-card-inner:before {
-        transform: scale(1);
-        opacity: 1;
+        transform: translateY(-10px);
+        box-shadow: 0 10px 20px rgba(0,0,0,0.1) !important;
     }
     
     .post-date {
@@ -151,7 +129,6 @@
         overflow: hidden;
         position: relative;
         color: #6c757d;
-        transition: color 0.3s ease;
     }
     
     .blog-content::after {
@@ -170,70 +147,17 @@
         margin-top: 15px;
         color: #4e73df;
         font-weight: 500;
-        opacity: 0;
-        transform: translateY(10px);
         transition: all 0.3s ease;
-    }
-    
-    .read-more i {
-        transition: transform 0.3s ease;
-    }
-    
-    .blog-card:hover .read-more {
-        opacity: 1;
-        transform: translateY(0);
     }
     
     .blog-card:hover .read-more i {
         transform: translateX(5px);
     }
-    
-    /* Staggered entrance animation for cards */
-    @keyframes fadeInStagger {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
-    }
-    
-    /* Empty state styling */
-    #emptyStateMessage {
-        animation: fadeIn 0.5s ease;
-    }
-    
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
-    }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
-    // Initialize AOS if available
-    if (typeof AOS !== 'undefined') {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-out',
-            once: true
-        });
-    } else {
-        // Fallback animation if AOS is not available
-        const blogCards = document.querySelectorAll('.blog-card');
-        blogCards.forEach((card, index) => {
-            card.style.opacity = '0';
-            card.style.animation = `fadeInStagger 0.5s ease ${index * 0.1}s forwards`;
-        });
-    }
-    
-    // Enhance search functionality
+    // Search functionality
     const searchInput = document.getElementById('searchInput');
     const blogCards = document.getElementsByClassName('blog-card');
     const emptyStateMessage = document.getElementById('emptyStateMessage');

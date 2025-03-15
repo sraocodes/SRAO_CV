@@ -5,22 +5,31 @@
 <script src="/SRAO_CV/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=SRAO_CV/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research &amp; Engineering Projects</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="print" onload="this.media='all'">
 
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+
+
+
+<script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+
+
 
 
 <body>
@@ -92,15 +101,40 @@
 </nav>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
 <script>
-$(document).ready(function () {
-    $('.dropdown-toggle').dropdown();
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  if (typeof $ === 'undefined') {
+    
+    loadScript('https://code.jquery.com/jquery-3.6.0.min.js', function() {
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', function() {
+        loadScript('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', function() {
+          
+          $('.dropdown-toggle').dropdown();
+        });
+      });
+    });
+  } else {
+    
+    if (typeof $.fn.dropdown !== 'undefined') {
+      $('.dropdown-toggle').dropdown();
+    } else if (typeof bootstrap !== 'undefined' && typeof bootstrap.Dropdown !== 'undefined') {
+      
+      document.querySelectorAll('.dropdown-toggle').forEach(function(element) {
+        new bootstrap.Dropdown(element);
+      });
+    }
+  }
 });
+
+
+function loadScript(url, callback) {
+  var script = document.createElement('script');
+  script.src = url;
+  script.onload = callback;
+  document.head.appendChild(script);
+}
 </script>
 
     
@@ -632,7 +666,6 @@ Developed a <strong>collision avoidance system</strong> using <strong>8051 micro
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
     color: black;
     padding: 60px 0;
-    text-shadow: none;
 }
 
  
@@ -641,7 +674,7 @@ Developed a <strong>collision avoidance system</strong> using <strong>8051 micro
     padding: 8px 15px;
     font-size: 0.9rem;
     border: none;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     background: #f8f9fa;
 }
 
@@ -652,32 +685,14 @@ Developed a <strong>collision avoidance system</strong> using <strong>8051 micro
 }
 
  
-.project-card {
-    opacity: 0;
-    transform: translateY(15px);
-    animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .project-hover {
     border-left: 4px solid #007bff;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .project-hover:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
  
@@ -691,18 +706,27 @@ Developed a <strong>collision avoidance system</strong> using <strong>8051 micro
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projects = document.querySelectorAll('.project-card');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+    
+    filterButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            
+            filterButtons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            this.classList.add('active');
 
-            const filter = button.dataset.filter;
-            projects.forEach(project => {
-                project.style.display = (filter === 'all' || project.dataset.category === filter) ? 'block' : 'none';
+            
+            const filter = this.dataset.filter;
+            projects.forEach(function(project) {
+                if (filter === 'all' || project.dataset.category === filter) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
             });
         });
     });
@@ -716,11 +740,6 @@ document.addEventListener('DOMContentLoaded', () => {
         <p class="text-center">
             &copy; 2025 Sathyanarayan Rao. All rights reserved. Powered by coffee ☕.
             <br>Website styled with <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a>.
-        </p>
-        <p class="text-center">
-            <a href="https://info.flagcounter.com/wmwB">
-                <img src="https://s01.flagcounter.com/count2/wmwB/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_10/viewers_0/labels_0/pageviews_0/flags_0/percent_0/" alt="Flag Counter" border="0">
-            </a>
         </p>
     </div>
 </footer>

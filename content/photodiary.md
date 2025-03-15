@@ -1,5 +1,5 @@
 ---
-title: "Some of my Best Photography"
+title: "Some of nice Photographies"
 date: "2023-09-22"
 layout: "photodiary"
 photos:
@@ -15,4 +15,8 @@ photos:
     caption: "Little Diesel Locomotive"
     taken: "7/9/2024 11:25AM"
     details: "Thomas the tank at Duren, Germany"
+  - file: "images/photos/photo4.jpg"
+    caption: "MIT like dome but its Cologne Train Station"
+    taken: "7/9/2024 11:25AM"
+    details: "Cologne Messe/Deutz train station"
 ---

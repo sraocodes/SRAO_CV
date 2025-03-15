@@ -106,7 +106,6 @@
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
     color: black;
     padding: 60px 0;
-    text-shadow: none;
 }
 
 /* Buttons */
@@ -115,7 +114,7 @@
     padding: 8px 15px;
     font-size: 0.9rem;
     border: none;
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;
     background: #f8f9fa;
 }
 
@@ -126,32 +125,14 @@
 }
 
 /* Project Cards */
-.project-card {
-    opacity: 0;
-    transform: translateY(15px);
-    animation: fadeIn 0.5s ease-in-out forwards;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(15px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .project-hover {
     border-left: 4px solid #007bff;
     border-radius: 10px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .project-hover:hover {
-    transform: scale(1.02);
-    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px);
 }
 
 /* Video Links */
@@ -165,18 +146,27 @@
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function() {
     const filterButtons = document.querySelectorAll('.filter-btn');
     const projects = document.querySelectorAll('.project-card');
 
-    filterButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            button.classList.add('active');
+    // Handle filter button clicks
+    filterButtons.forEach(function(button) {
+        button.addEventListener('click', function() {
+            // Update active button
+            filterButtons.forEach(function(btn) {
+                btn.classList.remove('active');
+            });
+            this.classList.add('active');
 
-            const filter = button.dataset.filter;
-            projects.forEach(project => {
-                project.style.display = (filter === 'all' || project.dataset.category === filter) ? 'block' : 'none';
+            // Filter projects
+            const filter = this.dataset.filter;
+            projects.forEach(function(project) {
+                if (filter === 'all' || project.dataset.category === filter) {
+                    project.style.display = 'block';
+                } else {
+                    project.style.display = 'none';
+                }
             });
         });
     });

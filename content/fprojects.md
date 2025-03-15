@@ -5,10 +5,10 @@ layout: "fprojects"
 
 projects:
   - title: "Numerical Simulation of Current-Free Double Layers in a Helicon Plasma Device"
-    investigator: 
+    investigator:
       principal: "Dr. Nagendra Singh (Deceased)"
       co_principal: "Dr. Sathyanarayan Rao"
-    funding: 
+    funding:
       agency: "NASA (University of Alabama in Huntsville)"
       amount: ">$100,000 (2010-2012)"
     description: |
@@ -20,7 +20,7 @@ projects:
       - title: "Numerical Simulation of Current-Free Double Layers Created in a Helicon Plasma Device"
         journal: "Physics of Plasmas, 2012"
         link: "https://doi.org/10.1063/1.4754598"
-
+  
   - title: "eRoot – Quantifying Electrical Signatures of Plant Root Systems"
     investigator:
       principal: "Dr. Mathieu Javaux, Frederic Neugen, Sarah Gare"
@@ -39,7 +39,7 @@ projects:
       - title: "Imaging Plant Responses to Water Deficit Using Electrical Resistivity Tomography"
         journal: "Plant & Soil, 2021"
         link: "https://doi.org/10.1007/s11104-020-04653-7"
-
+  
   - title: "PhenoRob Digital Agricultural Avatar (DAA)"
     investigator:
       principal: "Dr. Andrea Schnpef, Dr. Sabine Seidel & Dr. Guillaume Lobet"
@@ -53,5 +53,6 @@ projects:
       - Supports **climate resilience & sustainable agriculture**.
     publications:
       - title: "Phenorob Digital Agricultural Avatar"
+        journal: ""
         link: "https://www.phenorobdaa.de"
 ---
