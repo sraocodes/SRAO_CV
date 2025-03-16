@@ -5,22 +5,31 @@
 <script src="/SRAO_CV/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=SRAO_CV/livereload" data-no-instant defer></script><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>My Academic Journey until 2020</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-<link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 <link rel="icon" href="/favicon.ico" type="image/x-icon">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
 
-<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-
-<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="print" onload="this.media='all'">
 
 
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+
+
+
+
+<script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
+
+
+
+
 
 
 <body>
@@ -92,15 +101,40 @@
 </nav>
 
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
-
 <script>
-$(document).ready(function () {
-    $('.dropdown-toggle').dropdown();
+
+document.addEventListener('DOMContentLoaded', function() {
+  
+  if (typeof $ === 'undefined') {
+    
+    loadScript('https://code.jquery.com/jquery-3.6.0.min.js', function() {
+      loadScript('https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js', function() {
+        loadScript('https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js', function() {
+          
+          $('.dropdown-toggle').dropdown();
+        });
+      });
+    });
+  } else {
+    
+    if (typeof $.fn.dropdown !== 'undefined') {
+      $('.dropdown-toggle').dropdown();
+    } else if (typeof bootstrap !== 'undefined' && typeof bootstrap.Dropdown !== 'undefined') {
+      
+      document.querySelectorAll('.dropdown-toggle').forEach(function(element) {
+        new bootstrap.Dropdown(element);
+      });
+    }
+  }
 });
+
+
+function loadScript(url, callback) {
+  var script = document.createElement('script');
+  script.src = url;
+  script.onload = callback;
+  document.head.appendChild(script);
+}
 </script>
 
     
