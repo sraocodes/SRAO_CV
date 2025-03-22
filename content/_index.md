@@ -28,7 +28,11 @@ categories:
     title: "Hobbies"
     icon: "fas fa-camera-retro"
     gradient: "bg-gradient-danger"
-
+  - name: "cv"
+    title: "Curriculum Vitae"
+    icon: "fas fa-file-alt"
+    gradient: "bg-gradient-primary"
+    
 # Cards with category assignments
 cards:
   - title: "Connect me on LinkedIn"
@@ -112,5 +116,17 @@ cards:
     iconW: "60px"
     link: "https://www.youtube.com/@ExplorativeEye"  
     category: "hobby"  
-       
+
+  - title: "Academic CV"
+    emoji: "🎓"
+    emojiSize: "3rem"
+    link: "files/cv2.pdf"
+    category: "cv"
+      
+  - title: "Industry CV"
+    emoji: "💼"
+    emojiSize: "3rem"
+    link: "files/cv1.pdf"
+    category: "cv"  
+
 ---
