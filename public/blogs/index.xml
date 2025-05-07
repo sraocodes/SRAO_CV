@@ -2,25 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blogs on SRAO_CV</title>
-    <link>http://localhost:1313/SRAO_CV/blogs/</link>
+    <link>https://sraocodes.github.io/SRAO_CV/blogs/</link>
     <description>Recent content in Blogs on SRAO_CV</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 14 Jan 2024 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://localhost:1313/SRAO_CV/blogs/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sraocodes.github.io/SRAO_CV/blogs/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Your Blog Title</title>
-      <link>http://localhost:1313/SRAO_CV/blogs/1/</link>
-      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/SRAO_CV/blogs/1/</guid>
-      <description>&lt;p&gt;Your blog content here&amp;hellip;&lt;/p&gt;</description>
+      <title>2125: The Two Minds Future</title>
+      <link>https://sraocodes.github.io/SRAO_CV/blogs/2/</link>
+      <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://sraocodes.github.io/SRAO_CV/blogs/2/</guid>
+      <description>2125: The Two Minds Future As AI becomes increasingly intelligent and capable of competing with todays human tasks, I sometimes fast forward to imagine where this trajectory can lead to. I often see these CEOs and Gen Z entrepreneurs (especially outside the european countries as europe is renowned for work-life balance) claiming to put in 120-140 hours of work every week or at least advocating it for their employees (I&amp;rsquo;m not certain if it is possible to work 140 hrs a week and stay mentally healthy).</description>
     </item>
+    
     <item>
-      <title>Your Blog Title</title>
-      <link>http://localhost:1313/SRAO_CV/blogs/2/</link>
-      <pubDate>Sun, 14 Jan 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/SRAO_CV/blogs/2/</guid>
-      <description>&lt;p&gt;Your blog content here&amp;hellip;&lt;/p&gt;</description>
+      <title>My Academic Journey until 2020</title>
+      <link>https://sraocodes.github.io/SRAO_CV/blogs/1/</link>
+      <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
+      
+      <guid>https://sraocodes.github.io/SRAO_CV/blogs/1/</guid>
+      <description>Welcome to My Journey in Academia Programming has been a significant part of my academic life for the past 15 years. From simulating the Sun to modeling plants, I&amp;rsquo;ve explored various aspects of the world around us through numerical methods. Looking back, it&amp;rsquo;s been a journey filled with challenges, discoveries, and growth.
+In this blog, I want to share my programming journey and academic experiences—not as a polished narrative, but as a candid recollection of what comes to mind.</description>
     </item>
+    
   </channel>
 </rss>
