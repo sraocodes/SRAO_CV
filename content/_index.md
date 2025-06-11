@@ -120,13 +120,13 @@ cards:
   - title: "Academic CV"
     emoji: "🎓"
     emojiSize: "3rem"
-    link: "files/cv2.pdf"
+    link: "files/CV_Academics.pdf"
     category: "cv"
       
   - title: "Industry CV"
     emoji: "💼"
     emojiSize: "3rem"
-    link: "files/cv1.pdf"
+    link: "files/CV_industry.pdf"
     category: "cv"  
 
 ---
