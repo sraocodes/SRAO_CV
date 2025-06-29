@@ -9,7 +9,8 @@ intro_text: |
   On this site, you'll find my research contributions, technical projects, and insights from my research interests. Feel free to explore my online presence through these platforms:
 background_image: "images/background.png" 
 image: "images/sathya.jpg"
-
+video_url: "videos/video1.mp4"
+video_poster: "images/video-poster.jpg"  # optional - thumbnail image shown before video loads
 # Define categories with their visual properties
 categories:
   - name: "academic"
