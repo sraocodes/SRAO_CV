@@ -2,14 +2,10 @@
 navbar:
   - name: "Home"
     link: "/"
-  - name: "Projects"
-    dropdown:
-      - name: "Funded Projects"
-        link: "/fprojects"
-      - name: "Technical Projects"
-        link: "/projects"
   - name: "CV"
     link: "/cv"
+  - name: "Projects"
+    link: "/projects"
   - name: "Personal"
     dropdown:
       - name: "Blog"
