@@ -28,6 +28,27 @@
   </div>
 </div>
 
+<!-- Video Section (Option 1: Between hero and cards) -->
+{{ if .Params.video_url }}
+<div class="video-section py-4">
+  <div class="container">
+    <div class="video-container">
+      <video 
+        class="featured-video" 
+        autoplay 
+        muted 
+        loop 
+        playsinline
+        poster="{{ .Params.video_poster | default "" | relURL }}"
+      >
+        <source src="{{ .Params.video_url | relURL }}" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+  </div>
+</div>
+{{ end }}
+
 <div class="container py-5">
   <!-- Grouped Cards Section -->
   <div class="row mb-5">
@@ -83,8 +104,6 @@
     {{ end }}
   </div>
 </div>
-
-
 
 <style>
   /* Hero Section and Profile Container */
@@ -207,6 +226,107 @@
     margin-bottom: 1.2rem;
   }
 
+  /* Video Section Styling */
+  .video-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .video-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+    pointer-events: none;
+  }
+
+  .video-container {
+    position: relative;
+    z-index: 2;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .featured-video {
+    width: 100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .featured-video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.4);
+  }
+
+  /* Alternative: Floating video option */
+  .video-floating {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 250px;
+    height: 75px;
+    z-index: 1000;
+    border-radius: 10px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+
+  .video-floating:hover {
+    transform: scale(1.05);
+  }
+
+  .video-floating video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+  }
+
+  /* Alternative: Video in hero background */
+  .hero-with-video {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    opacity: 0.3;
+    object-fit: cover;
+  }
+
+  .hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(248, 249, 250, 0.9);
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+  }
+
   /* Card Styling */
   .card {
     border-radius: 12px;
@@ -308,8 +428,23 @@
     min-height: 60px;
   }
 
-
+  /* Responsive video adjustments */
+  @media (max-width: 768px) {
+    .video-container {
+      padding: 10px;
+    }
+    
+    .featured-video {
+      border-radius: 10px;
+    }
+    
+    .video-floating {
+      width: 200px;
+      height: 60px;
+      bottom: 10px;
+      right: 10px;
+    }
+  }
 </style>
-
 
 {{ end }}

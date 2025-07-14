@@ -9,7 +9,8 @@ intro_text: |
   On this site, you'll find my research contributions, technical projects, and insights from my research interests. Feel free to explore my online presence through these platforms:
 background_image: "images/background.png" 
 image: "images/sathya.jpg"
-
+video_url: "videos/video1.mp4"
+video_poster: "images/video-poster.jpg"  # optional - thumbnail image shown before video loads
 # Define categories with their visual properties
 categories:
   - name: "academic"
@@ -127,13 +128,13 @@ cards:
   - title: "Academic CV"
     emoji: "🎓"
     emojiSize: "3rem"
-    link: "files/cv2.pdf"
+    link: "files/CV_Academics.pdf"
     category: "cv"
       
   - title: "Industry CV"
     emoji: "💼"
     emojiSize: "3rem"
-    link: "files/cv1.pdf"
+    link: "files/CV_industry.pdf"
     category: "cv"  
 
 ---

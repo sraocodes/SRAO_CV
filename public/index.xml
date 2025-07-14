@@ -2,74 +2,60 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Dr. Sathyanarayan Rao on SRAO_CV</title>
-    <link>https://sraocodes.github.io/SRAO_CV/</link>
+    <link>http://localhost:1313/SRAO_CV/</link>
     <description>Recent content in Dr. Sathyanarayan Rao on SRAO_CV</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 04 Feb 2025 00:00:00 +0000</lastBuildDate><atom:link href="https://sraocodes.github.io/SRAO_CV/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 04 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/SRAO_CV/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2125: The Two Minds Future</title>
-      <link>https://sraocodes.github.io/SRAO_CV/blogs/2/</link>
+      <link>http://localhost:1313/SRAO_CV/blogs/2/</link>
       <pubDate>Tue, 04 Feb 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://sraocodes.github.io/SRAO_CV/blogs/2/</guid>
-      <description>2125: The Two Minds Future As AI becomes increasingly intelligent and capable of competing with todays human tasks, I sometimes fast forward to imagine where this trajectory can lead to. I often see these CEOs and Gen Z entrepreneurs (especially outside the european countries as europe is renowned for work-life balance) claiming to put in 120-140 hours of work every week or at least advocating it for their employees (I&amp;rsquo;m not certain if it is possible to work 140 hrs a week and stay mentally healthy).</description>
+      <guid>http://localhost:1313/SRAO_CV/blogs/2/</guid>
+      <description>&lt;h3 id=&#34;2125-the-two-minds-future&#34;&gt;2125: The Two Minds Future&lt;/h3&gt;&#xA;&lt;p&gt;As AI becomes increasingly intelligent and capable of competing with todays human tasks, I sometimes fast forward to imagine where this trajectory can lead to. I often see these CEOs and Gen Z&#xA;entrepreneurs (especially outside the european countries as europe is renowned for work-life balance) claiming to put in 120-140 hours of work every week or at least advocating it for their employees (I&amp;rsquo;m not certain if it is possible to work 140 hrs a week and stay mentally&#xA;healthy). In an academic environment, a typical work in my area of research such as for example creating a working digital twin for an agricultural test field can take well over two years with collaborations and other administrative tasks, because our work is&#xA;often tied to our human limitations and may be here AI definitely acts as assistant to achieve this goals much faster. Even with AI, building something like a digital twin of an agri field might take more than two years – not because it&amp;rsquo;s technically impossible&#xA;to do it within two weeks, but because usually in academics, less employees are hired for a given task and these employees also have a life outside work and lot of other things to take care of that cannot be&#xA;anytime soon replaced or aided by AI (kids, hobbies, normal life&amp;rsquo;s ups and downs).&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>My Academic Journey until 2020</title>
-      <link>https://sraocodes.github.io/SRAO_CV/blogs/1/</link>
+      <link>http://localhost:1313/SRAO_CV/blogs/1/</link>
       <pubDate>Tue, 14 Jan 2025 00:00:00 +0000</pubDate>
-      
-      <guid>https://sraocodes.github.io/SRAO_CV/blogs/1/</guid>
-      <description>Welcome to My Journey in Academia Programming has been a significant part of my academic life for the past 15 years. From simulating the Sun to modeling plants, I&amp;rsquo;ve explored various aspects of the world around us through numerical methods. Looking back, it&amp;rsquo;s been a journey filled with challenges, discoveries, and growth.
-In this blog, I want to share my programming journey and academic experiences—not as a polished narrative, but as a candid recollection of what comes to mind.</description>
+      <guid>http://localhost:1313/SRAO_CV/blogs/1/</guid>
+      <description>&lt;h3 id=&#34;welcome-to-my-journey-in-academia&#34;&gt;Welcome to My Journey in Academia&lt;/h3&gt;&#xA;&lt;p&gt;Programming has been a significant part of my academic life for the past 15 years.&#xA;From simulating the Sun to modeling plants, I&amp;rsquo;ve explored various aspects of the&#xA;world around us through numerical methods. Looking back, it&amp;rsquo;s been a journey filled&#xA;with challenges, discoveries, and growth.&lt;/p&gt;&#xA;&lt;p&gt;In this blog, I want to share my programming journey and academic experiences—not as&#xA;a polished narrative, but as a candid recollection of what comes to mind. Right now,&#xA;programming skills are how I earn my bread and butter. Reflecting on where I started,&#xA;what I learned, and the moments where I stumbled, I hope to capture the essence of my path so far.&lt;/p&gt;</description>
     </item>
-    
     <item>
       <title>Some of nice Photographies</title>
-      <link>https://sraocodes.github.io/SRAO_CV/photodiary/</link>
+      <link>http://localhost:1313/SRAO_CV/photodiary/</link>
       <pubDate>Fri, 22 Sep 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://sraocodes.github.io/SRAO_CV/photodiary/</guid>
+      <guid>http://localhost:1313/SRAO_CV/photodiary/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Blog from my Nueral Activity</title>
-      <link>https://sraocodes.github.io/SRAO_CV/blogs/</link>
+      <link>http://localhost:1313/SRAO_CV/blogs/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://sraocodes.github.io/SRAO_CV/blogs/</guid>
+      <guid>http://localhost:1313/SRAO_CV/blogs/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Dr. Sathyanarayan Rao</title>
-      <link>https://sraocodes.github.io/SRAO_CV/cv/</link>
+      <link>http://localhost:1313/SRAO_CV/cv/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://sraocodes.github.io/SRAO_CV/cv/</guid>
+      <guid>http://localhost:1313/SRAO_CV/cv/</guid>
       <description>Scientific Programmer &amp;amp; Software Developer | Kaggle Master (Top 2%) | Expertise in Computational Simulations, Data Analytics, &amp;amp; Agricultural Modeling</description>
     </item>
-    
     <item>
       <title>Funded Research Projects</title>
-      <link>https://sraocodes.github.io/SRAO_CV/fprojects/</link>
+      <link>http://localhost:1313/SRAO_CV/fprojects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://sraocodes.github.io/SRAO_CV/fprojects/</guid>
+      <guid>http://localhost:1313/SRAO_CV/fprojects/</guid>
       <description></description>
     </item>
-    
     <item>
       <title>Research &amp; Engineering Projects</title>
-      <link>https://sraocodes.github.io/SRAO_CV/projects/</link>
+      <link>http://localhost:1313/SRAO_CV/projects/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://sraocodes.github.io/SRAO_CV/projects/</guid>
+      <guid>http://localhost:1313/SRAO_CV/projects/</guid>
       <description></description>
     </item>
-    
   </channel>
 </rss>
