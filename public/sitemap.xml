@@ -2,28 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/SRAO_CV/blogs/2/</loc>
+    <loc>https://sraocodes.github.io/SRAO_CV/blogs/2/</loc>
     <lastmod>2025-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/SRAO_CV/</loc>
+    <loc>https://sraocodes.github.io/SRAO_CV/blogs/</loc>
     <lastmod>2025-02-04T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/SRAO_CV/blogs/1/</loc>
+    <loc>https://sraocodes.github.io/SRAO_CV/</loc>
+    <lastmod>2025-02-04T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://sraocodes.github.io/SRAO_CV/blogs/1/</loc>
     <lastmod>2025-01-14T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/SRAO_CV/photodiary/</loc>
+    <loc>https://sraocodes.github.io/SRAO_CV/photodiary/</loc>
     <lastmod>2023-09-22T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/SRAO_CV/blogs/</loc>
+    <loc>https://sraocodes.github.io/SRAO_CV/blogs/</loc>
   </url><url>
-    <loc>http://localhost:1313/SRAO_CV/categories/</loc>
+    <loc>https://sraocodes.github.io/SRAO_CV/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/SRAO_CV/cv/</loc>
+    <loc>https://sraocodes.github.io/SRAO_CV/cv/</loc>
   </url><url>
-    <loc>http://localhost:1313/SRAO_CV/fprojects/</loc>
+    <loc>https://sraocodes.github.io/SRAO_CV/projects/</loc>
   </url><url>
-    <loc>http://localhost:1313/SRAO_CV/projects/</loc>
-  </url><url>
-    <loc>http://localhost:1313/SRAO_CV/tags/</loc>
+    <loc>https://sraocodes.github.io/SRAO_CV/tags/</loc>
   </url>
 </urlset>
