@@ -93,7 +93,7 @@ cards:
     category: "academic"
 
   - title: "PhD Thesis"
-    link: "https://dial.uclouvain.be/pr/boreal/object/boreal:239364"
+    link: "files/my_thesis.pdf"
     emoji: "🎓"
     emojiSize: "3rem"
     category: "academic"
