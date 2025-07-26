@@ -10,7 +10,7 @@ intro_text: |
 background_image: "images/background.png" 
 image: "images/sathya.jpg"
 video_url: "videos/video1.mp4"
-video_poster: "images/video-poster.jpg"  # optional - thumbnail image shown before video loads
+video_poster: "images/video-poster.jpg"  
 # Define categories with their visual properties
 categories:
   - name: "academic"
@@ -49,6 +49,13 @@ cards:
     iconW: "80px"
     link: "https://x.com/DrSathyan10"
     category: "connect"  
+
+  - title: "Connect on Topmate"
+    icon: "images/topmate.png"  
+    iconH: "60px"
+    iconW: "60px"
+    link: "https://topmate.io/dr_sathyanarayan_rao"
+    category: "connect"
     
   - title: "GitHub"
     icon: "images/github.png"
@@ -127,7 +134,7 @@ cards:
   - title: "Industry CV"
     emoji: "💼"
     emojiSize: "3rem"
-    link: "files/CV_industry.pdf"
+    link: "files/CV_Industry.pdf"
     category: "cv"  
 
 ---
