@@ -3,7 +3,7 @@ title: "Dr. Sathyanarayan Rao"
 layout: "CV"
 image: "images/sathya.jpg"
 role: "Scientist — Interdisciplinary Researcher — Computational Modeler"
-location: "Jülich, Germany"
+location: "Bengaluru, India"
 summary: "Scientific Programmer & Software Developer | Kaggle Master (Top 2%) | Expertise in Computational Simulations, Data Analytics, & Agricultural Modeling"
 
 contact:
@@ -18,17 +18,24 @@ contact:
 
 expertise:
   - category: "Programming & Development"
-    skills: ["Python", "Fortran", "C++", "MATLAB", "HTML/CSS", "JavaScript", "Flask", "Gradio"]
-  - category: "Scientific Computing"
-    skills: ["High Performance Computing", "Model Coupling", "Computational Modeling", "Data Analytics", "Data Visualization"]
-  - category: "AI/ML"
-    skills: ["Scikit-learn", "PyTorch", "TensorFlow", "Neural Networks", "LSTM", "Regression Models", "Classification"]
-  - category: "Web Development"
-    skills: ["Hugo", "HTML", "CSS", "Tailwind CSS", "Jekyll", "SVG Animations", "Frontend Development"]
-  - category: "Software Tools"
-    skills: ["Git", "CI/CD Pipeline", "GitHub Actions", "Jira", "Slack", "Microsoft Teams"]
-  - category: "Domain Knowledge"
-    skills: ["Electromagnetics", "AgroEcosystem Modeling", "Computational Engineering", "Remote Sensing", "Computing"]
+    skills: ["Python (NumPy, Pandas)", "C++", "FORTRAN", "MATLAB", "PyQt (GUI)", "JavaScript (Vue.js)", "HTML/CSS", "Hugo"]
+  - category: "Machine Learning & Data Science"
+    skills: ["Scikit-learn", "TensorFlow", "PyTorch", "Random Forest", "LSTM", "SVM", "Time-series analysis", "Anomaly detection", "Cross-correlation"]
+  - category: "Data Engineering & Visualization"
+    skills: ["Data pipelines", "Plotly", "Chart.js", "Leaflet", "Vue.js dashboards", "Interactive visualization", "Data cleaning & ETL"]
+  - category: "Remote Sensing & Instrumentation"
+    skills: ["SAR backscatter analysis", "LAI estimation", "Satellite remote sensing", "Electrical resistivity (ERT)", "TDR/Tensiometers", "AFM"]
+  - category: "Modeling & Simulation"
+    skills: ["Finite Element Modeling (FEM)", "Model coupling / loose coupling", "Digital Twins", "Agro-ecosystem models (AgroC, CPlantBox)", "Numerical methods"]
+  - category: "High-Performance & Production Systems"
+    skills: ["HPC clusters", "MPI", "OpenMP", "Docker", "CI/CD", "Git (version control)", "Containerized workflows"]
+  - category: "Software Engineering & APIs"
+    skills: ["WebSockets", "API integration", "Automation scripts", "Testing & reproducibility", "Documentation (Hugo)"]
+  - category: "Computer Vision & Image Analysis"
+    skills: ["OpenCV", "LAI from imagery (prototype workflows)", "image preprocessing", "feature extraction"]
+  - category: "Science Communication & Tools"
+    skills: ["Technical writing", "Data storytelling", "Video editing (Final Cut Pro, DaVinci Resolve)", "2D animation (Pencil2D)", "Teaching & workshop delivery"]
+
 
 education:
   - degree: "PhD in Engineering Sciences"

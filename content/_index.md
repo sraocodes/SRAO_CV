@@ -2,11 +2,15 @@
 title: "Dr. Sathyanarayan Rao"
 subtitle: "Computational Scientist | Researcher | Creator | Explorer of Ideas & Worlds"
 intro_text: |
-  Welcome! I'm Dr. Sathyanarayan Rao, a scientific software developer passionate about bridging computational engineering and Machine Learning/ AI. Through my doctoral research on dynamic root water uptake modeling and subsequent work, I've developed expertise in scientific modeling, machine learning, inverse problems and data assimilation techniques.
+  Welcome! I'm Dr. Sathyanarayan Rao, a computational scientist and research associate at the Indian Institute of Science (IISc), Bengaluru.  
+  My work bridges scientific software development, machine learning, and high-performance computing with applications in hydrology, digital agriculture, and complex systems.  
 
-  My journey spans multiple continents and institutions, contributing to my unique perspective on computational approaches in physical sciences. Currently, at Forschungszentrum Jülich, I'm advancing the Digital Agricultural Avatar project, where we're revolutionizing our understanding of plant-soil interactions through advanced computational modeling.
+  Through my PhD (UCLouvain, Belgium) and international research experiences in Germany, Belgium, and the USA, I've developed a strong background in computational modeling, data-driven simulation, time-series analysis, and digital twin development. At IISc, I apply these skills to integrate remote sensing, machine learning, and field data to better understand soil–water–crop interactions.  
 
-  On this site, you'll find my research contributions, technical projects, and insights from my research interests. Feel free to explore my online presence through these platforms:
+  Beyond research, I actively engage in technical communication and education**, running the YouTube channel named Compute Stories, where I explain computational science, data analysis, and modeling concepts in simple, accessible ways.  
+
+  On this site, you’ll find my research highlights, technical projects, and reflections on computational approaches in science and engineering. Feel free to explore and connect with me through the platforms below!
+
 background_image: "images/background.png" 
 image: "images/sathya.jpg"
 video_url: "videos/video1.mp4"
@@ -118,23 +122,11 @@ cards:
     link: "https://www.shutterstock.com/g/sathyanarayanrao"  
     category: "hobby"  
 
-  - title: "Explorative Eye"
-    icon: "images/youtube.png"  
-    iconH: "70px"
-    iconW: "60px"
-    link: "https://www.youtube.com/@ExplorativeEye"  
-    category: "hobby"  
-
-  - title: "Academic CV"
+  - title: "Download PDF"
     emoji: "🎓"
     emojiSize: "3rem"
     link: "files/CV_Academics.pdf"
     category: "cv"
       
-  - title: "Industry CV"
-    emoji: "💼"
-    emojiSize: "3rem"
-    link: "files/CV_Industry.pdf"
-    category: "cv"  
 
 ---
