@@ -1,6 +1,6 @@
 ---
 title: "Dr. Sathyanarayan Rao"
-layout: "CV"
+layout: "cv"
 image: "images/sathya.jpg"
 role: "Scientist — Interdisciplinary Researcher — Computational Modeler"
 location: "Bengaluru, India"

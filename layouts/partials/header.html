@@ -16,14 +16,14 @@
                       </a>
                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown_{{ .name }}">
                           {{ range .dropdown }}
-                              <a class="dropdown-item" href="{{ printf "%s%s" $.Site.BaseURL .link }}">{{ .name }}</a>
+                              <a class="dropdown-item" href="{{ .link | relURL }}">{{ .name }}</a>
                           {{ end }}
                       </div>
                   </li>
               {{ else }}
                   <li class="nav-item">
                       <a class="nav-link btn btn-primary mx-1" 
-                         href="{{ printf "%s%s" $.Site.BaseURL .link }}" style="font-size: 1.2em;">
+                         href="{{ .link | relURL }}" style="font-size: 1.2em;">
                          {{ .name }}
                       </a>
                   </li>
