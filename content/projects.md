@@ -262,7 +262,7 @@ sections:
             
             **Publications:** 2 conference papers (*Geophysical Research Abstracts*)  
             **Thesis Chapter:** 4  
-            **Collaboration:** Prof. Andreas Kemna (Bonn), Dr. Praveen Ranganath (IISc) for ML discussions
+            **Collaboration:** Prof. Andreas Kemna (Bonn)
         
         skills:
           - type: "font"
