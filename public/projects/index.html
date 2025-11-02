@@ -800,7 +800,7 @@ You can identify crop species and quantify root traits <strong>without seeing th
 </ul>
 <p><strong>Publications:</strong> 2 conference papers (<em>Geophysical Research Abstracts</em>)<br>
 <strong>Thesis Chapter:</strong> 4<br>
-<strong>Collaboration:</strong> Prof. Andreas Kemna (Bonn), Dr. Praveen Ranganath (IISc) for ML discussions</p>
+<strong>Collaboration:</strong> Prof. Andreas Kemna (Bonn)</p>
 
                             </div>
 
@@ -2136,7 +2136,7 @@ Expertise in coupled physics-based simulations, numerical stability, and quantum
  
 .filter-section {
     background: white;
-    padding: 24px 0;
+    padding: 16px 0;
     border-bottom: 1px solid var(--border);
     position: sticky;
     top: 0;
@@ -2146,24 +2146,28 @@ Expertise in coupled physics-based simulations, numerical stability, and quantum
 
 .filter-wrapper {
     display: flex;
-    gap: 12px;
+    gap: 8px;
     flex-wrap: wrap;
     justify-content: center;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 4px 0;
 }
 
 .filter-btn {
     display: flex;
     align-items: center;
-    gap: 8px;
-    padding: 10px 20px;
+    gap: 6px;
+    padding: 8px 16px;
     border: 2px solid var(--border);
     background: white;
     border-radius: 50px;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 500;
     color: var(--text-secondary);
     cursor: pointer;
     transition: all 0.3s ease;
+    white-space: nowrap;
 }
 
 .filter-btn:hover {
@@ -2179,7 +2183,39 @@ Expertise in coupled physics-based simulations, numerical stability, and quantum
 }
 
 .filter-btn i {
-    font-size: 1rem;
+    font-size: 0.9rem;
+}
+
+ 
+@media (max-width: 768px) {
+    .filter-section {
+        padding: 12px 0;
+    }
+    
+    .filter-wrapper {
+        gap: 6px;
+        max-height: 120px;
+        padding: 2px 0;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        gap: 4px;
+    }
+    
+    .filter-btn i {
+        font-size: 0.85rem;
+    }
+    
+    .filter-btn span {
+        display: none;  
+    }
+    
+     
+    .filter-btn.active span {
+        display: inline;
+    }
 }
 
  

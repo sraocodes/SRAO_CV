@@ -130,16 +130,27 @@ function loadScript(url, callback) {
 </script>
 
     
-<div class="container py-5">
-    <article class="row justify-content-center">
-        <div class="col-lg-8">
-            <header class="text-center mb-5">
-                <h1 class="display-4">2125: The Two Minds Future</h1>
-                <p class="text-muted">February 4, 2025</p>
-            </header>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
 
-            <div class="content">
-                <h3 id="2125-the-two-minds-future">2125: The Two Minds Future</h3>
+<div class="blog-single">
+    <article class="container">
+        
+        <header class="blog-header">
+            <div class="blog-meta">
+                <time datetime="2025-02-04">
+                    <i class="far fa-calendar"></i>
+                    February 4, 2025
+                </time>
+                
+            </div>
+            <h1 class="blog-title">2125: The Two Minds Future</h1>
+            
+            
+        </header>
+
+        
+        <div class="blog-content">
+            <h3 id="2125-the-two-minds-future">2125: The Two Minds Future</h3>
 <p>I occasionally fast-forward to see where AI might go as it grows smarter and can compete with humans in today&rsquo;s tasks. These CEOs and Gen Z business owners frequently claim to work 120–140 hours per week, or at the very least, support it for their staff members (I&rsquo;m not sure if it&rsquo;s possible to work 140 hours per week and maintain mental health). This is especially true outside of Europe, where work-life balance is well-known. In an academic setting, a typical project in my field of study, like building a functional digital twin for an agricultural test field, can take well over two years with teamwork and other administrative duties. This is because our work is frequently limited by human limitations, and AI may help us accomplish these objectives much more quickly. Even with AI, creating a digital twin of an agricultural field could take longer than two years. This isn&rsquo;t because it&rsquo;s technically impossible to complete in two weeks, but rather because, in academia, fewer workers are typically hired for a given task, and these workers also have lives outside of work and many other responsibilities that AI can&rsquo;t replace or help with anytime soon (kids, hobbies, the ups and downs of everyday life).</p>
 <p>Let&rsquo;s now imagine that all 8 billion people are driven to put in those absurd 140 hours of work, whether they are coding, gathering data, creating AI systems, operating buses or trains, etc. All of this human labor, whether it be direct AI or code development or physical labor creating training data for a physical robot, would be expedited at an astounding rate. The final outcome? Superintelligent artificial intelligence, automated driving systems, and armies of robots are likely to arrive much sooner than anticipated. No one will want to spend any more time in front of a computer to code or operate a vehicle thanks to this incredibly intelligent AI. We don&rsquo;t even need to sit in front of a computer or gaze at a smartphone to access this super intelligence.We&rsquo;ll most likely have something much more straightforward instead: a digital twin, or even better, an AI mind that becomes a part of us.</p>
 <p>Social media today already has a big influence on people&rsquo;s thoughts, both positively and negatively, and it takes up a lot of time from all of humanity. In a century, our smartphones will have AI minds that can think like two different people. The way our brains connect to this AI mind is similar to how gadgets connect to Wi-Fi. Artificial general intelligence and brain interfaces are already making some headway.
@@ -157,22 +168,283 @@ Perhaps in 2125, everyone will have a mind that never dies, just like in that fi
 Perhaps it all comes down to striking the ideal balance between too much and too little.</p>
 <p>Why are we eight billion people here if all these digital twins are powered by nuclear power plants and all physical labor is done by robots? We&rsquo;re putting all of our effort into creating this ideal AI world right now, but after it&rsquo;s finished&hellip; what will happen? With this crazy, cutting-edge technology operating in the background, we might wind up exactly where we started. Isn&rsquo;t it fascinating to consider? Thus, I will conclude this blog post here.</p>
 
-            </div>
-
-            <div class="text-center mt-5">
-                
-                <a href="http://localhost:1313/SRAO_CV/blogs" class="btn btn-primary">&larr; Back to Blog</a>
-            </div>
         </div>
+
+        
+        <nav class="blog-nav">
+            <a href="http://localhost:1313/SRAO_CV/blogs" class="btn-back">
+                <i class="fas fa-arrow-left"></i>
+                <span>Back to Blog</span>
+            </a>
+            
+            
+        </nav>
     </article>
 </div>
 
 <style>
-    .content {
-        font-size: 1.1rem;
-        line-height: 1.8;
+:root {
+    --primary: #667eea;
+    --primary-dark: #5568d3;
+    --text-primary: #1a202c;
+    --text-secondary: #4a5568;
+    --text-muted: #718096;
+    --border: #e2e8f0;
+    --bg-light: #f7fafc;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.blog-single {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-light);
+    min-height: 100vh;
+    padding: 60px 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+ 
+.blog-header {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 40px 0;
+}
+
+.blog-meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.blog-meta time {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.blog-tags {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.tag {
+    padding: 4px 12px;
+    background: var(--primary);
+    color: white;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.blog-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 5vw, 3rem);
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.2;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.blog-subtitle {
+    font-size: 1.25rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.blog-author {
+    margin-top: 20px;
+}
+
+.author-name {
+    color: var(--text-muted);
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+ 
+.blog-content {
+    background: white;
+    padding: 60px 50px;
+    border-radius: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.blog-content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+}
+
+.blog-content h1,
+.blog-content h2,
+.blog-content h3 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: var(--text-primary);
+    margin-top: 2em;
+    margin-bottom: 0.75em;
+    line-height: 1.3;
+}
+
+.blog-content h1 {
+    font-size: 2rem;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 0.5em;
+}
+
+.blog-content h2 {
+    font-size: 1.75rem;
+}
+
+.blog-content h3 {
+    font-size: 1.5rem;
+}
+
+.blog-content p {
+    margin-bottom: 1.5em;
+}
+
+.blog-content a {
+    color: var(--primary);
+    text-decoration: none;
+    border-bottom: 1px solid var(--primary);
+    transition: all 0.2s;
+}
+
+.blog-content a:hover {
+    color: var(--primary-dark);
+    border-bottom-color: var(--primary-dark);
+}
+
+.blog-content ul,
+.blog-content ol {
+    margin: 1.5em 0;
+    padding-left: 2em;
+}
+
+.blog-content li {
+    margin-bottom: 0.5em;
+}
+
+.blog-content blockquote {
+    border-left: 4px solid var(--primary);
+    padding: 1em 1.5em;
+    margin: 2em 0;
+    background: var(--bg-light);
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+}
+
+.blog-content code {
+    background: var(--bg-light);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: 'Monaco', 'Courier New', monospace;
+}
+
+.blog-content pre {
+    background: #1e1e1e;
+    color: #d4d4d4;
+    padding: 1.5em;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 2em 0;
+}
+
+.blog-content pre code {
+    background: none;
+    padding: 0;
+    color: inherit;
+}
+
+.blog-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin: 2em 0;
+}
+
+ 
+.blog-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 60px;
+}
+
+.btn-back,
+.btn-next {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 24px;
+    background: white;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-back:hover,
+.btn-next:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+}
+
+ 
+@media (max-width: 768px) {
+    .blog-single {
+        padding: 30px 15px;
     }
+    
+    .blog-content {
+        padding: 30px 20px;
+        font-size: 1rem;
+    }
+    
+    .blog-header {
+        padding: 20px 0;
+        margin-bottom: 30px;
+    }
+    
+    .blog-title {
+        font-size: 1.75rem;
+    }
+    
+    .blog-nav {
+        flex-direction: column;
+    }
+    
+    .btn-back,
+    .btn-next {
+        width: 100%;
+        justify-content: center;
+    }
+}
 </style>
+
 
     
 <footer class="bg-dark text-white text-center py-3">
