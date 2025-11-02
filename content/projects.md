@@ -1,6 +1,6 @@
 ---
 title: "Research & Engineering Portfolio"
-subtitle: "From quantum physics simulations to agricultural AI - Two decades of computational science"
+subtitle: "From quantum physics simulations to agricultural processes - 15 years of computational science"
 layout: "project"
 
 sections:
