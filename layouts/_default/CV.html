@@ -6,7 +6,7 @@
       <div class="row align-items-center">
         <div class="col-md-3 text-center">
           <img 
-            src="{{ .Params.image | relURL }}" 
+            src="{{ printf "%s%s" $.Site.BaseURL .Params.image }}" 
             alt="{{ .Params.title }}" 
             class="profile-image"
           >
@@ -65,7 +65,7 @@
 
       <div class="row justify-content-center">
         <div class="col-md-6 text-center">
-          <a href="{{ "files/CV_Academics.pdf" | relURL }}" class="cv-button academic" target="_blank" rel="noopener">
+          <a href="{{ printf "%s%s" $.Site.BaseURL "files/CV_Academics.pdf" }}" class="cv-button academic" target="_blank" rel="noopener">
             <i class="fas fa-file-pdf button-icon"></i>
             <span>Download CV (PDF)</span>
           </a>
