@@ -82,10 +82,13 @@ coursework:
     gpa: ""
     courses: []
 
-  - degree: "MS in Optical Physics"
-    school: "Alabama A&M University"
+  - degree: "MS in Physics"
+    program: "Optical and Theoretical Physics"
+    school: "Alabama A&M University, Huntsville, USA"
+    year: "2014"
+    location: "USA"
     gpa: "4.0/4.0"
-    note: "I loved all these courses - they represent my passion in theoretical and applied physics"
+    note: "Graduate coursework focused on optics, quantum mechanics, and computational physics. This program shaped my transition toward advanced simulation and applied research."
     courses:
       - code: "PHY 503"
         title: "Methods of Mathematical Physics"
@@ -94,6 +97,11 @@ coursework:
         favorite: true
       - code: "PHY 521"
         title: "Quantum Mechanics I"
+        credits: 3
+        grade: "A"
+        favorite: true
+      - code: "PHY 500"
+        title: "Analytical Mechanics"
         credits: 3
         grade: "A"
         favorite: true
@@ -106,18 +114,23 @@ coursework:
         title: "Laser Physics"
         credits: 4
         grade: "A"
-        favorite: true
-      - code: "PHY 500"
-        title: "Analytical Mechanics"
+        favorite: false
+      - code: "PHY 649"
+        title: "Geometrical Optics"
         credits: 3
         grade: "A"
         favorite: false
-      - code: "PHY 799"
-        title: "Dissertation"
+      - code: "PHY 657"
+        title: "Physical Optics & Interferometry"
+        credits: 4
+        grade: "A"
+        favorite: true
+      - code: "PHY 692"
+        title: "Nanophotonics"
         credits: 3
-        grade: "X"
+        grade: "A"
         favorite: false
-
+ 
   - degree: "MS in Electrical Engineering"
     school: "University of Alabama in Huntsville"
     gpa: "3.9/4.0"
