@@ -13,7 +13,7 @@ contact:
     info: "www.drsrao.com"
     link: "https://www.drsrao.com"
   - icon: "fas fa-map-marker-alt"
-    info: "Jülich, Germany"
+    info: "Bengaluru, India"
     link: ""
 
 expertise:
