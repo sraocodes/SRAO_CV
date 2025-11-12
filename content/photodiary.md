@@ -19,4 +19,8 @@ photos:
     caption: "MIT like dome but its Cologne Train Station"
     taken: "7/9/2024 11:25AM"
     details: "Cologne Messe/Deutz train station"
+  - file: "images/photos/photo5.jpg"
+    caption: "Stunning blue flowers at UAS Campus, Bengaluru"
+    taken: "10/11/2025 09:25AM"
+    details: "University of Agricultural Sciences, Bengaluru"
 ---
