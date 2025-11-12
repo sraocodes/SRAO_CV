@@ -2,7 +2,7 @@
 navbar:
   - name: "Home"
     link: "/"
-  - name: "CV"
+  - name: "Academic Portfolio"
     link: "/cv"
   - name: "Projects"
     link: "/projects"

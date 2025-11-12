@@ -1,173 +1,601 @@
 {{ define "main" }}
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
-<div class="min-h-screen bg-light">
+<div class="projects-page">
     <!-- Hero Section -->
-    <header class="hero-header py-16">
-        <div class="container text-center">
-            <h1 class="display-4 font-weight-bold text-dark">{{ .Title }}</h1>
-            <p class="lead text-secondary">{{ .Params.subtitle }}</p>
+    <header class="hero-section">
+        <div class="container">
+            <h1 class="hero-title">{{ .Title }}</h1>
+            <p class="hero-subtitle">{{ .Params.subtitle }}</p>
         </div>
     </header>
 
-    <!-- Filter Buttons -->
-    <nav class="sticky-top bg-white shadow-sm py-3">
-        <div class="container d-flex justify-content-center flex-wrap gap-2">
-            <button class="btn filter-btn active" data-filter="all">
-                <i class="fas fa-th"></i> All Projects
-            </button>
-            <button class="btn filter-btn" data-filter="web-development">
-                <i class="fas fa-code"></i> Web Development
-            </button>
-            <button class="btn filter-btn" data-filter="scientific-software">
-                <i class="fas fa-laptop-code"></i> Scientific Software
-            </button>
-            <button class="btn filter-btn" data-filter="ai-machine-learning">
-                <i class="fas fa-brain"></i> AI & ML
-            </button>
-            <button class="btn filter-btn" data-filter="engineering-projects">
-                <i class="fas fa-cogs"></i> Engineering
-            </button>
-            <button class="btn filter-btn" data-filter="content-creation">
-                <i class="fas fa-pen-nib"></i> Content Creation
-            </button>
+    <!-- Filter Section -->
+    <nav class="filter-section">
+        <div class="container">
+            <div class="filter-wrapper">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-th"></i>
+                    <span>All Work</span>
+                </button>
+                <button class="filter-btn" data-filter="research-science">
+                    <i class="fas fa-flask"></i>
+                    <span>Research & Science</span>
+                </button>
+                <button class="filter-btn" data-filter="writing-publishing">
+                    <i class="fas fa-pen-fancy"></i>
+                    <span>Writing & Publishing</span>
+                </button>
+                <button class="filter-btn" data-filter="content-creation">
+                    <i class="fas fa-video"></i>
+                    <span>Content Creation</span>
+                </button>
+                <button class="filter-btn" data-filter="technical-projects">
+                    <i class="fas fa-laptop-code"></i>
+                    <span>Technical Projects</span>
+                </button>
+            </div>
         </div>
     </nav>
 
-    <!-- Project Cards -->
-    <main class="container py-5">
-        <div class="row">
-            {{ range .Params.sections }}
-                {{ range .items }}
-                <div class="col-md-6 col-lg-4 mb-4 project-card" data-category="{{ .category | urlize }}">
-                    <div class="card shadow-sm project-hover">
-                        <div class="card-body">
-                            <!-- Project Header -->
-                            <h5 class="font-weight-bold">{{ .main_text }}</h5>
-                            <p class="text-muted small">{{ .sub_text }}</p>
-                            <p class="text-secondary">{{ .description | markdownify }}</p>
-                            
-                            <div class="badge badge-primary">{{ .category }}</div>
-
-                            <!-- Video Section (Restored) -->
-                            {{ if .videos }}
-                                <div class="mt-3">
-                                    <h6 class="text-dark">Videos:</h6>
-                                    <ul class="list-unstyled">
-                                        {{ if .videos.daa_channel }}
-                                            <h6 class="small text-muted">Digital Agricultural Avatar Channel:</h6>
-                                            {{ range .videos.daa_channel }}
-                                            <li>
-                                                <a href="https://youtube.com/watch?v={{ .id }}" class="text-primary" target="_blank">
-                                                    <i class="fas fa-play-circle"></i> {{ .title }}
-                                                </a>
-                                            </li>
-                                            {{ end }}
-                                        {{ end }}
-
-                                        {{ if .videos.compute_channel }}
-                                            <h6 class="small text-muted mt-2">Compute Stories Channel:</h6>
-                                            {{ range .videos.compute_channel }}
-                                            <li>
-                                                <a href="https://youtube.com/watch?v={{ .id }}" class="text-primary" target="_blank">
-                                                    <i class="fas fa-play-circle"></i> {{ .title }}
-                                                </a>
-                                            </li>
-                                            {{ end }}
-                                        {{ end }}
-                                    </ul>
-                                </div>
-                            {{ end }}
-
-                            <!-- Skills Section -->
-                            {{ if .skills }}
-                            <div class="mt-3">
-                                <h6 class="text-dark">Skills Used:</h6>
-                                <div class="d-flex flex-wrap gap-2">
-                                    {{ range .skills }}
-                                    <span class="badge badge-secondary">
-                                        <i class="fas {{ .icon }}"></i> {{ .description }}
-                                    </span>
-                                    {{ end }}
-                                </div>
+    <!-- Projects Grid -->
+    <main class="projects-container">
+        <div class="container">
+            <div class="projects-grid">
+                {{ range .Params.sections }}
+                    {{ range .items }}
+                    <article class="project-card" data-category="{{ .category | urlize }}">
+                        <!-- Card Header -->
+                        <div class="card-header">
+                            <div class="card-meta">
+                                <span class="category-badge">{{ .category }}</span>
+                                <span class="timeframe">{{ .sub_text }}</span>
+                            </div>
+                            <h2 class="project-title">{{ .main_text }}</h2>
+                            {{ if or .role .institution }}
+                            <div class="project-context">
+                                {{ with .role }}<span class="role-badge"><i class="fas fa-user-tag"></i> {{ . }}</span>{{ end }}
+                                {{ with .institution }}<span class="institution-badge"><i class="fas fa-building"></i> {{ . }}</span>{{ end }}
                             </div>
                             {{ end }}
                         </div>
-                    </div>
-                </div>
+
+                        <!-- Card Body -->
+                        <div class="card-body">
+                            <div class="project-description">
+                                {{ .description | markdownify }}
+                            </div>
+
+                            <!-- Skills Pills (Compact) -->
+                            {{ if .skills }}
+                            <div class="skills-row">
+                                {{ range first 3 .skills }}
+                                <span class="skill-pill">{{ .description }}</span>
+                                {{ end }}
+                                {{ if gt (len .skills) 3 }}
+                                <span class="skill-pill more">+{{ sub (len .skills) 3 }} more</span>
+                                {{ end }}
+                            </div>
+                            {{ end }}
+
+                            <!-- Expandable Section -->
+                            <div class="expandable-content">
+                                <button class="expand-btn">
+                                    <span class="expand-text">View Details</span>
+                                    <i class="fas fa-chevron-down expand-icon"></i>
+                                </button>
+
+                                <div class="expanded-section">
+                                    <!-- All Skills -->
+                                    {{ if .skills }}
+                                    <div class="detail-section">
+                                        <h3 class="detail-title">Technologies Used</h3>
+                                        <div class="skills-grid">
+                                            {{ range .skills }}
+                                            <span class="skill-badge">
+                                                <i class="fas {{ .icon }}"></i>
+                                                {{ .description }}
+                                            </span>
+                                            {{ end }}
+                                        </div>
+                                    </div>
+                                    {{ end }}
+
+                                    <!-- Videos -->
+                                    {{ if .videos }}
+                                    <div class="detail-section">
+                                        <h3 class="detail-title">Related Videos</h3>
+                                        {{ if .videos.daa_channel }}
+                                        <div class="video-group">
+                                            <p class="video-channel">Digital Agricultural Avatar</p>
+                                            {{ range .videos.daa_channel }}
+                                            <a href="https://youtube.com/watch?v={{ .id }}" class="video-link" target="_blank">
+                                                <i class="fas fa-play-circle"></i>
+                                                <span>{{ .title }}</span>
+                                            </a>
+                                            {{ end }}
+                                        </div>
+                                        {{ end }}
+
+                                        {{ if .videos.compute_channel }}
+                                        <div class="video-group">
+                                            <p class="video-channel">Compute Stories</p>
+                                            {{ range .videos.compute_channel }}
+                                            <a href="https://youtube.com/watch?v={{ .id }}" class="video-link" target="_blank">
+                                                <i class="fas fa-play-circle"></i>
+                                                <span>{{ .title }}</span>
+                                            </a>
+                                            {{ end }}
+                                        </div>
+                                        {{ end }}
+                                    </div>
+                                    {{ end }}
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                    {{ end }}
                 {{ end }}
-            {{ end }}
+            </div>
         </div>
     </main>
 </div>
 
 <style>
-/* Fixing the Header */
-.hero-header {
-    background: linear-gradient(to right, #f8f9fa, #e9ecef);
-    color: black;
+:root {
+    --primary: #667eea;
+    --primary-dark: #5568d3;
+    --text-primary: #1a202c;
+    --text-secondary: #718096;
+    --text-tertiary: #a0aec0;
+    --border: #e2e8f0;
+    --bg-light: #f7fafc;
+    --bg-white: #ffffff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.projects-page {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-light);
+    min-height: 100vh;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    padding: 80px 0 60px;
+    text-align: center;
+    color: white;
+}
+
+.hero-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    margin-bottom: 16px;
+    letter-spacing: -0.5px;
+}
+
+.hero-subtitle {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 300;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Filter Section */
+.filter-section {
+    background: white;
+    padding: 16px 0;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.filter-wrapper {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-height: 200px;
+    overflow-y: auto;
+    padding: 4px 0;
+}
+
+.filter-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    border: 2px solid var(--border);
+    background: white;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: white;
+}
+
+.filter-btn i {
+    font-size: 0.9rem;
+}
+
+/* Mobile-specific filter adjustments */
+@media (max-width: 768px) {
+    .filter-section {
+        padding: 12px 0;
+    }
+    
+    .filter-wrapper {
+        gap: 6px;
+        max-height: 120px;
+        padding: 2px 0;
+    }
+    
+    .filter-btn {
+        padding: 6px 12px;
+        font-size: 0.8rem;
+        gap: 4px;
+    }
+    
+    .filter-btn i {
+        font-size: 0.85rem;
+    }
+    
+    .filter-btn span {
+        display: none; /* Hide text on mobile, show only icons */
+    }
+    
+    /* Show text only for active button on mobile */
+    .filter-btn.active span {
+        display: inline;
+    }
+}
+
+/* Projects Grid */
+.projects-container {
     padding: 60px 0;
 }
 
-/* Buttons */
-.filter-btn {
-    border-radius: 25px;
-    padding: 8px 15px;
-    font-size: 0.9rem;
-    border: none;
-    transition: background-color 0.3s ease, color 0.3s ease;
-    background: #f8f9fa;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
+    gap: 32px;
 }
 
-.filter-btn:hover, .filter-btn.active {
-    background: #007bff;
+@media (max-width: 768px) {
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Project Card */
+.project-card {
+    background: white;
+    border-radius: 16px;
+    border: 1px solid var(--border);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
+    border-color: var(--primary);
+}
+
+.card-header {
+    padding: 24px 24px 16px;
+    border-bottom: 1px solid var(--border);
+}
+
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.category-badge {
+    display: inline-block;
+    padding: 4px 12px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
     color: white;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-/* Project Cards */
-.project-hover {
-    border-left: 4px solid #007bff;
-    border-radius: 10px;
+.timeframe {
+    font-size: 0.85rem;
+    color: var(--text-tertiary);
+    font-weight: 500;
+}
+
+.project-title {
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin-bottom: 12px;
+}
+
+.project-context {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.role-badge, .institution-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 4px 10px;
+    background: rgba(102, 126, 234, 0.1);
+    color: var(--primary);
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.role-badge i, .institution-badge i {
+    font-size: 0.75rem;
+}
+
+/* Card Body */
+.card-body {
+    padding: 24px;
+}
+
+.project-description {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--text-secondary);
+    margin-bottom: 20px;
+}
+
+.project-description p {
+    margin-bottom: 12px;
+}
+
+.project-description strong {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.project-description ul {
+    margin-left: 20px;
+    margin-top: 8px;
+}
+
+/* Skills Pills */
+.skills-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.skill-pill {
+    display: inline-block;
+    padding: 6px 14px;
+    background: var(--bg-light);
+    color: var(--text-secondary);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.skill-pill.more {
+    background: var(--primary);
+    color: white;
+}
+
+/* Expand Button */
+.expand-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    padding: 12px;
+    background: var(--bg-light);
+    border: none;
+    border-radius: 8px;
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.expand-btn:hover {
+    background: var(--primary);
+    color: white;
+}
+
+.expand-icon {
     transition: transform 0.3s ease;
 }
 
-.project-hover:hover {
-    transform: translateY(-5px);
+.expand-btn.active .expand-icon {
+    transform: rotate(180deg);
+}
+
+/* Expanded Section */
+.expanded-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.expanded-section.show {
+    max-height: 2000px;
+}
+
+.detail-section {
+    padding: 20px 0;
+    border-top: 1px solid var(--border);
+}
+
+.detail-section:first-child {
+    padding-top: 24px;
+}
+
+.detail-title {
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+}
+
+/* Skills Grid */
+.skills-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skill-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 14px;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    transform: translateY(-2px);
+}
+
+.skill-badge i {
+    font-size: 1rem;
 }
 
 /* Video Links */
-.text-primary {
-    text-decoration: none;
+.video-group {
+    margin-bottom: 16px;
 }
 
-.text-primary:hover {
-    text-decoration: underline;
+.video-channel {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-tertiary);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.video-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 12px;
+    margin-bottom: 8px;
+    background: var(--bg-light);
+    border-radius: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+
+.video-link:hover {
+    background: var(--primary);
+    color: white;
+    transform: translateX(4px);
+}
+
+.video-link i {
+    font-size: 1.1rem;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
+    // Filter functionality
     const filterButtons = document.querySelectorAll('.filter-btn');
-    const projects = document.querySelectorAll('.project-card');
+    const projectCards = document.querySelectorAll('.project-card');
 
-    // Handle filter button clicks
-    filterButtons.forEach(function(button) {
+    filterButtons.forEach(button => {
         button.addEventListener('click', function() {
+            const filter = this.dataset.filter;
+
             // Update active button
-            filterButtons.forEach(function(btn) {
-                btn.classList.remove('active');
-            });
+            filterButtons.forEach(btn => btn.classList.remove('active'));
             this.classList.add('active');
 
             // Filter projects
-            const filter = this.dataset.filter;
-            projects.forEach(function(project) {
-                if (filter === 'all' || project.dataset.category === filter) {
-                    project.style.display = 'block';
+            projectCards.forEach(card => {
+                if (filter === 'all' || card.dataset.category === filter) {
+                    card.style.display = 'block';
                 } else {
-                    project.style.display = 'none';
+                    card.style.display = 'none';
                 }
             });
+        });
+    });
+
+    // Expand/collapse functionality
+    const expandButtons = document.querySelectorAll('.expand-btn');
+
+    expandButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.project-card');
+            const expandedSection = card.querySelector('.expanded-section');
+            
+            this.classList.toggle('active');
+            expandedSection.classList.toggle('show');
+            
+            // Update button text
+            const expandText = this.querySelector('.expand-text');
+            if (expandedSection.classList.contains('show')) {
+                expandText.textContent = 'Hide Details';
+            } else {
+                expandText.textContent = 'View Details';
+            }
         });
     });
 });

@@ -2,11 +2,13 @@
 title: "Dr. Sathyanarayan Rao"
 subtitle: "Computational Scientist | Researcher | Creator | Explorer of Ideas & Worlds"
 intro_text: |
-  Welcome! I'm Dr. Sathyanarayan Rao, a scientific software developer passionate about bridging computational engineering and Machine Learning/ AI. Through my doctoral research on dynamic root water uptake modeling and subsequent work, I've developed expertise in scientific modeling, machine learning, inverse problems and data assimilation techniques.
+  Computational scientist at the Indian Institute of Science (IISc), Bengaluru. I bridge scientific software, machine learning, and high-performance computing with applications in hydrology, digital agriculture, and complex systems.
 
-  My journey spans multiple continents and institutions, contributing to my unique perspective on computational approaches in physical sciences. Currently, at Forschungszentrum Jülich, I'm advancing the Digital Agricultural Avatar project, where we're revolutionizing our understanding of plant-soil interactions through advanced computational modeling.
+  My work spans computational modeling, data-driven simulation, and digital twin development—integrating remote sensing, ML, and field data to understand soil–water–crop interactions.
 
-  On this site, you'll find my research contributions, technical projects, and insights from my research interests. Feel free to explore my online presence through these platforms:
+  I also run Compute Stories on YouTube, making computational science accessible to everyone.
+
+
 background_image: "images/background.png" 
 image: "images/sathya.jpg"
 video_url: "videos/video1.mp4"
@@ -118,23 +120,11 @@ cards:
     link: "https://www.shutterstock.com/g/sathyanarayanrao"  
     category: "hobby"  
 
-  - title: "Explorative Eye"
-    icon: "images/youtube.png"  
-    iconH: "70px"
-    iconW: "60px"
-    link: "https://www.youtube.com/@ExplorativeEye"  
-    category: "hobby"  
-
-  - title: "Academic CV"
+  - title: "Download PDF"
     emoji: "🎓"
     emojiSize: "3rem"
     link: "files/CV_Academics.pdf"
     category: "cv"
       
-  - title: "Industry CV"
-    emoji: "💼"
-    emojiSize: "3rem"
-    link: "files/CV_Industry.pdf"
-    category: "cv"  
 
 ---
