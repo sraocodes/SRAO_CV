@@ -1,0 +1,553 @@
+{{ define "main" }}
+<div class="container py-5">
+  <!-- Profile Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <div class="row align-items-center">
+        <div class="col-md-3 text-center">
+          <img 
+            src="{{ printf "%s%s" $.Site.BaseURL .Params.image }}" 
+            alt="{{ .Params.title }}" 
+            class="profile-image"
+          >
+        </div>
+        <div class="col-md-9">
+          <h1 class="display-4 mb-3">{{ .Params.title }}</h1>
+          <h2 class="h4 text-muted mb-3">{{ .Params.role }}</h2>
+          <p class="lead">{{ .Params.summary }}</p>
+          <div class="row mt-4">
+            {{ range .Params.contact }}
+            <div class="col-md-6 col-lg-3 mb-3">
+              <a href="{{ .link }}" class="contact-link text-decoration-none">
+                <div class="contact-item p-2">
+                  <i class="{{ .icon }} fa-fw contact-icon"></i> 
+                  <span class="contact-text">{{ .info }}</span>
+                </div>
+              </a>
+            </div>
+            {{ end }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Expertise Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h2 class="h3 mb-4 section-title">Expertise</h2>
+      <div class="row">
+        {{ range .Params.expertise }}
+        <div class="col-md-4 mb-4">
+          <h3 class="h5 mb-3 category-title">{{ .category }}</h3>
+          <div class="skills-container">
+            {{ range .skills }}
+            <span class="skill-badge">{{ . }}</span>
+            {{ end }}
+          </div>
+        </div>
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <!-- CV Options Section (REPLACED: single CV download) -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body p-4">
+      <h2 class="h3 mb-4 text-center section-title">Curriculum Vitae</h2>
+      <div class="row mb-3">
+        <div class="col-lg-10 mx-auto">
+          <p class="lead text-center">
+            Download CV (PDF).
+          </p>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+          <a href="{{ printf "%s%s" $.Site.BaseURL "files/CV_Academics.pdf" }}" class="cv-button academic" target="_blank" rel="noopener">
+            <i class="fas fa-file-pdf button-icon"></i>
+            <span>Download CV (PDF)</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- Education Section -->
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h2 class="h3 mb-4 section-title">Education</h2>
+      {{ range .Params.education }}
+      <div class="education-item mb-4">
+        <div class="d-flex justify-content-between align-items-start">
+          <div>
+            <h3 class="h5 mb-1 degree-title">{{ .degree }}</h3>
+            <p class="text-muted mb-1 school-name">{{ .school }}</p>
+            {{ with .thesis }}<p class="small thesis-text">{{ . }}</p>{{ end }}
+            {{ with .gpa }}<p class="small text-primary gpa-text">GPA: {{ . }}</p>{{ end }}
+          </div>
+          <div class="text-right">
+            <span class="year-badge">{{ .year }}</span>
+            <div class="small text-muted location-text">{{ .location }}</div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+
+  <!-- Coursework Section -->
+  {{ if .Params.coursework }}
+  <div class="card mb-4 shadow-sm">
+    <div class="card-body">
+      <h2 class="h3 mb-4 section-title">Academic Coursework</h2>
+      <p class="text-center text-muted mb-4">
+        <i class="fas fa-star text-success me-2"></i>= Favorite subjects that sparked my passion
+      </p>
+      
+      {{ range .Params.coursework }}
+      <div class="degree-coursework mb-5">
+        <h3 class="h5 mb-3 degree-coursework-heading">
+          <i class="fas fa-graduation-cap me-2"></i>{{ .degree }}
+          <span class="school-badge-inline ms-2">{{ .school }}</span>
+        </h3>
+        
+        {{ if .note }}
+        <div class="alert alert-info mb-3">
+          <i class="fas fa-info-circle me-2"></i>{{ .note }}
+        </div>
+        {{ end }}
+
+        {{ if .gpa }}
+        <div class="gpa-summary-top mb-3">
+          <span class="fw-bold">Overall GPA:</span> {{ .gpa }}
+        </div>
+        {{ end }}
+
+        {{ if .courses }}
+        <!-- Graduate courses with course codes -->
+        <div class="table-responsive">
+          <table class="table table-hover course-table">
+            <thead>
+              <tr>
+                <th>Code</th>
+                <th>Course Title</th>
+                <th class="text-center">Credits</th>
+                <th class="text-center">Grade</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range .courses }}
+              <tr class="{{ if .favorite }}favorite-course{{ end }}">
+                <td class="course-code">{{ .code }}</td>
+                <td>
+                  {{ if .favorite }}<i class="fas fa-star text-success me-2"></i>{{ end }}
+                  {{ .title }}
+                </td>
+                <td class="text-center">{{ .credits }}</td>
+                <td class="text-center">
+                  <span class="grade-badge grade-{{ lower .grade }}">{{ .grade }}</span>
+                </td>
+              </tr>
+              {{ end }}
+            </tbody>
+          </table>
+        </div>
+        {{ end }}
+
+        {{ if .semesters }}
+        <!-- Undergraduate courses by semester -->
+        {{ range .semesters }}
+        <h4 class="semester-heading mt-4 mb-3">
+          <i class="fas fa-calendar-alt me-2"></i>{{ .name }}
+        </h4>
+        <div class="table-responsive">
+          <table class="table table-hover course-table">
+            <thead>
+              <tr>
+                <th>Course Title</th>
+                <th class="text-center">Marks</th>
+                <th class="text-center">Max</th>
+                <th class="text-center">%</th>
+              </tr>
+            </thead>
+            <tbody>
+              {{ range .courses }}
+              <tr class="{{ if .favorite }}favorite-course{{ end }}">
+                <td>
+                  {{ if .favorite }}<i class="fas fa-star text-success me-2"></i>{{ end }}
+                  {{ .title }}
+                </td>
+                <td class="text-center">{{ .marks }}</td>
+                <td class="text-center">{{ .max_marks }}</td>
+                <td class="text-center">
+                  {{ $percentage := mul (div (float .marks) (float .max_marks)) 100 }}
+                  <span class="percentage-badge">{{ printf "%.1f" $percentage }}%</span>
+                </td>
+              </tr>
+              {{ end }}
+            </tbody>
+          </table>
+        </div>
+        {{ end }}
+        {{ end }}
+
+      </div>
+      {{ end }}
+    </div>
+  </div>
+  {{ end }}
+</div>
+
+<style>
+/* Basic Styling - Purple Gradient Theme */
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.card {
+  border-radius: 12px;
+  border: none;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(102, 126, 234, 0.15);
+}
+
+/* Profile Image Styling */
+.profile-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid white;
+  box-shadow: 0 10px 20px rgba(102, 126, 234, 0.2);
+}
+
+/* Typography Styling with Purple Theme */
+.section-title {
+  position: relative;
+  color: #2c3e50;
+  padding-bottom: 12px;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.section-title:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 2px;
+}
+
+.category-title {
+  color: #3a3f51;
+  font-weight: 600;
+  font-size: 1.1rem;
+  position: relative;
+  padding-left: 15px;
+}
+
+.category-title:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 50%;
+}
+
+/* Contact Items Styling */
+.contact-link {
+  color: #555;
+  transition: all 0.3s ease;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  border-radius: 8px;
+  background-color: rgba(0,0,0,0.02);
+  transition: all 0.3s ease;
+}
+
+.contact-icon {
+  margin-right: 10px;
+  color: #667eea;
+}
+
+.contact-link:hover {
+  color: #667eea;
+  text-decoration: none;
+}
+
+.contact-link:hover .contact-item {
+  background-color: rgba(102, 126, 234, 0.1);
+  transform: translateX(3px);
+}
+
+/* Skills Badges Styling */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-badge {
+  display: inline-block;
+  padding: 6px 12px;
+  background: #f8f9fa;
+  color: #495057;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  border: 1px solid rgba(0,0,0,0.05);
+  transition: all 0.3s ease;
+}
+
+.skill-badge:hover {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(102, 126, 234, 0.3);
+}
+
+/* CV Buttons Styling with Gradient */
+.cv-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 20px;
+  border-radius: 10px;
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  text-align: center;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+  transition: all 0.3s ease;
+}
+
+.button-icon {
+  margin-right: 10px;
+  font-size: 1.2rem;
+}
+
+.cv-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+/* Year Badge Styling */
+.year-badge {
+  display: inline-block;
+  padding: 5px 12px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  box-shadow: 0 2px 5px rgba(102, 126, 234, 0.3);
+}
+
+/* Coursework Section Styling */
+.degree-coursework {
+  padding: 20px;
+  background: linear-gradient(to right, rgba(102, 126, 234, 0.03), rgba(118, 75, 162, 0.03));
+  border-radius: 12px;
+  border-left: 4px solid #667eea;
+}
+
+.degree-coursework-heading {
+  color: #2c3e50;
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+
+.school-badge-inline {
+  display: inline-block;
+  padding: 4px 12px;
+  background: rgba(102, 126, 234, 0.1);
+  color: #667eea;
+  border-radius: 15px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.alert-info {
+  background-color: rgba(102, 126, 234, 0.08);
+  border-left: 4px solid #667eea;
+  color: #4a5568;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.gpa-summary-top {
+  padding: 10px 15px;
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.1), rgba(118, 75, 162, 0.1));
+  border-radius: 8px;
+  color: #2c3e50;
+  font-size: 1.05rem;
+}
+
+/* Course Table Styling */
+.course-table {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.95rem;
+}
+
+.course-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+.course-table thead th {
+  border: none;
+  padding: 12px 15px;
+  font-weight: 500;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.course-table tbody tr {
+  transition: all 0.2s ease;
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.course-table tbody tr:hover {
+  background-color: rgba(102, 126, 234, 0.05);
+  transform: scale(1.01);
+}
+
+.course-table tbody td {
+  padding: 12px 15px;
+  vertical-align: middle;
+}
+
+.favorite-course {
+  background-color: rgba(34, 197, 94, 0.05) !important;
+  border-left: 3px solid #22c55e;
+}
+
+.favorite-course:hover {
+  background-color: rgba(34, 197, 94, 0.1) !important;
+}
+
+.course-code {
+  font-family: 'Courier New', monospace;
+  font-weight: 600;
+  color: #667eea;
+  font-size: 0.9rem;
+}
+
+/* Grade Badges */
+.grade-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  min-width: 40px;
+  text-align: center;
+}
+
+.grade-a {
+  background-color: #22c55e;
+  color: white;
+}
+
+.grade-b, .grade-b- {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.grade-s, .grade-x {
+  background-color: #8b5cf6;
+  color: white;
+}
+
+.percentage-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-weight: 600;
+  font-size: 0.85rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+}
+
+/* Semester Heading */
+.semester-heading {
+  color: #667eea;
+  font-weight: 600;
+  font-size: 1.15rem;
+  padding: 10px 15px;
+  background: rgba(102, 126, 234, 0.05);
+  border-left: 3px solid #667eea;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .profile-image {
+    width: 150px;
+    height: 150px;
+  }
+  
+  .degree-coursework {
+    padding: 15px;
+  }
+  
+  .course-table {
+    font-size: 0.85rem;
+  }
+  
+  .course-table thead th,
+  .course-table tbody td {
+    padding: 8px 10px;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .card { 
+    border: none !important; 
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+  .shadow-sm { 
+    box-shadow: none !important; 
+  }
+  a { 
+    text-decoration: none !important; 
+    color: inherit !important; 
+  }
+  .cv-button {
+    display: none;
+  }
+  .favorite-course {
+    border-left-color: #22c55e !important;
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
+</style>
+{{ end }}
