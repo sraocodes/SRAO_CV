@@ -103,99 +103,100 @@
   <div class="card mb-4 shadow-sm">
     <div class="card-body">
       <h2 class="h3 mb-4 section-title">Academic Coursework</h2>
-      <p class="text-center text-muted mb-4">
-        <i class="fas fa-star text-success me-2"></i>= Favorite subjects that sparked my passion
-      </p>
-      
+
       {{ range .Params.coursework }}
-      <div class="degree-coursework mb-5">
-        <h3 class="h5 mb-3 degree-coursework-heading">
-          <i class="fas fa-graduation-cap me-2"></i>{{ .degree }}
-          <span class="school-badge-inline ms-2">{{ .school }}</span>
-        </h3>
-        
-        {{ if .note }}
-        <div class="alert alert-info mb-3">
-          <i class="fas fa-info-circle me-2"></i>{{ .note }}
-        </div>
-        {{ end }}
+      {{ $favCount := 0 }}
+      {{ range .courses }}{{ if .favorite }}{{ $favCount = add $favCount 1 }}{{ end }}{{ end }}
+      {{ range .semesters }}{{ range .courses }}{{ if .favorite }}{{ $favCount = add $favCount 1 }}{{ end }}{{ end }}{{ end }}
+      {{ $courseCount := 0 }}
+      {{ if .courses }}{{ $courseCount = len .courses }}{{ end }}
+      {{ $semCount := 0 }}
+      {{ range .semesters }}{{ $semCount = add $semCount (len .courses) }}{{ end }}
+      {{ $total := add $courseCount $semCount }}
 
-        {{ if .gpa }}
-        <div class="gpa-summary-top mb-3">
-          <span class="fw-bold">Overall GPA:</span> {{ .gpa }}
-        </div>
-        {{ end }}
+      <div class="cw-accordion mb-3">
+        <button class="cw-toggle" onclick="toggleCW(this)">
+          <div class="cw-toggle-left">
+            <i class="fas fa-graduation-cap cw-icon"></i>
+            <div class="cw-toggle-text">
+              <span class="cw-degree">{{ .degree }}</span>
+              <span class="cw-school">{{ .school }}</span>
+            </div>
+          </div>
+          <div class="cw-toggle-right">
+            {{ if .gpa }}<span class="cw-stat gpa-stat">GPA {{ .gpa }}</span>{{ end }}
+            {{ if gt $total 0 }}<span class="cw-stat">{{ $total }} courses</span>{{ end }}
+            {{ if gt $favCount 0 }}<span class="cw-stat star-stat">★ {{ $favCount }} starred</span>{{ end }}
+            <i class="fas fa-chevron-down cw-chevron"></i>
+          </div>
+        </button>
 
-        {{ if .courses }}
-        <!-- Graduate courses with course codes -->
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Code</th>
-                <th>Course Title</th>
-                <th class="text-center">Credits</th>
-                <th class="text-center">Grade</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{ range .courses }}
-              <tr class="{{ if .favorite }}favorite-course{{ end }}">
-                <td class="course-code">{{ .code }}</td>
-                <td>
-                  {{ if .favorite }}<i class="fas fa-star text-success me-2"></i>{{ end }}
-                  {{ .title }}
-                </td>
-                <td class="text-center">{{ .credits }}</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-{{ lower .grade }}">{{ .grade }}</span>
-                </td>
-              </tr>
-              {{ end }}
-            </tbody>
-          </table>
-        </div>
-        {{ end }}
+        <div class="cw-body">
+          {{ if .note }}
+          <p class="cw-note"><i class="fas fa-info-circle me-2"></i>{{ .note }}</p>
+          {{ end }}
 
-        {{ if .semesters }}
-        <!-- Undergraduate courses by semester -->
-        {{ range .semesters }}
-        <h4 class="semester-heading mt-4 mb-3">
-          <i class="fas fa-calendar-alt me-2"></i>{{ .name }}
-        </h4>
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Course Title</th>
-                <th class="text-center">Marks</th>
-                <th class="text-center">Max</th>
-                <th class="text-center">%</th>
-              </tr>
-            </thead>
-            <tbody>
-              {{ range .courses }}
-              <tr class="{{ if .favorite }}favorite-course{{ end }}">
-                <td>
-                  {{ if .favorite }}<i class="fas fa-star text-success me-2"></i>{{ end }}
-                  {{ .title }}
-                </td>
-                <td class="text-center">{{ .marks }}</td>
-                <td class="text-center">{{ .max_marks }}</td>
-                <td class="text-center">
-                  {{ $percentage := mul (div (float .marks) (float .max_marks)) 100 }}
-                  <span class="percentage-badge">{{ printf "%.1f" $percentage }}%</span>
-                </td>
-              </tr>
-              {{ end }}
-            </tbody>
-          </table>
-        </div>
-        {{ end }}
-        {{ end }}
+          {{ if .courses }}
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Course Title</th>
+                  <th class="text-center">Credits</th>
+                  <th class="text-center">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{ range .courses }}
+                <tr class="{{ if .favorite }}favorite-course{{ end }}">
+                  <td class="course-code">{{ .code }}</td>
+                  <td>{{ if .favorite }}<i class="fas fa-star text-success me-2"></i>{{ end }}{{ .title }}</td>
+                  <td class="text-center">{{ .credits }}</td>
+                  <td class="text-center"><span class="grade-badge grade-{{ lower .grade }}">{{ .grade }}</span></td>
+                </tr>
+                {{ end }}
+              </tbody>
+            </table>
+          </div>
+          {{ end }}
 
+          {{ if .semesters }}
+          {{ range .semesters }}
+          <h4 class="semester-heading mt-4 mb-3">
+            <i class="fas fa-calendar-alt me-2"></i>{{ .name }}
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Course Title</th>
+                  <th class="text-center">Marks</th>
+                  <th class="text-center">Max</th>
+                  <th class="text-center">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                {{ range .courses }}
+                <tr class="{{ if .favorite }}favorite-course{{ end }}">
+                  <td>{{ if .favorite }}<i class="fas fa-star text-success me-2"></i>{{ end }}{{ .title }}</td>
+                  <td class="text-center">{{ .marks }}</td>
+                  <td class="text-center">{{ .max_marks }}</td>
+                  <td class="text-center">
+                    {{ $pct := mul (div (float .marks) (float .max_marks)) 100 }}
+                    <span class="percentage-badge">{{ printf "%.1f" $pct }}%</span>
+                  </td>
+                </tr>
+                {{ end }}
+              </tbody>
+            </table>
+          </div>
+          {{ end }}
+          {{ end }}
+        </div>
       </div>
       {{ end }}
+
     </div>
   </div>
   {{ end }}
@@ -526,6 +527,119 @@ body {
   }
 }
 
+/* Coursework Accordion */
+.cw-accordion {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cw-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #fafbff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+  gap: 12px;
+}
+
+.cw-toggle:hover { background: #f0f2ff; }
+
+.cw-toggle-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cw-icon {
+  color: #667eea;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.cw-toggle-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cw-degree {
+  font-weight: 600;
+  color: #1a202c;
+  font-size: 0.95rem;
+}
+
+.cw-school {
+  font-size: 0.8rem;
+  color: #a0aec0;
+}
+
+.cw-toggle-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.cw-stat {
+  padding: 3px 10px;
+  background: #eef0ff;
+  color: #5568d3;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.gpa-stat { background: #e6f4ea; color: #2d7a4f; }
+.star-stat { background: #fff8e1; color: #b7791f; }
+
+.cw-chevron {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.cw-toggle.open .cw-chevron { transform: rotate(180deg); }
+.cw-toggle.open { background: #f0f2ff; }
+
+.cw-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 20px;
+}
+
+.cw-body.open {
+  max-height: 6000px;
+  padding: 16px 20px 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.cw-note {
+  font-size: 0.88rem;
+  color: #4a5568;
+  background: rgba(102,126,234,0.06);
+  border-left: 3px solid #667eea;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .cw-toggle { flex-direction: column; align-items: flex-start; }
+  .cw-toggle-right { margin-top: 8px; }
+  .cw-chevron { display: none; }
+}
+
 /* Print Styles */
 @media print {
   .card { 
@@ -550,4 +664,13 @@ body {
   }
 }
 </style>
+
+<script>
+function toggleCW(btn) {
+  const body = btn.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  btn.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
+}
+</script>
 {{ end }}

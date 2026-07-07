@@ -521,7 +521,7 @@ groups:
     items:
 
       - main_text: "Sentinel-2 NDVI Trends as a Groundwater Extraction Indicator (Tamil Nadu)"
-        sub_text: "2026–Present"
+        sub_text: "2026"
         role: "Independent Researcher (Solo)"
         summary: "Independent analysis testing whether block-scale Sentinel-2 peak-NDVI trends track CGWB groundwater extraction gradients across six over-exploited blocks in Tiruvannamalai district, Tamil Nadu. Found a borderline-significant positive association (r=0.814, p=0.049)."
         description: |
@@ -587,7 +587,7 @@ groups:
             icon: "fa-chalkboard-teacher"
             description: "Science Communication"
 
-      - main_text: "How Not to Die in Indian Traffic: A Scientist's Survival Guide to Bengaluru Roads"
+      - main_text: "How Not to Die in Indian Traffic: A Scientist's Survival Guide to Bengaluru Roads (Book)"
         sub_text: "March 2026"
         role: "Author · Kindle Edition"
         summary: "A traffic awareness book exploring Bengaluru roads as a human system — psychology, risk perception, social norms, and urban density — drawn from daily commute observations and analytical thinking. Published March 2026."

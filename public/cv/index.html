@@ -55,7 +55,7 @@
                   <li class="nav-item">
                       <a class="nav-link btn btn-primary mx-1" 
                          href="https://sraocodes.github.io/SRAO_CV//cv" style="font-size: 1.2em;">
-                         Academic Portfolio
+                         CV
                       </a>
                   </li>
               
@@ -463,1297 +463,1077 @@ function loadScript(url, callback) {
   <div class="card mb-4 shadow-sm">
     <div class="card-body">
       <h2 class="h3 mb-4 section-title">Academic Coursework</h2>
-      <p class="text-center text-muted mb-4">
-        <i class="fas fa-star text-success me-2"></i>= Favorite subjects that sparked my passion
-      </p>
+
       
       
-      <div class="degree-coursework mb-5">
-        <h3 class="h5 mb-3 degree-coursework-heading">
-          <i class="fas fa-graduation-cap me-2"></i>PhD in Engineering Sciences
-          <span class="school-badge-inline ms-2">University of Louvain (UCLouvain)</span>
-        </h3>
-        
-        
-        <div class="alert alert-info mb-3">
-          <i class="fas fa-info-circle me-2"></i>European Ph.D. program - Research-focused with no formal coursework requirement
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="cw-accordion mb-3">
+        <button class="cw-toggle" onclick="toggleCW(this)">
+          <div class="cw-toggle-left">
+            <i class="fas fa-graduation-cap cw-icon"></i>
+            <div class="cw-toggle-text">
+              <span class="cw-degree">PhD in Engineering Sciences</span>
+              <span class="cw-school">University of Louvain (UCLouvain)</span>
+            </div>
+          </div>
+          <div class="cw-toggle-right">
+            
+            
+            
+            <i class="fas fa-chevron-down cw-chevron"></i>
+          </div>
+        </button>
+
+        <div class="cw-body">
+          
+          <p class="cw-note"><i class="fas fa-info-circle me-2"></i>European Ph.D. program - Research-focused with no formal coursework requirement</p>
+          
+
+          
+
+          
         </div>
-        
-
-        
-
-        
-
-        
-
       </div>
       
-      <div class="degree-coursework mb-5">
-        <h3 class="h5 mb-3 degree-coursework-heading">
-          <i class="fas fa-graduation-cap me-2"></i>MS in Physics
-          <span class="school-badge-inline ms-2">Alabama A&amp;M University, Huntsville, USA</span>
-        </h3>
-        
-        
-        <div class="alert alert-info mb-3">
-          <i class="fas fa-info-circle me-2"></i>Graduate coursework focused on optics, quantum mechanics, and computational physics. This program shaped my transition toward advanced simulation and applied research.
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="cw-accordion mb-3">
+        <button class="cw-toggle" onclick="toggleCW(this)">
+          <div class="cw-toggle-left">
+            <i class="fas fa-graduation-cap cw-icon"></i>
+            <div class="cw-toggle-text">
+              <span class="cw-degree">MS in Physics</span>
+              <span class="cw-school">Alabama A&amp;M University, Huntsville, USA</span>
+            </div>
+          </div>
+          <div class="cw-toggle-right">
+            <span class="cw-stat gpa-stat">GPA 4.0/4.0</span>
+            <span class="cw-stat">8 courses</span>
+            <span class="cw-stat star-stat">★ 5 starred</span>
+            <i class="fas fa-chevron-down cw-chevron"></i>
+          </div>
+        </button>
+
+        <div class="cw-body">
+          
+          <p class="cw-note"><i class="fas fa-info-circle me-2"></i>Graduate coursework focused on optics, quantum mechanics, and computational physics. This program shaped my transition toward advanced simulation and applied research.</p>
+          
+
+          
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Course Title</th>
+                  <th class="text-center">Credits</th>
+                  <th class="text-center">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="favorite-course">
+                  <td class="course-code">PHY 503</td>
+                  <td><i class="fas fa-star text-success me-2"></i>Methods of Mathematical Physics</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td class="course-code">PHY 521</td>
+                  <td><i class="fas fa-star text-success me-2"></i>Quantum Mechanics I</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td class="course-code">PHY 500</td>
+                  <td><i class="fas fa-star text-success me-2"></i>Analytical Mechanics</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td class="course-code">PHY 518</td>
+                  <td><i class="fas fa-star text-success me-2"></i>Thermodynamics &amp; Statistical Mechanics</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">PHY 671</td>
+                  <td>Laser Physics</td>
+                  <td class="text-center">4</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">PHY 649</td>
+                  <td>Geometrical Optics</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td class="course-code">PHY 657</td>
+                  <td><i class="fas fa-star text-success me-2"></i>Physical Optics &amp; Interferometry</td>
+                  <td class="text-center">4</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">PHY 692</td>
+                  <td>Nanophotonics</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+
+          
         </div>
-        
-
-        
-        <div class="gpa-summary-top mb-3">
-          <span class="fw-bold">Overall GPA:</span> 4.0/4.0
-        </div>
-        
-
-        
-        
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Code</th>
-                <th>Course Title</th>
-                <th class="text-center">Credits</th>
-                <th class="text-center">Grade</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr class="favorite-course">
-                <td class="course-code">PHY 503</td>
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Methods of Mathematical Physics
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td class="course-code">PHY 521</td>
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Quantum Mechanics I
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td class="course-code">PHY 500</td>
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Analytical Mechanics
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td class="course-code">PHY 518</td>
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Thermodynamics &amp; Statistical Mechanics
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">PHY 671</td>
-                <td>
-                  
-                  Laser Physics
-                </td>
-                <td class="text-center">4</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">PHY 649</td>
-                <td>
-                  
-                  Geometrical Optics
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td class="course-code">PHY 657</td>
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Physical Optics &amp; Interferometry
-                </td>
-                <td class="text-center">4</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">PHY 692</td>
-                <td>
-                  
-                  Nanophotonics
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
-        
-
-        
-
       </div>
       
-      <div class="degree-coursework mb-5">
-        <h3 class="h5 mb-3 degree-coursework-heading">
-          <i class="fas fa-graduation-cap me-2"></i>MS in Electrical Engineering
-          <span class="school-badge-inline ms-2">University of Alabama in Huntsville</span>
-        </h3>
-        
-        
-        <div class="alert alert-info mb-3">
-          <i class="fas fa-info-circle me-2"></i>I selected all these courses based on my interests - they represent my passion areas in electrical engineering
+      
+      
+      
+      
+      
+      
+      
+      
+
+      <div class="cw-accordion mb-3">
+        <button class="cw-toggle" onclick="toggleCW(this)">
+          <div class="cw-toggle-left">
+            <i class="fas fa-graduation-cap cw-icon"></i>
+            <div class="cw-toggle-text">
+              <span class="cw-degree">MS in Electrical Engineering</span>
+              <span class="cw-school">University of Alabama in Huntsville</span>
+            </div>
+          </div>
+          <div class="cw-toggle-right">
+            <span class="cw-stat gpa-stat">GPA 3.9/4.0</span>
+            <span class="cw-stat">10 courses</span>
+            
+            <i class="fas fa-chevron-down cw-chevron"></i>
+          </div>
+        </button>
+
+        <div class="cw-body">
+          
+          <p class="cw-note"><i class="fas fa-info-circle me-2"></i>I selected all these courses based on my interests - they represent my passion areas in electrical engineering</p>
+          
+
+          
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Code</th>
+                  <th>Course Title</th>
+                  <th class="text-center">Credits</th>
+                  <th class="text-center">Grade</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="">
+                  <td class="course-code">EE 500</td>
+                  <td>Random Signals &amp; Noise</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">EE 527</td>
+                  <td>Electromagnetic Waves</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">EE 629</td>
+                  <td>Analytical &amp; Computational Methods in Electromagnetic Engineering I</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">EE 609</td>
+                  <td>Electromagnetic Field Theory</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">EE 710</td>
+                  <td>Special Topics: Numerical Methods in Electromagnetics</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">EE 725</td>
+                  <td>Advanced Radar Technique</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">EE 610</td>
+                  <td>Special Topics: Computational Electromagnetics</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">EE 699</td>
+                  <td>Master&#39;s Thesis</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-s">S</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">MA 685</td>
+                  <td>Stochastic Processes / Applied I</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-b-">B-</span></td>
+                </tr>
+                
+                <tr class="">
+                  <td class="course-code">PH 636</td>
+                  <td>Introduction to Space Plasma Physics</td>
+                  <td class="text-center">3</td>
+                  <td class="text-center"><span class="grade-badge grade-a">A</span></td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+
+          
         </div>
-        
-
-        
-        <div class="gpa-summary-top mb-3">
-          <span class="fw-bold">Overall GPA:</span> 3.9/4.0
-        </div>
-        
-
-        
-        
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Code</th>
-                <th>Course Title</th>
-                <th class="text-center">Credits</th>
-                <th class="text-center">Grade</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr class="">
-                <td class="course-code">EE 500</td>
-                <td>
-                  
-                  Random Signals &amp; Noise
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">EE 527</td>
-                <td>
-                  
-                  Electromagnetic Waves
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">EE 629</td>
-                <td>
-                  
-                  Analytical &amp; Computational Methods in Electromagnetic Engineering I
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">EE 609</td>
-                <td>
-                  
-                  Electromagnetic Field Theory
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">EE 710</td>
-                <td>
-                  
-                  Special Topics: Numerical Methods in Electromagnetics
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">EE 725</td>
-                <td>
-                  
-                  Advanced Radar Technique
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">EE 610</td>
-                <td>
-                  
-                  Special Topics: Computational Electromagnetics
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">EE 699</td>
-                <td>
-                  
-                  Master&#39;s Thesis
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-s">S</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">MA 685</td>
-                <td>
-                  
-                  Stochastic Processes / Applied I
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-b-">B-</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td class="course-code">PH 636</td>
-                <td>
-                  
-                  Introduction to Space Plasma Physics
-                </td>
-                <td class="text-center">3</td>
-                <td class="text-center">
-                  <span class="grade-badge grade-a">A</span>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
-        
-
-        
-
       </div>
       
-      <div class="degree-coursework mb-5">
-        <h3 class="h5 mb-3 degree-coursework-heading">
-          <i class="fas fa-graduation-cap me-2"></i>B.Eng in Electronics and Communication
-          <span class="school-badge-inline ms-2">Visvesvaraya Technological University</span>
-        </h3>
-        
-        
+      
+      
+      
+      
+      
+      
+      
+      
 
-        
-        <div class="gpa-summary-top mb-3">
-          <span class="fw-bold">Overall GPA:</span> First Class with Distinction
-        </div>
-        
+      <div class="cw-accordion mb-3">
+        <button class="cw-toggle" onclick="toggleCW(this)">
+          <div class="cw-toggle-left">
+            <i class="fas fa-graduation-cap cw-icon"></i>
+            <div class="cw-toggle-text">
+              <span class="cw-degree">B.Eng in Electronics and Communication</span>
+              <span class="cw-school">Visvesvaraya Technological University</span>
+            </div>
+          </div>
+          <div class="cw-toggle-right">
+            <span class="cw-stat gpa-stat">GPA First Class with Distinction</span>
+            <span class="cw-stat">61 courses</span>
+            <span class="cw-stat star-stat">★ 12 starred</span>
+            <i class="fas fa-chevron-down cw-chevron"></i>
+          </div>
+        </button>
 
-        
+        <div class="cw-body">
+          
 
-        
-        
-        
-        <h4 class="semester-heading mt-4 mb-3">
-          <i class="fas fa-calendar-alt me-2"></i>Semester I
-        </h4>
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Course Title</th>
-                <th class="text-center">Marks</th>
-                <th class="text-center">Max</th>
-                <th class="text-center">%</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Engineering Maths - I
-                </td>
-                <td class="text-center">105</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">84.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Engineering Physics
-                </td>
-                <td class="text-center">81</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">64.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Elements of Civil Engg. &amp; Engg. Mechanics
-                </td>
-                <td class="text-center">72</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">57.6%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Elements of Mechanical Engineering
-                </td>
-                <td class="text-center">89</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">71.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Basic Electrical Engineering
-                </td>
-                <td class="text-center">91</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">72.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Workshop Practice
-                </td>
-                <td class="text-center">60</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">80.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Engineering Physics Lab
-                </td>
-                <td class="text-center">50</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">66.7%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Constitution of India &amp; Professional Ethics
-                </td>
-                <td class="text-center">55</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">73.3%</span>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
-        
-        <h4 class="semester-heading mt-4 mb-3">
-          <i class="fas fa-calendar-alt me-2"></i>Semester II
-        </h4>
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Course Title</th>
-                <th class="text-center">Marks</th>
-                <th class="text-center">Max</th>
-                <th class="text-center">%</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Engineering Maths - II
-                </td>
-                <td class="text-center">106</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">84.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Engineering Chemistry
-                </td>
-                <td class="text-center">90</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">72.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Computer Concepts &amp; C Programming
-                </td>
-                <td class="text-center">85</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">68.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Computer Aided Engineering Drawing
-                </td>
-                <td class="text-center">116</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">92.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Basic Electronics
-                </td>
-                <td class="text-center">83</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">66.4%</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Computer Programming Lab
-                </td>
-                <td class="text-center">57</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">76.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Engineering Chemistry Lab
-                </td>
-                <td class="text-center">49</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">65.3%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Environmental Studies
-                </td>
-                <td class="text-center">49</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">65.3%</span>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
-        
-        <h4 class="semester-heading mt-4 mb-3">
-          <i class="fas fa-calendar-alt me-2"></i>Semester III
-        </h4>
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Course Title</th>
-                <th class="text-center">Marks</th>
-                <th class="text-center">Max</th>
-                <th class="text-center">%</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Engineering Mathematics - III
-                </td>
-                <td class="text-center">106</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">84.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Analog Electronic Circuits
-                </td>
-                <td class="text-center">64</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">51.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Logic Design
-                </td>
-                <td class="text-center">82</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">65.6%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Network Analysis
-                </td>
-                <td class="text-center">89</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">71.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Electronic Instrumentation
-                </td>
-                <td class="text-center">84</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">67.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Field Theory
-                </td>
-                <td class="text-center">68</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">54.4%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Analog Electronics Lab
-                </td>
-                <td class="text-center">42</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">56.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Logic Design Lab
-                </td>
-                <td class="text-center">45</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">60.0%</span>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
-        
-        <h4 class="semester-heading mt-4 mb-3">
-          <i class="fas fa-calendar-alt me-2"></i>Semester IV
-        </h4>
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Course Title</th>
-                <th class="text-center">Marks</th>
-                <th class="text-center">Max</th>
-                <th class="text-center">%</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Engineering Mathematics - IV
-                </td>
-                <td class="text-center">106</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">84.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Microcontrollers
-                </td>
-                <td class="text-center">96</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">76.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Control Systems
-                </td>
-                <td class="text-center">94</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">75.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Signals &amp; Systems
-                </td>
-                <td class="text-center">105</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">84.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Fundamentals of HDL
-                </td>
-                <td class="text-center">81</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">64.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Linear ICs &amp; Applications
-                </td>
-                <td class="text-center">100</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">80.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Microcontrollers Lab
-                </td>
-                <td class="text-center">51</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">68.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  HDL Lab
-                </td>
-                <td class="text-center">54</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">72.0%</span>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
-        
-        <h4 class="semester-heading mt-4 mb-3">
-          <i class="fas fa-calendar-alt me-2"></i>Semester V
-        </h4>
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Course Title</th>
-                <th class="text-center">Marks</th>
-                <th class="text-center">Max</th>
-                <th class="text-center">%</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr class="">
-                <td>
-                  
-                  Management &amp; Entrepreneurship
-                </td>
-                <td class="text-center">83</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">66.4%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Digital Signal Processing
-                </td>
-                <td class="text-center">86</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">68.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Analog Communication
-                </td>
-                <td class="text-center">86</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">68.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Microwaves and Radar
-                </td>
-                <td class="text-center">94</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">75.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Digital Switching Systems
-                </td>
-                <td class="text-center">90</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">72.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Fundamentals of CMOS VLSI
-                </td>
-                <td class="text-center">109</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">87.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  DSP Lab
-                </td>
-                <td class="text-center">54</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">72.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Analog Communication Lab &#43; LIC Lab
-                </td>
-                <td class="text-center">70</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">93.3%</span>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
-        
-        <h4 class="semester-heading mt-4 mb-3">
-          <i class="fas fa-calendar-alt me-2"></i>Semester VI
-        </h4>
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Course Title</th>
-                <th class="text-center">Marks</th>
-                <th class="text-center">Max</th>
-                <th class="text-center">%</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr class="">
-                <td>
-                  
-                  Digital Communication
-                </td>
-                <td class="text-center">88</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">70.4%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Microprocessors
-                </td>
-                <td class="text-center">77</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">61.6%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Analog and Mixed Mode VLSI Design
-                </td>
-                <td class="text-center">84</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">67.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Antennas and Propagation
-                </td>
-                <td class="text-center">99</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">79.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Information Theory and Coding
-                </td>
-                <td class="text-center">107</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">85.6%</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Satellite Communications
-                </td>
-                <td class="text-center">95</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">76.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Advanced Communication Lab
-                </td>
-                <td class="text-center">64</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">85.3%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Microprocessors Lab
-                </td>
-                <td class="text-center">61</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">81.3%</span>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
-        
-        <h4 class="semester-heading mt-4 mb-3">
-          <i class="fas fa-calendar-alt me-2"></i>Semester VII
-        </h4>
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Course Title</th>
-                <th class="text-center">Marks</th>
-                <th class="text-center">Max</th>
-                <th class="text-center">%</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr class="">
-                <td>
-                  
-                  Computer Communication Networks
-                </td>
-                <td class="text-center">66</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">52.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Optical Fiber Communication
-                </td>
-                <td class="text-center">85</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">68.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Power Electronics
-                </td>
-                <td class="text-center">98</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">78.4%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  DSP Algorithms &amp; Architecture
-                </td>
-                <td class="text-center">85</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">68.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="favorite-course">
-                <td>
-                  <i class="fas fa-star text-success me-2"></i>
-                  Image Processing
-                </td>
-                <td class="text-center">91</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">72.8%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  H R Management
-                </td>
-                <td class="text-center">98</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">78.4%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  VLSI Lab
-                </td>
-                <td class="text-center">50</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">66.7%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Power Electronics Lab
-                </td>
-                <td class="text-center">59</td>
-                <td class="text-center">75</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">78.7%</span>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
-        
-        <h4 class="semester-heading mt-4 mb-3">
-          <i class="fas fa-calendar-alt me-2"></i>Semester VIII
-        </h4>
-        <div class="table-responsive">
-          <table class="table table-hover course-table">
-            <thead>
-              <tr>
-                <th>Course Title</th>
-                <th class="text-center">Marks</th>
-                <th class="text-center">Max</th>
-                <th class="text-center">%</th>
-              </tr>
-            </thead>
-            <tbody>
-              
-              <tr class="">
-                <td>
-                  
-                  Wireless Communication
-                </td>
-                <td class="text-center">69</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">55.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Embedded System Design
-                </td>
-                <td class="text-center">62</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">49.6%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Network Security
-                </td>
-                <td class="text-center">69</td>
-                <td class="text-center">125</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">55.2%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Project Work
-                </td>
-                <td class="text-center">100</td>
-                <td class="text-center">100</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">100.0%</span>
-                </td>
-              </tr>
-              
-              <tr class="">
-                <td>
-                  
-                  Seminar
-                </td>
-                <td class="text-center">40</td>
-                <td class="text-center">50</td>
-                <td class="text-center">
-                  
-                  <span class="percentage-badge">80.0%</span>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
-        </div>
-        
-        
+          
 
+          
+          
+          <h4 class="semester-heading mt-4 mb-3">
+            <i class="fas fa-calendar-alt me-2"></i>Semester I
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Course Title</th>
+                  <th class="text-center">Marks</th>
+                  <th class="text-center">Max</th>
+                  <th class="text-center">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Engineering Maths - I</td>
+                  <td class="text-center">105</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">84.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Engineering Physics</td>
+                  <td class="text-center">81</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">64.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Elements of Civil Engg. &amp; Engg. Mechanics</td>
+                  <td class="text-center">72</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">57.6%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Elements of Mechanical Engineering</td>
+                  <td class="text-center">89</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">71.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Basic Electrical Engineering</td>
+                  <td class="text-center">91</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">72.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Workshop Practice</td>
+                  <td class="text-center">60</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">80.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Engineering Physics Lab</td>
+                  <td class="text-center">50</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">66.7%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Constitution of India &amp; Professional Ethics</td>
+                  <td class="text-center">55</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">73.3%</span>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+          <h4 class="semester-heading mt-4 mb-3">
+            <i class="fas fa-calendar-alt me-2"></i>Semester II
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Course Title</th>
+                  <th class="text-center">Marks</th>
+                  <th class="text-center">Max</th>
+                  <th class="text-center">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Engineering Maths - II</td>
+                  <td class="text-center">106</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">84.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Engineering Chemistry</td>
+                  <td class="text-center">90</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">72.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Computer Concepts &amp; C Programming</td>
+                  <td class="text-center">85</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">68.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Computer Aided Engineering Drawing</td>
+                  <td class="text-center">116</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">92.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Basic Electronics</td>
+                  <td class="text-center">83</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">66.4%</span>
+                  </td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Computer Programming Lab</td>
+                  <td class="text-center">57</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">76.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Engineering Chemistry Lab</td>
+                  <td class="text-center">49</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">65.3%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Environmental Studies</td>
+                  <td class="text-center">49</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">65.3%</span>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+          <h4 class="semester-heading mt-4 mb-3">
+            <i class="fas fa-calendar-alt me-2"></i>Semester III
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Course Title</th>
+                  <th class="text-center">Marks</th>
+                  <th class="text-center">Max</th>
+                  <th class="text-center">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Engineering Mathematics - III</td>
+                  <td class="text-center">106</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">84.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Analog Electronic Circuits</td>
+                  <td class="text-center">64</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">51.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Logic Design</td>
+                  <td class="text-center">82</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">65.6%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Network Analysis</td>
+                  <td class="text-center">89</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">71.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Electronic Instrumentation</td>
+                  <td class="text-center">84</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">67.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Field Theory</td>
+                  <td class="text-center">68</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">54.4%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Analog Electronics Lab</td>
+                  <td class="text-center">42</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">56.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Logic Design Lab</td>
+                  <td class="text-center">45</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">60.0%</span>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+          <h4 class="semester-heading mt-4 mb-3">
+            <i class="fas fa-calendar-alt me-2"></i>Semester IV
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Course Title</th>
+                  <th class="text-center">Marks</th>
+                  <th class="text-center">Max</th>
+                  <th class="text-center">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Engineering Mathematics - IV</td>
+                  <td class="text-center">106</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">84.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Microcontrollers</td>
+                  <td class="text-center">96</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">76.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Control Systems</td>
+                  <td class="text-center">94</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">75.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Signals &amp; Systems</td>
+                  <td class="text-center">105</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">84.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Fundamentals of HDL</td>
+                  <td class="text-center">81</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">64.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Linear ICs &amp; Applications</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">80.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Microcontrollers Lab</td>
+                  <td class="text-center">51</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">68.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>HDL Lab</td>
+                  <td class="text-center">54</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">72.0%</span>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+          <h4 class="semester-heading mt-4 mb-3">
+            <i class="fas fa-calendar-alt me-2"></i>Semester V
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Course Title</th>
+                  <th class="text-center">Marks</th>
+                  <th class="text-center">Max</th>
+                  <th class="text-center">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="">
+                  <td>Management &amp; Entrepreneurship</td>
+                  <td class="text-center">83</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">66.4%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Digital Signal Processing</td>
+                  <td class="text-center">86</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">68.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Analog Communication</td>
+                  <td class="text-center">86</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">68.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Microwaves and Radar</td>
+                  <td class="text-center">94</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">75.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Digital Switching Systems</td>
+                  <td class="text-center">90</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">72.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Fundamentals of CMOS VLSI</td>
+                  <td class="text-center">109</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">87.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>DSP Lab</td>
+                  <td class="text-center">54</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">72.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Analog Communication Lab &#43; LIC Lab</td>
+                  <td class="text-center">70</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">93.3%</span>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+          <h4 class="semester-heading mt-4 mb-3">
+            <i class="fas fa-calendar-alt me-2"></i>Semester VI
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Course Title</th>
+                  <th class="text-center">Marks</th>
+                  <th class="text-center">Max</th>
+                  <th class="text-center">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="">
+                  <td>Digital Communication</td>
+                  <td class="text-center">88</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">70.4%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Microprocessors</td>
+                  <td class="text-center">77</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">61.6%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Analog and Mixed Mode VLSI Design</td>
+                  <td class="text-center">84</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">67.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Antennas and Propagation</td>
+                  <td class="text-center">99</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">79.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Information Theory and Coding</td>
+                  <td class="text-center">107</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">85.6%</span>
+                  </td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Satellite Communications</td>
+                  <td class="text-center">95</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">76.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Advanced Communication Lab</td>
+                  <td class="text-center">64</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">85.3%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Microprocessors Lab</td>
+                  <td class="text-center">61</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">81.3%</span>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+          <h4 class="semester-heading mt-4 mb-3">
+            <i class="fas fa-calendar-alt me-2"></i>Semester VII
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Course Title</th>
+                  <th class="text-center">Marks</th>
+                  <th class="text-center">Max</th>
+                  <th class="text-center">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="">
+                  <td>Computer Communication Networks</td>
+                  <td class="text-center">66</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">52.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Optical Fiber Communication</td>
+                  <td class="text-center">85</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">68.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Power Electronics</td>
+                  <td class="text-center">98</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">78.4%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>DSP Algorithms &amp; Architecture</td>
+                  <td class="text-center">85</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">68.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="favorite-course">
+                  <td><i class="fas fa-star text-success me-2"></i>Image Processing</td>
+                  <td class="text-center">91</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">72.8%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>H R Management</td>
+                  <td class="text-center">98</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">78.4%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>VLSI Lab</td>
+                  <td class="text-center">50</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">66.7%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Power Electronics Lab</td>
+                  <td class="text-center">59</td>
+                  <td class="text-center">75</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">78.7%</span>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+          <h4 class="semester-heading mt-4 mb-3">
+            <i class="fas fa-calendar-alt me-2"></i>Semester VIII
+          </h4>
+          <div class="table-responsive">
+            <table class="table table-hover course-table">
+              <thead>
+                <tr>
+                  <th>Course Title</th>
+                  <th class="text-center">Marks</th>
+                  <th class="text-center">Max</th>
+                  <th class="text-center">%</th>
+                </tr>
+              </thead>
+              <tbody>
+                
+                <tr class="">
+                  <td>Wireless Communication</td>
+                  <td class="text-center">69</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">55.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Embedded System Design</td>
+                  <td class="text-center">62</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">49.6%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Network Security</td>
+                  <td class="text-center">69</td>
+                  <td class="text-center">125</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">55.2%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Project Work</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">100</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">100.0%</span>
+                  </td>
+                </tr>
+                
+                <tr class="">
+                  <td>Seminar</td>
+                  <td class="text-center">40</td>
+                  <td class="text-center">50</td>
+                  <td class="text-center">
+                    
+                    <span class="percentage-badge">80.0%</span>
+                  </td>
+                </tr>
+                
+              </tbody>
+            </table>
+          </div>
+          
+          
+        </div>
       </div>
       
+
     </div>
   </div>
   
@@ -2085,6 +1865,119 @@ body {
 }
 
  
+.cw-accordion {
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cw-toggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 20px;
+  background: #fafbff;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s;
+  gap: 12px;
+}
+
+.cw-toggle:hover { background: #f0f2ff; }
+
+.cw-toggle-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cw-icon {
+  color: #667eea;
+  font-size: 1rem;
+  flex-shrink: 0;
+}
+
+.cw-toggle-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.cw-degree {
+  font-weight: 600;
+  color: #1a202c;
+  font-size: 0.95rem;
+}
+
+.cw-school {
+  font-size: 0.8rem;
+  color: #a0aec0;
+}
+
+.cw-toggle-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.cw-stat {
+  padding: 3px 10px;
+  background: #eef0ff;
+  color: #5568d3;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.gpa-stat { background: #e6f4ea; color: #2d7a4f; }
+.star-stat { background: #fff8e1; color: #b7791f; }
+
+.cw-chevron {
+  font-size: 0.75rem;
+  color: #a0aec0;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.cw-toggle.open .cw-chevron { transform: rotate(180deg); }
+.cw-toggle.open { background: #f0f2ff; }
+
+.cw-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  padding: 0 20px;
+}
+
+.cw-body.open {
+  max-height: 6000px;
+  padding: 16px 20px 20px;
+  border-top: 1px solid #e2e8f0;
+}
+
+.cw-note {
+  font-size: 0.88rem;
+  color: #4a5568;
+  background: rgba(102,126,234,0.06);
+  border-left: 3px solid #667eea;
+  padding: 10px 14px;
+  border-radius: 0 6px 6px 0;
+  margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+  .cw-toggle { flex-direction: column; align-items: flex-start; }
+  .cw-toggle-right { margin-top: 8px; }
+  .cw-chevron { display: none; }
+}
+
+ 
 @media print {
   .card { 
     border: none !important; 
@@ -2108,6 +2001,15 @@ body {
   }
 }
 </style>
+
+<script>
+function toggleCW(btn) {
+  const body = btn.nextElementSibling;
+  const isOpen = body.classList.contains('open');
+  btn.classList.toggle('open', !isOpen);
+  body.classList.toggle('open', !isOpen);
+}
+</script>
 
     
 <footer class="bg-dark text-white text-center py-3">
