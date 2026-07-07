@@ -2,7 +2,7 @@
 <html lang="en">
 
 
-<script src="/SRAO_CV/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=SRAO_CV/livereload" data-no-instant defer></script><meta charset="UTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Research &amp; Engineering Portfolio</title>
 
@@ -45,7 +45,7 @@
               
                   <li class="nav-item">
                       <a class="nav-link btn btn-primary mx-1" 
-                         href="http://localhost:1313/SRAO_CV//" style="font-size: 1.2em;">
+                         href="https://sraocodes.github.io/SRAO_CV//" style="font-size: 1.2em;">
                          Home
                       </a>
                   </li>
@@ -54,7 +54,7 @@
               
                   <li class="nav-item">
                       <a class="nav-link btn btn-primary mx-1" 
-                         href="http://localhost:1313/SRAO_CV//cv" style="font-size: 1.2em;">
+                         href="https://sraocodes.github.io/SRAO_CV//cv" style="font-size: 1.2em;">
                          Academic Portfolio
                       </a>
                   </li>
@@ -63,7 +63,7 @@
               
                   <li class="nav-item">
                       <a class="nav-link btn btn-primary mx-1" 
-                         href="http://localhost:1313/SRAO_CV//projects" style="font-size: 1.2em;">
+                         href="https://sraocodes.github.io/SRAO_CV//projects" style="font-size: 1.2em;">
                          Projects
                       </a>
                   </li>
@@ -78,11 +78,11 @@
                       </a>
                       <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown_Personal">
                           
-                              <a class="dropdown-item" href="http://localhost:1313/SRAO_CV//blogs">Blog</a>
+                              <a class="dropdown-item" href="https://sraocodes.github.io/SRAO_CV//blogs">Blog</a>
                           
-                              <a class="dropdown-item" href="http://localhost:1313/SRAO_CV//photodiary">Photography</a>
+                              <a class="dropdown-item" href="https://sraocodes.github.io/SRAO_CV//photodiary">Photography</a>
                           
-                              <a class="dropdown-item" href="http://localhost:1313/SRAO_CV//videos">Hobby Videos</a>
+                              <a class="dropdown-item" href="https://sraocodes.github.io/SRAO_CV//videos">Hobby Videos</a>
                           
                       </div>
                   </li>
@@ -133,68 +133,53 @@ function loadScript(url, callback) {
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
 
 <div class="projects-page">
-    
-    <header class="hero-section">
-        <div class="container">
-            <h1 class="hero-title">Research &amp; Engineering Portfolio</h1>
-            <p class="hero-subtitle">From quantum physics simulations to agricultural processes - 15 years of computational science</p>
-        </div>
-    </header>
 
-    
-    <nav class="filter-section">
-        <div class="container">
-            <div class="filter-wrapper">
-                <button class="filter-btn active" data-filter="all">
-                    <i class="fas fa-th"></i>
-                    <span>All Work</span>
-                </button>
-                <button class="filter-btn" data-filter="research-science">
-                    <i class="fas fa-flask"></i>
-                    <span>Research & Science</span>
-                </button>
-                <button class="filter-btn" data-filter="writing-publishing">
-                    <i class="fas fa-pen-fancy"></i>
-                    <span>Writing & Publishing</span>
-                </button>
-                <button class="filter-btn" data-filter="content-creation">
-                    <i class="fas fa-video"></i>
-                    <span>Content Creation</span>
-                </button>
-                <button class="filter-btn" data-filter="technical-projects">
-                    <i class="fas fa-laptop-code"></i>
-                    <span>Technical Projects</span>
-                </button>
+  <header class="hero-section">
+    <div class="container">
+      <h1 class="hero-title">Research &amp; Engineering Portfolio</h1>
+    </div>
+  </header>
+
+  <main class="sections-wrapper">
+    <div class="container">
+      
+      <section class="institution-section">
+        <div class="section-header">
+          <div class="section-icon"><i class="fas fa-flask"></i></div>
+          <div class="section-meta">
+            <h2 class="section-name">Indian Institute of Science</h2>
+            <p class="section-tagline">Bengaluru, India · 2022–Present</p>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <div class="card-period">2024–2025</div>
+            <h3 class="card-title">SAR-Based Soil Moisture Estimation with Machine Learning</h3>
+            <div class="card-role">Research Associate</div>
+            <p class="card-summary">Soil-specific Random Forest calibration for SAR-based soil moisture retrieval, achieving a 34% accuracy improvement for sandy textures. Submitted to Remote Sensing Letters.</p>
+
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Random Forest</span>
+              
+              <span class="skill-pill">SAR Remote Sensing</span>
+              
+              <span class="skill-pill">Python/Scikit-learn</span>
+              
             </div>
-        </div>
-    </nav>
+            
 
-    
-    <main class="projects-container">
-        <div class="container">
-            <div class="projects-grid">
-                
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2024-2025</span>
-                            </div>
-                            <h2 class="project-title">SAR-Based Soil Moisture Estimation with Machine Learning</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Research Associate</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Indian Institute of Science (IISc), Bengaluru</span>
-                            </div>
-                            
-                        </div>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Breakthrough Achievement:</strong> Developed soil-specific Random Forest calibration achieving <strong>34% accuracy improvement</strong> for sandy textures in SAR-based soil moisture retrieval.</p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Breakthrough Achievement:</strong> Developed soil-specific Random Forest calibration achieving <strong>34% accuracy improvement</strong> for sandy textures in SAR-based soil moisture retrieval.</p>
 <p><strong>Scientific Impact:</strong></p>
 <ul>
 <li>Analyzed 677 paired SAR-soil moisture observations across 5 soil textures</li>
@@ -204,168 +189,169 @@ function loadScript(url, callback) {
 </ul>
 <p><strong>Innovation:</strong> Combined physics-based understanding with machine learning to solve operational remote sensing challenges.</p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2025–Present</div>
+            <h3 class="card-title">Surface Moisture Diagnostics for Watershed Interventions (REWARD Project)</h3>
+            <div class="card-role">Project Lead (Research Associate)</div>
+            <p class="card-summary">Sentinel-1-based diagnostic evaluating whether watershed interventions produce a measurable dry-season surface moisture advantage over untreated neighbouring land, applied across multiple watersheds in North Karnataka over two successive dry seasons.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Random Forest</span>
-                                
-                                <span class="skill-pill">SAR Remote Sensing</span>
-                                
-                                <span class="skill-pill">Python/Scikit-learn</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Sentinel-1 SAR</span>
+              
+              <span class="skill-pill">Watershed Hydrology</span>
+              
+              <span class="skill-pill">Treatment-Control Analysis</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-brain"></i>
-                                                Random Forest
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-satellite"></i>
-                                                SAR Remote Sensing
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-python"></i>
-                                                Python/Scikit-learn
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Context:</strong> Satellite-based diagnostic evaluating whether watershed interventions produce a measurable dry-season surface moisture advantage over untreated neighbouring land.</p>
+<p><strong>Approach:</strong> A local control-ring design — treated points inside each intervention polygon compared against a surrounding untreated ring, with the difference referenced to a pre-intervention baseline. Applied across two successive dry seasons.</p>
+<p><strong>What was found:</strong> Roughly half the watersheds showed either a persistent or emerging positive dry-season moisture signal. A subset held the advantage consistently across both years; others showed it emerging or weakening. The analysis identifies which watersheds are strongest candidates for detailed field follow-up.</p>
+<p>A companion assessment examined pre-monsoon surface moisture behaviour in a single taluk during a drought year, showing that one long-treated watershed retained its moisture advantage while untreated neighbours declined.</p>
+<p><strong>Status:</strong> Internal diagnostic report (May 2026); IISc Civil Engineering, Bengaluru.</p>
 
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2022-2025</span>
-                            </div>
-                            <h2 class="project-title">Decade-Long Soil Hydrothermal Dataset (2016-2025)</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Research Associate</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Indian Institute of Science (IISc), Bengaluru</span>
-                            </div>
-                            
-                        </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2025–Present</div>
+            <h3 class="card-title">Active-Passive Microwave Fusion for Decadal Soil Moisture Monitoring</h3>
+            <div class="card-role">Research Associate (First Author)</div>
+            <p class="card-summary">Fused Sentinel-1 SAR with SMAP-400m passive microwave to bridge the systematic monsoon data gap in passive retrievals, producing a 129-month continuous soil moisture record (2016–2026) for a 5400-ha watershed in Karnataka. Submitted to International Journal of Remote Sensing.</p>
 
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Dataset Contribution:</strong> Curated and analyzed <strong>10-year, 15-minute resolution</strong> soil moisture and temperature observations from semi-arid agricultural catchment.</p>
-<p><strong>Key Discoveries:</strong></p>
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Sentinel-1 SAR / SMAP</span>
+              
+              <span class="skill-pill">Sensor Fusion</span>
+              
+              <span class="skill-pill">Time-series Analysis</span>
+              
+            </div>
+            
+
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
+
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Problem:</strong> Satellite passive microwave (SMAP-400m) fails on fewer than 12% of monsoon days over the Harave watershed — precisely when hydrology is most active. Cloud cover blocks the optical downscaling inputs; L-band is attenuated under dense wet canopy.</p>
+<p><strong>Approach:</strong> Calibrated a dry-season empirical transfer function between Sentinel-1 VV backscatter and SMAP-400m soil moisture, selected from four functional forms using the Bayesian Information Criterion and validated by leave-one-year-out cross-validation.</p>
+<p><strong>Key Findings:</strong></p>
 <ul>
-<li>Identified systematic increase in thermal inversions (+2.41%/year)</li>
-<li>Documented 79.3% percolation probability across 916 rainfall events</li>
-<li>Revealed &ldquo;dry-soil advantage&rdquo; for deep infiltration</li>
-<li>Detected emerging water stress trends (+4.6%/year)</li>
+<li>Linear model retained for operational use (yields absolute volumetric estimates)</li>
+<li>Sentinel-2 NDVI did not improve calibration — vegetation structure already embedded in SMAP-400m via VIIRS leaf area index</li>
+<li>Fused record validated against independent rainfall and TDR observations in adjacent Mallaiinupura watershed without recalibration</li>
 </ul>
-<p><strong>Impact:</strong> Provides critical tropical land surface data filling gap in global soil moisture networks.<br>
-<strong>Publication:</strong> In preparation for <em>Scientific Data</em> (2025)</p>
+<p><strong>Output:</strong> 129-month continuous monthly soil moisture record, 2016–2026, covering 58 monsoon months where SMAP-400m was unavailable.</p>
+<p><strong>Submitted to:</strong> <em>International Journal of Remote Sensing</em> (IJRS)</p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2025–Present</div>
+            <h3 class="card-title">High-Frequency Soil Hydrothermal Observations from a Semi-Arid Monsoon Catchment, 2016–2025</h3>
+            <div class="card-role">Research Associate (First Author)</div>
+            <p class="card-summary">A decade-long, 15-minute resolution record of soil moisture, temperature, and electrical conductivity from the Berambadi agricultural catchment, Karnataka — covering 944 rainfall events across wet, drought, and recovery years. Submitted to Scientific Data, June 2026.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Time-series Analysis</span>
-                                
-                                <span class="skill-pill">Hydrology</span>
-                                
-                                <span class="skill-pill">Big Data Processing</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Time-series Analysis</span>
+              
+              <span class="skill-pill">Soil Hydrology</span>
+              
+              <span class="skill-pill">Open Dataset</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-chart-line"></i>
-                                                Time-series Analysis
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-water"></i>
-                                                Hydrology
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-database"></i>
-                                                Big Data Processing
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Dataset:</strong> Continuous 15-minute measurements of soil moisture, temperature, and electrical conductivity (or dielectric permittivity from 2021) at 5 cm and 50 cm depths, with an additional 15 cm depth from 2021 onwards. Co-located precipitation recorded at the same interval. Delivered as annual CSV files in Indian Standard Time.</p>
+<p><strong>Study site:</strong> Berambadi agricultural catchment, Mysore Plateau, Karnataka (~84 km²). Part of the Kabini Critical Zone Observatory and the OZCAR network. Mixed rainfed and groundwater-irrigated agriculture under semi-arid monsoon conditions (~800 mm/yr).</p>
+<p><strong>Record span:</strong> 2016–2025. Covers event, seasonal, and interannual scales including a wet year (2016), drought (2023), and recovery (2024). Sensor transition in 2021 (EC → dielectric permittivity) with one year of overlap to support continuity.</p>
+<p><strong>What it provides:</strong></p>
+<ul>
+<li>944-event rainfall catalogue with sub-hourly resolution</li>
+<li>Depth-dependent thermal and hydraulic response of the soil profile</li>
+<li>One of the few long-term, sub-hourly soil hydrothermal records from the Indian monsoon belt</li>
+</ul>
+<p><strong>Submitted to:</strong> <em>Scientific Data</em> (June 2026, under review after revision)</p>
 
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2023-2025</span>
-                            </div>
-                            <h2 class="project-title">Agricultural Digital Twin Model Coupling</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Research Software Engineer</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Forschungszentrum Jülich (PhenoRob Project), Germany</span>
-                            </div>
-                            
-                        </div>
+              </div>
+              
+            </div>
+          </article>
+          
+        </div>
+      </section>
+      
+      <section class="institution-section">
+        <div class="section-header">
+          <div class="section-icon"><i class="fas fa-seedling"></i></div>
+          <div class="section-meta">
+            <h2 class="section-name">Forschungszentrum Jülich</h2>
+            <p class="section-tagline">Germany · 2023–2025</p>
+          </div>
+        </div>
 
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>System Integration:</strong> Coupled 1D crop models (C/C++) with 3D Functional-Structural Plant Models (Fortran/CPlantBox), enabling realistic simulation of soil-plant-atmosphere dynamics.</p>
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <div class="card-period">2023–2025</div>
+            <h3 class="card-title">Agricultural Digital Twin Model Coupling</h3>
+            <div class="card-role">Research Software Engineer</div>
+            <p class="card-summary">Coupled 1D crop models (C/C&#43;&#43;) with 3D functional-structural plant models (Fortran/CPlantBox) for the PhenoRob project, enabling realistic soil-plant-atmosphere simulation.</p>
+
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">C&#43;&#43;/Fortran Integration</span>
+              
+              <span class="skill-pill">Docker/HPC</span>
+              
+              <span class="skill-pill">Scientific Computing</span>
+              
+            </div>
+            
+
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
+
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>System Integration:</strong> Coupled 1D crop models (C/C++) with 3D Functional-Structural Plant Models (Fortran/CPlantBox), enabling realistic simulation of soil-plant-atmosphere dynamics.</p>
 <p><strong>Technical Achievement:</strong></p>
 <ul>
 <li>Implemented loose-coupling data exchange with timestep synchronization</li>
@@ -380,82 +366,37 @@ function loadScript(url, callback) {
 <li>Contributed book chapters on LLMs and UAVs in agriculture</li>
 </ul>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2024</div>
+            <h3 class="card-title">Docker Containers for Agricultural Modeling</h3>
+            <div class="card-role">Research Software Engineer</div>
+            <p class="card-summary">Containerized CPlantBox and DuMuX-ROSI environments for plant modeling research, including VNC-enabled 3D visualization. Available on DockerHub.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">C&#43;&#43;/Fortran Integration</span>
-                                
-                                <span class="skill-pill">Docker/HPC</span>
-                                
-                                <span class="skill-pill">Scientific Computing</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Docker</span>
+              
+              <span class="skill-pill">DevOps</span>
+              
+              <span class="skill-pill">Plant Modeling</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-cogs"></i>
-                                                C&#43;&#43;/Fortran Integration
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-docker"></i>
-                                                Docker/HPC
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-laptop-code"></i>
-                                                Scientific Computing
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="technical-projects">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Technical Projects</span>
-                                <span class="timeframe">2024</span>
-                            </div>
-                            <h2 class="project-title">Docker Containers for Agricultural Modeling</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Research Software Engineer</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Forschungszentrum Jülich, Germany</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Reproducible Science:</strong> Created containerized environments for plant modeling frameworks, dramatically improving accessibility and reproducibility.</p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Reproducible Science:</strong> Created containerized environments for plant modeling frameworks, dramatically improving accessibility and reproducibility.</p>
 <p><strong>CPlantBox GUI Docker:</strong></p>
 <ul>
 <li>Integrated VNC viewer for 3D root visualization</li>
@@ -469,109 +410,121 @@ function loadScript(url, callback) {
 <li><a href="https://hub.docker.com/r/satraox/dumux-rosi-jupyter">DockerHub: satraox/dumux-rosi-jupyter</a></li>
 </ul>
 
-                            </div>
+              </div>
+              
+              <div class="videos-section">
+                
+                <div class="video-group">
+                  <p class="video-channel-label">Digital Agricultural Avatar</p>
+                  
+                  <a href="https://youtube.com/watch?v=UN6D1_cXeT8" class="video-link" target="_blank">
+                    <i class="fas fa-play-circle"></i> Running CPlantBox with Docker
+                  </a>
+                  
+                </div>
+                
+                
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2023–2024</div>
+            <h3 class="card-title">PhenoRob Digital Agricultural Avatar Website</h3>
+            <div class="card-role">Web Developer &amp; Technical Lead</div>
+            <p class="card-summary">Hugo-based documentation platform for PhenoRob agricultural modeling tools, with interactive guides, scientific visualizations, and custom SCSS/JavaScript.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Docker</span>
-                                
-                                <span class="skill-pill">DevOps</span>
-                                
-                                <span class="skill-pill">Plant Modeling</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Hugo/JavaScript</span>
+              
+              <span class="skill-pill">Web Design</span>
+              
+              <span class="skill-pill">Documentation</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-docker"></i>
-                                                Docker
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-server"></i>
-                                                DevOps
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-leaf"></i>
-                                                Plant Modeling
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Related Videos</h3>
-                                        
-                                        <div class="video-group">
-                                            <p class="video-channel">Digital Agricultural Avatar</p>
-                                            
-                                            <a href="https://youtube.com/watch?v=UN6D1_cXeT8" class="video-link" target="_blank">
-                                                <i class="fas fa-play-circle"></i>
-                                                <span>Running CPlantBox with Docker</span>
-                                            </a>
-                                            
-                                        </div>
-                                        
-
-                                        
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2016-2020</span>
-                            </div>
-                            <h2 class="project-title">Doctoral Thesis: Non-Invasive Geo-Electrical Imaging of Plant Roots</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> FNRS Research Fellow (PhD)</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> UCLouvain, Belgium (Earth and Life Institute)</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Thesis Title:</strong> &ldquo;Investigation of signatures of plant roots from non-invasive geo-electrical measurements&rdquo;</p>
-<p><strong>Research Problem:</strong> How do plant roots influence soil electrical properties? Can we &ldquo;see&rdquo; roots without digging them up?</p>
-<p><strong>Breakthrough Achievement:</strong><br>
-Created <strong>world&rsquo;s first coupled hydro-geophysical framework</strong> linking root architecture, water uptake, and electrical signatures. This enables non-invasive root phenotyping at scales from centimeters to field plots.</p>
-<p><strong>Why This Matters:</strong></p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Project Website:</strong> Developed comprehensive documentation platform for agricultural modeling tools integration.</p>
+<p><strong>Features:</strong></p>
 <ul>
-<li>🌾 <strong>Agriculture</strong>: Real-time root monitoring without destructive sampling</li>
-<li>🔬 <strong>Plant Breeding</strong>: Rapid phenotyping for drought tolerance</li>
-<li>🌍 <strong>Climate</strong>: Quantify carbon sequestration in root systems</li>
-<li>💧 <strong>Water Management</strong>: Optimize irrigation based on root activity</li>
+<li>Interactive documentation for crop modeling workflows</li>
+<li>Scientific visualizations and animations</li>
+<li>Hugo-based static site with custom SCSS/JavaScript</li>
+<li>Integration guides for multiple modeling frameworks</li>
 </ul>
+<p><a href="https://sraocodes.github.io/Phenorob-DAA/">Visit Project Website</a></p>
+
+              </div>
+              
+              <div class="videos-section">
+                
+                <div class="video-group">
+                  <p class="video-channel-label">Digital Agricultural Avatar</p>
+                  
+                  <a href="https://youtube.com/watch?v=1E9nW_TAp0c" class="video-link" target="_blank">
+                    <i class="fas fa-play-circle"></i> AgroC Crop Model: Installation Guide
+                  </a>
+                  
+                </div>
+                
+                
+              </div>
+              
+            </div>
+          </article>
+          
+        </div>
+      </section>
+      
+      <section class="institution-section">
+        <div class="section-header">
+          <div class="section-icon"><i class="fas fa-graduation-cap"></i></div>
+          <div class="section-meta">
+            <h2 class="section-name">UCLouvain — PhD Research</h2>
+            <p class="section-tagline">Belgium · 2016–2020 · FNRS Research Fellow</p>
+          </div>
+        </div>
+
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <div class="card-period">2016–2020</div>
+            <h3 class="card-title">Doctoral Thesis: Non-Invasive Geo-Electrical Imaging of Plant Roots</h3>
+            <div class="card-role">FNRS Research Fellow</div>
+            <p class="card-summary">Four-year investigation into non-invasive geo-electrical imaging of plant roots, producing the first coupled hydro-geophysical framework linking root architecture, water uptake, and electrical signatures. 4 papers, 135&#43; citations.</p>
+
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">FEM (500k elements)</span>
+              
+              <span class="skill-pill">Root Biophysics</span>
+              
+              <span class="skill-pill">Geoelectrical Methods</span>
+              
+            </div>
+            
+
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
+
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Thesis Title:</strong> &ldquo;Investigation of signatures of plant roots from non-invasive geo-electrical measurements&rdquo;</p>
+<p><strong>Research Problem:</strong> How do plant roots influence soil electrical properties? Can we &ldquo;see&rdquo; roots without digging them up?</p>
+<p>Created the first coupled hydro-geophysical framework linking root architecture, water uptake, and electrical signatures — enabling non-invasive root phenotyping at scales from centimeters to field plots.</p>
 <p><strong>Funding:</strong> Belgian FNRS (Fonds National de la Recherche Scientifique) - Grant T.1088.15<br>
 <strong>Defense:</strong> 2020, UCLouvain (during COVID-19 pandemic)<br>
 <strong>Supervisors:</strong> Prof. Mathieu Javaux (UCLouvain), Prof. Frédéric Nguyen (ULiège), Prof. Sarah Garré (Gembloux)</p>
@@ -580,88 +533,41 @@ Created <strong>world&rsquo;s first coupled hydro-geophysical framework</strong>
 <li>4 peer-reviewed papers (135+ citations)</li>
 <li>5 international conference presentations</li>
 <li>Multiple international collaborations (Germany, Austria, Israel)</li>
-<li>Established new research field: <strong>Computational Root Geophysics</strong></li>
+<li>Established new research field: Computational Root Geophysics</li>
 </ul>
-<p><strong>Consulting Applications:</strong> Precision agriculture, breeding programs, environmental monitoring, AgTech startups</p>
-<p><em>Expand below to explore 5 thesis components →</em></p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2017–2018</div>
+            <h3 class="card-title">Process-Based Mechanistic Model for Soil-Root Electrical Conduction</h3>
+            <div class="card-role">PhD Researcher</div>
+            <p class="card-summary">First mechanistic model to couple root water uptake (R-SWMS) with 3D electrical simulations (PyGIMLi), quantifying how roots distort standard petrophysical relations. Published in Vadose Zone Journal, 2019.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">FEM (500k elements)</span>
-                                
-                                <span class="skill-pill">Root Biophysics</span>
-                                
-                                <span class="skill-pill">Geoelectrical Methods</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Coupled Modeling</span>
+              
+              <span class="skill-pill">Root Hydraulics</span>
+              
+              <span class="skill-pill">Python/PyGIMLi</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-cube"></i>
-                                                FEM (500k elements)
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-leaf"></i>
-                                                Root Biophysics
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-bolt"></i>
-                                                Geoelectrical Methods
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2017-2018 | PhD Research</span>
-                            </div>
-                            <h2 class="project-title">Process-Based Mechanistic Model for Soil-Root Electrical Conduction</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> PhD Researcher</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> UCLouvain, Belgium</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Research Question:</strong> Can we build a mechanistic model incorporating BOTH root architecture and water dynamics?</p>
-<p><strong>Innovation - Coupled Framework:</strong></p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Research Question:</strong> Can we build a mechanistic model incorporating BOTH root architecture and water dynamics?</p>
+<p><strong>Innovation — Coupled Framework:</strong></p>
 <ul>
 <li>Integrated R-SWMS (root water uptake) with PyGIMLi (electrical modeling)</li>
 <li>3D finite element models with 500,000+ tetrahedral elements</li>
@@ -669,105 +575,44 @@ Created <strong>world&rsquo;s first coupled hydro-geophysical framework</strong>
 <li>First model to achieve this level of physical realism</li>
 </ul>
 <p><strong>Key Discovery:</strong><br>
-<strong>Roots impact petrophysical relations</strong> - The standard Archie&rsquo;s Law doesn&rsquo;t work when roots are present! We quantified exactly how roots modify the soil&rsquo;s electrical behavior.</p>
-<p><strong>Technical Achievement:</strong></p>
-<ul>
-<li>Custom mesh generation pipeline (Gmsh + Python automation)</li>
-<li>Forward ERT simulations validated against rhizotron experiments</li>
-<li>Computed apparent vs. effective electrical conductivities</li>
-<li>Developed upscaling methodology for field applications</li>
-</ul>
-<p><strong>Validation:</strong><br>
-Synthetic measurements matched real rhizotron data for maize and lupin under controlled conditions.</p>
-<p><strong>Commercial Value:</strong><br>
-Framework can be adapted to ANY crop-soil system. Companies can use this to:</p>
-<ul>
-<li>Design better root monitoring sensors</li>
-<li>Interpret field ERT data correctly</li>
-<li>Predict irrigation needs from electrical measurements</li>
-</ul>
+Roots impact petrophysical relations — the standard Archie&rsquo;s Law doesn&rsquo;t work when roots are present. We quantified exactly how roots modify the soil&rsquo;s electrical behavior.</p>
 <p><strong>Publication:</strong> <em>Vadose Zone Journal</em> (2019), 35 citations<br>
 <strong>Thesis Chapter:</strong> 3<br>
 <strong>Tools:</strong> Python, PyGIMLi, Gmsh, R-SWMS, EIDORS</p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2018–2019</div>
+            <h3 class="card-title">Electrical Anisotropy as Root Architecture Fingerprint</h3>
+            <div class="card-role">PhD Researcher (Visiting Scholar, Univ. Bonn)</div>
+            <p class="card-summary">Demonstrated that electrical anisotropy encodes root architecture — species discrimination at 95% accuracy using k-NN on electrical signatures alone. First mechanistic proof of 3D structural information in geoelectrical data.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Coupled Modeling</span>
-                                
-                                <span class="skill-pill">Root Hydraulics</span>
-                                
-                                <span class="skill-pill">Python/PyGIMLi</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">k-NN/PCA/ML</span>
+              
+              <span class="skill-pill">Anisotropy Tensors</span>
+              
+              <span class="skill-pill">Root Architecture</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-project-diagram"></i>
-                                                Coupled Modeling
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-water"></i>
-                                                Root Hydraulics
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-python"></i>
-                                                Python/PyGIMLi
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2018-2019 | PhD Research</span>
-                            </div>
-                            <h2 class="project-title">Electrical Anisotropy as Root Architecture Fingerprint</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> PhD Researcher (Visiting Scholar)</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> University of Bonn, Germany &amp; UCLouvain, Belgium</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Research Question:</strong> Does electrical anisotropy (direction-dependent conductivity) contain information about root architecture?</p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Research Question:</strong> Does electrical anisotropy contain information about root architecture?</p>
 <p><strong>Breakthrough Discovery:</strong><br>
-<strong>YES!</strong> Electrical anisotropy is a <strong>fingerprint of root organization</strong>. This was the first mechanistic proof that geoelectrical measurements encode 3D structural information.</p>
+Electrical anisotropy is a fingerprint of root organization — the first mechanistic proof that geoelectrical measurements encode 3D structural information.</p>
 <p><strong>Methodology:</strong></p>
 <ul>
 <li>Generated synthetic root architectures using C-Rootbox (monocots vs. dicots)</li>
@@ -777,233 +622,95 @@ Framework can be adapted to ANY crop-soil system. Companies can use this to:</p>
 </ul>
 <p><strong>Key Results:</strong></p>
 <ul>
-<li><strong>Magnitude component</strong> (low frequency): Water uptake patterns</li>
-<li><strong>Phase component</strong> (high frequency): Root architecture directly</li>
-<li><strong>Anisotropy factor</strong>: Strong correlation with root geometry indices</li>
-<li><strong>Species discrimination</strong>: 95% accuracy using k-NN on electrical signatures alone!</li>
-</ul>
-<p><strong>Machine Learning Integration:</strong></p>
-<ul>
-<li>Principal Component Analysis for dimensionality reduction</li>
-<li>K-Nearest Neighbor classifier for species identification</li>
-<li>Statistical validation (ANOVA, Tukey HSD)</li>
-<li>Proven discriminatory power of anisotropy metrics</li>
-</ul>
-<p><strong>Why This Is Revolutionary:</strong><br>
-You can identify crop species and quantify root traits <strong>without seeing the roots</strong>. Just measure electrical anisotropy!</p>
-<p><strong>Commercial Applications:</strong></p>
-<ul>
-<li>Automated root phenotyping for breeding trials</li>
-<li>Early species detection in mixed cropping</li>
-<li>Root architecture quantification for precision agriculture</li>
-<li>Patent-worthy algorithms for AgTech companies</li>
+<li>Magnitude component (low frequency): water uptake patterns</li>
+<li>Phase component (high frequency): root architecture directly</li>
+<li>Species discrimination: 95% accuracy using k-NN on electrical signatures alone</li>
 </ul>
 <p><strong>Publications:</strong> 2 conference papers (<em>Geophysical Research Abstracts</em>)<br>
 <strong>Thesis Chapter:</strong> 4<br>
 <strong>Collaboration:</strong> Prof. Andreas Kemna (Bonn)</p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2018–2020</div>
+            <h3 class="card-title">Field-Scale ERT Phenotyping Under Water Deficit</h3>
+            <div class="card-role">PhD Researcher</div>
+            <p class="card-summary">Multi-season ERT field campaign across 6 grassland species under controlled water deficit. Successfully discriminated species by their electrical-hydraulic fingerprints. Published in Plant and Soil, 2020.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">k-NN/PCA/ML</span>
-                                
-                                <span class="skill-pill">Anisotropy Tensors</span>
-                                
-                                <span class="skill-pill">Root Architecture</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Field ERT</span>
+              
+              <span class="skill-pill">Time-series/Gaussian Fitting</span>
+              
+              <span class="skill-pill">Experimental Design</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-brain"></i>
-                                                k-NN/PCA/ML
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-chart-area"></i>
-                                                Anisotropy Tensors
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-seedling"></i>
-                                                Root Architecture
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2018-2020 | PhD Research</span>
-                            </div>
-                            <h2 class="project-title">Field-Scale ERT Phenotyping Under Water Deficit</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> PhD Researcher</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> UCLouvain &amp; Gembloux Agro-Bio Tech, Belgium</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Research Question:</strong> Can ERT discriminate between plant species in real field conditions?</p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Research Question:</strong> Can ERT discriminate between plant species in real field conditions?</p>
 <p><strong>Field Experimental Campaign:</strong></p>
 <ul>
 <li>Multi-season ERT surveys across 6 grassland species (alfalfa, red clover, chicory, plantain, ryegrass, fescue)</li>
 <li>Controlled water deficit experiment (ForDrought project)</li>
 <li>Integration with TDR sensors for soil moisture validation</li>
 <li>Repeated 3D ERT measurements during drying cycles</li>
-<li>Weather station data for ET₀ calculations</li>
 </ul>
-<p><strong>Novel Methodology - &ldquo;Model-Informed ERT Interpretation&rdquo;:</strong><br>
-Problem: Field ERT is noisy. How do you know if changes are real or artifacts?<br>
-Solution: Run synthetic forward models to test what SHOULD happen, then compare to observations.</p>
-<p><strong>Analytical Innovation:</strong></p>
-<ul>
-<li>Fitted <strong>Gaussian temporal curves</strong> to quantify water uptake timing</li>
-<li>Computed spatial variability of transpiration demand</li>
-<li>Used numerical models to validate that changes were plant-driven</li>
-<li>Developed statistical framework to detect species-specific signatures</li>
-</ul>
+<p><strong>Novel Methodology — &ldquo;Model-Informed ERT Interpretation&rdquo;:</strong><br>
+Run synthetic forward models to test what should happen, then compare to observations.</p>
 <p><strong>Major Finding:</strong><br>
-<strong>Successfully discriminated 5 grass species</strong> based on their electrical-hydraulic fingerprints! Species-specific depletion zones were clearly visible and statistically significant.</p>
-<p><strong>What Made This Difficult:</strong></p>
-<ul>
-<li>Soil heterogeneity (noise)</li>
-<li>Atmospheric variability (rain, temperature)</li>
-<li>Measurement artifacts (electrode contact)</li>
-<li>Small signal-to-noise ratio for subtle differences</li>
-</ul>
-<p><strong>How We Solved It:</strong></p>
-<ul>
-<li>Advanced data filtering (Adrián Flores Orozco, TU Vienna)</li>
-<li>Model-based artifact detection</li>
-<li>Temporal curve fitting to extract patterns</li>
-<li>Statistical validation against destructive sampling</li>
-</ul>
-<p><strong>Practical Impact:</strong><br>
-This proves ERT works for <strong>operational field phenotyping</strong>. Breeding programs can now:</p>
-<ul>
-<li>Screen hundreds of varieties non-destructively</li>
-<li>Monitor root activity continuously</li>
-<li>Select for drought tolerance in-field</li>
-<li>Reduce phenotyping costs by 10x</li>
-</ul>
+Successfully discriminated 5 grass species based on their electrical-hydraulic fingerprints. Species-specific depletion zones were clearly visible and statistically significant.</p>
 <p><strong>Publications:</strong></p>
 <ul>
 <li><em>Plant and Soil</em> (2020), 29 citations</li>
 <li>Field data supported by Région Wallonne (ForDrought D31-1341)</li>
 </ul>
 <p><strong>Thesis Chapters:</strong> 5 &amp; 6<br>
-<strong>Collaborations:</strong> Prof. Sarah Garré (field access), Dr. Florian Wagner (RWTH Aachen), Dr. Nolwenn Lesparre (Strasbourg)</p>
+<strong>Collaborations:</strong> Prof. Sarah Garré, Dr. Florian Wagner (RWTH Aachen), Dr. Nolwenn Lesparre (Strasbourg)</p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2016–2017</div>
+            <h3 class="card-title">Comprehensive Review: Electrical Properties of Roots</h3>
+            <div class="card-role">PhD Researcher</div>
+            <p class="card-summary">Comprehensive synthesis of geoelectrical methods for soil-root studies, with original lab measurements of root electrical properties. 71 citations in Vadose Zone Journal — the most-cited paper of the PhD.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Field ERT</span>
-                                
-                                <span class="skill-pill">Time-series/Gaussian Fitting</span>
-                                
-                                <span class="skill-pill">Experimental Design</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Literature Synthesis</span>
+              
+              <span class="skill-pill">Root Measurements</span>
+              
+              <span class="skill-pill">Electrical Spectroscopy</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-broadcast-tower"></i>
-                                                Field ERT
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-chart-line"></i>
-                                                Time-series/Gaussian Fitting
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-vial"></i>
-                                                Experimental Design
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2016-2017 | PhD Research</span>
-                            </div>
-                            <h2 class="project-title">Comprehensive Review: Electrical Properties of Roots</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> PhD Researcher</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> UCLouvain &amp; University of Liège, Belgium</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Comprehensive Review:</strong> State-of-the-art in geoelectrical methods for soil-root studies.</p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Comprehensive Review:</strong> State-of-the-art in geoelectrical methods for soil-root studies.</p>
 <p><strong>Coverage:</strong></p>
 <ul>
 <li>Theoretical background (lossy dielectrics, polarization mechanisms)</li>
@@ -1016,96 +723,46 @@ This proves ERT works for <strong>operational field phenotyping</strong>. Breedi
 <ul>
 <li>Electrical measurements on root segments (DC resistance, polarization signatures)</li>
 <li>Laboratory characterization of rapeseed root electrical properties</li>
-<li>Time-Domain Induced Polarization (TDIP) experiments</li>
-<li>Spectral Induced Polarization (SIP) analysis</li>
+<li>Time-Domain and Spectral Induced Polarization (TDIP/SIP) experiments</li>
 </ul>
 <p><strong>Key Insight:</strong><br>
-Existing &ldquo;mixing models&rdquo; (averaging soil + roots) <strong>don&rsquo;t capture physics correctly</strong>. You need explicit 3D representation of root architecture.</p>
-<p><strong>This Review Became Highly Cited:</strong><br>
-<em>Vadose Zone Journal</em> (2020), <strong>71 citations</strong> - Most cited paper of PhD!</p>
-<p>&ldquo;Sensing the electrical properties of roots: A review&rdquo;<br>
-Comprehensive synthesis establishing foundation for thesis work.</p>
-<p><strong>Thesis Chapter:</strong> 2<br>
-<strong>Laboratory Collaborations:</strong><br>
-Dr. Solomon Ehosioke (ULiège) for root electrical parameterization experiments</p>
+Existing mixing models don&rsquo;t capture physics correctly. You need explicit 3D representation of root architecture.</p>
+<p><strong>Publication:</strong> <em>Vadose Zone Journal</em> (2020), <strong>71 citations</strong><br>
+<strong>Thesis Chapter:</strong> 2<br>
+<strong>Laboratory Collaborations:</strong> Dr. Solomon Ehosioke (ULiège)</p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2016–2020</div>
+            <h3 class="card-title">Open-Source Root-ERT Modeling Pipeline</h3>
+            <div class="card-role">PhD Researcher &amp; Software Developer</div>
+            <p class="card-summary">Modular, reproducible framework for root-soil electrical modeling: from root architecture generation (C-Rootbox) through water uptake (R-SWMS) to 3D FEM electrical simulation (PyGIMLi/Gmsh).</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Literature Synthesis</span>
-                                
-                                <span class="skill-pill">Root Measurements</span>
-                                
-                                <span class="skill-pill">Electrical Spectroscopy</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Python/C&#43;&#43;</span>
+              
+              <span class="skill-pill">FEM/Gmsh</span>
+              
+              <span class="skill-pill">HPC/Parallel Computing</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-book"></i>
-                                                Literature Synthesis
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-microscope"></i>
-                                                Root Measurements
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-bolt"></i>
-                                                Electrical Spectroscopy
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="technical-projects">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Technical Projects</span>
-                                <span class="timeframe">2016-2020 | PhD Research</span>
-                            </div>
-                            <h2 class="project-title">Open-Source Root-ERT Modeling Pipeline</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> PhD Researcher &amp; Software Developer</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> UCLouvain, Belgium</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Objective:</strong> Create reproducible, modular framework for root-soil electrical modeling.</p>
-<p><strong>Architecture - Full Pipeline:</strong></p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Objective:</strong> Create reproducible, modular framework for root-soil electrical modeling.</p>
+<p><strong>Full Pipeline:</strong></p>
 <pre tabindex="0"><code>Root Architecture (C-Rootbox)
         ↓
 Water Uptake (R-SWMS)
@@ -1114,130 +771,69 @@ Water Uptake (R-SWMS)
         ↓
 Electrical Forward Model (PyGIMLi)
         ↓
-ERT Inversion &amp; Analysis (PyGIMLi + SciPy)
+ERT Inversion &amp; Analysis
         ↓
 Visualization (ParaView, Matplotlib)
-</code></pre><p><strong>Key Components:</strong></p>
+</code></pre><p><strong>Key Features:</strong></p>
 <ul>
-<li><strong>Automatic mesh generation</strong>: Converts root architectures to FEM-ready meshes</li>
-<li><strong>Coupled hydro-electrical</strong>: Bidirectional data exchange</li>
-<li><strong>Scalability</strong>: Rhizotron → Pot → Field</li>
-<li><strong>Parallelization</strong>: HPC-ready for large simulations</li>
-<li><strong>Quality control</strong>: Automated convergence checks</li>
-</ul>
-<p><strong>Software Stack:</strong></p>
-<ul>
-<li><strong>PyGIMLi</strong>: Core ERT modeling and inversion library</li>
-<li><strong>Gmsh</strong>: 3D tetrahedral mesh generation</li>
-<li><strong>R-SWMS</strong>: Root water uptake (C++ backend)</li>
-<li><strong>C-Rootbox</strong>: Root architecture generator</li>
-<li><strong>EIDORS</strong>: Effective property calculations (MATLAB)</li>
-<li><strong>Python</strong>: Pipeline orchestration (NumPy, SciPy, Pandas)</li>
-<li><strong>ParaView</strong>: 3D visualization and rendering</li>
-</ul>
-<p><strong>Computational Challenges:</strong></p>
-<ul>
-<li>Models with 500,000+ elements require HPC</li>
-<li>Memory management for large meshes</li>
-<li>Numerical stability in coupled simulations</li>
-<li>Parallelization for parameter sweeps</li>
+<li>Automatic mesh generation from root architectures</li>
+<li>Coupled hydro-electrical data exchange</li>
+<li>Scalable from rhizotron to field</li>
+<li>HPC-ready parallelization</li>
 </ul>
 <p><strong>Open Science Contribution:</strong></p>
 <ul>
 <li>Shared datasets for benchmarking</li>
 <li>Contributed code to PyGIMLi community</li>
-<li>Documented workflows for reproducibility</li>
 <li>Trained 5+ students in framework usage</li>
-<li>Active in PyGIMLi GitLab (Dr. Thomas Günther, Dr. Carsten Rücker)</li>
 </ul>
-<p><strong>Consulting Value:</strong><br>
-This is a <strong>ready-to-deploy commercial framework</strong>. Companies can license/adapt for:</p>
-<ul>
-<li>Custom crop monitoring solutions</li>
-<li>Sensor design and validation</li>
-<li>Digital twin development for agriculture</li>
-<li>Real-time root activity estimation</li>
-</ul>
-<p><strong>Technical Depth:</strong><br>
-Full grasp of: Finite elements, inverse problems, geophysics, plant biophysics, scientific computing, HPC</p>
-<p><strong>Repository:</strong> Available for collaboration/consulting (contact for details)</p>
+<p><strong>Repository:</strong> Available for collaboration (contact for details)</p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+        </div>
+      </section>
+      
+      <section class="institution-section">
+        <div class="section-header">
+          <div class="section-icon"><i class="fas fa-atom"></i></div>
+          <div class="section-meta">
+            <h2 class="section-name">Earlier Research</h2>
+            <p class="section-tagline">USA &amp; Germany · 2010–2016</p>
+          </div>
+        </div>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Python/C&#43;&#43;</span>
-                                
-                                <span class="skill-pill">FEM/Gmsh</span>
-                                
-                                <span class="skill-pill">HPC/Parallel Computing</span>
-                                
-                                
-                            </div>
-                            
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <div class="card-period">2010–2013</div>
+            <h3 class="card-title">Plasma Physics Simulations</h3>
+            <div class="card-role">Research Assistant (MS) · University of Alabama in Huntsville</div>
+            <p class="card-summary">Extended a 2D electrostatic particle-in-cell code into a full 3D electromagnetic plasma simulation framework. 3 papers in Physics of Plasmas, 69 citations.</p>
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">FORTRAN/MPI</span>
+              
+              <span class="skill-pill">HPC</span>
+              
+              <span class="skill-pill">Numerical Methods</span>
+              
+            </div>
+            
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-python"></i>
-                                                Python/C&#43;&#43;
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-cube"></i>
-                                                FEM/Gmsh
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-server"></i>
-                                                HPC/Parallel Computing
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2010-2013</span>
-                            </div>
-                            <h2 class="project-title">Plasma Physics Simulations</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Research Assistant (MS)</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> University of Alabama in Huntsville, USA</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Computational Physics:</strong> Extended 2D electrostatic Particle-in-Cell plasma code into fully functional 3D electromagnetic simulation framework.</p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Computational Physics:</strong> Extended 2D electrostatic Particle-in-Cell plasma code into fully functional 3D electromagnetic simulation framework.</p>
 <p><strong>Achievements:</strong></p>
 <ul>
 <li>Developed Helmholtz coil field generation modules for plasma thruster digital twins</li>
@@ -1247,210 +843,80 @@ Full grasp of: Finite elements, inverse problems, geophysics, plant biophysics, 
 <p><strong>Funding:</strong> NSF grant ATM0647157<br>
 <strong>Publications:</strong> 3 papers in <em>Physics of Plasmas</em> (69 citations)</p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2015–2016</div>
+            <h3 class="card-title">Maxwell-Bloch Equations for Exciton-Polariton Propagation</h3>
+            <div class="card-role">Research Assistant · University of Paderborn</div>
+            <p class="card-summary">FORTRAN solver for exciton-polariton propagation in semiconductors using coupled Maxwell-Bloch equations, with 4th-order Runge-Kutta temporal integration.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">FORTRAN/MPI</span>
-                                
-                                <span class="skill-pill">HPC</span>
-                                
-                                <span class="skill-pill">Numerical Methods</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">FORTRAN/Numerical PDE</span>
+              
+              <span class="skill-pill">Quantum Optics</span>
+              
+              <span class="skill-pill">Runge-Kutta/Finite-Diff</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-bolt"></i>
-                                                FORTRAN/MPI
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-server"></i>
-                                                HPC
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-calculator"></i>
-                                                Numerical Methods
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2015-2016</span>
-                            </div>
-                            <h2 class="project-title">Maxwell-Bloch Equations for Exciton-Polariton Propagation</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Research Assistant</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> University of Paderborn, Germany</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Research Project:</strong> Numerical modeling of light propagation in semiconductor optical systems using coupled Maxwell-Bloch equations.</p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Research Project:</strong> Numerical modeling of light propagation in semiconductor optical systems using coupled Maxwell-Bloch equations.</p>
 <p><strong>Physical System:</strong><br>
-Exciton-polaritons in semiconductors - quasi-particles resulting from strong coupling between light (photons) and matter excitations (excitons). These systems are crucial for developing optical switches, modulators, and quantum information devices.</p>
-<p><strong>Theoretical Framework:</strong></p>
-<ul>
-<li><strong>Maxwell Equations</strong>: Governs electromagnetic wave propagation</li>
-<li><strong>Optical Bloch Equations</strong>: Describes two-level system dynamics (excitonic resonances)</li>
-<li><strong>Coupling</strong>: Material response modeled as collection of two-level systems responding to optical fields</li>
-</ul>
-<p><strong>Technical Challenge:</strong><br>
-Solving coupled nonlinear partial differential equations (Maxwell) with ordinary differential equations (Bloch) requires sophisticated numerical methods and deep understanding of both quantum mechanics and electromagnetism.</p>
-<p><strong>Background Preparation:</strong></p>
-<ul>
-<li>Self-studied advanced quantum mechanics (second quantization, many-body theory)</li>
-<li>Learned solid-state physics and semiconductor optics (band structure, interband absorption, excitons, polaritons)</li>
-<li>Mastered optical Bloch equations for two-level systems</li>
-<li>Studied light-matter interaction theory from research literature</li>
-</ul>
+Exciton-polaritons in semiconductors — quasi-particles from strong coupling between photons and excitonic resonances, crucial for optical switches and quantum information devices.</p>
 <p><strong>Numerical Implementation:</strong></p>
 <ul>
-<li><strong>FORTRAN code development</strong> for Maxwell-Bloch solver</li>
-<li><strong>4th-order Runge-Kutta method</strong> for temporal integration</li>
-<li><strong>Finite-difference methods</strong> for spatial derivatives</li>
-<li><strong>Adaptive time-stepping</strong> for numerical stability</li>
-<li>Handled stiff differential equations common in quantum-optical systems</li>
-</ul>
-<p><strong>Research Contribution:</strong><br>
-Developed working numerical solver capable of simulating:</p>
-<ul>
-<li>Pulse propagation through semiconductor media</li>
-<li>Excitonic resonance effects</li>
-<li>Polariton formation and dynamics</li>
-<li>Nonlinear optical phenomena (self-induced transparency, solitons)</li>
-</ul>
-<p><strong>Technical Skills Acquired:</strong></p>
-<ul>
-<li>Quantum mechanics (Wannier equation, hydrogen atom solutions, raising/lowering operators)</li>
-<li>Many-body quantum mechanics and second quantization</li>
-<li>Semiconductor physics (optical excitations, band structure)</li>
-<li>Advanced numerical methods (Runge-Kutta, finite-difference, FDTD)</li>
-<li>High-performance scientific computing in FORTRAN</li>
+<li>FORTRAN code development for Maxwell-Bloch solver</li>
+<li>4th-order Runge-Kutta method for temporal integration</li>
+<li>Finite-difference methods for spatial derivatives</li>
+<li>Adaptive time-stepping for numerical stability</li>
 </ul>
 <p><strong>Supervision:</strong> Prof. Torsten Meier (Theoretical Physics)<br>
-<strong>Funding:</strong> DFG (German Research Foundation) optical signal processing project</p>
-<p><strong>Consulting Relevance:</strong><br>
-Expertise in coupled physics-based simulations, numerical stability, and quantum-classical interfaces applicable to:</p>
-<ul>
-<li>Optical device simulation</li>
-<li>Quantum computing systems</li>
-<li>Multiphysics modeling</li>
-<li>Scientific software development</li>
-</ul>
+<strong>Funding:</strong> DFG optical signal processing project</p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2013–2014</div>
+            <h3 class="card-title">Laser-Matter Interaction Research</h3>
+            <div class="card-role">Research Assistant (MS) · Alabama A&amp;M University</div>
+            <p class="card-summary">Experimental study of laser-induced photodegradation of Rhodamine 6G — cleanroom operations, AFM, and high-value laser systems. GPA 4.0/4.0.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">FORTRAN/Numerical PDE</span>
-                                
-                                <span class="skill-pill">Quantum Optics</span>
-                                
-                                <span class="skill-pill">Runge-Kutta/Finite-Diff</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">AFM/Laser Systems</span>
+              
+              <span class="skill-pill">Experimental Physics</span>
+              
+              <span class="skill-pill">Photodegradation</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-wave-square"></i>
-                                                FORTRAN/Numerical PDE
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-atom"></i>
-                                                Quantum Optics
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-calculator"></i>
-                                                Runge-Kutta/Finite-Diff
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="research-science">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Research &amp; Science</span>
-                                <span class="timeframe">2013-2014</span>
-                            </div>
-                            <h2 class="project-title">Laser-Matter Interaction Research</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Research Assistant (MS)</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Alabama A&amp;M University, USA</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Experimental &amp; Theoretical Physics:</strong> Investigated laser-induced photodegradation of dye molecules (Rhodamine 6G).</p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Experimental &amp; Theoretical Physics:</strong> Investigated laser-induced photodegradation of dye molecules (Rhodamine 6G).</p>
 <p><strong>Laboratory Skills:</strong></p>
 <ul>
 <li>Performed photo-patterning and bio-deposition in cleanroom</li>
@@ -1460,82 +926,98 @@ Expertise in coupled physics-based simulations, numerical stability, and quantum
 </ul>
 <p><strong>Academic Performance:</strong> GPA 4.0/4.0</p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+        </div>
+      </section>
+      
+      <section class="institution-section">
+        <div class="section-header">
+          <div class="section-icon"><i class="fas fa-user-astronaut"></i></div>
+          <div class="section-meta">
+            <h2 class="section-name">Independent</h2>
+            <p class="section-tagline">2020–Present</p>
+          </div>
+        </div>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">AFM/Laser Systems</span>
-                                
-                                <span class="skill-pill">Experimental Physics</span>
-                                
-                                <span class="skill-pill">Photodegradation</span>
-                                
-                                
-                            </div>
-                            
+        <div class="projects-grid">
+          
+          <article class="project-card">
+            <div class="card-period">2026–Present</div>
+            <h3 class="card-title">Sentinel-2 NDVI Trends as a Groundwater Extraction Indicator (Tamil Nadu)</h3>
+            <div class="card-role">Independent Researcher (Solo)</div>
+            <p class="card-summary">Independent analysis testing whether block-scale Sentinel-2 peak-NDVI trends track CGWB groundwater extraction gradients across six over-exploited blocks in Tiruvannamalai district, Tamil Nadu. Found a borderline-significant positive association (r=0.814, p=0.049).</p>
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Sentinel-2 / GEE</span>
+              
+              <span class="skill-pill">Groundwater Remote Sensing</span>
+              
+              <span class="skill-pill">Trend Analysis</span>
+              
+            </div>
+            
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-microscope"></i>
-                                                AFM/Laser Systems
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-vial"></i>
-                                                Experimental Physics
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-atom"></i>
-                                                Photodegradation
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="content-creation">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Content Creation</span>
-                                <span class="timeframe">2024-Present</span>
-                            </div>
-                            <h2 class="project-title">Compute Stories YouTube Channel</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Content Creator &amp; Educator</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Independent</span>
-                            </div>
-                            
-                        </div>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Question:</strong> Can freely available satellite vegetation trends serve as an annual spatial indicator of groundwater extraction intensity between CGWB assessment cycles?</p>
+<p><strong>Approach:</strong></p>
+<ul>
+<li>Computed the &ldquo;intensifier fraction&rdquo; — the fraction of cropland pixels with strongly positive Sentinel-2 peak-NDVI trends (2018–2024)</li>
+<li>Evaluated consistency with CGWB extraction percentages across 6 over-exploited blocks (102–118% of annual recharge)</li>
+<li>Used Arunachala Hill (Tiruvannamalai) as geographic anchor for stratified sampling, controlling for broad-scale climate and topographic gradients</li>
+<li>Ran Sentinel-1 VV detectability analysis to explain why single-pixel SAR trend detection fails where block-level optical detection succeeds</li>
+</ul>
+<p><strong>Key Results:</strong></p>
+<ul>
+<li>Intensifier fraction positively associated with extraction percentage: Pearson r = 0.814, p = 0.049, permutation p = 0.061</li>
+<li>Rainfall trends show no evidence of confounding</li>
+<li>Block-level aggregation necessary — per-pixel NDVI changes fall below the single-pixel detection bound</li>
+</ul>
+<p><strong>Scope:</strong> Proof-of-concept for one district; requires multi-district validation before operational use. Intended as a supplement to well monitoring, not a replacement.</p>
+<p><strong>Status:</strong> Manuscript prepared; independent work outside institutional affiliation.</p>
 
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Science Communication:</strong> Produce educational videos simplifying computational science, data analysis, and modeling for students and professionals.</p>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2024–Present</div>
+            <h3 class="card-title">Compute Stories YouTube Channel</h3>
+            <div class="card-role">Content Creator &amp; Educator</div>
+            <p class="card-summary">Educational videos on computational science, data analysis, and modeling for students and professionals.</p>
+
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Video Production</span>
+              
+              <span class="skill-pill">Content Creation</span>
+              
+              <span class="skill-pill">Science Communication</span>
+              
+            </div>
+            
+
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
+
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Science Communication:</strong> Produce educational videos simplifying computational science, data analysis, and modeling.</p>
 <p><strong>Content Focus:</strong></p>
 <ul>
 <li>Computational modeling fundamentals</li>
@@ -1546,109 +1028,96 @@ Expertise in coupled physics-based simulations, numerical stability, and quantum
 <p><strong>Production Skills:</strong> Video editing (Final Cut Pro, DaVinci Resolve), 2D animation (Pencil2D), visual storytelling</p>
 <p><a href="https://www.youtube.com/@ComputeStories">Watch on YouTube</a></p>
 
-                            </div>
+              </div>
+              
+              <div class="videos-section">
+                
+                
+                <div class="video-group">
+                  <p class="video-channel-label">Compute Stories</p>
+                  
+                  <a href="https://youtube.com/watch?v=AmmajDBSLFM%26t%3d92s" class="video-link" target="_blank">
+                    <i class="fas fa-play-circle"></i> Canonical Correspondence Analysis
+                  </a>
+                  
+                  <a href="https://youtube.com/watch?v=ZkhP0Vdlkok%26t%3d37s" class="video-link" target="_blank">
+                    <i class="fas fa-play-circle"></i> Statistical Arbitrage in Trading
+                  </a>
+                  
+                  <a href="https://youtube.com/watch?v=9GOKTmn8tO0%26t%3d324s" class="video-link" target="_blank">
+                    <i class="fas fa-play-circle"></i> Soil Moisture Explained
+                  </a>
+                  
+                </div>
+                
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">March 2026</div>
+            <h3 class="card-title">How Not to Die in Indian Traffic: A Scientist&#39;s Survival Guide to Bengaluru Roads</h3>
+            <div class="card-role">Author · Kindle Edition</div>
+            <p class="card-summary">A traffic awareness book exploring Bengaluru roads as a human system — psychology, risk perception, social norms, and urban density — drawn from daily commute observations and analytical thinking. Published March 2026.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Video Production</span>
-                                
-                                <span class="skill-pill">Content Creation</span>
-                                
-                                <span class="skill-pill">Science Communication</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Popular Science</span>
+              
+              <span class="skill-pill">Behavioral Analysis</span>
+              
+              <span class="skill-pill">Science Writing</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-video"></i>
-                                                Video Production
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-youtube"></i>
-                                                Content Creation
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-chalkboard-teacher"></i>
-                                                Science Communication
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
+            <div class="expanded-section">
+              <div class="project-description">
+                <p>Rather than treating traffic as an engineering problem, this book approaches it as a complex human system shaped by psychology, cognitive decision-making, and social behavior under stress.</p>
+<p>The ideas grew out of daily riding observations in Bengaluru — recurring patterns, predictable mistakes, and the dynamics that make Indian urban traffic what it is.</p>
+<p><strong>Published:</strong> 20 March 2026<br>
+<strong>Format:</strong> Kindle Edition, 61 pages<br>
+<strong>ASIN:</strong> B0GT7D2NMN</p>
+<p><a href="https://www.amazon.in/How-Not-Die-Indian-Traffic-ebook/dp/B0GT7D2NMN">Available on Amazon</a></p>
 
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Related Videos</h3>
-                                        
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2025</div>
+            <h3 class="card-title">Digital Twins: From Apollo to Smart Farming (Book)</h3>
+            <div class="card-role">Author · Notion Press</div>
+            <p class="card-summary">Monograph on digital twin technology from Apollo missions to precision agriculture. ISBN: 979-8900231457.</p>
 
-                                        
-                                        <div class="video-group">
-                                            <p class="video-channel">Compute Stories</p>
-                                            
-                                            <a href="https://youtube.com/watch?v=AmmajDBSLFM%26t%3d92s" class="video-link" target="_blank">
-                                                <i class="fas fa-play-circle"></i>
-                                                <span>Canonical Correspondence Analysis</span>
-                                            </a>
-                                            
-                                            <a href="https://youtube.com/watch?v=ZkhP0Vdlkok%26t%3d37s" class="video-link" target="_blank">
-                                                <i class="fas fa-play-circle"></i>
-                                                <span>Statistical Arbitrage in Trading</span>
-                                            </a>
-                                            
-                                            <a href="https://youtube.com/watch?v=9GOKTmn8tO0%26t%3d324s" class="video-link" target="_blank">
-                                                <i class="fas fa-play-circle"></i>
-                                                <span>Soil Moisture Explained</span>
-                                            </a>
-                                            
-                                        </div>
-                                        
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="writing-publishing">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Writing &amp; Publishing</span>
-                                <span class="timeframe">2025</span>
-                            </div>
-                            <h2 class="project-title">Digital Twins: From Apollo to Smart Farming (Book)</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Author</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Notion Press</span>
-                            </div>
-                            
-                        </div>
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Technical Writing</span>
+              
+              <span class="skill-pill">Publishing</span>
+              
+              <span class="skill-pill">Digital Twins</span>
+              
+            </div>
+            
 
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Published Monograph:</strong> Comprehensive exploration of digital twin technology evolution from aerospace engineering to modern agriculture.</p>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
+
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Published Monograph:</strong> Comprehensive exploration of digital twin technology evolution from aerospace engineering to modern agriculture.</p>
 <p><strong>Coverage:</strong></p>
 <ul>
 <li>Historical development (Apollo missions → Industry 4.0)</li>
@@ -1659,277 +1128,37 @@ Expertise in coupled physics-based simulations, numerical stability, and quantum
 <p><strong>ISBN:</strong> 979-8900231457<br>
 <a href="https://www.amazon.in/dp/B0FP5JS1KL">Available on Amazon</a></p>
 
-                            </div>
+              </div>
+              
+            </div>
+          </article>
+          
+          <article class="project-card">
+            <div class="card-period">2020–2022</div>
+            <h3 class="card-title">Algorithmic Trading Systems</h3>
+            <div class="card-role">Independent Consultant</div>
+            <p class="card-summary">Python-based automated trading systems with real-time WebSocket tick data and broker API integration (Angel Broking, Zerodha). Built during the COVID-19 pandemic.</p>
 
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Technical Writing</span>
-                                
-                                <span class="skill-pill">Publishing</span>
-                                
-                                <span class="skill-pill">Digital Twins</span>
-                                
-                                
-                            </div>
-                            
+            
+            <div class="skills-row">
+              
+              <span class="skill-pill">Algorithmic Trading</span>
+              
+              <span class="skill-pill">Python/APIs</span>
+              
+              <span class="skill-pill">WebSocket</span>
+              
+            </div>
+            
 
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
+            <button class="expand-btn">
+              <span class="expand-text">Details</span>
+              <i class="fas fa-chevron-down expand-icon"></i>
+            </button>
 
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-book"></i>
-                                                Technical Writing
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-pen"></i>
-                                                Publishing
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-robot"></i>
-                                                Digital Twins
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="writing-publishing">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Writing &amp; Publishing</span>
-                                <span class="timeframe">2012-2025</span>
-                            </div>
-                            <h2 class="project-title">Scientific Publications &amp; Book Chapters</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Author &amp; Co-author</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Multiple Institutions</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Research Output:</strong> 9 peer-reviewed journal articles (204+ citations), 2 book chapters, 5 conference presentations.</p>
-<p><strong>Recent Publications:</strong></p>
-<ul>
-<li><em>Remote Sensing Letters</em> (2024, under review): SAR soil moisture calibration</li>
-<li><em>In Silico Plants</em> (2024, under review): Digital twin architectures</li>
-<li><em>Scientific Data</em> (2025, in prep): Decade-long soil dataset</li>
-</ul>
-<p><strong>Book Chapters:</strong></p>
-<ul>
-<li>Climate-Resilient Agriculture with LLMs (2025)</li>
-<li>UAVs as Data Feeders for Agricultural Digital Twins (2025, submitted)</li>
-</ul>
-<p><strong>Most Cited Papers:</strong></p>
-<ul>
-<li>&ldquo;Sensing electrical properties of roots&rdquo; (71 citations, <em>Vadose Zone Journal</em>)</li>
-<li>&ldquo;Plasma waves in helicon magnetic nozzle&rdquo; (39 citations, <em>Physics of Plasmas</em>)</li>
-</ul>
-
-                            </div>
-
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Scientific Writing</span>
-                                
-                                <span class="skill-pill">Research Communication</span>
-                                
-                                <span class="skill-pill">Peer Review</span>
-                                
-                                
-                            </div>
-                            
-
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
-
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-file-alt"></i>
-                                                Scientific Writing
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-chart-bar"></i>
-                                                Research Communication
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-book-open"></i>
-                                                Peer Review
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="technical-projects">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Technical Projects</span>
-                                <span class="timeframe">2023-2024</span>
-                            </div>
-                            <h2 class="project-title">PhenoRob Digital Agricultural Avatar Website</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Web Developer &amp; Technical Lead</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Forschungszentrum Jülich, Germany</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Project Website:</strong> Developed comprehensive documentation platform for agricultural modeling tools integration.</p>
-<p><strong>Features:</strong></p>
-<ul>
-<li>Interactive documentation for crop modeling workflows</li>
-<li>Scientific visualizations and animations</li>
-<li>Hugo-based static site with custom SCSS/JavaScript</li>
-<li>Integration guides for multiple modeling frameworks</li>
-</ul>
-<p><a href="https://sraocodes.github.io/Phenorob-DAA/">Visit Project Website</a></p>
-
-                            </div>
-
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Hugo/JavaScript</span>
-                                
-                                <span class="skill-pill">Web Design</span>
-                                
-                                <span class="skill-pill">Documentation</span>
-                                
-                                
-                            </div>
-                            
-
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
-
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-code"></i>
-                                                Hugo/JavaScript
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-palette"></i>
-                                                Web Design
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-book-open"></i>
-                                                Documentation
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Related Videos</h3>
-                                        
-                                        <div class="video-group">
-                                            <p class="video-channel">Digital Agricultural Avatar</p>
-                                            
-                                            <a href="https://youtube.com/watch?v=1E9nW_TAp0c" class="video-link" target="_blank">
-                                                <i class="fas fa-play-circle"></i>
-                                                <span>AgroC Crop Model: Installation Guide</span>
-                                            </a>
-                                            
-                                        </div>
-                                        
-
-                                        
-                                    </div>
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="technical-projects">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Technical Projects</span>
-                                <span class="timeframe">2020-2022</span>
-                            </div>
-                            <h2 class="project-title">Algorithmic Trading Systems</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Independent Consultant</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Freelance Projects</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Financial Technology:</strong> Developed algorithmic trading strategies and execution systems for clients using Python.</p>
+            <div class="expanded-section">
+              <div class="project-description">
+                <p><strong>Financial Technology:</strong> Developed algorithmic trading strategies and execution systems for clients using Python.</p>
 <p><strong>Technical Implementation:</strong></p>
 <ul>
 <li>WebSocket integration for real-time tick data</li>
@@ -1939,609 +1168,307 @@ Expertise in coupled physics-based simulations, numerical stability, and quantum
 </ul>
 <p><strong>Period Context:</strong> Maintained active skill-building during COVID-19 pandemic while pursuing academic opportunities.</p>
 
-                            </div>
-
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Algorithmic Trading</span>
-                                
-                                <span class="skill-pill">Python/APIs</span>
-                                
-                                <span class="skill-pill">WebSocket</span>
-                                
-                                
-                            </div>
-                            
-
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
-
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-chart-line"></i>
-                                                Algorithmic Trading
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-python"></i>
-                                                Python/APIs
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-network-wired"></i>
-                                                WebSocket
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                    <article class="project-card" data-category="technical-projects">
-                        
-                        <div class="card-header">
-                            <div class="card-meta">
-                                <span class="category-badge">Technical Projects</span>
-                                <span class="timeframe">2020-2022</span>
-                            </div>
-                            <h2 class="project-title">Healthcare ML Architecture Consulting</h2>
-                            
-                            <div class="project-context">
-                                <span class="role-badge"><i class="fas fa-user-tag"></i> Independent Consultant</span>
-                                <span class="institution-badge"><i class="fas fa-building"></i> Freelance Projects</span>
-                            </div>
-                            
-                        </div>
-
-                        
-                        <div class="card-body">
-                            <div class="project-description">
-                                <p><strong>Machine Learning Consulting:</strong> Advised on ML library selection and developed MVP for healthcare application using Gradio.</p>
-<p><strong>Deliverables:</strong></p>
-<ul>
-<li>ML pipeline architecture design</li>
-<li>Interactive UI prototypes with Gradio</li>
-<li>Time-series modeling for medical data</li>
-<li>Technical documentation and training</li>
-</ul>
-
-                            </div>
-
-                            
-                            
-                            <div class="skills-row">
-                                
-                                <span class="skill-pill">Machine Learning</span>
-                                
-                                <span class="skill-pill">Healthcare Tech</span>
-                                
-                                <span class="skill-pill">Python/Gradio</span>
-                                
-                                
-                            </div>
-                            
-
-                            
-                            <div class="expandable-content">
-                                <button class="expand-btn">
-                                    <span class="expand-text">View Details</span>
-                                    <i class="fas fa-chevron-down expand-icon"></i>
-                                </button>
-
-                                <div class="expanded-section">
-                                    
-                                    
-                                    <div class="detail-section">
-                                        <h3 class="detail-title">Technologies Used</h3>
-                                        <div class="skills-grid">
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-brain"></i>
-                                                Machine Learning
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-heartbeat"></i>
-                                                Healthcare Tech
-                                            </span>
-                                            
-                                            <span class="skill-badge">
-                                                <i class="fas fa-laptop-code"></i>
-                                                Python/Gradio
-                                            </span>
-                                            
-                                        </div>
-                                    </div>
-                                    
-
-                                    
-                                    
-                                </div>
-                            </div>
-                        </div>
-                    </article>
-                    
-                
+              </div>
+              
             </div>
+          </article>
+          
         </div>
-    </main>
+      </section>
+      
+    </div>
+  </main>
 </div>
 
 <style>
 :root {
-    --primary: #667eea;
-    --primary-dark: #5568d3;
-    --text-primary: #1a202c;
-    --text-secondary: #718096;
-    --text-tertiary: #a0aec0;
-    --border: #e2e8f0;
-    --bg-light: #f7fafc;
-    --bg-white: #ffffff;
+  --primary: #667eea;
+  --primary-dark: #5568d3;
+  --text-primary: #1a202c;
+  --text-secondary: #4a5568;
+  --text-muted: #a0aec0;
+  --border: #e2e8f0;
+  --bg-page: #f8fafc;
+  --radius: 12px;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 .projects-page {
-    font-family: 'Inter', sans-serif;
-    background: var(--bg-light);
-    min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  background: var(--bg-page);
+  min-height: 100vh;
 }
 
  
 .hero-section {
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    padding: 80px 0 60px;
-    text-align: center;
-    color: white;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding: 72px 0 56px;
+  text-align: center;
+  color: white;
 }
 
 .hero-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: clamp(2rem, 5vw, 3.5rem);
-    font-weight: 700;
-    margin-bottom: 16px;
-    letter-spacing: -0.5px;
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.5px;
 }
 
-.hero-subtitle {
-    font-size: clamp(1rem, 2vw, 1.25rem);
-    font-weight: 300;
-    opacity: 0.95;
-    max-width: 600px;
-    margin: 0 auto;
+.container {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 24px;
 }
 
  
-.filter-section {
-    background: white;
-    padding: 16px 0;
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-}
-
-.filter-wrapper {
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
-    justify-content: center;
-    max-height: 200px;
-    overflow-y: auto;
-    padding: 4px 0;
-}
-
-.filter-btn {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 16px;
-    border: 2px solid var(--border);
-    background: white;
-    border-radius: 50px;
-    font-size: 0.85rem;
-    font-weight: 500;
-    color: var(--text-secondary);
-    cursor: pointer;
-    transition: all 0.3s ease;
-    white-space: nowrap;
-}
-
-.filter-btn:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-    transform: translateY(-2px);
-}
-
-.filter-btn.active {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: white;
-}
-
-.filter-btn i {
-    font-size: 0.9rem;
+.sections-wrapper {
+  padding: 56px 0 80px;
 }
 
  
-@media (max-width: 768px) {
-    .filter-section {
-        padding: 12px 0;
-    }
-    
-    .filter-wrapper {
-        gap: 6px;
-        max-height: 120px;
-        padding: 2px 0;
-    }
-    
-    .filter-btn {
-        padding: 6px 12px;
-        font-size: 0.8rem;
-        gap: 4px;
-    }
-    
-    .filter-btn i {
-        font-size: 0.85rem;
-    }
-    
-    .filter-btn span {
-        display: none;  
-    }
-    
-     
-    .filter-btn.active span {
-        display: inline;
-    }
+.institution-section {
+  margin-bottom: 60px;
 }
 
  
-.projects-container {
-    padding: 60px 0;
+.section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 18px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+  position: relative;
 }
 
+.section-header::after {
+  content: '';
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 48px;
+  height: 2px;
+  background: var(--primary);
+}
+
+.section-icon {
+  width: 44px;
+  height: 44px;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.section-name {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.2;
+  margin-bottom: 2px;
+}
+
+.section-tagline {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+ 
 .projects-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(380px, 1fr));
-    gap: 32px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 16px;
 }
 
-@media (max-width: 768px) {
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
+@media (max-width: 720px) {
+  .projects-grid { grid-template-columns: 1fr; }
+  .section-name { font-size: 1.15rem; }
 }
 
  
 .project-card {
-    background: white;
-    border-radius: 16px;
-    border: 1px solid var(--border);
-    overflow: hidden;
-    transition: all 0.3s ease;
+  background: white;
+  border-radius: var(--radius);
+  border: 1px solid var(--border);
+  padding: 20px;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
 }
 
 .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.1);
-    border-color: var(--primary);
+  box-shadow: 0 4px 20px rgba(102, 126, 234, 0.12);
+  border-color: var(--primary);
 }
 
-.card-header {
-    padding: 24px 24px 16px;
-    border-bottom: 1px solid var(--border);
+.card-period {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 0.6px;
+  margin-bottom: 6px;
 }
 
-.card-meta {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 12px;
+.card-title {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.45;
+  margin-bottom: 5px;
 }
 
-.category-badge {
-    display: inline-block;
-    padding: 4px 12px;
-    background: linear-gradient(135deg, var(--primary), var(--primary-dark));
-    color: white;
-    border-radius: 20px;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
+.card-role {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 12px;
 }
 
-.timeframe {
-    font-size: 0.85rem;
-    color: var(--text-tertiary);
-    font-weight: 500;
-}
-
-.project-title {
-    font-family: 'Space Grotesk', sans-serif;
-    font-size: 1.5rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    line-height: 1.3;
-    margin-bottom: 12px;
-}
-
-.project-context {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-top: 8px;
-}
-
-.role-badge, .institution-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 4px 10px;
-    background: rgba(102, 126, 234, 0.1);
-    color: var(--primary);
-    border-radius: 12px;
-    font-size: 0.8rem;
-    font-weight: 500;
-}
-
-.role-badge i, .institution-badge i {
-    font-size: 0.75rem;
-}
-
- 
-.card-body {
-    padding: 24px;
-}
-
-.project-description {
-    font-size: 0.95rem;
-    line-height: 1.7;
-    color: var(--text-secondary);
-    margin-bottom: 20px;
-}
-
-.project-description p {
-    margin-bottom: 12px;
-}
-
-.project-description strong {
-    color: var(--text-primary);
-    font-weight: 600;
-}
-
-.project-description ul {
-    margin-left: 20px;
-    margin-top: 8px;
+.card-summary {
+  font-size: 0.88rem;
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
+  flex-grow: 1;
 }
 
  
 .skills-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-    margin-bottom: 16px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 14px;
 }
 
 .skill-pill {
-    display: inline-block;
-    padding: 6px 14px;
-    background: var(--bg-light);
-    color: var(--text-secondary);
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-}
-
-.skill-pill.more {
-    background: var(--primary);
-    color: white;
+  padding: 3px 10px;
+  background: #eef0ff;
+  color: var(--primary-dark);
+  border-radius: 20px;
+  font-size: 0.76rem;
+  font-weight: 500;
 }
 
  
 .expand-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    padding: 12px;
-    background: var(--bg-light);
-    border: none;
-    border-radius: 8px;
-    color: var(--primary);
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+  font-family: 'Inter', sans-serif;
 }
 
-.expand-btn:hover {
-    background: var(--primary);
-    color: white;
-}
+.expand-btn:hover { color: var(--primary); }
 
 .expand-icon {
-    transition: transform 0.3s ease;
+  font-size: 0.7rem;
+  transition: transform 0.3s;
 }
 
-.expand-btn.active .expand-icon {
-    transform: rotate(180deg);
-}
+.expand-btn.active { color: var(--primary); }
+.expand-btn.active .expand-icon { transform: rotate(180deg); }
 
  
 .expanded-section {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
 }
 
-.expanded-section.show {
-    max-height: 2000px;
+.expanded-section.show { max-height: 4000px; }
+
+.project-description {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
+  font-size: 0.88rem;
+  line-height: 1.75;
+  color: var(--text-secondary);
 }
 
-.detail-section {
-    padding: 20px 0;
-    border-top: 1px solid var(--border);
+.project-description p { margin-bottom: 10px; }
+.project-description ul, .project-description ol {
+  margin-left: 18px;
+  margin-bottom: 10px;
 }
-
-.detail-section:first-child {
-    padding-top: 24px;
+.project-description li { margin-bottom: 4px; }
+.project-description strong { color: var(--text-primary); font-weight: 600; }
+.project-description h2, .project-description h3 {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 14px 0 6px;
 }
-
-.detail-title {
-    font-size: 0.9rem;
-    font-weight: 600;
-    color: var(--text-primary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 12px;
-}
-
- 
-.skills-grid {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-.skill-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
-    padding: 8px 14px;
-    background: white;
-    border: 1px solid var(--border);
-    border-radius: 8px;
-    font-size: 0.85rem;
-    color: var(--text-secondary);
-    transition: all 0.3s ease;
-}
-
-.skill-badge:hover {
-    border-color: var(--primary);
-    color: var(--primary);
-    transform: translateY(-2px);
-}
-
-.skill-badge i {
-    font-size: 1rem;
+.project-description pre {
+  background: var(--bg-page);
+  border-radius: 8px;
+  padding: 12px;
+  font-size: 0.82rem;
+  overflow-x: auto;
+  margin-bottom: 10px;
 }
 
  
-.video-group {
-    margin-bottom: 16px;
+.videos-section {
+  margin-top: 14px;
+  padding-top: 14px;
+  border-top: 1px solid var(--border);
 }
 
-.video-channel {
-    font-size: 0.8rem;
-    font-weight: 600;
-    color: var(--text-tertiary);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 8px;
+.video-channel-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
 }
 
 .video-link {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    padding: 10px 12px;
-    margin-bottom: 8px;
-    background: var(--bg-light);
-    border-radius: 8px;
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  margin-bottom: 6px;
+  background: var(--bg-page);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: background 0.2s, color 0.2s;
 }
 
 .video-link:hover {
-    background: var(--primary);
-    color: white;
-    transform: translateX(4px);
-}
-
-.video-link i {
-    font-size: 1.1rem;
-}
-
- 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+  background: var(--primary);
+  color: white;
 }
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const filter = this.dataset.filter;
-
-            
-            filterButtons.forEach(btn => btn.classList.remove('active'));
-            this.classList.add('active');
-
-            
-            projectCards.forEach(card => {
-                if (filter === 'all' || card.dataset.category === filter) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
-        });
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.expand-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var section = this.closest('.project-card').querySelector('.expanded-section');
+      var text = this.querySelector('.expand-text');
+      this.classList.toggle('active');
+      section.classList.toggle('show');
+      text.textContent = section.classList.contains('show') ? 'Hide' : 'Details';
     });
-
-    
-    const expandButtons = document.querySelectorAll('.expand-btn');
-
-    expandButtons.forEach(button => {
-        button.addEventListener('click', function() {
-            const card = this.closest('.project-card');
-            const expandedSection = card.querySelector('.expanded-section');
-            
-            this.classList.toggle('active');
-            expandedSection.classList.toggle('show');
-            
-            
-            const expandText = this.querySelector('.expand-text');
-            if (expandedSection.classList.contains('show')) {
-                expandText.textContent = 'Hide Details';
-            } else {
-                expandText.textContent = 'View Details';
-            }
-        });
-    });
+  });
 });
 </script>
 
