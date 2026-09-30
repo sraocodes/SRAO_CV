@@ -15,6 +15,10 @@ enableRobotsTXT = true
   image = "images/sathya.jpg"
   cv = "files/CV_Academics.pdf"
 
+  # Google AdSense. Kept from the previous site; the site funds itself and will
+  # host free ebooks and technical writing. Unset this to switch ads off.
+  adsense_client = "ca-pub-3958596344589303"
+
 [markup]
   [markup.goldmark.renderer]
     unsafe = true
