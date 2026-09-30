@@ -1,0 +1,184 @@
+# Publications — single source of truth.
+#
+# Every entry below was cross-checked against Crossref (title, journal, volume,
+# issue, pages and AUTHOR ORDER) and against static/files/CV_Academics.pdf.
+# Do not add an entry without a verified DOI or a confirmed status.
+#
+# `me` is the author string that templates render in bold. Keep the spelling in
+# the `authors` lists identical to it.
+me: "Rao, S."
+
+journal_articles:
+  - key: nmi-2026-learnability
+    authors: ["Rao, S."]
+    year: 2026
+    title: "Temporal variability predicts learnability in repeated-entity spatiotemporal sensing"
+    journal: "Nordic Machine Intelligence"
+    volume: "6"
+    issue: "1"
+    pages: "39–54"
+    doi: "10.5617/nmi.13381"
+    url: "https://doi.org/10.5617/nmi.13381"
+    theme: "scientific-ai"
+    open_access: true
+
+  - key: rsl-2026-information-proxy
+    authors: ["Rao, S.", "Gupta, V.", "Murugesan, S.", "Zribi, M.", "Muddu, S."]
+    year: 2026
+    title: "An information proxy framework that explains why soil-specific radar calibration succeeds in sandy textures but fails in clay"
+    journal: "Remote Sensing Letters"
+    volume: "17"
+    issue: "4"
+    pages: "416–428"
+    doi: "10.1080/2150704X.2026.2647288"
+    url: "https://doi.org/10.1080/2150704X.2026.2647288"
+    theme: "remote-sensing"
+
+  - key: isp-2026-digital-twins
+    authors: ["Rao, S.", "Ahmadi, S. H.", "Leitner, D.", "Vianna, M.", "Bauer, F. M.", "Seidel, S. J.", "Schnepf, A."]
+    year: 2026
+    title: "Integrated modeling approaches for agricultural digital twins: the role of process based models, agent based models, machine learning, and model coupling"
+    journal: "in silico Plants"
+    volume: "8"
+    issue: "1"
+    pages: "diag002"
+    doi: "10.1093/insilicoplants/diag002"
+    url: "https://doi.org/10.1093/insilicoplants/diag002"
+    theme: "digital-twins"
+    open_access: true
+
+  - key: vzj-2020-review
+    authors: ["Ehosioke, S.", "Nguyen, F.", "Rao, S.", "Kremer, T.", "Placencia-Gomez, E.", "Huisman, J. A.", "Kemna, A.", "Javaux, M.", "Garré, S."]
+    year: 2020
+    title: "Sensing the electrical properties of roots: A review"
+    journal: "Vadose Zone Journal"
+    volume: "19"
+    issue: "1"
+    pages: "e20082"
+    doi: "10.1002/vzj2.20082"
+    url: "https://doi.org/10.1002/vzj2.20082"
+    theme: "geophysics"
+
+  - key: pls-2020-ert-water-deficit
+    authors: ["Rao, S.", "Lesparre, N.", "Flores-Orozco, A.", "Wagner, F.", "Kemna, A.", "Javaux, M."]
+    year: 2020
+    title: "Imaging plant responses to water deficit using electrical resistivity tomography"
+    journal: "Plant and Soil"
+    volume: "454"
+    issue: "1–2"
+    pages: "261–281"
+    doi: "10.1007/s11104-020-04653-7"
+    url: "https://doi.org/10.1007/s11104-020-04653-7"
+    theme: "geophysics"
+
+  - key: vzj-2019-maize-roots
+    authors: ["Rao, S.", "Meunier, F.", "Ehosioke, S.", "Lesparre, N.", "Kemna, A.", "Nguyen, F.", "Garré, S.", "Javaux, M."]
+    year: 2019
+    title: "Impact of maize roots on soil–root electrical conductivity: A simulation study"
+    journal: "Vadose Zone Journal"
+    volume: "18"
+    issue: "1"
+    pages: "190037"
+    doi: "10.2136/vzj2019.04.0037"
+    url: "https://doi.org/10.2136/vzj2019.04.0037"
+    theme: "geophysics"
+
+  - key: pop-2013-magnetic-nozzle
+    authors: ["Singh, N.", "Rao, S.", "Ranganath, P."]
+    year: 2013
+    title: "Waves generated in the plasma plume of helicon magnetic nozzle"
+    journal: "Physics of Plasmas"
+    volume: "20"
+    issue: "3"
+    pages: "032111"
+    doi: "10.1063/1.4795734"
+    url: "https://doi.org/10.1063/1.4795734"
+    theme: "plasma-physics"
+
+  - key: pop-2012-alfven-turbulence
+    authors: ["Singh, N.", "Rao, S."]
+    year: 2012
+    title: "Plasma turbulence driven by transversely large-scale standing shear Alfvén waves"
+    journal: "Physics of Plasmas"
+    volume: "19"
+    issue: "12"
+    pages: "122303"
+    doi: "10.1063/1.4769851"
+    url: "https://doi.org/10.1063/1.4769851"
+    theme: "plasma-physics"
+
+  - key: pop-2012-double-layers
+    authors: ["Rao, S.", "Singh, N."]
+    year: 2012
+    title: "Numerical simulation of current-free double layers created in a helicon plasma device"
+    journal: "Physics of Plasmas"
+    volume: "19"
+    issue: "9"
+    pages: "093507"
+    doi: "10.1063/1.4754598"
+    url: "https://doi.org/10.1063/1.4754598"
+    theme: "plasma-physics"
+
+book_chapters:
+  - key: springer-2025-climate-resilient
+    authors: ["Rao, S.", "Ranganath, P."]
+    year: 2025
+    title: "Climate-resilient agriculture: Leveraging language models for mitigation and adaptation"
+    book: "Mitigation and Adaptation Strategies Against Climate Change in Natural Systems"
+    editors: ["Srivastava, R. K.", "Chakraborty, A."]
+    publisher: "Springer, Cham"
+    pages: "357–382"
+    doi: "10.1007/978-3-031-75968-0_19"
+    url: "https://doi.org/10.1007/978-3-031-75968-0_19"
+    theme: "digital-twins"
+
+conference_presentations:
+  - key: smw-2023-random-forest
+    authors: ["Rao, S.", "et al."]
+    year: 2023
+    title: "Random forest for soil moisture retrieval using satellite backscatter"
+    venue: "Soil Moisture Workshop, IIT Bombay, India"
+    kind: "Poster"
+    theme: "remote-sensing"
+
+  - key: egu-2019-anisotropy
+    authors: ["Rao, S.", "et al."]
+    year: 2019
+    title: "Investigation of electrical anisotropy as a root phenotyping parameter: numerical study with root water uptake"
+    venue: "EGU General Assembly, Vienna, Austria"
+    proceedings: "Geophysical Research Abstracts, 21"
+    theme: "geophysics"
+
+  - key: gelmon-2017-forward-model
+    authors: ["Rao, S.", "Meunier, F.", "Ehosioke, S.", "Lesparre, N.", "Nguyen, F.", "Kemna, A.", "Garré, S.", "Javaux, M."]
+    year: 2017
+    title: "A forward model for electrical conduction in soil–root continuum: a virtual rhizotron study"
+    venue: "4th International Workshop on Geoelectrical Monitoring (GELMON), Vienna, Austria"
+    theme: "geophysics"
+
+  - key: egu-2017-rhizotron
+    authors: ["Rao, S.", "Ehosioke, S.", "Lesparre, N.", "Nguyen, F.", "Javaux, M."]
+    year: 2017
+    title: "Characterizing root system characteristics with electrical resistivity tomography: a virtual rhizotron simulation"
+    venue: "EGU General Assembly, Vienna, Austria"
+    proceedings: "Geophysical Research Abstracts, 19, EGU2017-4405"
+    theme: "geophysics"
+
+# Themes used by the Publications filter UI.
+themes:
+  - id: "remote-sensing"
+    label: "Earth Observation"
+  - id: "geophysics"
+    label: "Geophysics & Sensing"
+  - id: "digital-twins"
+    label: "Digital Twins"
+  - id: "scientific-ai"
+    label: "Scientific AI"
+  - id: "plasma-physics"
+    label: "Plasma Physics"
+
+# Manuscripts under review. Deliberately kept OUT of the peer-reviewed lists and
+# rendered only when `show_forthcoming` is true, so nothing unverified is ever
+# presented as published. Status must be confirmed before this is switched on.
+show_forthcoming: false
+forthcoming: []

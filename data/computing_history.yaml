@@ -1,0 +1,81 @@
+# "Deprecated" — a version history of one person's computational practice.
+#
+# The framing is deliberate: a deprecated API is not a failure. It shipped, it was
+# correct, people depended on it, and it has been superseded. That is the honest
+# relationship between a 2018 Kaggle rank and the work of 2026.
+#
+# PROVENANCE: ranks and counts come from the former content/cv.md, are undated
+# snapshots, and are presented as historical for exactly that reason. The v1.0
+# line is quoted from the "My Academic Journey until 2020" essay.
+
+subhead: "Still compiles. No longer the recommended path."
+
+intro: >-
+  Fifteen years of learning to compute, versioned. Each release solved the problem
+  the last one couldn't, and each was made obsolete by the next — which is the
+  normal fate of good tooling and no reason to be precious about it.
+
+versions:
+  - v: "v1.0"
+    year: "2006"
+    title: "First program"
+    body: "C++ at BMSIT, Bengaluru. Sorting algorithms, microcontroller assembly, and MATLAB filters. Believed at the time that programming was technically inferior to designing circuits and antennas."
+    stack: ["C++", "Assembly", "MATLAB"]
+
+  - v: "v2.0"
+    year: "2010"
+    title: "The cluster"
+    body: "Fortran and MPI at Huntsville. A 2D electrostatic particle-in-cell code extended to 3D electromagnetic, parallelised, and queued overnight. Submit, sleep, hope. A wrong sign in a boundary condition cost a day, so you learned to read your own code properly."
+    stack: ["Fortran", "MPI/OpenMP", "HPC batch"]
+
+  - v: "v3.0"
+    year: "2016"
+    title: "Inverse problems"
+    body: "Python at UCLouvain. Root architectures into meshes into finite-element electrical models — up to 500,000 tetrahedra — and back out as something you could compare against a field measurement."
+    stack: ["Python", "PyGIMLi", "Gmsh", "R-SWMS"]
+
+  - v: "v4.0"
+    year: "2023"
+    title: "Coupling"
+    body: "Jülich. Less about writing code than about making other people's codes talk to each other across C, C++, Fortran and Python, with timestep synchronisation and two-way state exchange. Then containerising it so the result would still run somewhere else."
+    stack: ["Model coupling", "Docker", "PyQt"]
+
+  - v: "v5.0"
+    year: "2025"
+    title: "Agents"
+    body: "The loop writes itself now. What does not write itself is the decision about which problem is worth posing, whether the answer is actually right, and how you would know. That turns out to be most of the job."
+    stack: ["Agentic workflows", "Benchmark design", "Evaluation"]
+
+# Artefacts from the earlier releases. Kept, dated, and explicitly not current.
+artifacts:
+  - label: "Kaggle"
+    era: "v2–v3"
+    headline: "Competitions Master"
+    detail: "Twenty medals across silver and bronze, back when a good feature was something you thought of yourself."
+    stat: "Rank 649 of 322,985"
+    icon: "images/kaggle.png"
+    url: "https://www.kaggle.com/sathyanarayanrao89"
+
+  - label: "MATLAB Central"
+    era: "v1–v3"
+    headline: "File Exchange contributor"
+    detail: "Numerical routines other people downloaded and ran, in the era before you could simply ask for one."
+    stat: "70,339 downloads · rank 164 of 19,325"
+    icon: "images/matlab.png"
+    url: "https://www.mathworks.com/matlabcentral/profile/authors/2686490"
+
+  - label: "Algorithmic trading"
+    era: "v3–v4"
+    headline: "Independent consulting, 2020–2022"
+    detail: "Python trading systems on live WebSocket tick data with broker API integration, built during the pandemic while waiting for academia to reopen."
+    stat: "2020–2022"
+
+  - label: "Fellowships"
+    era: "v1–v3"
+    headline: "Funded research"
+    detail: "FNRS doctoral fellowship in Belgium, NSF-funded plasma work in Alabama, DFG-funded optics in Paderborn."
+    stat: "FNRS · NSF · DFG"
+
+outro: >-
+  None of it is a selling point in 2026. All of it is why the current work looks
+  the way it does.

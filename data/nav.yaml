@@ -1,0 +1,15 @@
+# Primary navigation. External profiles live in profiles.yaml and are rendered
+# separately, so they never crowd the main bar.
+primary:
+  - name: "Research"
+    url: "/research/"
+  - name: "Publications"
+    url: "/publications/"
+  - name: "Writing"
+    url: "/writing/"
+  - name: "Books"
+    url: "/books/"
+  - name: "About"
+    url: "/about/"
+  - name: "CV"
+    url: "/cv/"

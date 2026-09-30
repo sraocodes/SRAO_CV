@@ -1,0 +1,178 @@
+# Current roles and career chronology.
+# Transcribed from static/files/CV_Academics.pdf, which is the authoritative
+# source for dates and titles. Nothing here is inferred.
+
+current:
+  - key: iisc
+    title: "Research Associate"
+    org: "Indian Institute of Science (IISc), Bengaluru"
+    unit: "Department of Civil Engineering"
+    programme: "Hydro-REWARD (World Bank–supported)"
+    start: "2025-04"
+    end: ""
+    logo: "images/iisc.png"
+    summary: >-
+      Earth-observation research on soil moisture and watershed hydrology in
+      semi-arid Karnataka — satellite retrieval, field measurement and causal
+      evaluation of watershed interventions.
+
+  - key: chakradhari
+    title: "Co-Founder & Director"
+    org: "Chakradhari Computational Technologies Pvt. Ltd., Bengaluru"
+    unit: "Deep-tech scientific R&D"
+    url: "https://cctech.in"
+    start: "2025-10"
+    end: ""
+    summary: >-
+      Scientific R&D across electromagnetic sensing, inverse problems, Earth
+      observation and scientific software, turning advanced methods into
+      computational systems that other people can use.
+
+  - key: mercor
+    title: "Scientific AI Expert"
+    org: "Mercor Intelligence"
+    unit: "Remote · project-based"
+    start: "2026-05"
+    end: ""
+    summary: >-
+      Designing scientific benchmarks and test environments that probe where
+      frontier AI systems reason soundly and where they fail — black-box
+      inference problems and simulation-based engineering tasks.
+
+past:
+  - title: "Reviewer & Team Lead, Scientific AI Evaluation"
+    org: "Turing"
+    start: "2026-01"
+    end: "2026-07"
+  - title: "Scientific Programmer"
+    org: "Forschungszentrum Jülich, Germany"
+    unit: "PhenoRob Cluster of Excellence"
+    start: "2023"
+    end: "2025"
+    logo: "images/juelich.jpeg"
+  - title: "Research Associate"
+    org: "Indian Institute of Science (IISc), Bengaluru"
+    start: "2022-09"
+    end: "2023-08"
+    logo: "images/iisc.png"
+  - title: "Independent Research & Development"
+    org: "India"
+    start: "2020"
+    end: "2022"
+  - title: "Doctoral Researcher, F.R.S.-FNRS eRoot Project"
+    org: "UCLouvain, Belgium"
+    start: "2016"
+    end: "2020"
+    logo: "images/ucl.png"
+  - title: "Research Assistant"
+    org: "Paderborn University, Germany"
+    unit: "group of Prof. Torsten Meier"
+    start: "2015-08"
+    end: "2016-03"
+    logo: "images/paderborn.png"
+  - title: "Graduate Research Assistant, MS Research"
+    org: "Alabama A&M University, USA"
+    start: "2013"
+    end: "2014"
+    logo: "images/aamu.png"
+  - title: "Graduate Research Assistant"
+    org: "University of Alabama in Huntsville, USA"
+    start: "2010"
+    end: "2013"
+    logo: "images/uah.png"
+
+# The research trajectory shown on the homepage. The point of this section is
+# continuity: one method — modelling difficult or partly observable systems,
+# understanding how their signals arise, and inferring the process underneath —
+# applied to progressively larger systems.
+trajectory:
+  thread: "Physics-based modelling of partly observable systems, and inference from what they emit"
+  stages:
+    - years: "2010–2013"
+      field: "Plasma physics"
+      where: "UA Huntsville"
+      note: "Particle-in-cell simulation extended from 2D electrostatic to 3D electromagnetic, parallelised with MPI/OpenMP."
+      image: "images/waves.png"
+      image_alt: "Simulated Ex field showing wave structure in a helicon plasma plume"
+    - years: "2013–2016"
+      field: "Optoelectronics"
+      where: "Alabama A&M · Paderborn"
+      note: "Laser–matter interaction experiments, then Fortran Maxwell–Bloch solvers for light propagation in excitonic systems."
+      image: "images/bloch2level.jpg"
+      image_alt: "Maxwell-Bloch equations for a two-level excitonic system"
+    - years: "2016–2020"
+      field: "Geoelectrical root sensing"
+      where: "UCLouvain"
+      note: "Coupled hydro-geophysical models linking root architecture, water uptake and electrical signature — field and laboratory ERT."
+      image: "images/eroot1.png"
+      image_alt: "Field electrical resistivity survey over a grass root zone"
+    - years: "2023–2025"
+      field: "Agricultural digital twins"
+      where: "Forschungszentrum Jülich"
+      note: "Coupling process-based crop models with functional–structural root models across C/C++, Fortran and Python."
+      image: "images/DAA.png"
+      image_alt: "Digital Agricultural Avatar: a plant and its coupled model representation"
+    - years: "2025–"
+      field: "Earth observation & hydrology"
+      where: "IISc Bengaluru"
+      note: "Sentinel-1 soil moisture retrieval, active–passive fusion with SMAP, and decade-scale watershed evaluation."
+      image: "images/satellite.png"
+      image_alt: "Satellite Earth observation feeding computational analysis"
+    - years: "2026–"
+      field: "Scientific AI"
+      where: "Independent · Mercor"
+      note: "Benchmarks and test environments that measure where frontier models reason soundly about physical systems."
+
+# Professional contributions, from the CV.
+service:
+  peer_review:
+    - "Nordic Machine Intelligence"
+    - "in silico Plants"
+    - "PeerJ Computer Science"
+    - "Plant and Soil"
+    - "Vadose Zone Journal"
+    - "Agricultural Research"
+    - "Frontiers in Plant Science"
+  talks:
+    - title: "Sentinel-1 SAR and GPR for subsurface assessment"
+      venue: "KCIRI, Coimbatore"
+      date: "2026-03"
+    - title: "A computational scientist's view of quantum computing"
+      venue: "Kumaraguru College of Technology"
+      date: "2025-10"
+  roles:
+    - label: "Young Hydrologic Society"
+      detail: "Blog Committee member, 2025–present — writing on computational hydrology, environmental modelling and digital twins."
+    - label: "Compute Stories"
+      detail: "Creator, 2024–present — explaining computational modelling and scientific ideas on YouTube."
+    - label: "Teaching"
+      detail: "Graduate teaching assistant, Physics 101 and 102, Alabama A&M University, 2013–2014."
+    - label: "Workshop instructor"
+      detail: "MATLAB workshop on van Genuchten parameter estimation for soil hydraulic modelling, UCLouvain, 2018."
+
+education:
+  - degree: "PhD, Engineering Sciences"
+    school: "UCLouvain, Belgium"
+    year: 2020
+    span: "2016–2020"
+    thesis: "Investigation of signatures of plant roots from non-invasive geo-electrical measurements"
+    funding: "F.R.S.-FNRS eRoot project (T.1088.15)"
+    logo: "images/ucl.png"
+  - degree: "MS, Applied Physics"
+    school: "Alabama A&M University, USA"
+    year: 2014
+    span: "2013–2014"
+    logo: "images/aamu.png"
+  - degree: "MS, Electrical Engineering"
+    school: "University of Alabama in Huntsville, USA"
+    year: 2012
+    span: "2010–2012"
+    funding: "Research funded by NSF grant ATM0647157"
+    logo: "images/uah.png"
+  - degree: "BE, Electronics & Communication Engineering"
+    school: "Visvesvaraya Technological University, India"
+    year: 2010
+    span: "2006–2010"
+    note: "External project at Bharat Electronics Limited (BEL), digital communication systems."
+    # logo intentionally omitted: static/images/bmsit.jpeg is BMSIT,
+    # a VTU-affiliated college, not VTU itself. Confirm before using.

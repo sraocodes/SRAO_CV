@@ -1,0 +1,76 @@
+# External profiles — one definition, reused by the header, the footer and the
+# "Elsewhere on the internet" section. `tier` controls prominence:
+#   scholarly : shown beside the name and in the footer (Scholar, ORCID, GitHub, LinkedIn)
+#   creative  : Compute Stories, Shutterstock, writing
+#   playful   : the rest of the digital universe, shown only in the Easter-egg section
+profiles:
+  - id: scholar
+    label: "Google Scholar"
+    url: "https://scholar.google.co.uk/citations?user=9yc3jiIAAAAJ&hl=en"
+    icon: "images/googlescholar.png"
+    tier: scholarly
+
+  - id: orcid
+    label: "ORCID"
+    url: "https://orcid.org/0000-0002-0071-5167"
+    icon: "images/orcid.png"
+    tier: scholarly
+
+  - id: github
+    label: "GitHub"
+    url: "https://github.com/sraocodes"
+    icon: "images/github.png"
+    tier: scholarly
+
+  - id: linkedin
+    label: "LinkedIn"
+    url: "https://www.linkedin.com/in/sathyanarayanrao1/"
+    icon: "images/linkedin.png"
+    tier: scholarly
+
+  - id: youtube
+    label: "Compute Stories"
+    url: "https://www.youtube.com/@ComputeStories"
+    icon: "images/youtube.png"
+    tier: creative
+    note: "Science communication on YouTube, 2024–present"
+
+  - id: shutterstock
+    label: "Shutterstock"
+    url: "https://www.shutterstock.com/g/sathyanarayanrao"
+    icon: "images/shutterstock.png"
+    tier: creative
+    note: "Photography portfolio"
+
+  - id: matlab
+    label: "MATLAB Central"
+    url: "https://www.mathworks.com/matlabcentral/profile/authors/2686490"
+    icon: "images/matlab.png"
+    tier: playful
+
+  - id: kaggle
+    label: "Kaggle"
+    url: "https://www.kaggle.com/sathyanarayanrao89"
+    icon: "images/kaggle.png"
+    tier: playful
+
+  - id: x
+    label: "X"
+    url: "https://x.com/DrSathyan10"
+    icon: "images/X.png"
+    tier: playful
+
+  - id: topmate
+    label: "Topmate"
+    url: "https://topmate.io/dr_sathyanarayan_rao"
+    icon: "images/topmate.png"
+    tier: playful
+
+# Documents linked from the CV page rather than the profile grid.
+documents:
+  - label: "Curriculum Vitae (PDF)"
+    url: "files/CV_Academics.pdf"
+  - label: "PhD thesis"
+    url: "files/my_thesis.pdf"
+  - label: "MS thesis"
+    url: "https://louis.uah.edu/uah-theses/579/"

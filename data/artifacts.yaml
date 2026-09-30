@@ -1,0 +1,52 @@
+# "Before the models came" — the pre-AI era section.
+#
+# These are deliberately framed as period pieces rather than current credentials.
+# They are not achievements the site leads with; they are evidence of a working
+# life that predates the tooling everyone now has. Keep the tone dry and fond,
+# never boastful.
+#
+# PROVENANCE: the ranks and counts below come from the previous content/cv.md,
+# not from CV_Academics.pdf, and they are undated snapshots. They are presented
+# as historical, which is the honest way to show a number that has since drifted.
+artifacts:
+  intro: >-
+    Some of this used to be how you proved you could compute. It is mostly
+    obsolete now, which is rather the point — every one of these was earned
+    before a model would write the loop for you.
+
+  items:
+    - key: kaggle
+      label: "Kaggle"
+      era: "2017–2020"
+      headline: "Competitions Master"
+      detail: "Twenty medals across silver and bronze, back when a good feature was something you thought of yourself."
+      stat: "Rank 649 of 322,985"
+      icon: "images/kaggle.png"
+      url: "https://www.kaggle.com/sathyanarayanrao89"
+
+    - key: matlab
+      label: "MATLAB Central"
+      era: "2012–2018"
+      headline: "File Exchange contributor"
+      detail: "Numerical routines other people actually downloaded and ran, in the era before you could ask for one."
+      stat: "70,339 downloads"
+      icon: "images/matlab.png"
+      url: "https://www.mathworks.com/matlabcentral/profile/authors/2686490"
+
+    - key: fortran
+      label: "Fortran"
+      era: "2010–2016"
+      headline: "Maxwell–Bloch and particle-in-cell solvers"
+      detail: "Hand-written time integrators, debugged by print statement and stubbornness. No autocomplete, no copilot."
+      stat: "MPI / OpenMP"
+
+    - key: hpc
+      label: "The cluster"
+      era: "2010–2020"
+      headline: "Batch jobs and overnight runs"
+      detail: "Submit, sleep, hope. A wrong sign in a boundary condition cost you a day, so you learned to read your own code carefully."
+      stat: "500k-element meshes"
+
+  outro: >-
+    None of it is a selling point in 2026. All of it is why the current work
+    looks the way it does.
