@@ -1,6 +1,11 @@
 ---
 title: "When AI Gave Everyone Almost the Same Answer"
 date: 2026-07-26T00:00:00+05:30
+aliases:
+  - "/blogs/4/"
+tags:
+  - "AI"
+  - "Evaluation"
 ---
 
 ### When AI Gave Everyone Almost the Same Answer

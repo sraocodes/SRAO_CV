@@ -1,6 +1,11 @@
 ---
 title: "2125: The Two Minds Future"
 date: 2025-02-04
+aliases:
+  - "/blogs/2/"
+tags:
+  - "Speculative"
+  - "AI"
 ---
 
 ### 2125: The Two Minds Future

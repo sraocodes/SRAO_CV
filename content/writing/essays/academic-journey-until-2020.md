@@ -1,6 +1,11 @@
 ---
 title: "My Academic Journey until 2020"
 date: 2025-01-14
+aliases:
+  - "/blogs/1/"
+tags:
+  - "Academic life"
+  - "Personal"
 ---
 
 ### Welcome to My Journey in Academia

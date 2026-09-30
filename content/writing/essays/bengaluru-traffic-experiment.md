@@ -1,6 +1,11 @@
 ---
 title: "Bengaluru Traffic: A Daily Near-Death Experiment"
 date: 2026-01-26
+aliases:
+  - "/blogs/3/"
+tags:
+  - "Bengaluru"
+  - "Observation"
 ---
 
 ### Bengaluru Traffic: A Daily Near-Death Experiment
