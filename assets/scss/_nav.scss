@@ -98,8 +98,16 @@
   img { width: 1.05rem; height: 1.05rem; object-fit: contain; }
 }
 
-// Icon images are mostly dark-on-transparent PNGs; lift them in dark mode.
-@mixin profile-icon-dark { .nav-profiles__link img, .profile-chip img { filter: invert(1) brightness(1.7) contrast(0.9); } }
+// These are brand logos, so inverting them is wrong - it turned Scholar's blue
+// yellow and ORCID's green purple. Instead give them a light plate in dark mode
+// so monochrome-dark marks (GitHub, X) stay legible while colour is preserved.
+@mixin profile-icon-dark {
+  .nav-profiles__link img, .profile-chip img {
+    background: #f2f0ea;
+    border-radius: 2px;
+    padding: 1px;
+  }
+}
 :root[data-theme="dark"] { @include profile-icon-dark; }
 @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { @include profile-icon-dark; } }
 

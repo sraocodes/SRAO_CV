@@ -17,6 +17,7 @@
   display: flex;
   flex-direction: column;
   gap: var(--s-4);
+  align-self: start;   // each cover keeps its own height
 }
 
 .book__cover {
@@ -27,9 +28,10 @@
   border: 1px solid var(--rule);
   box-shadow: var(--shadow);
   transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
-  aspect-ratio: 2 / 3;
 
-  img { width: 100%; height: 100%; object-fit: cover; }
+  // No fixed aspect-ratio: the covers differ (0.63-0.71 w/h) and a 2:3 box
+  // with object-fit:cover was cropping the credit line off the tallest one.
+  img { width: 100%; height: auto; display: block; }
 
   &:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
 }
