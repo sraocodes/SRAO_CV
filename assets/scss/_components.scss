@@ -360,8 +360,16 @@
   &__body { padding-top: var(--s-3); color: var(--ink-soft); font-size: var(--t-sm); }
 }
 
-// A neutral tag for secondary labels ("Open access", "Research software"), so
-// they read as metadata rather than as a theme classification.
+// Open access, in green: the signal readers already know, and a small piece of
+// good news worth colouring.
+.tag--oa {
+  background: var(--oa-wash);
+  border: 1px solid var(--oa-edge);
+  color: var(--oa);
+}
+
+// A neutral tag for other secondary labels ("Research software"), so they read
+// as metadata rather than as a theme classification.
 .tag--soft {
   background: transparent;
   border: 1px solid var(--rule-strong);

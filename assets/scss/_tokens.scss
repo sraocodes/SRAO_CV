@@ -30,6 +30,11 @@
   --ember-wash:    #f8efe8;
   --ember-ring:    rgba(154, 74, 36, 0.3);
 
+  // Open access. Green is the convention readers expect for "freely available".
+  --oa:            #1c6b3d;
+  --oa-wash:       #e8f3ec;
+  --oa-edge:       #b6d8c2;
+
   --font-display: "Newsreader", Georgia, "Times New Roman", serif;
   --font-sans:    "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono:    "IBM Plex Mono", ui-monospace, SFMono-Regular, Menlo, monospace;
@@ -83,6 +88,10 @@
   --ember-hover:   #e5a57d;
   --ember-wash:    #2a1c14;
   --ember-ring:    rgba(214, 139, 95, 0.38);
+
+  --oa:            #7cc79a;
+  --oa-wash:       #15271c;
+  --oa-edge:       #2e5240;
 
   --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.45);
   --shadow:    0 2px 12px rgba(0, 0, 0, 0.5);
