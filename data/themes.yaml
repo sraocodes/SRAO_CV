@@ -1,0 +1,23 @@
+# The five research themes, each phrased as the question the work answers.
+# Adding a project means setting `theme:` to one of these ids — nothing else.
+themes:
+  - id: "water"
+    question: "Can you see soil water from orbit?"
+    label: "Earth Observation & Hydrology"
+    blurb: "Satellite radar and passive microwave turned into soil moisture you can actually use — retrieval, sensor fusion and decade-scale records over semi-arid monsoon catchments."
+  - id: "roots"
+    question: "Can you see a root without digging it up?"
+    label: "Environmental Sensing & Inverse Problems"
+    blurb: "Coupled hydro-geophysical models linking root architecture, water uptake and electrical signature, from virtual rhizotrons to field-scale resistivity surveys."
+  - id: "crops"
+    question: "Can you simulate a crop before it grows?"
+    label: "Agricultural Modelling & Digital Twins"
+    blurb: "Making independently developed scientific codes talk to each other — process-based crop models coupled to functional-structural root models, packaged so others can run them."
+  - id: "matter"
+    question: "Can you simulate what no instrument can reach?"
+    label: "Computational Physics"
+    blurb: "Particle-in-cell plasma simulation, Maxwell-Bloch solvers for light-matter interaction, and the laboratory optics that preceded both."
+  - id: "models"
+    question: "Can you tell whether a model reasons or recalls?"
+    label: "Scientific AI"
+    blurb: "Benchmarks and test environments that probe where frontier AI systems reason soundly about physical and mathematical systems, and where they only appear to."

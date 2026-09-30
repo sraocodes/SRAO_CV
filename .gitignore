@@ -1,0 +1,7 @@
+# Hugo build output. Generated fresh by CI on every deploy.
+# Previously committed, which kept stale pages live and masked missing
+# static/ assets. See the redesign history if you need the old artefacts.
+/public/
+/resources/_gen/
+.hugo_build.lock
+.DS_Store

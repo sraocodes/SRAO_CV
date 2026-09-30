@@ -1,0 +1,18 @@
+{{/* Compact book cover for the homepage strip. Context: dict "book" <entry> */}}
+{{- $b := .book -}}
+{{- $href := "" -}}
+{{- with $b.links }}{{ $href = (index . 0).url }}{{ end -}}
+{{- $img := "" -}}
+{{- with $b.cover }}{{ $img = resources.Get . }}{{ end -}}
+<figure class="spine{{ if eq $b.status "forthcoming" }} spine--forthcoming{{ end }}">
+  {{- if $href }}<a href="{{ $href }}" target="_blank" rel="noopener" title="{{ $b.title }}">{{ end }}
+  {{- if $img }}
+    {{- $c := $img.Process "webp q82 resize 300x" }}
+    <img src="{{ $c.RelPermalink }}" width="{{ $c.Width }}" height="{{ $c.Height }}"
+         alt="Cover of {{ $b.title }}" loading="lazy" decoding="async">
+  {{- else }}
+    <span class="spine__placeholder">{{ $b.title }}</span>
+  {{- end }}
+  {{- if $href }}</a>{{ end }}
+  {{- if eq $b.status "forthcoming" }}<figcaption>Forthcoming</figcaption>{{ end }}
+</figure>

@@ -1,0 +1,38 @@
+{{/* Book card. Context: dict "book" <entry>
+     Covers are processed from assets/ into responsive WebP. When a cover file is
+     absent the card renders a typeset placeholder rather than a broken image. */}}
+{{- $b := .book -}}
+{{- $img := "" -}}
+{{- with $b.cover }}{{ $img = resources.Get . }}{{ end -}}
+<article class="book">
+  {{- if $img }}
+    {{- $w360 := $img.Process "webp q82 resize 360x" -}}
+    {{- $w720 := $img.Process "webp q82 resize 720x" -}}
+    <div class="book__cover">
+      <img src="{{ $w360.RelPermalink }}"
+           srcset="{{ $w360.RelPermalink }} 360w, {{ $w720.RelPermalink }} 720w"
+           sizes="(min-width: 60rem) 21rem, (min-width: 40rem) 45vw, 90vw"
+           width="{{ $w720.Width }}" height="{{ $w720.Height }}"
+           alt="Cover of {{ $b.title }}" loading="lazy" decoding="async">
+    </div>
+  {{- else }}
+    <div class="book__cover book__cover--placeholder"><span>{{ $b.title }}</span></div>
+  {{- end }}
+
+  <div>
+    <h3 class="book__title">{{ $b.title }}</h3>
+    {{- with $b.subtitle }}<p class="book__sub">{{ . }}</p>{{ end }}
+    <p class="book__meta">
+      {{ $b.year }}{{ with $b.format }} · {{ . }}{{ end }}{{ with $b.publisher }} · {{ . }}{{ end }}
+      {{- with $b.isbn }}<br>ISBN {{ . }}{{ end }}
+    </p>
+    {{- with $b.tagline }}<p class="book__tagline">{{ . }}</p>{{ end }}
+    {{- with $b.description }}<p class="book__desc">{{ . }}</p>{{ end }}
+    {{- with $b.credits }}<p class="book__meta">{{ . }}</p>{{ end }}
+    {{- with $b.links }}
+      <div class="btn-row">
+        {{- range . }}<a class="btn" href="{{ .url }}" target="_blank" rel="noopener">{{ .label }}</a>{{ end }}
+      </div>
+    {{- end }}
+  </div>
+</article>

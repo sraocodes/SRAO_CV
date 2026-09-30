@@ -1,0 +1,22 @@
+{{ define "main" }}
+<article class="page-head register-personal">
+  <div class="wrap">
+    <p class="eyebrow"><a href="{{ "/archive/" | relURL }}">Archive</a></p>
+    <h1>{{ .Title }}</h1>
+    <div class="lede">{{ .Content }}</div>
+  </div>
+</article>
+<div class="wrap register-personal">
+  <div class="photo-grid">
+    {{- range .Site.Data.photos.photos }}
+      <figure class="photo">
+        <img src="{{ .file | relURL }}" alt="{{ .caption }}" loading="lazy" decoding="async">
+        <figcaption>{{ .caption }}{{ with .details }}<span>{{ . }}</span>{{ end }}{{ with .taken }}<span>{{ . }}</span>{{ end }}</figcaption>
+      </figure>
+    {{- end }}
+  </div>
+  <p class="muted" style="margin-top:var(--s-6)">
+    More on <a href="https://www.shutterstock.com/g/sathyanarayanrao" target="_blank" rel="noopener">Shutterstock</a>.
+  </p>
+</div>
+{{ end }}

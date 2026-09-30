@@ -1,0 +1,70 @@
+# Independent books — deliberately kept separate from peer-reviewed work.
+#
+# status: published | forthcoming | in-progress
+#   published    full treatment: cover, retailer link, ISBN
+#   forthcoming  cover if it exists, expected period, no dead buy button
+#   in-progress  title and one line only; renders as a quiet typeset panel
+# kind:   technical | personal   (groups the page without touching a template)
+#
+# Adding a book is one YAML block. Nothing else changes.
+#
+# Metadata from static/files/CV_Academics.pdf; purchase links from the previous
+# projects page. `cover` is an asset-relative path under assets/images/books/,
+# processed by Hugo into responsive WebP at build time. Covers are the author's
+# own artwork, supplied directly — no retailer imagery is copied into the repo.
+books:
+  - key: manikarnika
+    status: "published"
+    kind: "personal"
+    title: "Three Days at Manikarnika"
+    subtitle: "A Scientist's Journey Through Death and Life"
+    year: 2026
+    format: "Kindle edition"
+    cover: "images/books/manikarnika.png"
+    # Tagline is set on the cover artwork itself.
+    tagline: "Not all journeys change the place. Some journeys change you."
+    credits: "Edited by Shruti Rao"
+    description: ""
+    links: []
+    # NEEDED: retailer link, and a one-line description if you want more than
+    # the cover tagline. Nothing here is inferred from the title.
+
+  - key: indian-traffic
+    status: "published"
+    kind: "personal"
+    title: "How Not to Die in Indian Traffic"
+    subtitle: "A Scientist's Survival Guide to Bengaluru Roads"
+    year: 2026
+    format: "Kindle edition · 61 pages"
+    publisher: "Pothi.com"
+    isbn: "979-8903302376"
+    asin: "B0GT7D2NMN"
+    published: "2026-03-20"
+    cover: "images/books/indian-traffic.png"
+    description: >-
+      Bengaluru traffic read as a human system rather than an engineering one —
+      risk perception, social norms and decision-making under stress, drawn from
+      daily observation on the commute.
+    links:
+      - label: "Amazon"
+        url: "https://www.amazon.in/How-Not-Die-Indian-Traffic-ebook/dp/B0GT7D2NMN"
+    # NOTE: the CV lists Pothi.com + ISBN while the old site listed an Amazon
+    # Kindle ASIN — confirm whether both editions exist.
+
+  - key: digital-twins
+    status: "published"
+    kind: "technical"
+    title: "Digital Twins"
+    subtitle: "From Apollo Missions to Smart Farming"
+    year: 2025
+    format: "Paperback"
+    publisher: "Notion Press"
+    isbn: "979-8900231457"
+    cover: "images/books/digital-twins.png"
+    description: >-
+      How the digital twin idea travelled from Apollo-era spacecraft simulation
+      to precision agriculture, and what changes when the system being mirrored
+      is a living, growing one.
+    links:
+      - label: "Amazon"
+        url: "https://www.amazon.in/dp/B0FP5JS1KL"

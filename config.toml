@@ -1,12 +1,37 @@
-baseURL = "https://sraocodes.github.io/SRAO_CV/"
+baseURL = "https://www.drsrao.com/"
 languageCode = "en-us"
-title = "SRAO_CV"
+title = "Sathyanarayan Rao"
+enableRobotsTXT = true
 
-[directories]
-contentDir = "content"
-publishDir = "docs"
+# Canonical author/identity, used for metadata and structured data.
+[params]
+  name = "Sathyanarayan Rao"
+  credential = "PhD"
+  tagline = "Computational Scientist · Scientific R&D · Modelling, Sensing & Scientific AI"
+  description = "Computational scientist working across scientific modelling, sensing, Earth observation, research software and AI evaluation."
+  email = "satraox@gmail.com"
+  location = "Bengaluru, India"
+  orcid = "0000-0002-0071-5167"
+  image = "images/sathya.jpg"
+  cv = "files/CV_Academics.pdf"
+
+  # Google AdSense. Kept from the previous site; the site funds itself and will
+  # host free ebooks and technical writing. Unset this to switch ads off.
+  adsense_client = "ca-pub-3958596344589303"
 
 [markup]
-  [markup.goldmark]
-    [markup.goldmark.renderer]
-      unsafe = true
+  [markup.goldmark.renderer]
+    unsafe = true
+  [markup.highlight]
+    noClasses = false
+    lineNos = false
+  [markup.tableOfContents]
+    startLevel = 2
+    endLevel = 3
+
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+[minify]
+  disableXML = true

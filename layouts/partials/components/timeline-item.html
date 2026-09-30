@@ -1,0 +1,16 @@
+{{/* Trajectory stage. Context: dict "stage" <entry> */}}
+{{- $s := .stage -}}
+<li class="tl-item">
+  <span class="tl-item__dot" aria-hidden="true"></span>
+  <div class="tl-item__years">{{ $s.years }}</div>
+  <div class="tl-item__body">
+    <h3>{{ $s.field }}</h3>
+    <p class="tl-item__where">{{ $s.where }}</p>
+    <p class="tl-item__note">{{ $s.note }}</p>
+    {{- with $s.image }}
+      <figure class="tl-item__fig">
+        <img src="{{ . | relURL }}" alt="{{ $s.image_alt | default "" }}" loading="lazy" decoding="async" width="208" height="156">
+      </figure>
+    {{- end }}
+  </div>
+</li>

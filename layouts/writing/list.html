@@ -1,0 +1,42 @@
+{{ define "main" }}
+{{- $notes  := (site.GetPage "/writing/notes").RegularPages -}}
+{{- $essays := (site.GetPage "/writing/essays").RegularPages -}}
+<article class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Writing</p>
+    <h1>{{ .Title }}</h1>
+    <div class="lede">{{ .Content }}</div>
+  </div>
+</article>
+
+<div class="wrap stream-split">
+  {{/* Scientific stream first: a professional visitor never has to enter the other. */}}
+  <section class="stream stream--notes">
+    <header class="stream__head">
+      <h2><a href="{{ "/writing/notes/" | relURL }}">Notes</a></h2>
+      <p>Technical essays, tutorials, research notes and literature commentary.</p>
+    </header>
+    {{- if $notes }}
+      <ul class="post-list">
+        {{- range first 6 $notes }}{{ partial "components/post-card.html" (dict "page" .) }}{{ end }}
+      </ul>
+    {{- else }}
+      <div class="empty-state empty-state--stream">
+        <p><b>Nothing here yet.</b></p>
+        <p>Technical notes and research commentary will land here — including writing
+           for the Young Hydrologic Society blog.</p>
+      </div>
+    {{- end }}
+  </section>
+
+  <section class="stream stream--essays register-personal">
+    <header class="stream__head">
+      <h2><a href="{{ "/writing/essays/" | relURL }}">Essays</a></h2>
+      <p>AI and the future, traffic and motorcycles, and a career looked back on.</p>
+    </header>
+    <ul class="post-list">
+      {{- range first 6 $essays }}{{ partial "components/post-card.html" (dict "page" .) }}{{ end }}
+    </ul>
+  </section>
+</div>
+{{ end }}

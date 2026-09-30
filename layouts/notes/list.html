@@ -1,0 +1,28 @@
+{{ define "main" }}
+{{- $personal := eq .Type "essays" -}}
+<article class="page-head{{ if $personal }} register-personal{{ end }}">
+  <div class="wrap">
+    <p class="eyebrow"><a href="{{ "/writing/" | relURL }}">Writing</a></p>
+    <h1>{{ .Title }}</h1>
+    <div class="lede">{{ .Content }}</div>
+  </div>
+</article>
+
+<div class="wrap{{ if $personal }} register-personal{{ end }}" data-filterable>
+  {{- if .Pages }}
+    <div class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4" stroke-linecap="round"/></svg>
+      <input type="search" data-search-input placeholder="Search {{ lower .Title }}&hellip;" aria-label="Search {{ .Title }}">
+    </div>
+    <ul class="post-list">
+      {{- range .Pages }}{{ partial "components/post-card.html" (dict "page" .) }}{{ end }}
+    </ul>
+    <p class="empty-state" data-empty data-hidden="true">Nothing matches that search.</p>
+  {{- else }}
+    <div class="empty-state empty-state--stream">
+      <p><b>Nothing here yet.</b></p>
+      <p>This stream is set up and waiting for its first piece.</p>
+    </div>
+  {{- end }}
+</div>
+{{ end }}

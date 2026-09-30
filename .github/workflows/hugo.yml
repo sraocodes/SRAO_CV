@@ -18,7 +18,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.114.0
+      HUGO_VERSION: 0.152.2
 
     steps:
       - name: Install Hugo CLI
@@ -45,10 +45,10 @@ jobs:
         env:
           HUGO_ENVIRONMENT: production
           HUGO_ENV: production
-        run: |
-          hugo \
-            --minify \
-            --baseURL "${{ steps.pages.outputs.base_url }}/"
+        # baseURL is owned by config.toml (https://www.drsrao.com/) so that local
+        # and production builds are identical. Passing --baseURL here would append
+        # a second slash to the custom domain emitted by configure-pages.
+        run: hugo --minify
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3

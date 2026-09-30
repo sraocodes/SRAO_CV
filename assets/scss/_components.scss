@@ -1,0 +1,352 @@
+// ---------------------------------------------------------------------------
+// Reusable components: cards, publication entries, timeline, filters, chips.
+// ---------------------------------------------------------------------------
+
+// --- Card ------------------------------------------------------------------
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--surface);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: var(--s-5);
+  transition: border-color var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease),
+              transform var(--dur) var(--ease);
+
+  &:hover {
+    border-color: var(--rule-strong);
+    box-shadow: var(--shadow);
+    transform: translateY(-2px);
+  }
+
+  h3 { font-size: var(--t-lg); margin-bottom: var(--s-2); }
+  p  { color: var(--ink-soft); margin-bottom: var(--s-3); }
+  p:last-child { margin-bottom: 0; }
+}
+
+// Whole-card click target driven by a single real link, so keyboard and
+// screen-reader users get one focusable element with a proper accessible name.
+.card--link {
+  .card__title a {
+    color: var(--ink);
+    text-decoration: none;
+
+    &::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    &:hover { color: var(--accent); }
+  }
+
+  &:focus-within {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-ring);
+  }
+}
+
+.card__meta {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--s-2);
+  font-size: var(--t-xs);
+  color: var(--muted);
+  margin-bottom: var(--s-3);
+}
+
+.card__meta .dot { width: 3px; height: 3px; border-radius: 50%; background: currentColor; opacity: 0.55; }
+
+.card-grid {
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: 1fr;
+
+  @media (min-width: 38rem) { grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 62rem) { grid-template-columns: repeat(3, 1fr); }
+}
+
+.card-grid--2 {
+  @media (min-width: 38rem) { grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 62rem) { grid-template-columns: repeat(2, 1fr); }
+}
+
+// --- Theme tag -------------------------------------------------------------
+// One per card at most. The old site put a dozen pills on every entry.
+.tag {
+  display: inline-block;
+  padding: 0.16rem 0.52rem;
+  border-radius: 999px;
+  background: var(--accent-wash);
+  color: var(--accent);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+// --- Publication entry -----------------------------------------------------
+.pub-list { list-style: none; padding: 0; margin: 0; counter-reset: pub; }
+
+.pub {
+  display: grid;
+  grid-template-columns: 2.25rem 1fr;
+  gap: var(--s-4);
+  padding: var(--s-5) 0;
+  border-bottom: 1px solid var(--rule);
+
+  &:first-child { padding-top: 0; }
+  &:last-child  { border-bottom: 0; }
+}
+
+// Auto-numbered, newest first. Numbering is display-only.
+.pub__num {
+  font-family: var(--font-mono);
+  font-size: var(--t-sm);
+  color: var(--muted);
+  padding-top: 0.2rem;
+  font-variant-numeric: tabular-nums;
+
+  &::before { counter-increment: pub; content: counter(pub) "."; }
+}
+
+.pub__title {
+  font-family: var(--font-display);
+  font-size: var(--t-lg);
+  font-weight: 600;
+  line-height: 1.3;
+  margin: 0 0 var(--s-2);
+
+  a { color: var(--ink); text-decoration: none; &:hover { color: var(--accent); text-decoration: underline; } }
+}
+
+.pub__authors {
+  font-size: var(--t-sm);
+  color: var(--ink-soft);
+  margin: 0 0 var(--s-2);
+  line-height: 1.55;
+
+  // Long author lists must wrap cleanly, never overflow.
+  overflow-wrap: break-word;
+
+  b { color: var(--ink); font-weight: 650; }
+}
+
+.pub__venue {
+  font-size: var(--t-sm);
+  color: var(--muted);
+  margin: 0 0 var(--s-3);
+
+  em { color: var(--ink-soft); font-style: italic; }
+}
+
+.pub__links { display: flex; flex-wrap: wrap; gap: var(--s-2); align-items: center; }
+
+.pub__doi {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.12rem 0.5rem;
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  color: var(--muted);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+
+  &:hover { border-color: var(--accent); color: var(--accent); }
+}
+
+.pub-group { margin-bottom: var(--s-8); }
+
+.pub-group__head {
+  font-family: var(--font-sans);
+  font-size: var(--t-xs);
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  padding-bottom: var(--s-3);
+  margin-bottom: var(--s-4);
+  border-bottom: 1px solid var(--rule-strong);
+}
+
+// --- Filter bar ------------------------------------------------------------
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+  margin-bottom: var(--s-6);
+}
+
+.filter {
+  padding: 0.34rem 0.8rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--dur) var(--ease);
+
+  &:hover { border-color: var(--accent); color: var(--ink); }
+
+  &[aria-pressed="true"] {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+}
+
+@mixin filter-active-dark { .filter[aria-pressed="true"] { color: #10131a; } }
+:root[data-theme="dark"] { @include filter-active-dark; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { @include filter-active-dark; } }
+
+// Hidden by the filter/search JS. Attribute-driven so CSS stays declarative.
+[data-hidden="true"] { display: none !important; }
+
+.empty-state {
+  padding: var(--s-7) var(--s-4);
+  text-align: center;
+  color: var(--muted);
+  border: 1px dashed var(--rule-strong);
+  border-radius: var(--radius-lg);
+}
+
+// --- Search ----------------------------------------------------------------
+.search {
+  position: relative;
+  max-width: 24rem;
+  margin-bottom: var(--s-5);
+
+  input {
+    width: 100%;
+    padding: 0.55rem 0.8rem 0.55rem 2.1rem;
+    border: 1px solid var(--rule);
+    border-radius: var(--radius);
+    background: var(--surface);
+    color: var(--ink);
+    font: inherit;
+    font-size: var(--t-sm);
+
+    &::placeholder { color: var(--muted); }
+    &:focus-visible { border-color: var(--accent); outline-offset: 1px; }
+  }
+
+  svg {
+    position: absolute;
+    left: 0.66rem; top: 50%;
+    transform: translateY(-50%);
+    width: 0.95rem; height: 0.95rem;
+    stroke: var(--muted); fill: none; stroke-width: 1.8;
+    pointer-events: none;
+  }
+}
+
+// --- Timeline --------------------------------------------------------------
+.timeline { position: relative; list-style: none; padding: 0; margin: 0; }
+
+// The continuous rule is the point: it reads as one career, not six jobs.
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.32rem; top: 0.4rem; bottom: 0.4rem;
+  width: 1px;
+  background: linear-gradient(to bottom, transparent, var(--rule-strong) 8%, var(--rule-strong) 92%, transparent);
+
+  @media (min-width: 48rem) { left: 7.5rem; }
+}
+
+.tl-item {
+  position: relative;
+  padding-left: 1.6rem;
+  padding-bottom: var(--s-6);
+
+  @media (min-width: 48rem) {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: var(--s-6);
+    padding-left: 0;
+  }
+
+  &:last-child { padding-bottom: 0; }
+}
+
+.tl-item__dot {
+  position: absolute;
+  left: 0; top: 0.42rem;
+  width: 0.68rem; height: 0.68rem;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2px solid var(--rule-strong);
+  transition: border-color var(--dur) var(--ease), transform var(--dur) var(--ease);
+
+  @media (min-width: 48rem) { left: 7.19rem; }
+}
+
+.tl-item:hover .tl-item__dot,
+.tl-item:focus-within .tl-item__dot { border-color: var(--accent); transform: scale(1.22); }
+
+.tl-item__years {
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+  margin-bottom: var(--s-1);
+
+  @media (min-width: 48rem) { text-align: right; padding-top: 0.15rem; margin-bottom: 0; }
+}
+
+.tl-item__body h3 { font-size: var(--t-lg); margin-bottom: var(--s-1); }
+
+.tl-item__where {
+  font-size: var(--t-xs);
+  color: var(--muted);
+  margin-bottom: var(--s-2);
+}
+
+.tl-item__note { color: var(--ink-soft); font-size: var(--t-sm); margin: 0; max-width: 54ch; }
+
+.tl-item__fig {
+  margin-top: var(--s-3);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius);
+  overflow: hidden;
+  max-width: 13rem;
+  background: var(--bg-sunken);
+
+  img { width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+}
+
+// --- Details / expandable --------------------------------------------------
+.detail {
+  border-top: 1px solid var(--rule);
+  margin-top: var(--s-4);
+  padding-top: var(--s-3);
+
+  summary {
+    cursor: pointer;
+    font-size: var(--t-sm);
+    font-weight: 500;
+    color: var(--accent);
+    list-style: none;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--s-2);
+
+    &::-webkit-details-marker { display: none; }
+
+    &::after {
+      content: "";
+      width: 0.42rem; height: 0.42rem;
+      border-right: 1.5px solid currentColor;
+      border-bottom: 1.5px solid currentColor;
+      transform: rotate(45deg) translateY(-1px);
+      transition: transform var(--dur) var(--ease);
+    }
+  }
+
+  &[open] summary::after { transform: rotate(-135deg) translateY(-1px); }
+
+  &__body { padding-top: var(--s-3); color: var(--ink-soft); font-size: var(--t-sm); }
+}

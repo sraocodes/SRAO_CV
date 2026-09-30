@@ -1,0 +1,52 @@
+{{/* One publication entry.
+     Context: dict "pub" <entry> "me" <author string to embolden>
+                   "kind" <journal|chapter|conference> "numbered" <bool>
+     Author order is preserved exactly as stored; only the matching name is bolded. */}}
+{{- $p := .pub -}}
+{{- $me := .me -}}
+{{- $kind := .kind | default "journal" -}}
+{{- $numbered := .numbered | default false -}}
+{{- $venue := or $p.journal $p.book $p.venue "" -}}
+{{- $search := printf "%s %s %s %s" $p.title (delimit $p.authors " ") $venue (string $p.year) -}}
+<li class="pub{{ if not $numbered }} pub--plain{{ end }}" data-item
+    data-theme-key="{{ $p.theme | default "" }}" data-search="{{ $search }}" data-hidden="false">
+  {{- if $numbered }}<div class="pub__num" aria-hidden="true"></div>{{ end }}
+  <div class="pub__main">
+    <h3 class="pub__title">
+      {{- with $p.url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ $p.title }}</a>
+      {{- else }}{{ $p.title }}{{ end -}}
+    </h3>
+
+    <p class="pub__authors">
+      {{- range $i, $a := $p.authors -}}
+        {{- if $i }}, {{ end -}}
+        {{- if eq $a $me }}<b>{{ $a }}</b>{{ else }}{{ $a }}{{ end -}}
+      {{- end -}}
+      {{- with $p.year }} ({{ . }}){{ end -}}
+    </p>
+
+    <p class="pub__venue">
+      {{- if eq $kind "chapter" -}}
+        In {{ with $p.editors }}{{ delimit . ", " }} (Eds.), {{ end }}<em>{{ $p.book }}</em>
+        {{- with $p.pages }} (pp. {{ . }}){{ end }}{{ with $p.publisher }}. {{ . }}{{ end }}.
+      {{- else if eq $kind "conference" -}}
+        {{ with $p.kind }}{{ . }}. {{ end }}{{ $p.venue }}{{ with $p.proceedings }}. <em>{{ . }}</em>{{ end }}.
+      {{- else -}}
+        <em>{{ $p.journal }}</em>
+        {{- with $p.volume }}, {{ . }}{{ end }}{{ with $p.issue }}({{ . }}){{ end }}{{ with $p.pages }}, {{ . }}{{ end }}.
+      {{- end -}}
+      {{- with $p.status }} <span class="pub__status">{{ . }}</span>{{ end }}
+    </p>
+
+    {{- if or $p.doi $p.open_access }}
+    <div class="pub__links">
+      {{- with $p.doi }}
+      <a class="pub__doi" href="https://doi.org/{{ . }}" target="_blank" rel="noopener">
+        <span aria-hidden="true">doi</span><span class="visually-hidden">DOI</span> {{ . }}
+      </a>
+      {{- end }}
+      {{- if $p.open_access }}<span class="tag tag--soft">Open access</span>{{ end }}
+    </div>
+    {{- end }}
+  </div>
+</li>

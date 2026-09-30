@@ -1,38 +1,78 @@
-{{ define "head" }}
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{{ .Title }}</title>
+{{- $site := .Site.Params -}}
+{{- $title := cond .IsHome (printf "%s, %s — %s" $site.name $site.credential "Computational Scientist") (printf "%s · %s" .Title $site.name) -}}
+{{- $desc := cond (ne .Description "") .Description (cond .IsHome $site.description (printf "%s — %s" .Title $site.name)) -}}
+{{- $ogimg := (printf "%s%s" .Site.BaseURL (strings.TrimPrefix "/" $site.image)) -}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>{{ $title }}</title>
+<meta name="description" content="{{ $desc }}">
+<meta name="author" content="{{ $site.name }}">
+<link rel="canonical" href="{{ .Permalink }}">
 
-<!-- Critical CSS first -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-<link rel="icon" href="/favicon.ico" type="image/x-icon">
+{{/* Open Graph / Twitter */}}
+<meta property="og:type" content="{{ cond .IsPage "article" "website" }}">
+<meta property="og:title" content="{{ $title }}">
+<meta property="og:description" content="{{ $desc }}">
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:site_name" content="{{ $site.name }}">
+<meta property="og:image" content="{{ $ogimg }}">
+{{- with .Date }}{{ if $.IsPage }}
+<meta property="article:published_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">
+{{- end }}{{ end }}
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ $title }}">
+<meta name="twitter:description" content="{{ $desc }}">
+<meta name="twitter:image" content="{{ $ogimg }}">
 
-<!-- Preload fonts -->
+{{/* Theme colour follows the active theme so mobile browser chrome matches. */}}
+<meta name="theme-color" content="#fbfaf7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#16161a" media="(prefers-color-scheme: dark)">
+
+{{/* Applied before first paint so a stored dark preference never flashes white. */}}
+<script>
+  (function () {
+    try {
+      var t = localStorage.getItem("theme");
+      if (t === "dark" || t === "light") document.documentElement.setAttribute("data-theme", t);
+    } catch (e) {}
+  })();
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400..600;1,6..72,400&display=swap">
 
-<!-- Defer non-critical CSS -->
-<link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="print" onload="this.media='all'">
+{{- $opts := dict "transpiler" "libsass" "targetPath" "css/main.css" "outputStyle" (cond hugo.IsProduction "compressed" "expanded") }}
+{{- $css := resources.Get "scss/main.scss" | toCSS $opts | fingerprint }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
 
-<!-- Conditionally load page-specific resources -->
-{{ if eq .Layout "map" }}
-  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-{{ end }}
+<link rel="icon" href="/favicon.ico" sizes="any">
+{{ with .OutputFormats.Get "rss" }}<link rel="alternate" type="application/rss+xml" title="{{ $site.name }}" href="{{ .Permalink }}">{{ end }}
 
-{{ if .Params.animate }}
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-{{ end }}
+{{/* Structured data: one Person record on the homepage. */}}
+{{- if .IsHome }}
+<script type="application/ld+json">
+{{- dict
+  "@context" "https://schema.org"
+  "@type" "Person"
+  "name" $site.name
+  "honorificSuffix" $site.credential
+  "jobTitle" "Computational Scientist"
+  "email" (printf "mailto:%s" $site.email)
+  "url" .Site.BaseURL
+  "image" $ogimg
+  "identifier" (printf "https://orcid.org/%s" $site.orcid)
+  "sameAs" (slice
+    (printf "https://orcid.org/%s" $site.orcid)
+    "https://github.com/sraocodes"
+    "https://www.linkedin.com/in/sathyanarayanrao1/"
+    "https://scholar.google.co.uk/citations?user=9yc3jiIAAAAJ&hl=en")
+  | jsonify (dict "indent" "  ") | safeJS }}
+</script>
+{{- end }}
 
-<!-- Move scripts to the end of body or use defer -->
-<script defer src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script defer src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
-
-{{ if eq .Layout "map" }}
-  <script defer src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
-{{ end }}
-
-{{ if .Params.animate }}
-  <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
-{{ end }}
-{{ end }}
+{{/* AdSense is opt-in via params.adsense_client in config.toml. It was on the
+     previous site; leaving it unset keeps it off without deleting the wiring. */}}
+{{- with $site.adsense_client }}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ . }}" crossorigin="anonymous"></script>
+{{- end }}

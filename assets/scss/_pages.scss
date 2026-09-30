@@ -1,0 +1,244 @@
+// ---------------------------------------------------------------------------
+// Page-level composition: hero, current work, books, writing, the pre-AI
+// section, the "elsewhere" grid, and the article reading experience.
+// ---------------------------------------------------------------------------
+
+// --- Books -----------------------------------------------------------------
+.book-grid {
+  display: grid;
+  gap: var(--s-6);
+  grid-template-columns: 1fr;
+
+  @media (min-width: 40rem) { grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 60rem) { grid-template-columns: repeat(3, 1fr); }
+}
+
+.book {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-4);
+  align-self: start;   // each cover keeps its own height
+}
+
+.book__cover {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  background: var(--bg-sunken);
+  border: 1px solid var(--rule);
+  box-shadow: var(--shadow);
+  transition: transform var(--dur) var(--ease), box-shadow var(--dur) var(--ease);
+
+  // No fixed aspect-ratio: the covers differ (0.63-0.71 w/h) and a 2:3 box
+  // with object-fit:cover was cropping the credit line off the tallest one.
+  img { width: 100%; height: auto; display: block; }
+
+  &:hover { transform: translateY(-3px); box-shadow: var(--shadow-lg); }
+}
+
+// Shown when no cover file exists, so the page never ships a broken image.
+.book__cover--placeholder {
+  display: grid;
+  place-content: center;
+  text-align: center;
+  padding: var(--s-5);
+  border-style: dashed;
+
+  span {
+    font-family: var(--font-display);
+    font-size: var(--t-lg);
+    color: var(--muted);
+    line-height: 1.3;
+  }
+}
+
+.book__title { font-size: var(--t-lg); margin-bottom: var(--s-1); }
+.book__sub   { font-size: var(--t-sm); color: var(--muted); margin-bottom: var(--s-2); font-style: italic; }
+.book__meta  { font-family: var(--font-mono); font-size: var(--t-xs); color: var(--muted); margin-bottom: var(--s-3); }
+.book__desc  { font-size: var(--t-sm); color: var(--ink-soft); margin-bottom: var(--s-3); }
+
+.book__tagline {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--t-sm);
+  color: var(--ink-soft);
+  padding-left: var(--s-3);
+  border-left: 2px solid var(--rule-strong);
+  margin-bottom: var(--s-3);
+}
+
+// --- Writing ---------------------------------------------------------------
+.post-list { list-style: none; padding: 0; margin: 0; }
+
+.post-item {
+  position: relative;
+  display: grid;
+  gap: var(--s-2);
+  padding: var(--s-5) 0;
+  border-bottom: 1px solid var(--rule);
+
+  @media (min-width: 46rem) { grid-template-columns: 8rem 1fr; gap: var(--s-6); }
+
+  &:hover .post-item__title a { color: var(--accent); }
+}
+
+.post-item__date {
+  font-family: var(--font-mono);
+  font-size: var(--t-xs);
+  color: var(--muted);
+  font-variant-numeric: tabular-nums;
+
+  @media (min-width: 46rem) { padding-top: 0.42rem; }
+}
+
+.post-item__title {
+  font-size: var(--t-xl);
+  margin-bottom: var(--s-2);
+
+  a {
+    color: var(--ink);
+    text-decoration: none;
+    &::after { content: ""; position: absolute; inset: 0; }
+  }
+}
+
+.post-item__excerpt { color: var(--ink-soft); font-size: var(--t-sm); margin-bottom: var(--s-2); max-width: var(--measure); }
+
+.post-item__meta { display: flex; flex-wrap: wrap; gap: var(--s-3); font-size: var(--t-xs); color: var(--muted); }
+
+// --- Article ---------------------------------------------------------------
+.article { padding-block: var(--s-7); }
+
+.article__header { margin-bottom: var(--s-7); padding-bottom: var(--s-5); border-bottom: 1px solid var(--rule); }
+
+.article__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  align-items: center;
+  font-size: var(--t-sm);
+  color: var(--muted);
+  margin-top: var(--s-3);
+}
+
+.article__body {
+  max-width: var(--measure);
+  font-size: var(--t-lg);
+  line-height: 1.75;
+
+  h2 { margin-top: var(--s-7); }
+  h3 { margin-top: var(--s-6); }
+  img { border-radius: var(--radius); margin-block: var(--s-5); }
+
+  // Long URLs in personal writing must not push the page sideways.
+  a { overflow-wrap: break-word; }
+}
+
+.toc {
+  background: var(--bg-sunken);
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  padding: var(--s-4) var(--s-5);
+  margin-bottom: var(--s-6);
+  font-size: var(--t-sm);
+
+  summary { cursor: pointer; font-weight: 600; color: var(--ink); }
+
+  ul { list-style: none; padding-left: 0; margin: var(--s-3) 0 0; }
+  li { margin-bottom: var(--s-2); }
+  ul ul { padding-left: var(--s-4); margin-top: var(--s-2); }
+  a { color: var(--ink-soft); text-decoration: none; &:hover { color: var(--accent); } }
+}
+
+.post-nav {
+  display: grid;
+  gap: var(--s-4);
+  margin-top: var(--s-8);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--rule);
+
+  @media (min-width: 40rem) { grid-template-columns: 1fr 1fr; }
+
+  a {
+    display: block;
+    padding: var(--s-4);
+    border: 1px solid var(--rule);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    color: var(--ink);
+    transition: border-color var(--dur) var(--ease);
+
+    &:hover { border-color: var(--accent); }
+
+    span { display: block; font-size: var(--t-xs); color: var(--muted); margin-bottom: var(--s-1); }
+  }
+
+  .post-nav__next { text-align: right; }
+}
+
+// --- Elsewhere on the internet --------------------------------------------
+.elsewhere__head { display: flex; align-items: center; gap: var(--s-3); margin-bottom: var(--s-2); }
+
+// The Pokéball, reduced to a small, well-made mark.
+.pokeball {
+  width: 1.15rem; height: 1.15rem;
+  flex: none;
+  transition: transform 400ms var(--ease);
+
+  .pokeball__top    { fill: #d94a3d; }
+  .pokeball__bottom { fill: var(--surface); }
+  .pokeball__ring   { fill: none; stroke: var(--ink); stroke-width: 6; }
+  .pokeball__band   { stroke: var(--ink); stroke-width: 6; }
+  .pokeball__center { fill: var(--surface); stroke: var(--ink); stroke-width: 5; }
+}
+
+.elsewhere:hover .pokeball { transform: rotate(18deg); }
+
+.profile-chips { display: flex; flex-wrap: wrap; gap: var(--s-3); }
+
+.profile-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+  padding: 0.45rem 0.85rem;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  background: var(--surface);
+  color: var(--ink-soft);
+  font-size: var(--t-sm);
+  font-weight: 500;
+  text-decoration: none;
+  transition: all var(--dur) var(--ease);
+
+  img { width: 1.05rem; height: 1.05rem; object-fit: contain; opacity: 0.8; }
+
+  &:hover {
+    border-color: var(--accent);
+    color: var(--ink);
+    transform: translateY(-2px);
+    img { opacity: 1; }
+  }
+}
+
+// --- Photo diary -----------------------------------------------------------
+.photo-grid {
+  display: grid;
+  gap: var(--s-4);
+  grid-template-columns: 1fr;
+
+  @media (min-width: 38rem) { grid-template-columns: repeat(2, 1fr); }
+  @media (min-width: 62rem) { grid-template-columns: repeat(3, 1fr); }
+}
+
+.photo {
+  border: 1px solid var(--rule);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--surface);
+
+  img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; }
+
+  figcaption { padding: var(--s-3) var(--s-4); font-size: var(--t-sm); color: var(--ink-soft); }
+
+  span { display: block; font-size: var(--t-xs); color: var(--muted); margin-top: var(--s-1); }
+}

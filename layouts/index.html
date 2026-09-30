@@ -1,413 +1,180 @@
 {{ define "main" }}
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Lora:wght@400;500;600&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+{{- $pubs   := .Site.Data.publications -}}
+{{- $roles  := .Site.Data.roles -}}
+{{- $themes := .Site.Data.themes.themes -}}
+{{- $hist   := .Site.Data.computing_history -}}
 
-<!-- Profile Section -->
-<div class="hero-section py-5">
-  <div class="container">
-    <div class="profile-container">
-      <!-- Profile Image -->
-      <div class="profile-image-container">
-        <div class="profile-image-wrapper">
-          <img src="{{ .Params.image | relURL }}" alt="Profile Image" class="profile-image">
-        </div>
+{{/* ---------- 1. Statement ---------- */}}
+<section class="hero">
+  <div class="wrap hero__inner">
+    <div class="hero__body">
+      <h1 class="hero__name">Sathyanarayan Rao<span class="cred">, PhD</span></h1>
+      <p class="hero__role">Computational Scientist · Scientific R&amp;D<br>Modelling, Sensing &amp; Scientific AI</p>
+      <div class="hero__text">
+        <p>
+          I work on systems that are difficult to observe directly. Roots under a
+          field, water held in soil seen from orbit, a plasma no probe survives, a
+          crop that hasn't grown yet. The method has been the same for nineteen
+          years: build a physical model, understand how the observations actually
+          arise, and use computation to infer the processes underneath.
+        </p>
+        <p>
+          Lately the same habit has turned on AI systems — you can only partly see
+          how they reason, so you design the probes and infer from what comes back.
+        </p>
       </div>
-      
-      <!-- Profile Content -->
-      <div class="profile-content">
-        <h1 class="profile-name">{{ .Params.title }}</h1>
-        <h4 class="profile-role">{{ .Params.subtitle }}</h4>
-        
-        <div class="profile-text">
-          {{ $paragraphs := split .Params.intro_text "\n\n" }}
-          {{ range $paragraph := $paragraphs }}
-            <p>{{ . }}</p>
-          {{ end }}
-        </div>
+      <div class="btn-row">
+        <a class="btn btn--primary" href="{{ "/research/" | relURL }}">Research</a>
+        <a class="btn" href="{{ "/publications/" | relURL }}">Publications</a>
+        <a class="btn" href="{{ "/cv/" | relURL }}">CV</a>
+        <a class="btn" href="mailto:{{ .Site.Params.email }}">Email</a>
       </div>
     </div>
+    <figure class="hero__portrait">
+      <img src="{{ .Site.Params.image | relURL }}" alt="Sathyanarayan Rao" width="420" height="525" fetchpriority="high">
+    </figure>
   </div>
-</div>
+</section>
 
-<div class="divider-section">
-  <div class="container">
-    <div class="elegant-divider"></div>
+{{/* ---------- 2. Now ---------- */}}
+<section class="section section--now">
+  <div class="wrap">
+    <p class="eyebrow">Currently</p>
+    <div class="now-grid">
+      {{- range $roles.current }}
+        <article class="now-card">
+          <p class="now-card__when">{{ dateFormat "Jan 2006" (printf "%s-01" .start) }} &rarr;</p>
+          <h3>{{ .title }}</h3>
+          <p class="now-card__org">
+            {{- with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .org }}{{ with .url }}</a>{{ end -}}
+          </p>
+          <p>{{ .summary }}</p>
+        </article>
+      {{- end }}
+    </div>
   </div>
-</div>
+</section>
 
-<!-- Badge Collection Section Header -->
-<div class="container py-3">
-  <div class="badge-header text-center">
-    <h2 class="badge-title">🔴🔘⚪️ My Digital Badge Collection</h2>
-    <p class="badge-subtitle">🔴⚪️⚡🐁 Catch 'em all! Here's where you can find me across the digital universe</p>
+{{/* ---------- 3. The through-line ---------- */}}
+<section class="section throughline">
+  <div class="wrap">
+    <p class="eyebrow">The through-line</p>
+    <h2 class="throughline__claim">
+      One method, applied to systems that kept getting larger.
+    </h2>
+    <p class="lede throughline__lede">
+      {{ $roles.trajectory.thread }} — plasma, then light, then roots, then crops,
+      then catchments, and now the models themselves.
+    </p>
+    <ol class="timeline">
+      {{- range $roles.trajectory.stages }}
+        {{ partial "components/timeline-item.html" (dict "stage" .) }}
+      {{- end }}
+    </ol>
   </div>
-</div>
+</section>
 
-<div class="container py-5">
-  <!-- Grouped Cards Section -->
-  <div class="row mb-5">
-    <!-- First, group cards by category -->
-    {{ $groupedCards := dict }}
-    {{ range .Params.cards }}
-        {{ $category := .category | default "general" }}
-        {{ $existingCards := index $groupedCards $category | default slice }}
-        {{ $updatedCards := $existingCards | append . }}
-        {{ $groupedCards = merge $groupedCards (dict $category $updatedCards) }}
-    {{ end }}
-    
-    <!-- Loop through categories and create cards -->
-    {{ range $categoryName, $cards := $groupedCards }}
-        <!-- Find category info from categories array if it exists -->
-        {{ $categoryTitle := humanize $categoryName }}
-        {{ $categoryIcon := "fas fa-folder" }}
-        {{ $categoryGradient := "bg-primary" }}
-        
-        {{ range $.Params.categories }}
-            {{ if eq .name $categoryName }}
-                {{ if .title }}{{ $categoryTitle = .title }}{{ end }}
-                {{ if .icon }}{{ $categoryIcon = .icon }}{{ end }}
-                {{ if .gradient }}{{ $categoryGradient = .gradient }}{{ end }}
-            {{ end }}
-        {{ end }}
-        
-        <div class="col-md-6 col-lg-4 mb-4">
-            <div class="card h-100 shadow-sm hover-lift">
-                <div class="card-header {{ $categoryGradient }} text-white">
-                    <h4 class="card-title mb-0"><i class="{{ $categoryIcon }} mr-2"></i>{{ $categoryTitle }}</h4>
-                </div>
-                <div class="card-body">
-                    <div class="row g-3">
-                        {{ range $cards }}
-                        <div class="col-6 text-center mb-3">
-                            <a href="{{ .link }}" target="_blank" class="social-link" title="{{ .title }}">
-                                <div class="link-card p-2 rounded">
-                                    {{ if .emoji }}
-                                    <div class="emoji-container" style="font-size: {{ default "2rem" .emojiSize }};">{{ .emoji }}</div>
-                                    {{ else }}
-                                    <img src="{{ .icon | relURL }}" alt="{{ .title }}" class="social-icon" style="width: {{ .iconW }}; height: {{ .iconH }};">
-                                    {{ end }}
-                                    <div class="link-title mt-2">{{ .title }}</div>
-                                </div>
-                            </a>
-                        </div>
-                        {{ end }}
-                    </div>
-                </div>
-            </div>
-        </div>
-    {{ end }}
+{{/* ---------- 4. Research, by question ---------- */}}
+{{- $research := where .Site.RegularPages "Section" "research" -}}
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Research</p>
+    <div class="section-head">
+      <h2>Five questions</h2>
+      <a class="btn" href="{{ "/research/" | relURL }}">All projects &rarr;</a>
+    </div>
+    <div class="theme-list">
+      {{- range $themes }}
+        {{- $t := . }}
+        {{- $in := where $research "Params.theme" $t.id }}
+        {{- $lead := index (sort (where $in "Params.featured" true) "Params.weight") 0 }}
+        {{- if not $lead }}{{ $lead = index (sort $in "Params.weight") 0 }}{{ end }}
+        <article class="theme-row">
+          <div class="theme-row__q">
+            <h3><a href="{{ "/research/" | relURL }}#{{ $t.id }}">{{ $t.question }}</a></h3>
+            <p class="theme-row__label">{{ $t.label }}</p>
+          </div>
+          <div class="theme-row__body">
+            <p>{{ $t.blurb }}</p>
+            {{- with $lead }}
+              <p class="theme-row__lead">
+                <span class="muted">Representative work —</span>
+                <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+              </p>
+            {{- end }}
+            <p class="theme-row__count">{{ len $in }} project{{ if ne (len $in) 1 }}s{{ end }}</p>
+          </div>
+        </article>
+      {{- end }}
+    </div>
   </div>
-</div>
+</section>
 
-<style>
-  /* Hero Section and Profile Container */
-  .hero-section {
-    padding: 60px 0 40px;
-    position: relative;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  }
+{{/* ---------- 5. Recent publications ---------- */}}
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Publications</p>
+    <div class="section-head">
+      <h2>Recent peer-reviewed work</h2>
+      <a class="btn" href="{{ "/publications/" | relURL }}">All {{ len $pubs.journal_articles }} articles &rarr;</a>
+    </div>
+    <ol class="pub-list pub-list--plain">
+      {{- range first 4 (sort $pubs.journal_articles "year" "desc") }}
+        {{ partial "components/publication.html" (dict "pub" . "me" $pubs.me "kind" "journal" "numbered" false) }}
+      {{- end }}
+    </ol>
+  </div>
+</section>
 
-  .profile-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 40px;
-  }
+{{/* ---------- 6. Writing + Books ---------- */}}
+<section class="section">
+  <div class="wrap two-col">
+    <div>
+      <p class="eyebrow">Writing</p>
+      <div class="section-head"><h2>Recent</h2></div>
+      <ul class="post-list post-list--compact">
+        {{- range first 3 (site.GetPage "/writing/essays").RegularPages }}
+          {{ partial "components/post-card.html" (dict "page" . "compact" true) }}
+        {{- end }}
+      </ul>
+      <a class="btn" href="{{ "/writing/" | relURL }}">All writing &rarr;</a>
+    </div>
+    <div class="register-personal">
+      <p class="eyebrow">Books</p>
+      <div class="section-head"><h2>Published</h2></div>
+      <div class="book-strip">
+        {{- range .Site.Data.books.books }}
+          {{- if ne .status "in-progress" }}
+            {{ partial "components/book-spine.html" (dict "book" .) }}
+          {{- end }}
+        {{- end }}
+      </div>
+      <a class="btn" href="{{ "/books/" | relURL }}">All books &rarr;</a>
+    </div>
+  </div>
+</section>
 
-  @media (min-width: 992px) {
-    .profile-container {
-      flex-direction: row;
-      align-items: center;
-    }
-  }
-
-  /* Profile Image Styling */
-  .profile-image-container {
-    position: relative;
-    margin-bottom: 40px;
-  }
-
-  .profile-image-wrapper {
-    position: relative;
-    width: 280px;
-    height: 280px;
-    margin: 0 auto;
-  }
-
-  .profile-image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 50%;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    border: 6px solid white;
-  }
-
-  @media (min-width: 992px) {
-    .profile-image-container {
-      flex: 0 0 40%;
-      margin-bottom: 0;
-    }
-  }
-
-  /* Profile Content Styling */
-  .profile-content {
-    text-align: center;
-    padding: 0 15px;
-  }
-
-  @media (min-width: 992px) {
-    .profile-content {
-      flex: 0 0 60%;
-      text-align: left;
-      padding: 0 30px;
-    }
-  }
-
-  .profile-name {
-    font-family: 'Lora', serif;
-    font-weight: 600;
-    font-size: 2.5rem;
-    color: #ffffff;
-    margin-bottom: 10px;
-    position: relative;
-  }
-
-  .profile-name::after {
-    content: '';
-    position: absolute;
-    bottom: -8px;
-    left: 50%;
-    width: 80px;
-    height: 4px;
-    background: rgba(255,255,255,0.8);
-    transform: translateX(-50%);
-    border-radius: 2px;
-  }
-
-  @media (min-width: 992px) {
-    .profile-name::after {
-      left: 0;
-      transform: none;
-    }
-  }
-
-  .profile-role {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 400;
-    font-size: 1.3rem;
-    color: rgba(255,255,255,0.95);
-    margin-bottom: 25px;
-  }
-
-  .profile-text {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 300;
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: rgba(255,255,255,0.9);
-    max-width: 800px;
-    margin: 0 auto;
-  }
-
-  @media (min-width: 992px) {
-    .profile-text {
-      margin: 0;
-    }
-  }
-
-  .profile-text p {
-    margin-bottom: 1.2rem;
-  }
-
-
-  /* Elegant Divider */
-  .divider-section {
-    padding: 40px 0;
-    background: #f8fafc;
-  }
-
-  .elegant-divider {
-    width: 100px;
-    height: 2px;
-    background: linear-gradient(135deg, #4e73df 0%, #224abe 100%);
-    margin: 0 auto;
-    border-radius: 1px;
-  }
-
-  /* Badge Collection Header */
-  .badge-header {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 3px solid #667eea;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .badge-title {
-    font-family: 'Space Grotesk', 'Lora', serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 12px;
-    letter-spacing: -0.5px;
-  }
-
-  .badge-subtitle {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.15rem;
-    color: #64748b;
-    font-weight: 400;
-    line-height: 1.6;
-  }
-
-  /* Badge Collection Header */
-  .badge-header {
-    margin-bottom: 40px;
-    padding-bottom: 20px;
-    border-bottom: 3px solid #667eea;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .badge-title {
-    font-family: 'Space Grotesk', 'Lora', serif;
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #2c3e50;
-    margin-bottom: 12px;
-    letter-spacing: -0.5px;
-  }
-
-  .badge-subtitle {
-    font-family: 'Roboto', sans-serif;
-    font-size: 1.15rem;
-    color: #64748b;
-    font-weight: 400;
-    line-height: 1.6;
-  }
-
-  /* Card Styling */
-  .card {
-    border-radius: 16px;
-    border: 2px solid #2c3e50;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    overflow: hidden;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.07);
-  }
-
-  .hover-lift:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 24px rgba(0,0,0,0.15)!important;
-  }
-
-  .card-header {
-    border-bottom: none;
-    padding: 1rem 1.25rem;
-  }
-
-  .bg-gradient-primary {
-    background: #667eea;
-  }
-  
-  .bg-gradient-info {
-    background: #667eea;
-  }
-  
-  .bg-gradient-success {
-    background: #667eea;
-  }
-  
-  .bg-gradient-danger {
-    background: #667eea;
-  }
-
-  /* Section headings */
-  .section-heading {
-    position: relative;
-    color: #2c3e50;
-    text-align: center;
-    padding-bottom: 15px;
-    margin-bottom: 30px;
-  }
-
-  .section-heading::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60px;
-    height: 3px;
-    background: #4e73df;
-    border-radius: 2px;
-  }
-
-  /* Links styling */
-  .social-link {
-    text-decoration: none !important;
-  }
-  
-  .link-card {
-    transition: all 0.3s ease;
-    background-color: white;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .social-link:hover .link-card {
-    background-color: #f8f9fa;
-    transform: translateY(-3px);
-  }
-  
-  .link-title {
-    font-family: 'Roboto', sans-serif;
-    font-size: 0.85rem;
-    font-weight: 400;
-    color: #576574;
-    transition: color 0.3s ease;
-    margin-top: 8px;
-  }
-  
-  .social-link:hover .link-title {
-    color: #667eea;
-  }
-  
-  .social-icon {
-    transition: transform 0.3s ease;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .emoji-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 60px;
-  }
-
-  /* Responsive video adjustments */
-  @media (max-width: 768px) {
-    .video-container {
-      padding: 10px;
-    }
-    
-    .featured-video {
-      border-radius: 10px;
-    }
-    
-    .video-floating {
-      width: 200px;
-      height: 60px;
-      bottom: 10px;
-      right: 10px;
-    }
-  }
-</style>
-
+{{/* ---------- 7. Deprecated ---------- */}}
+<section class="section vintage register-personal">
+  <div class="wrap">
+    <p class="eyebrow">Deprecated</p>
+    <div class="section-head">
+      <h2>{{ $hist.subhead }}</h2>
+      <a class="btn" href="{{ "/archive/computing-history/" | relURL }}">The full changelog &rarr;</a>
+    </div>
+    <p class="vintage__intro">{{ $hist.intro }}</p>
+    <ol class="changelog">
+      {{- range $hist.versions }}
+        <li class="rel">
+          <code class="rel__v">{{ .v }}</code>
+          <span class="rel__year">{{ .year }}</span>
+          <div class="rel__body">
+            <h3>{{ .title }}</h3>
+            <p>{{ .body }}</p>
+          </div>
+        </li>
+      {{- end }}
+    </ol>
+  </div>
+</section>
 {{ end }}
