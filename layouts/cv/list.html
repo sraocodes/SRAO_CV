@@ -5,11 +5,12 @@
     <p class="eyebrow">Curriculum Vitae</p>
     <h1>Sathyanarayan Rao, PhD</h1>
     <p class="lede">
-      Computational scientist with nineteen years of research across plasma physics,
-      optoelectronics, geoelectrical sensing, agricultural digital twins and microwave
-      remote sensing. Currently at IISc Bengaluru, co-founder of a scientific R&amp;D
-      company, and working on evaluations that test where frontier AI systems reason
-      soundly. Research career across India, Europe and the United States.
+      Computational scientist, {{ partial "years.html" (dict "Site" .Site "kind" "research") }} years into a research career that has
+      run from plasma physics and optoelectronics through geoelectrical sensing and
+      agricultural digital twins to microwave remote sensing. Currently a research
+      associate at IISc Bengaluru, co-founder of a scientific R&amp;D company, and
+      building evaluations that test where frontier AI systems reason soundly and
+      where they don't. India, Europe and the United States along the way.
     </p>
     <div class="btn-row">
       <a class="btn btn--primary" href="{{ .Site.Params.cv | relURL }}">Download CV (PDF)</a>

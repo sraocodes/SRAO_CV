@@ -6,9 +6,9 @@
     <p class="eyebrow">Publications</p>
     <h1>{{ .Title }}</h1>
     <p class="lede">
-      {{ len $arts }} peer-reviewed journal articles, {{ len $p.book_chapters }} book chapter{{ if ne (len $p.book_chapters) 1 }}s{{ end }}
-      and {{ len $p.conference_presentations }} selected conference presentations, {{ (index (last 1 $arts) 0).year }}&ndash;{{ (index (first 1 $arts) 0).year }}.
-      Author order is exact; <b>bold</b> marks my name.
+      {{ len $arts }} peer-reviewed journal articles between {{ (index (last 1 $arts) 0).year }} and {{ (index (first 1 $arts) 0).year }}, alongside
+      {{ len $p.book_chapters }} book chapter{{ if ne (len $p.book_chapters) 1 }}s{{ end }} and {{ len $p.conference_presentations }} conference presentations worth singling out.
+      Author order is exactly as published, and <b>bold</b> marks where I appear.
     </p>
   </div>
 </article>
