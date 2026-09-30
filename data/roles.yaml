@@ -87,6 +87,8 @@ past:
 # applied to progressively larger systems.
 trajectory:
   thread: "Physics-based modelling of partly observable systems, and inference from what they emit"
+  # Shown beneath the timeline, so the present does not read as a destination.
+  now_note: "The last two are happening at once. Watershed hydrology at IISc and frontier-AI evaluation are both current work — not consecutive chapters."
   stages:
     - years: "2010–2013"
       field: "Plasma physics"
@@ -112,16 +114,21 @@ trajectory:
       note: "Coupling process-based crop models with functional–structural root models across C/C++, Fortran and Python."
       image: "images/DAA.png"
       image_alt: "Digital Agricultural Avatar: a plant and its coupled model representation"
+    # The present is not a single strand. These two run at the same time, and
+    # `concurrent` marks them so the timeline does not imply one replaced the
+    # other. Rendered as a joined "now" band rather than sequential steps.
     - years: "2025–"
       field: "Earth observation & hydrology"
       where: "IISc Bengaluru"
-      note: "Sentinel-1 soil moisture retrieval, active–passive fusion with SMAP, and decade-scale watershed evaluation."
+      concurrent: true
+      note: "Sentinel-1 soil moisture retrieval, active–passive fusion with SMAP, and decade-scale watershed evaluation across semi-arid Karnataka."
       image: "images/satellite.png"
       image_alt: "Satellite Earth observation feeding computational analysis"
     - years: "2026–"
       field: "Scientific AI"
       where: "Independent · Mercor"
-      note: "Benchmarks and test environments that measure where frontier models reason soundly about physical systems."
+      concurrent: true
+      note: "Benchmarks and test environments that measure where frontier models reason soundly about physical systems — running alongside the hydrology, not after it."
 
 # Professional contributions, from the CV.
 service:

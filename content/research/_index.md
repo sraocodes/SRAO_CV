@@ -5,8 +5,9 @@ aliases:
   - "/projects/"
 ---
 
-The work runs to {{< years >}} years now, across plasma physics, optoelectronics,
-root geophysics, agricultural modelling, Earth observation and scientific AI. Listed by subject that
-reads like six different careers. Listed by method it's one: **model a system you can
-only partly observe, work out how its signals arise, and use computation to infer
-what's going on underneath.**
+{{< years >}} years of work across plasma physics, optoelectronics, root geophysics,
+crop modelling, Earth observation and scientific AI. The subjects look unrelated; the
+method is much the same in each case — build a model of the system, understand how the
+measurements arise, and infer what you can from them.
+
+Grouped below by the question each set of projects was trying to answer.

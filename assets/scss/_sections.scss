@@ -479,3 +479,46 @@
   a { color: var(--ink); text-decoration: none; &:hover { color: var(--accent); } }
   .is-current { color: var(--muted); }
 }
+
+// --- The concurrent present ------------------------------------------------
+// The last two strands run at the same time. They are drawn as a joined band so
+// the timeline cannot be read as "moved on from hydrology to AI".
+.tl-item--now .tl-item__dot {
+  background: var(--accent);
+  border-color: var(--accent);
+}
+
+.tl-item--now + .tl-item--now {
+  // Pull the second strand up against the first and drop the gap between them.
+  margin-top: calc(var(--s-6) * -1);
+  padding-top: var(--s-5);
+}
+
+// A bracket spanning both, marking them as one present rather than two steps.
+.tl-item--now {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0.32rem; top: 0.5rem; bottom: -0.4rem;
+    width: 2px;
+    background: var(--accent);
+    border-radius: 1px;
+
+    @media (min-width: 48rem) { left: 7.5rem; }
+  }
+
+  &:last-child::before { bottom: auto; height: 0.9rem; }
+}
+
+.throughline__now {
+  margin-top: var(--s-5);
+  padding: var(--s-4) var(--s-5);
+  border-left: 2px solid var(--accent);
+  background: var(--accent-wash);
+  border-radius: 0 var(--radius) var(--radius) 0;
+  font-size: var(--t-sm);
+  color: var(--ink-soft);
+  max-width: 62ch;
+}

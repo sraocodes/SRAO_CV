@@ -1,6 +1,6 @@
 {{/* Trajectory stage. Context: dict "stage" <entry> */}}
 {{- $s := .stage -}}
-<li class="tl-item">
+<li class="tl-item{{ if $s.concurrent }} tl-item--now{{ end }}">
   <span class="tl-item__dot" aria-hidden="true"></span>
   <div class="tl-item__years">{{ $s.years }}</div>
   <div class="tl-item__body">

@@ -11,46 +11,46 @@
 <div class="wrap about-grid">
   <div class="about-body prose">
     <p class="lede">
-      I'm a computational scientist in Bengaluru. For {{ partial "years.html" (dict "Site" .Site "kind" "research") }} years I've been
-      building models of systems that don't submit to direct measurement, and
-      working out how much you can honestly infer from the traces they leave
-      behind in an instrument.
+      I'm a computational scientist. Most of my work has been building models of
+      physical systems and working out what you can infer about them from
+      measurements.
     </p>
     <p>
-      It started with plasma. At Huntsville I extended a particle-in-cell code from
-      two dimensions to three and learned to wait overnight for a cluster to tell me
-      whether I had got a boundary condition right. Then light — laser-induced
-      photodegradation in an Alabama cleanroom, then Maxwell–Bloch solvers in
-      Paderborn for light moving through excitonic media.
+      I started in plasma physics at UA Huntsville, on a particle-in-cell code —
+      extending it from 2D electrostatic to 3D electromagnetic and parallelising it
+      with MPI. Then some experimental optics at Alabama A&amp;M, and after that
+      Fortran solvers for the Maxwell&ndash;Bloch equations at Paderborn.
     </p>
     <p>
-      The PhD in Belgium was the turn that mattered. The question was whether you
-      could see a plant's roots without digging them up, by reading the electrical
-      field of the soil around them. Answering it meant coupling root architecture,
-      water uptake and geoelectrical forward models into a single simulation, then
-      taking the whole apparatus into a field of grasses under drought and seeing
-      whether it survived contact with reality. Mostly it did.
+      My PhD at UCLouvain was on geoelectrical sensing of plant roots: how much you
+      can say about root structure and water uptake from electrical resistivity
+      measurements. That meant coupling root architecture models, water uptake models
+      and electrical forward models, and then running field and lab ERT campaigns to
+      compare the simulations against measurements.
     </p>
     <p>
-      At Jülich the systems got bigger and the problem changed shape: less about
-      writing a model than about making independently developed scientific codes —
-      C, C++, Fortran, Python — exchange state without lying to each other. At IISc
-      the scale moved again, to catchments and satellites and decade-long records of
-      how soil in semi-arid Karnataka holds water.
+      At Jülich I worked on coupling crop models with root models. Mostly interface
+      work between codes written in C, C++, Fortran and Python, plus containers so
+      other people could actually run them.
     </p>
     <p>
-      Now a third thread runs alongside. I design scientific benchmarks that test
-      whether frontier AI systems reason or merely recall — which turns out to need
-      the same habits as the rest of it. You cannot fully see inside the system. You
-      can only choose your probes carefully, understand how the outputs arise, and
-      be honest about what they actually support.
+      Now I'm a research associate at IISc, working on soil moisture retrieval from
+      Sentinel-1, fusing it with SMAP for longer records, and evaluating watershed
+      interventions in Karnataka. Alongside that I do scientific AI evaluation —
+      designing benchmarks that test whether frontier models actually work through a
+      physics or maths problem or just pattern-match their way to an answer. I also
+      co-founded <a href="https://cctech.in" target="_blank" rel="noopener">Chakradhari
+      Computational Technologies</a>, a small scientific R&amp;D company.
     </p>
     <p>
-      Outside that: I write. Two books in 2026, one about traffic and one about three
-      days at a cremation ghat. I make <a href="https://www.youtube.com/@ComputeStories" target="_blank" rel="noopener">Compute Stories</a>
-      on YouTube, sit on the Young Hydrologic Society blog committee, photograph the
-      cities I have lived in, and ride a modest motorcycle through Bengaluru traffic
-      with more anxiety than the machine deserves.
+      The common thread, if there is one, is computational modelling and inference
+      from measurements. The subject matter has changed a lot; that part hasn't.
+    </p>
+    <p>
+      Outside research I write — two books in 2026 — make videos on
+      <a href="https://www.youtube.com/@ComputeStories" target="_blank" rel="noopener">Compute Stories</a>,
+      sit on the Young Hydrologic Society blog committee, take photographs, and ride
+      a motorcycle.
     </p>
   </div>
 

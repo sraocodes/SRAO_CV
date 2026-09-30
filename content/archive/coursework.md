@@ -5,9 +5,6 @@ layout: "coursework"
 description: "Four degrees, three countries, fourteen years of coursework — the courses that stuck, and the complete record behind them."
 ---
 
-Seventy-nine graded courses, four degrees, three countries, 2006 to 2020. I have
-forgotten most of them. A handful rearranged how I think, and those are worth
-naming out loud.
-
-The full transcript is underneath. It's there because a record ought to be
-complete, not because anyone needs to read it.
+Seventy-nine graded courses across four degrees, 2006 to 2020. I've forgotten most
+of them, but a few were genuinely useful and I've listed those first. The full
+transcript is below if anyone wants it.

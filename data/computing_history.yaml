@@ -11,9 +11,8 @@
 subhead: "Still compiles. No longer the recommended path."
 
 intro: >-
-  Twenty years of learning to compute, versioned. Each release solved the problem
-  the one before it couldn't, and each was made obsolete by the one after — which
-  is the normal fate of good tooling, and no reason to get sentimental about it.
+  Twenty years of learning to compute, written out as a version history. Each stage
+  solved something the previous one couldn't, and each has since been superseded.
 
 versions:
   - v: "v1.0"
@@ -77,5 +76,5 @@ artifacts:
     stat: "FNRS · NSF · DFG"
 
 outro: >-
-  None of it is a selling point in 2026. All of it is why the current work looks
-  the way it does.
+  None of this is especially relevant now, but it is how I learned to do the
+  current work.

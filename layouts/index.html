@@ -12,17 +12,14 @@
       <p class="hero__role">Computational Scientist · Scientific R&amp;D<br>Modelling, Sensing &amp; Scientific AI</p>
       <div class="hero__text">
         <p>
-          Most of what I study can't be looked at directly. Roots under a field.
-          Water held in soil, seen from orbit. A plasma that destroys any probe you
-          put in it. A crop that hasn't grown yet. For {{ partial "years.html" (dict "Site" .Site "kind" "research") }} years the
-          approach has been the same one: build a model of the physics, work out
-          what a sensor would actually record, and reason back from there to what
-          is really going on.
+          I build computational models of physical systems and work out what can be
+          inferred about them from measurements. Over {{ partial "years.html" (dict "Site" .Site "kind" "research") }} years that has
+          meant plasma physics, optics, geoelectrical sensing of plant roots, crop
+          modelling, and now satellite remote sensing of soil moisture.
         </p>
         <p>
-          Lately I've been pointing the same habit at AI systems. You can't see
-          inside them either — so you design the probes carefully and pay attention
-          to what comes back.
+          These days I also design benchmarks that test how well frontier AI systems
+          reason about physics and mathematics. Both are current work.
         </p>
       </div>
       <div class="btn-row">
@@ -62,17 +59,20 @@
   <div class="wrap">
     <p class="eyebrow">The through-line</p>
     <h2 class="throughline__claim">
-      One method, applied to systems that kept getting larger.
+      Where the work has gone
     </h2>
     <p class="lede throughline__lede">
-      {{ $roles.trajectory.thread }} — plasma, then light, then roots, then crops,
-      then catchments, and now the models themselves.
+      Different subjects, mostly the same job: model the system, understand how the
+      measurements come about, and infer what you can from them.
     </p>
     <ol class="timeline">
       {{- range $roles.trajectory.stages }}
         {{ partial "components/timeline-item.html" (dict "stage" .) }}
       {{- end }}
     </ol>
+    {{- with $roles.trajectory.now_note }}
+      <p class="throughline__now">{{ . }}</p>
+    {{- end }}
   </div>
 </section>
 
