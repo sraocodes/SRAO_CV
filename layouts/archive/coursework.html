@@ -1,0 +1,121 @@
+{{ define "main" }}
+{{- $c := .Site.Data.coursework -}}
+<article class="page-head register-personal">
+  <div class="wrap">
+    <p class="eyebrow"><a href="{{ "/archive/" | relURL }}">Archive</a></p>
+    <h1>{{ .Title }}</h1>
+    <div class="lede">{{ .Content }}</div>
+  </div>
+</article>
+
+<div class="wrap register-personal">
+  {{/* The favourite flags were set years ago in the original CV data. They are the
+       reason this page leads with something human rather than a transcript dump. */}}
+  <section>
+    <h2 class="pub-group__head">Courses I still think about</h2>
+    <div class="fav-grid">
+      {{- range $c.coursework }}
+        {{- $deg := .degree }}
+        {{- range where (.courses | default slice) "favorite" true }}
+          <article class="fav">
+            {{- with .code }}<code class="fav__code">{{ . }}</code>{{ end }}
+            <h3>{{ .title }}</h3>
+            <p class="fav__deg">{{ $deg }}</p>
+          </article>
+        {{- end }}
+        {{- range (.semesters | default slice) }}
+          {{- range where .courses "favorite" true }}
+            <article class="fav">
+              <h3>{{ .title }}</h3>
+              <p class="fav__deg">{{ $deg }}</p>
+            </article>
+          {{- end }}
+        {{- end }}
+      {{- end }}
+    </div>
+  </section>
+
+  <section>
+    <h2 class="pub-group__head">The complete record</h2>
+    {{- range $c.coursework }}
+      {{- $has := or (and .courses (gt (len .courses) 0)) .semesters }}
+      <details class="transcript">
+        <summary>
+          <b>{{ .degree }}</b>
+          <span class="muted">{{ .school }}{{ with .gpa }} · {{ . }}{{ end }}</span>
+        </summary>
+        <div class="transcript__body">
+          {{- with .note }}<p class="muted transcript__note">{{ . }}</p>{{ end }}
+          {{- if not $has }}
+            <p class="muted">No formal coursework.</p>
+          {{- end }}
+
+          {{- with .courses }}
+            <table class="transcript__table">
+              <thead><tr><th>Code</th><th>Course</th><th>Cr.</th><th>Grade</th></tr></thead>
+              <tbody>
+                {{- range . }}
+                  <tr{{ if .favorite }} class="is-fav"{{ end }}>
+                    <td><code>{{ .code }}</code></td>
+                    <td>{{ .title }}{{ if .favorite }} <span class="fav-dot" title="A favourite" aria-label="A favourite">◆</span>{{ end }}</td>
+                    <td>{{ .credits }}</td>
+                    <td>{{ .grade }}</td>
+                  </tr>
+                {{- end }}
+              </tbody>
+            </table>
+          {{- end }}
+
+          {{- range .semesters }}
+            <h4 class="transcript__sem">{{ .name }}</h4>
+            <table class="transcript__table">
+              <thead><tr><th>Course</th><th>Marks</th></tr></thead>
+              <tbody>
+                {{- range .courses }}
+                  <tr{{ if .favorite }} class="is-fav"{{ end }}>
+                    <td>{{ .title }}{{ if .favorite }} <span class="fav-dot" title="A favourite" aria-label="A favourite">◆</span>{{ end }}</td>
+                    <td class="num">{{ .marks }}<span class="muted">/{{ .max_marks }}</span></td>
+                  </tr>
+                {{- end }}
+              </tbody>
+            </table>
+          {{- end }}
+        </div>
+      </details>
+    {{- end }}
+  </section>
+
+  <section>
+    <h2 class="pub-group__head">Technical inventory, c. 2024</h2>
+    <p class="muted prose">
+      The skills list from the old CV, kept as a record of how the work was described
+      at the time. It is here rather than on the front page because a list of tools is
+      no longer a useful description of what anyone does.
+    </p>
+    <div class="card-grid card-grid--2">
+      {{- range $c.expertise }}
+        <article class="card">
+          <h3>{{ .category }}</h3>
+          <p class="muted">{{ delimit .skills ", " }}</p>
+        </article>
+      {{- end }}
+    </div>
+  </section>
+
+  <section>
+    <h2 class="pub-group__head">Recognitions of the period</h2>
+    <div class="card-grid card-grid--2">
+      {{- range $c.achievements }}
+        <article class="card">
+          <h3>{{ .title }}</h3>
+          <ul class="muted">{{ range .details }}<li>{{ . }}</li>{{ end }}</ul>
+        </article>
+      {{- end }}
+    </div>
+    <p class="muted" style="margin-top:var(--s-4)">
+      See also <a href="{{ "/archive/computing-history/" | relURL }}">Deprecated</a>,
+      where these sit in context.
+    </p>
+  </section>
+</div>
+{{ end }}

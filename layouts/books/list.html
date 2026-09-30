@@ -1,0 +1,24 @@
+{{ define "main" }}
+{{- $books := .Site.Data.books.books -}}
+<article class="page-head register-personal">
+  <div class="wrap">
+    <p class="eyebrow">Books</p>
+    <h1>{{ .Title }}</h1>
+    <div class="lede">{{ .Content }}</div>
+  </div>
+</article>
+
+<div class="wrap register-personal">
+  {{- range $kind, $label := (dict "technical" "Technical" "personal" "Personal") }}
+    {{- $set := where $books "kind" $kind }}
+    {{- if $set }}
+      <section class="book-section">
+        <h2 class="pub-group__head">{{ $label }}</h2>
+        <div class="book-grid">
+          {{- range $set }}{{ partial "components/book.html" (dict "book" .) }}{{ end }}
+        </div>
+      </section>
+    {{- end }}
+  {{- end }}
+</div>
+{{ end }}

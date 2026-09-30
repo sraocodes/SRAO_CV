@@ -1,0 +1,69 @@
+{{ define "main" }}
+{{- $p := .Site.Data.publications -}}
+{{- $arts := sort $p.journal_articles "year" "desc" -}}
+<article class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Publications</p>
+    <h1>{{ .Title }}</h1>
+    <p class="lede">
+      {{ len $arts }} peer-reviewed journal articles, {{ len $p.book_chapters }} book chapter{{ if ne (len $p.book_chapters) 1 }}s{{ end }}
+      and {{ len $p.conference_presentations }} selected conference presentations, {{ (index (last 1 $arts) 0).year }}&ndash;{{ (index (first 1 $arts) 0).year }}.
+      Author order is exact; <b>bold</b> marks my name.
+    </p>
+  </div>
+</article>
+
+<div class="wrap" data-filterable>
+  <div class="filters">
+    <button class="filter" data-filter="all" aria-pressed="true">All</button>
+    {{- range $p.themes }}
+      <button class="filter" data-filter="{{ .id }}" aria-pressed="false">{{ .label }}</button>
+    {{- end }}
+  </div>
+
+  <section class="pub-group" data-group>
+    <h2 class="pub-group__head">Peer-reviewed journal articles</h2>
+    <ol class="pub-list">
+      {{- range $arts }}
+        {{ partial "components/publication.html" (dict "pub" . "me" $p.me "kind" "journal" "numbered" true) }}
+      {{- end }}
+    </ol>
+  </section>
+
+  <section class="pub-group" data-group>
+    <h2 class="pub-group__head">Peer-reviewed book chapters</h2>
+    <ol class="pub-list">
+      {{- range $p.book_chapters }}
+        {{ partial "components/publication.html" (dict "pub" . "me" $p.me "kind" "chapter" "numbered" true) }}
+      {{- end }}
+    </ol>
+  </section>
+
+  <section class="pub-group" data-group>
+    <h2 class="pub-group__head">Selected conference presentations</h2>
+    <ol class="pub-list pub-list--plain">
+      {{- range sort $p.conference_presentations "year" "desc" }}
+        {{ partial "components/publication.html" (dict "pub" . "me" $p.me "kind" "conference" "numbered" false) }}
+      {{- end }}
+    </ol>
+  </section>
+
+  {{- if $p.show_forthcoming }}
+  <section class="pub-group" data-group>
+    <h2 class="pub-group__head">Forthcoming</h2>
+    <ol class="pub-list pub-list--plain">
+      {{- range $p.forthcoming }}
+        {{ partial "components/publication.html" (dict "pub" . "me" $p.me "kind" "journal" "numbered" false) }}
+      {{- end }}
+    </ol>
+  </section>
+  {{- end }}
+
+  <p class="empty-state" data-empty data-hidden="true">No publications match that filter.</p>
+
+  <p class="muted pub-foot">
+    Also on <a href="https://orcid.org/{{ .Site.Params.orcid }}" target="_blank" rel="noopener">ORCID</a>
+    and <a href="https://scholar.google.co.uk/citations?user=9yc3jiIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>.
+  </p>
+</div>
+{{ end }}

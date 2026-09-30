@@ -1,0 +1,86 @@
+{{ define "main" }}
+{{- $r := .Site.Data.roles -}}
+<article class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Curriculum Vitae</p>
+    <h1>Sathyanarayan Rao, PhD</h1>
+    <p class="lede">
+      Computational scientist with nineteen years of research across plasma physics,
+      optoelectronics, geoelectrical sensing, agricultural digital twins and microwave
+      remote sensing. Currently at IISc Bengaluru, co-founder of a scientific R&amp;D
+      company, and working on evaluations that test where frontier AI systems reason
+      soundly. Research career across India, Europe and the United States.
+    </p>
+    <div class="btn-row">
+      <a class="btn btn--primary" href="{{ .Site.Params.cv | relURL }}">Download CV (PDF)</a>
+      <a class="btn" href="https://orcid.org/{{ .Site.Params.orcid }}" target="_blank" rel="noopener">ORCID</a>
+      <a class="btn" href="https://scholar.google.co.uk/citations?user=9yc3jiIAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar</a>
+    </div>
+  </div>
+</article>
+
+<div class="wrap cv-grid">
+  <section>
+    <h2 class="pub-group__head">Current</h2>
+    <ul class="cv-roles">
+      {{- range $r.current }}
+        <li>
+          <span class="cv-roles__when">{{ dateFormat "Jan 2006" (printf "%s-01" .start) }} &rarr;</span>
+          <div><b>{{ .title }}</b><br><span class="muted">{{ .org }}</span></div>
+        </li>
+      {{- end }}
+    </ul>
+
+    <h2 class="pub-group__head">Previously</h2>
+    <ul class="cv-roles">
+      {{- range $r.past }}
+        <li>
+          <span class="cv-roles__when">{{ .start }}&ndash;{{ .end }}</span>
+          <div><b>{{ .title }}</b><br><span class="muted">{{ .org }}</span></div>
+        </li>
+      {{- end }}
+    </ul>
+  </section>
+
+  <section>
+    <h2 class="pub-group__head">Education</h2>
+    <ul class="cv-facts">
+      {{- range $r.education }}
+        <li>
+          <span class="cv-facts__year">{{ with .span }}{{ . }}{{ else }}{{ .year }}{{ end }}</span>
+          <div>
+            <b>{{ .degree }}</b><br><span class="muted">{{ .school }}</span>
+            {{- with .thesis }}<span class="cv-thesis">{{ . }}</span>{{ end }}
+            {{- with .funding }}<span class="cv-thesis">{{ . }}</span>{{ end }}
+          </div>
+        </li>
+      {{- end }}
+    </ul>
+
+    <h2 class="pub-group__head">Service</h2>
+    <ul class="cv-facts cv-facts--flush">
+      {{- range $r.service.roles }}
+        <li><div><b>{{ .label }}</b><br><span class="muted">{{ .detail }}</span></div></li>
+      {{- end }}
+      <li><div><b>Peer review</b><br><span class="muted">{{ delimit $r.service.peer_review ", " }}</span></div></li>
+    </ul>
+
+    <h2 class="pub-group__head">Invited talks</h2>
+    <ul class="cv-facts">
+      {{- range $r.service.talks }}
+        <li><span class="cv-facts__year">{{ dateFormat "2006" (printf "%s-01" .date) }}</span>
+        <div><b>{{ .title }}</b><br><span class="muted">{{ .venue }}</span></div></li>
+      {{- end }}
+    </ul>
+  </section>
+</div>
+
+<div class="wrap">
+  <p class="muted cv-foot">
+    The complete record is in the <a href="{{ .Site.Params.cv | relURL }}">PDF</a>.
+    Theses: <a href="{{ "files/my_thesis.pdf" | relURL }}">PhD</a> ·
+    <a href="https://louis.uah.edu/uah-theses/579/" target="_blank" rel="noopener">MS</a>.
+    Earlier versions live in the <a href="{{ "/archive/previous-cvs/" | relURL }}">archive</a>.
+  </p>
+</div>
+{{ end }}

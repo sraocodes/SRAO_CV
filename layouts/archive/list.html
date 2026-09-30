@@ -1,0 +1,19 @@
+{{ define "main" }}
+<article class="page-head register-personal">
+  <div class="wrap">
+    <p class="eyebrow">Archive</p>
+    <h1>{{ .Title }}</h1>
+    <div class="lede">{{ .Content }}</div>
+  </div>
+</article>
+<div class="wrap register-personal">
+  <div class="card-grid card-grid--2">
+    {{- range sort .Pages "Params.weight" }}
+      <article class="card card--link">
+        <h3 class="card__title"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ .Description }}</p>
+      </article>
+    {{- end }}
+  </div>
+</div>
+{{ end }}

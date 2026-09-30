@@ -1,0 +1,95 @@
+{{ define "main" }}
+{{- $r := .Site.Data.roles -}}
+{{- $prof := .Site.Data.profiles.profiles -}}
+<article class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">About</p>
+    <h1>Sathyanarayan Rao</h1>
+  </div>
+</article>
+
+<div class="wrap about-grid">
+  <div class="about-body prose">
+    <p class="lede">
+      I am a computational scientist in Bengaluru. For nineteen years I have been
+      building models of systems that resist direct measurement, and working out
+      what you can honestly infer from the traces they leave in a sensor.
+    </p>
+    <p>
+      It started with plasma. At Huntsville I extended a particle-in-cell code from
+      two dimensions to three and learned to wait overnight for a cluster to tell me
+      whether I had got a boundary condition right. Then light — laser-induced
+      photodegradation in an Alabama cleanroom, then Maxwell–Bloch solvers in
+      Paderborn for light moving through excitonic media.
+    </p>
+    <p>
+      The PhD in Belgium was the turn that mattered. The question was whether you
+      could see a plant's roots without digging them up, by reading the electrical
+      field of the soil around them. Answering it meant coupling root architecture,
+      water uptake and geoelectrical forward models into a single simulation, then
+      taking the whole apparatus into a field of grasses under drought and seeing
+      whether it survived contact with reality. Mostly it did.
+    </p>
+    <p>
+      At Jülich the systems got bigger and the problem changed shape: less about
+      writing a model than about making independently developed scientific codes —
+      C, C++, Fortran, Python — exchange state without lying to each other. At IISc
+      the scale moved again, to catchments and satellites and decade-long records of
+      how soil in semi-arid Karnataka holds water.
+    </p>
+    <p>
+      Now a third thread runs alongside. I design scientific benchmarks that test
+      whether frontier AI systems reason or merely recall — which is, structurally,
+      the same inverse problem I have been solving all along. You cannot open the
+      system. You can only choose your probes carefully and be honest about what
+      the answer supports.
+    </p>
+    <p>
+      Outside that: I write. Two books in 2026, one about traffic and one about three
+      days at a cremation ghat. I make <a href="https://www.youtube.com/@ComputeStories" target="_blank" rel="noopener">Compute Stories</a>
+      on YouTube, sit on the Young Hydrologic Society blog committee, photograph the
+      cities I have lived in, and ride a modest motorcycle through Bengaluru traffic
+      with more anxiety than the machine deserves.
+    </p>
+  </div>
+
+  <aside class="about-side">
+    <section>
+      <h2 class="pub-group__head">Now</h2>
+      <ul class="side-list">
+        {{- range $r.current }}
+          <li><b>{{ .title }}</b><br><span class="muted">{{ .org }}</span></li>
+        {{- end }}
+      </ul>
+    </section>
+
+    <section>
+      <h2 class="pub-group__head">Education</h2>
+      <ul class="side-list">
+        {{- range $r.education }}
+          <li><b>{{ .degree }}</b><br><span class="muted">{{ .school }}, {{ .year }}</span></li>
+        {{- end }}
+      </ul>
+    </section>
+
+    <section class="register-personal">
+      <h2 class="pub-group__head">Elsewhere</h2>
+      <div class="profile-chips">
+        {{- range $prof }}{{ partial "components/profile-chip.html" (dict "p" .) }}{{ end }}
+      </div>
+      <p class="muted side-note">
+        {{ partial "pokeball.html" . }} Still collecting them.
+      </p>
+    </section>
+
+    <section class="register-personal">
+      <h2 class="pub-group__head">Deeper</h2>
+      <ul class="side-list">
+        <li><a href="{{ "/archive/" | relURL }}">The archive</a><br><span class="muted">Coursework, early computing, photography</span></li>
+        <li><a href="{{ "/archive/photography/" | relURL }}">Photography</a></li>
+        <li><a href="{{ "/archive/computing-history/" | relURL }}">Deprecated</a></li>
+      </ul>
+    </section>
+  </aside>
+</div>
+{{ end }}

@@ -1,0 +1,65 @@
+{{ define "main" }}
+{{- $themes := .Site.Data.themes.themes -}}
+{{- $all := where .Site.RegularPages "Section" "research" -}}
+<article class="page-head">
+  <div class="wrap">
+    <p class="eyebrow">Research</p>
+    <h1>{{ .Title }}</h1>
+    <div class="lede">{{ .Content }}</div>
+  </div>
+</article>
+
+<div class="wrap" data-viewswitch>
+  <div class="viewswitch">
+    <button class="filter" data-view-btn="themes" aria-pressed="true">By question</button>
+    <button class="filter" data-view-btn="time" aria-pressed="false">By time</button>
+  </div>
+
+  {{/* --- By question --- */}}
+  <div data-view-panel="themes" data-hidden="false">
+    {{- range $themes }}
+      {{- $t := . }}
+      {{- $in := sort (where $all "Params.theme" $t.id) "Params.weight" }}
+      <section class="theme-block" id="{{ $t.id }}">
+        <header class="theme-block__head">
+          <h2>{{ $t.question }}</h2>
+          <p class="theme-block__label">{{ $t.label }}</p>
+          <p class="theme-block__blurb">{{ $t.blurb }}</p>
+        </header>
+        <div class="proj-list">
+          {{- range $in }}
+            <article class="proj">
+              <div class="proj__when">{{ .Params.period }}</div>
+              <div class="proj__body">
+                <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+                <p class="proj__meta">
+                  {{ .Params.institution }}{{ with .Params.role }} · {{ . }}{{ end }}
+                  {{- if .Params.software }} · <span class="tag tag--soft">Research software</span>{{ end }}
+                </p>
+                <p class="proj__summary">{{ .Params.summary }}</p>
+              </div>
+            </article>
+          {{- end }}
+        </div>
+      </section>
+    {{- end }}
+  </div>
+
+  {{/* --- By time --- */}}
+  <div data-view-panel="time" data-hidden="true">
+    <ol class="timeline timeline--dense">
+      {{- range sort $all "Date" "desc" }}
+        <li class="tl-item">
+          <span class="tl-item__dot" aria-hidden="true"></span>
+          <div class="tl-item__years">{{ .Params.period }}</div>
+          <div class="tl-item__body">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+            <p class="tl-item__where">{{ .Params.institution }}</p>
+            <p class="tl-item__note">{{ .Params.summary }}</p>
+          </div>
+        </li>
+      {{- end }}
+    </ol>
+  </div>
+</div>
+{{ end }}

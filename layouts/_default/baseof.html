@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3958596344589303"
-     crossorigin="anonymous"></script>
-{{ block "head" . }}{{ end }}
+  {{ partial "head.html" . }}
 </head>
-
 <body>
-    {{ block "header" . }} {{ end }}
-    {{ block "main" . }} {{ end }}
-    {{ block "footer" . }} {{ end }}
+  <a class="skip-link" href="#main">Skip to content</a>
+  {{ partial "header.html" . }}
+  <main id="main">
+    {{ block "main" . }}{{ end }}
+  </main>
+  {{ partial "footer.html" . }}
+  {{ $js := resources.Get "js/main.js" | js.Build (dict "minify" hugo.IsProduction) | fingerprint }}
+  <script defer src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
 </body>
-
 </html>

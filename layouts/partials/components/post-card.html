@@ -1,0 +1,23 @@
+{{/* Writing listing row. Context: dict "page" <page> "compact" <bool> */}}
+{{- $p := .page -}}
+{{- $compact := .compact | default false -}}
+{{- $series := $p.Params.series -}}
+<li class="post-item{{ if $compact }} post-item--compact{{ end }}" data-item
+    data-search="{{ $p.Title }} {{ $p.Summary | plainify }} {{ delimit ($p.Params.tags | default slice) " " }}"
+    data-hidden="false">
+  <div class="post-item__date">
+    <time datetime="{{ $p.Date.Format "2006-01-02" }}">{{ $p.Date.Format "2 Jan 2006" }}</time>
+    {{- with $p.Params.revised }}<span class="post-item__revised" title="Revised after publication">rev. {{ . }}</span>{{ end }}
+  </div>
+  <div>
+    {{- with $series }}<p class="series-mark"><span aria-hidden="true">◇</span> {{ . }}</p>{{ end }}
+    <h3 class="post-item__title"><a href="{{ $p.RelPermalink }}">{{ $p.Title }}</a></h3>
+    {{- if not $compact }}
+      <p class="post-item__excerpt">{{ $p.Summary | plainify | truncate 190 }}</p>
+    {{- end }}
+    <div class="post-item__meta">
+      <span>{{ $p.ReadingTime }} min</span>
+      {{- with $p.Params.tags }}<span>{{ delimit (first 3 .) " · " }}</span>{{ end }}
+    </div>
+  </div>
+</li>

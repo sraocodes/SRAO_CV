@@ -1,0 +1,45 @@
+{{ define "main" }}
+{{- $theme := index (where .Site.Data.themes.themes "id" .Params.theme) 0 -}}
+<article class="article">
+  <div class="wrap">
+    <header class="article__header">
+      <p class="eyebrow"><a href="{{ "/research/" | relURL }}#{{ .Params.theme }}">{{ with $theme }}{{ .label }}{{ end }}</a></p>
+      <h1>{{ .Title }}</h1>
+      <p class="lede">{{ .Params.summary }}</p>
+      <dl class="factbar">
+        <div><dt>Period</dt><dd>{{ .Params.period }}</dd></div>
+        <div><dt>Where</dt><dd>{{ .Params.institution }}</dd></div>
+        {{- with .Params.role }}<div><dt>Role</dt><dd>{{ . }}</dd></div>{{ end }}
+        {{- with .Params.methods }}<div><dt>Methods</dt><dd>{{ delimit . ", " }}</dd></div>{{ end }}
+      </dl>
+    </header>
+
+    {{- with .Params.figure }}
+      <figure class="article__figure">
+        <img src="{{ . | relURL }}" alt="{{ $.Params.figure_alt }}" loading="lazy" decoding="async">
+        {{- with $.Params.figure_alt }}<figcaption>{{ . }}</figcaption>{{ end }}
+      </figure>
+    {{- end }}
+
+    <div class="article__body">{{ .Content }}</div>
+
+    {{- with .Params.videos }}
+      <section class="article__videos">
+        <h2>Video</h2>
+        <div class="video-list">
+          {{- range . }}
+            <a class="video-link" href="https://www.youtube.com/watch?v={{ .id }}" target="_blank" rel="noopener">
+              <span class="video-link__play" aria-hidden="true">&#9654;</span>{{ .title }}
+            </a>
+          {{- end }}
+        </div>
+      </section>
+    {{- end }}
+
+    <nav class="post-nav">
+      {{- with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>Previous</span>{{ .Title }}</a>{{ end }}
+      {{- with .NextInSection }}<a class="post-nav__next" href="{{ .RelPermalink }}"><span>Next</span>{{ .Title }}</a>{{ end }}
+    </nav>
+  </div>
+</article>
+{{ end }}

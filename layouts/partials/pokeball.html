@@ -1,0 +1,12 @@
+{{/* The Pokéball, kept as a small well-drawn mark rather than an emoji row.
+     Decorative only — the adjacent heading carries the meaning. */}}
+<svg class="pokeball" viewBox="0 0 100 100" aria-hidden="true" focusable="false">
+  <clipPath id="pb-clip"><circle cx="50" cy="50" r="46"/></clipPath>
+  <g clip-path="url(#pb-clip)">
+    <rect class="pokeball__top" x="0" y="0" width="100" height="50"/>
+    <rect class="pokeball__bottom" x="0" y="50" width="100" height="50"/>
+    <line class="pokeball__band" x1="0" y1="50" x2="100" y2="50"/>
+  </g>
+  <circle class="pokeball__ring" cx="50" cy="50" r="46"/>
+  <circle class="pokeball__center" cx="50" cy="50" r="13"/>
+</svg>

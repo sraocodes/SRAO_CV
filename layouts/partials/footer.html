@@ -1,12 +1,37 @@
-{{ define "footer" }}
-<footer class="bg-dark text-white text-center py-3">
-    <div class="container">
-        <p class="text-center">
-            &copy; {{ now.Year }} Sathyanarayan Rao. All rights reserved. Powered by coffee ☕.
-            <br>Website styled with <a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">Bootstrap</a>.
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="site-footer__grid">
+      <div>
+        <h3>Sathyanarayan Rao, PhD</h3>
+        <p class="muted" style="max-width:34ch">
+          Computational scientist working on modelling, sensing and scientific AI.
+          Bengaluru, India.
         </p>
+        <p><a href="mailto:{{ .Site.Params.email }}">{{ .Site.Params.email }}</a></p>
+      </div>
+
+      <div>
+        <h3>Site</h3>
+        <ul class="footer-links">
+          {{- range .Site.Data.nav.primary }}
+            <li><a href="{{ .url | relURL }}">{{ .name }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
+
+      <div>
+        <h3>Elsewhere</h3>
+        <ul class="footer-links">
+          {{- range where .Site.Data.profiles.profiles "tier" "in" (slice "scholarly" "creative") }}
+            <li><a href="{{ .url }}" target="_blank" rel="noopener me">{{ .label }}</a></li>
+          {{- end }}
+        </ul>
+      </div>
     </div>
+
+    <div class="site-footer__base">
+      <p>&copy; {{ now.Year }} Sathyanarayan Rao. ORCID <a href="https://orcid.org/{{ .Site.Params.orcid }}" target="_blank" rel="noopener">{{ .Site.Params.orcid }}</a>.</p>
+      <p>Built with Hugo. Still powered by coffee &#9749;</p>
+    </div>
+  </div>
 </footer>
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-{{ end }}

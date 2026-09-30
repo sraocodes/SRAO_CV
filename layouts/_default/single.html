@@ -1,45 +1,49 @@
 {{ define "main" }}
-<div class="container text-center mt-5">
-    {{ with .Params.sections }}
-        {{ range . }}
-            <div class="section {{ .title | urlize }}">
-                <h2>{{ .title }}</h2>
-                {{ range .items }}
-                    <div class="card mb-3">
-                        <div class="row g-0">
-                            <div class="col-md-4 text-center">
-                                {{ $linkURL := .link }}
-                                {{ if not (strings.HasPrefix $linkURL "http") }}
-                                    {{ $linkURL = printf "%s%s" $.Site.BaseURL $linkURL }}
-                                {{ end }}
-                                <a href="{{ $linkURL }}" target="_blank">
-                                    {{ $imageURL := .image }}
-                                    {{ if not (strings.HasPrefix $imageURL "http") }}
-                                        {{ $imageURL = printf "%s%s" $.Site.BaseURL $imageURL }}
-                                    {{ end }}
-                                    <img src="{{ $imageURL }}" class="img-fluid my-3" alt="{{ .main_text }}" style="width: {{ .imageWidth }}; height: {{ .imageHeight }};">
-                                    <h5 class="card-title">
-                                    <a href="{{ $linkURL }}" class="emblem-link" target="_blank">{{ .emblem_text }}</a>
-                                </h5>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">{{ .main_text }}</h5>
-                                    <p class="card-text">{{ .sub_text }}</p>
-                                    {{ with .optional }}
-                                        <ul class="list-unstyled">
-                                        {{ range . }}
-                                            <li>{{ . | safeHTML }}</li>
-                                        {{ end }}
-                                        </ul>
-                                    {{ end }}
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {{ end }}
-            </div>
-        {{ end }}
-    {{ end }}
-</div>
+{{- $personal := in (slice "essays") .Section -}}
+<article class="article{{ if $personal }} register-personal{{ end }}">
+  <div class="wrap wrap--narrow">
+    <header class="article__header">
+      <p class="eyebrow">
+        {{- if $personal }}<a href="{{ "/writing/essays/" | relURL }}">Essays</a>
+        {{- else if eq .Section "notes" }}<a href="{{ "/writing/notes/" | relURL }}">Notes</a>
+        {{- else }}<a href="{{ "/" | relURL }}">{{ .Site.Params.name }}</a>{{ end }}
+      </p>
+      <h1>{{ .Title }}</h1>
+      {{- with .Params.series }}<p class="series-mark"><span aria-hidden="true">◇</span> Part of <b>{{ . }}</b></p>{{ end }}
+      <div class="article__meta">
+        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2 January 2006" }}</time>
+        <span>{{ .ReadingTime }} min read</span>
+        {{- with .Params.revised }}<span class="revised">Revised {{ . }}</span>{{ end }}
+        {{- with .Params.tags }}<span>{{ delimit . " · " }}</span>{{ end }}
+      </div>
+    </header>
+
+    {{- if and (gt .WordCount 1200) (gt (len .TableOfContents) 80) }}
+      <details class="toc"><summary>Contents</summary>{{ .TableOfContents }}</details>
+    {{- end }}
+
+    <div class="article__body">{{ .Content }}</div>
+
+    {{/* Related: same series first, then the rest of the stream. */}}
+    {{- $rel := slice }}
+    {{- with .Params.series }}
+      {{- $rel = where (where $.Site.RegularPages "Section" $.Section) "Params.series" . }}
+    {{- end }}
+    {{- if lt (len $rel) 2 }}{{ $rel = where $.Site.RegularPages "Section" $.Section }}{{ end }}
+    {{- $rel = first 3 (where $rel "Permalink" "!=" .Permalink) }}
+    {{- if $rel }}
+      <section class="related">
+        <h2 class="pub-group__head">{{ with .Params.series }}More from this series{{ else }}More writing{{ end }}</h2>
+        <ul class="post-list post-list--compact">
+          {{- range $rel }}{{ partial "components/post-card.html" (dict "page" . "compact" true) }}{{ end }}
+        </ul>
+      </section>
+    {{- end }}
+
+    <nav class="post-nav">
+      {{- with .PrevInSection }}<a href="{{ .RelPermalink }}"><span>Previous</span>{{ .Title }}</a>{{ end }}
+      {{- with .NextInSection }}<a class="post-nav__next" href="{{ .RelPermalink }}"><span>Next</span>{{ .Title }}</a>{{ end }}
+    </nav>
+  </div>
+</article>
 {{ end }}

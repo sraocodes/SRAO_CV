@@ -1,0 +1,46 @@
+{{ define "main" }}
+{{- $h := .Site.Data.computing_history -}}
+<article class="page-head register-personal">
+  <div class="wrap">
+    <p class="eyebrow"><a href="{{ "/archive/" | relURL }}">Archive</a></p>
+    <h1>{{ .Title }}</h1>
+    <p class="lede">{{ $h.subhead }}</p>
+    <p class="prose">{{ $h.intro }}</p>
+  </div>
+</article>
+
+<div class="wrap register-personal">
+  <ol class="changelog changelog--full">
+    {{- range $h.versions }}
+      <li class="rel">
+        <code class="rel__v">{{ .v }}</code>
+        <span class="rel__year">{{ .year }}</span>
+        <div class="rel__body">
+          <h3>{{ .title }}</h3>
+          <p>{{ .body }}</p>
+          {{- with .stack }}<p class="rel__stack">{{ range . }}<code>{{ . }}</code>{{ end }}</p>{{ end }}
+        </div>
+      </li>
+    {{- end }}
+  </ol>
+
+  <h2 class="pub-group__head">Artefacts</h2>
+  <div class="card-grid card-grid--2">
+    {{- range $h.artifacts }}
+      <article class="relic">
+        <div class="relic__top">
+          {{- if .icon }}<img class="relic__icon" src="{{ .icon | relURL }}" alt="" width="26" height="26" loading="lazy">{{ else }}<span></span>{{ end }}
+          <span class="relic__era">{{ .era }}</span>
+        </div>
+        <p class="relic__label">{{ .label }}</p>
+        <h3 class="relic__headline">
+          {{- with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .headline }}{{ with .url }}</a>{{ end -}}
+        </h3>
+        <p class="relic__detail">{{ .detail }}</p>
+        <p class="relic__stat">{{ .stat }}</p>
+      </article>
+    {{- end }}
+  </div>
+  <p class="vintage__outro">{{ $h.outro }}</p>
+</div>
+{{ end }}
