@@ -11,15 +11,17 @@
       <h1 class="hero__name">Sathyanarayan Rao<span class="cred">, PhD</span></h1>
       <p class="hero__role">Computational Scientist · Scientific R&amp;D<br>Modelling, Sensing &amp; Scientific AI</p>
       <div class="hero__text">
+        <p class="hero__claim">I make hard scientific problems computable.</p>
         <p>
-          I build computational models of physical systems and work out what can be
-          inferred about them from measurements. Over {{ partial "years.html" (dict "Site" .Site "kind" "research") }} years that has
-          meant plasma physics, optics, geoelectrical sensing of plant roots, crop
-          modelling, and now satellite remote sensing of soil moisture.
+          I've worked on plasma physics, optoelectronics, geoelectrical sensing, crop
+          models, remote sensing and hydrology. The problems changed; computation
+          stayed the common element — numerical modelling, differential equations,
+          scientific software and data.
         </p>
         <p>
-          These days I also design benchmarks that test how well frontier AI systems
-          reason about physics and mathematics. Both are current work.
+          More recently AI has become another part of that toolbox, both for
+          scientific computing and for evaluating frontier AI systems on hard
+          scientific problems.
         </p>
       </div>
       <div class="btn-row">
@@ -54,16 +56,16 @@
   </div>
 </section>
 
-{{/* ---------- 3. The through-line ---------- */}}
+{{/* ---------- 3. What I've worked on ---------- */}}
 <section class="section throughline">
   <div class="wrap">
-    <p class="eyebrow">The through-line</p>
+    <p class="eyebrow">What I've worked on</p>
     <h2 class="throughline__claim">
-      Where the work has gone
+      Different problems, same tools
     </h2>
     <p class="lede throughline__lede">
-      Different subjects, mostly the same job: model the system, understand how the
-      measurements come about, and infer what you can from them.
+      I didn't plan this as one continuous research programme. I moved across
+      problems that looked interesting and used computation on them.
     </p>
     <ol class="timeline">
       {{- range $roles.trajectory.stages }}

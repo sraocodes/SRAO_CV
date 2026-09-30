@@ -24,9 +24,9 @@ current:
     start: "2025-10"
     end: ""
     summary: >-
-      Scientific R&D across electromagnetic sensing, inverse problems, Earth
-      observation and scientific software, turning advanced methods into
-      computational systems that other people can use.
+      An independent R&D effort I co-founded. We take hard scientific problems and
+      see what computation can do with them — currently sensing, inverse problems,
+      Earth observation and scientific software.
 
   - key: mercor
     title: "Scientific AI Expert"
@@ -35,9 +35,9 @@ current:
     start: "2026-05"
     end: ""
     summary: >-
-      Designing scientific benchmarks and test environments that probe where
-      frontier AI systems reason soundly and where they fail — black-box
-      inference problems and simulation-based engineering tasks.
+      Scientific evaluation and refinement of frontier AI systems, including models
+      before public release. I write hard scientific problems, find where models
+      fail, and study whether they are reasoning through a problem or recognising it.
 
 past:
   - title: "Reviewer & Team Lead, Scientific AI Evaluation"
@@ -81,12 +81,11 @@ past:
     end: "2013"
     logo: "images/uah.png"
 
-# The research trajectory shown on the homepage. The point of this section is
-# continuity: one method — modelling difficult or partly observable systems,
-# understanding how their signals arise, and inferring the process underneath —
-# applied to progressively larger systems.
+# The trajectory shown on the homepage. It is a list of what was worked on and
+# when, not an argument that the career was planned. The subjects changed; the
+# computation is what stayed.
 trajectory:
-  thread: "Physics-based modelling of partly observable systems, and inference from what they emit"
+  thread: "Computation applied to whatever the problem happened to be"
   # Shown beneath the timeline, so the present does not read as a destination.
   now_note: "The last two are happening at once. Watershed hydrology at IISc and frontier-AI evaluation are both current work — not consecutive chapters."
   stages:
@@ -128,7 +127,7 @@ trajectory:
       field: "Scientific AI"
       where: "Independent · Mercor"
       concurrent: true
-      note: "Benchmarks and test environments that measure where frontier models reason soundly about physical systems — running alongside the hydrology, not after it."
+      note: "Writing hard scientific problems and evaluating how frontier models handle them — running alongside the hydrology, not after it."
 
 # Professional contributions, from the CV.
 service:
