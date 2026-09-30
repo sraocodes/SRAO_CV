@@ -156,6 +156,15 @@
   &:hover { border-color: var(--accent); color: var(--accent); }
 }
 
+// Unnumbered entries omit the number cell, so the grid must collapse to a
+// single column. Otherwise the sole child auto-places into the 2.25rem column
+// and can only grow to its longest word, which squeezed the homepage list and
+// the conference section into a ~230px ribbon.
+.pub--plain {
+  grid-template-columns: 1fr;
+  gap: 0;
+}
+
 .pub-group { margin-bottom: var(--s-8); }
 
 .pub-group__head {
@@ -350,3 +359,16 @@
 
   &__body { padding-top: var(--s-3); color: var(--ink-soft); font-size: var(--t-sm); }
 }
+
+// A neutral tag for secondary labels ("Open access", "Research software"), so
+// they read as metadata rather than as a theme classification.
+.tag--soft {
+  background: transparent;
+  border: 1px solid var(--rule-strong);
+  color: var(--muted);
+  font-weight: 500;
+}
+
+// The chronological view of research packs more items, so tighten it.
+.timeline--dense .tl-item { padding-bottom: var(--s-5); }
+.timeline--dense .tl-item__note { font-size: var(--t-sm); }
