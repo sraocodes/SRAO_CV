@@ -4,6 +4,9 @@
 # issue, pages and AUTHOR ORDER) and against static/files/CV_Academics.pdf.
 # Do not add an entry without a verified DOI or a confirmed status.
 #
+# `open_access` / `license` are taken from the licence Crossref records against each
+# DOI, not assumed. Papers with no recorded open licence are left unflagged.
+#
 # `me` is the author string that templates render in bold. Keep the spelling in
 # the `authors` lists identical to it.
 me: "Rao, S."
@@ -21,6 +24,7 @@ journal_articles:
     url: "https://doi.org/10.5617/nmi.13381"
     theme: "scientific-ai"
     open_access: true
+    license: "CC BY 4.0"
 
   - key: rsl-2026-information-proxy
     authors: ["Rao, S.", "Gupta, V.", "Murugesan, S.", "Zribi, M.", "Muddu, S."]
@@ -46,6 +50,7 @@ journal_articles:
     url: "https://doi.org/10.1093/insilicoplants/diag002"
     theme: "digital-twins"
     open_access: true
+    license: "CC BY 4.0"
 
   - key: vzj-2020-review
     authors: ["Ehosioke, S.", "Nguyen, F.", "Rao, S.", "Kremer, T.", "Placencia-Gomez, E.", "Huisman, J. A.", "Kemna, A.", "Javaux, M.", "Garré, S."]
@@ -57,6 +62,8 @@ journal_articles:
     pages: "e20082"
     doi: "10.1002/vzj2.20082"
     url: "https://doi.org/10.1002/vzj2.20082"
+    open_access: true
+    license: "CC BY 4.0"
     theme: "geophysics"
 
   - key: pls-2020-ert-water-deficit
@@ -69,6 +76,8 @@ journal_articles:
     pages: "261–281"
     doi: "10.1007/s11104-020-04653-7"
     url: "https://doi.org/10.1007/s11104-020-04653-7"
+    open_access: true
+    license: "CC BY 4.0"
     theme: "geophysics"
 
   - key: vzj-2019-maize-roots
@@ -81,6 +90,8 @@ journal_articles:
     pages: "190037"
     doi: "10.2136/vzj2019.04.0037"
     url: "https://doi.org/10.2136/vzj2019.04.0037"
+    open_access: true
+    license: "CC BY-NC-ND 4.0"
     theme: "geophysics"
 
   - key: pop-2013-magnetic-nozzle

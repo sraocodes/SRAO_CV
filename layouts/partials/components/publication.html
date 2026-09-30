@@ -45,7 +45,11 @@
         <span aria-hidden="true">doi</span><span class="visually-hidden">DOI</span> {{ . }}
       </a>
       {{- end }}
-      {{- if $p.open_access }}<span class="tag tag--oa">Open access</span>{{ end }}
+      {{- if $p.open_access }}
+        <span class="tag tag--oa"{{ with $p.license }} title="{{ . }}"{{ end }}>
+          Open access{{ with $p.license }} <span class="tag__lic">{{ . }}</span>{{ end }}
+        </span>
+      {{- end }}
     </div>
     {{- end }}
   </div>

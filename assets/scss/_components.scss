@@ -380,3 +380,12 @@
 // The chronological view of research packs more items, so tighten it.
 .timeline--dense .tl-item { padding-bottom: var(--s-5); }
 .timeline--dense .tl-item__note { font-size: var(--t-sm); }
+
+// The licence, set quieter than the label it qualifies.
+.tag__lic {
+  font-family: var(--font-mono);
+  font-size: 0.86em;
+  font-weight: 400;
+  opacity: 0.72;
+  margin-left: 0.15em;
+}
