@@ -133,7 +133,7 @@
       <p class="eyebrow">Writing</p>
       <div class="section-head"><h2>Recent</h2></div>
       <ul class="post-list post-list--compact">
-        {{- range first 3 (where .Site.RegularPages "Section" "essays") }}
+        {{- range first 3 (site.GetPage "/writing/essays").RegularPages }}
           {{ partial "components/post-card.html" (dict "page" . "compact" true) }}
         {{- end }}
       </ul>

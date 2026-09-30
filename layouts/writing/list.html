@@ -1,6 +1,6 @@
 {{ define "main" }}
-{{- $notes  := where .Site.RegularPages "Section" "notes" -}}
-{{- $essays := where .Site.RegularPages "Section" "essays" -}}
+{{- $notes  := (site.GetPage "/writing/notes").RegularPages -}}
+{{- $essays := (site.GetPage "/writing/essays").RegularPages -}}
 <article class="page-head">
   <div class="wrap">
     <p class="eyebrow">Writing</p>

@@ -6,10 +6,8 @@ aliases:
 tags:
   - "Bengaluru"
   - "Observation"
+revised: "2026-02-07"
 ---
-
-### Bengaluru Traffic: A Daily Near-Death Experiment
-
 Yesterday was a holiday.  
 Naturally, I went to work.
 
@@ -154,7 +152,7 @@ We screen pilots and soldiers for temperament. Roads kill more people than both 
 
 ---
 
-### Update — Second Iteration (February 7, 2026)
+## Update — Second Iteration (February 7, 2026)
 
 After sitting with this for a few weeks, I've changed my mind.
 

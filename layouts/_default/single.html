@@ -1,11 +1,11 @@
 {{ define "main" }}
-{{- $personal := in (slice "essays") .Section -}}
+{{- $personal := eq .Type "essays" -}}
 <article class="article{{ if $personal }} register-personal{{ end }}">
   <div class="wrap wrap--narrow">
     <header class="article__header">
       <p class="eyebrow">
         {{- if $personal }}<a href="{{ "/writing/essays/" | relURL }}">Essays</a>
-        {{- else if eq .Section "notes" }}<a href="{{ "/writing/notes/" | relURL }}">Notes</a>
+        {{- else if eq .Type "notes" }}<a href="{{ "/writing/notes/" | relURL }}">Notes</a>
         {{- else }}<a href="{{ "/" | relURL }}">{{ .Site.Params.name }}</a>{{ end }}
       </p>
       <h1>{{ .Title }}</h1>
@@ -24,12 +24,33 @@
 
     <div class="article__body">{{ .Content }}</div>
 
+    {{/* If this post belongs to a series, show the whole series in order. */}}
+    {{- with .Params.series }}
+      {{- $sib := sort (where $.CurrentSection.RegularPages "Params.series" .) "Params.series_order" }}
+      {{- if gt (len $sib) 1 }}
+        <nav class="series-nav" aria-label="Series">
+          <h2>The {{ . }} essays</h2>
+          <ol>
+            {{- range $sib }}
+              <li>
+                {{- if eq .Permalink $.Permalink }}
+                  <span class="is-current">{{ .Title }} <em>(you are here)</em></span>
+                {{- else }}
+                  <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                {{- end }}
+              </li>
+            {{- end }}
+          </ol>
+        </nav>
+      {{- end }}
+    {{- end }}
+
     {{/* Related: same series first, then the rest of the stream. */}}
     {{- $rel := slice }}
     {{- with .Params.series }}
-      {{- $rel = where (where $.Site.RegularPages "Section" $.Section) "Params.series" . }}
+      {{- $rel = where $.CurrentSection.RegularPages "Params.series" . }}
     {{- end }}
-    {{- if lt (len $rel) 2 }}{{ $rel = where $.Site.RegularPages "Section" $.Section }}{{ end }}
+    {{- if lt (len $rel) 2 }}{{ $rel = $.CurrentSection.RegularPages }}{{ end }}
     {{- $rel = first 3 (where $rel "Permalink" "!=" .Permalink) }}
     {{- if $rel }}
       <section class="related">

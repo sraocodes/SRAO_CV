@@ -438,3 +438,44 @@
 }
 
 .fav-dot { color: var(--accent); font-size: 0.75em; }
+
+// --- Reading register ------------------------------------------------------
+// Essays read in the display serif; Notes stay in the sans. This is the main
+// felt difference between the two streams, beyond the accent colour.
+.register-personal .article__body {
+  font-family: var(--font-display);
+  line-height: 1.72;
+
+  p { margin-bottom: var(--s-5); }
+
+  // A first-line indent would be wrong here; the posts use short paragraphs
+  // and hard breaks as a rhythmic device, so keep the spacing generous instead.
+  h2 {
+    margin-top: var(--s-8);
+    padding-top: var(--s-5);
+    border-top: 1px solid var(--rule);
+  }
+}
+
+// The opening paragraph of an essay gets slightly more presence.
+.register-personal .article__body > p:first-of-type {
+  font-size: 1.08em;
+  color: var(--ink);
+}
+
+// Series navigation at the foot of an essay that belongs to one.
+.series-nav {
+  margin-top: var(--s-7);
+  padding: var(--s-5);
+  border: 1px solid var(--rule);
+  border-left: 2px solid var(--accent);
+  border-radius: var(--radius);
+  background: var(--bg-sunken);
+
+  h2 { font-family: var(--font-sans); font-size: var(--t-sm); text-transform: uppercase;
+       letter-spacing: 0.08em; color: var(--muted); margin-bottom: var(--s-3); }
+  ol { margin: 0; padding-left: 1.1rem; }
+  li { font-size: var(--t-sm); margin-bottom: var(--s-2); }
+  a { color: var(--ink); text-decoration: none; &:hover { color: var(--accent); } }
+  .is-current { color: var(--muted); }
+}

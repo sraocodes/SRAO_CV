@@ -1,6 +1,9 @@
 ---
 title: "Essays"
 stream: "essays"
+type: "essays"
+cascade:
+  type: "essays"
 description: "Personal essays on AI, the future, traffic, motorcycles and a career in science."
 ---
 

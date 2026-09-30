@@ -1,6 +1,9 @@
 ---
 title: "Notes"
 stream: "notes"
+type: "notes"
+cascade:
+  type: "notes"
 description: "Technical essays, tutorials, research notes and literature commentary."
 ---
 

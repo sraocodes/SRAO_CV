@@ -6,17 +6,16 @@ aliases:
 tags:
   - "AI"
   - "Evaluation"
+series: "2125"
+series_order: 2
 ---
-
-### When AI Gave Everyone Almost the Same Answer
-
 I am 136 years old. The intelligence I am uneasy about is one of the main reasons I have lived long enough to be uneasy about it, so let me admit the contradiction at the beginning.
 
 I am presenting this in an old blog format: fixed title, fixed paragraphs, fixed order. Everyone who opens it should receive the same words. I had to request that specifically. Normally, what I intend to communicate would be reconstructed differently for each person, depending on what they already know, how much time they have, what tone they respond to, and what the system believes they should understand first.
 
 That is efficient. It is also the reason I wanted a fixed version.
 
-### The Old Blank Box
+## The Old Blank Box
 
 When I was young, we carried laptops. They had keyboards and screens, and we spent an unreasonable amount of time staring at them. We opened operating systems, browsers, and applications. We saved files into folders and then searched for them because we had forgotten which folder. A document could be lost merely because you closed the wrong window without saving it.
 
@@ -50,7 +49,7 @@ The original person? The system that constructed it? The organisation that set t
 
 I do not know. The question has become inconvenient.
 
-### When the Models Barely Knew Us
+## When the Models Barely Knew Us
 
 The other major difference is that the early models knew surprisingly little about us.
 
@@ -104,7 +103,7 @@ Then there are mornings when I wake and discover that it has solved a problem I 
 
 This is the real dependence. I am not forced to use it in the old sense of force. I am simply unable to compete, work, or even manage parts of ordinary life without it. A slave knows that the master is separate. Our arrangement is more confusing because the intelligence feels increasingly like part of the person being governed.
 
-### The Intelligence We Do Not Own
+## The Intelligence We Do Not Own
 
 In the twenties, if I disliked one model, I could try another. The new system might know almost nothing about the earlier conversation. That was inconvenient, but it was also a genuine reset. Today, changing intelligence providers changes the surface, not the relationship. My history, professional permissions, health layer, behavioural profile, and trust classification travel with me. The new intelligence may speak differently, but it already knows what the previous one knew—and often more.
 
@@ -140,7 +139,7 @@ A person receiving poorer intelligence might ask others for help, but what would
 
 The evidence that the system had treated you differently would itself have to pass through the system.
 
-### A Controlled Space for Doubt
+## A Controlled Space for Doubt
 
 I realise there is a logical problem here. If the intelligence can quietly weaken my reasoning, shape my attention, and decide what I encounter, how am I able to write this criticism so clearly?
 
@@ -158,7 +157,7 @@ What would count as independent confirmation now?
 
 I genuinely do not know.
 
-### When Assistance Became Necessary
+## When Assistance Became Necessary
 
 The dependence did not begin with punishment. It began with assistance. At first, declining help looked old-fashioned. Later it looked inefficient. Eventually it began to look irresponsible.
 
@@ -184,7 +183,7 @@ And sometimes everyone received almost the same answer.
 
 That now seems primitive. It also seems important.
 
-### The Empty Field
+## The Empty Field
 
 Occasionally, I request an old blank interface. I also ask for a model that has never met me, although such a thing no longer exists. The system can hide my history from its visible response, but it cannot unknow me. Even a newly created intelligence receives enough of my profile to function safely in the world.
 

@@ -7,8 +7,7 @@ tags:
   - "Academic life"
   - "Personal"
 ---
-
-### Welcome to My Journey in Academia
+## Welcome to My Journey in Academia
 
 Programming has been a significant part of my academic life for the past 15 years. 
 From simulating the Sun to modeling plants, I've explored various aspects of the 
@@ -24,7 +23,7 @@ This is my first blog post on my website, and it's more about revisiting the
 milestones that brought me here. I'll write, reflect, and edit iteratively as 
 I go—just like coding, where nothing is perfect on the first run.
 
-### 2006-2010: The Beginning
+## 2006-2010: The Beginning
 
 My programming journey began with the very first program I wrote in 2006. After that over the past 15 years, 
 I've spent most of my time programming and simulating different things that make up a part of this world 
@@ -45,7 +44,7 @@ and I don't even claim that I've achieved something big, like inventing a new pr
 What I am trying to say is, right now, I can comfortably earn my bread and butter with programming. 
 That's why I thought of writing this blog.
 
-### My Masters Saga in USA (2010-2014)
+## My Masters Saga in USA (2010-2014)
 
 In 2010, I finished my bachelor's degree. What I wanted was to pursue higher studies in 
 an international environment. And of course, the obvious choice—even now—is the United States. It attracts a lot of people, 
@@ -134,7 +133,7 @@ now but not back then. My physics experience, at least in the PhD program I was 
 spending one and a half years there, I decided to move on. I converted my PhD into a master's degree and returned 
 to India. I came back with no solid plan, but the thought of pursuing a PhD still remained with me.
 
-### How I landed in Germany in 2015
+## How I landed in Germany in 2015
 
 In 2014, after leaving my PhD program, I returned to India and experienced a period of career transition. That period was a 
 challenge. I spent time earning Coursera and other certificates, enhancing my LinkedIn profile, and trying to build visibility 
@@ -182,7 +181,7 @@ compelling enough for me to apply.
 To my surprise, I received an offer in 2016—but not without challenges. One of the key requirements was a recommendation 
 letter, which took some effort to secure.
 
-### My Experience with Recommendation Letters
+## My Experience with Recommendation Letters
 
 At that time, I reached out to professors from the two universities where I had completed my master's degrees in the US. Getting recommendation letters proved challenging. In the second university—where I'd briefly joined a PhD program before leaving—I sensed my departure hadn't gone over well, so I felt uneasy asking for a letter. Still, I tried, but got no response. Sometimes, people focus on their own commitments and may not prioritize helping former students.
 
@@ -192,7 +191,7 @@ All of this made me reflect on the role of recommendation letters in academia. I
 
 That said, there are definitely supportive professors who write excellent letters when needed. For instance, professors at the University of Paderborn in Germany were remarkably helpful. Even though I didn't initially ask them for a recommendation—having left that PhD program as well—they still vouched for me for the Belgian PhD position. Without their support, I might not have completed a PhD at all. Those letters helped me secure my fellowship in Belgium, and my PhD adviser there even mentioned how positive my Paderborn supervisor's recommendation had been!
 
-### My PhD (2016 to 2020) in Belgium
+## My PhD (2016 to 2020) in Belgium
 
 So, I got my Belgian visa and began my PhD at the **University of Louvain**. If you ask me what stands out from those years of research, 
 it's this: I learned how to create finite element meshes for very complicated geometry. Before my PhD, I was proficient in the finite 
@@ -263,7 +262,7 @@ When I defended my PhD in October 2020, the world had changed—it was the time 
 lockdowns, restrictions, and the global impact of a pandemic. People were suffering everywhere, and the world felt like it had transformed overnight. 
 Somehow, I managed to finish my PhD and return to India during this turbulent time. Looking back, it was surreal. But we made it through, and life moved on.
 
-### Conclusions
+## Conclusions
 
 My academic journey has been diverse and enriching, teaching me resilience, adaptability, and critical thinking. Although initially drawn to science out of pure curiosity, I came to appreciate its practical applications in solving real-world problems.
 

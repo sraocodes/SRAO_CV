@@ -1,5 +1,5 @@
 {{ define "main" }}
-{{- $personal := eq .Section "essays" -}}
+{{- $personal := eq .Type "essays" -}}
 <article class="page-head{{ if $personal }} register-personal{{ end }}">
   <div class="wrap">
     <p class="eyebrow"><a href="{{ "/writing/" | relURL }}">Writing</a></p>

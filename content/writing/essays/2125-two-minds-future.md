@@ -6,10 +6,9 @@ aliases:
 tags:
   - "Speculative"
   - "AI"
+series: "2125"
+series_order: 1
 ---
-
-### 2125: The Two Minds Future
-
 I occasionally fast-forward to see where AI might go as it grows smarter and can compete with humans in today's tasks. These CEOs and Gen Z business owners frequently claim to work 120–140 hours per week, or at the very least, support it for their staff members (I'm not sure if it's possible to work 140 hours per week and maintain mental health). This is especially true outside of Europe, where work-life balance is well-known. In an academic setting, a typical project in my field of study, like building a functional digital twin for an agricultural test field, can take well over two years with teamwork and other administrative duties. This is because our work is frequently limited by human limitations, and AI may help us accomplish these objectives much more quickly. Even with AI, creating a digital twin of an agricultural field could take longer than two years. This isn't because it's technically impossible to complete in two weeks, but rather because, in academia, fewer workers are typically hired for a given task, and these workers also have lives outside of work and many other responsibilities that AI can't replace or help with anytime soon (kids, hobbies, the ups and downs of everyday life).
 
 Let's now imagine that all 8 billion people are driven to put in those absurd 140 hours of work, whether they are coding, gathering data, creating AI systems, operating buses or trains, etc. All of this human labor, whether it be direct AI or code development or physical labor creating training data for a physical robot, would be expedited at an astounding rate. The final outcome? Superintelligent artificial intelligence, automated driving systems, and armies of robots are likely to arrive much sooner than anticipated. No one will want to spend any more time in front of a computer to code or operate a vehicle thanks to this incredibly intelligent AI. We don't even need to sit in front of a computer or gaze at a smartphone to access this super intelligence.We'll most likely have something much more straightforward instead: a digital twin, or even better, an AI mind that becomes a part of us. 
