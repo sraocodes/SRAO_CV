@@ -7,6 +7,7 @@ current:
     title: "Research Associate"
     org: "Indian Institute of Science (IISc), Bengaluru"
     unit: "Department of Civil Engineering"
+    url: "https://civil.iisc.ac.in/~muddu/"
     programme: "Hydro-REWARD (World Bank–supported)"
     start: "2025-04"
     end: ""
@@ -28,11 +29,17 @@ current:
       see what computation can do with them — currently sensing, inverse problems,
       Earth observation and scientific software.
 
-  - key: mercor
+  - key: ai-eval
+    # title/org match CV_Academics.pdf and are what the CV and About pages show.
+    # home_title/home_org are a homepage-only override: the front page should
+    # name the role rather than a single client.
     title: "Scientific AI Expert"
     org: "Mercor Intelligence"
+    home_title: "Frontier AI Evaluator"
+    home_org: "Project-based · Mercor, Turing, Handshake AI"
     unit: "Remote · project-based"
     start: "2026-05"
+    home_start: "2026-01"
     end: ""
     summary: >-
       Scientific evaluation and refinement of frontier AI systems, including models
@@ -125,7 +132,7 @@ trajectory:
       image_alt: "Satellite Earth observation feeding computational analysis"
     - years: "2026–"
       field: "Scientific AI"
-      where: "Independent · Mercor"
+      where: "Project-based · Mercor, Turing, Handshake AI"
       concurrent: true
       note: "Writing hard scientific problems and evaluating how frontier models handle them — running alongside the hydrology, not after it."
 

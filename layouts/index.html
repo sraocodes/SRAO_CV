@@ -43,11 +43,13 @@
     <p class="eyebrow">Currently</p>
     <div class="now-grid">
       {{- range $roles.current }}
+        {{/* home_title / home_org are homepage-only overrides; the CV and About
+             pages use the CV's own wording from title / org. */}}
         <article class="now-card">
-          <p class="now-card__when">{{ dateFormat "Jan 2006" (printf "%s-01" .start) }} &rarr;</p>
-          <h3>{{ .title }}</h3>
+          <p class="now-card__when">{{ dateFormat "Jan 2006" (printf "%s-01" (or .home_start .start)) }} &rarr;</p>
+          <h3>{{ or .home_title .title }}</h3>
           <p class="now-card__org">
-            {{- with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ .org }}{{ with .url }}</a>{{ end -}}
+            {{- with .url }}<a href="{{ . }}" target="_blank" rel="noopener">{{ end }}{{ or .home_org .org }}{{ with .url }}</a>{{ end -}}
           </p>
           <p>{{ .summary }}</p>
         </article>
