@@ -35,8 +35,8 @@ current:
     # name the role rather than a single client.
     title: "Scientific AI Expert"
     org: "Mercor Intelligence"
-    home_title: "Frontier AI Evaluator"
-    home_org: "Project-based · Mercor, Turing, Handshake AI"
+    home_title: "AI Evaluator"
+    home_org: "Project-based"
     unit: "Remote · project-based"
     start: "2026-05"
     home_start: "2026-01"
@@ -132,7 +132,7 @@ trajectory:
       image_alt: "Satellite Earth observation feeding computational analysis"
     - years: "2026–"
       field: "Scientific AI"
-      where: "Project-based · Mercor, Turing, Handshake AI"
+      where: "Project-based"
       concurrent: true
       note: "Writing hard scientific problems and evaluating how frontier models handle them — running alongside the hydrology, not after it."
 
