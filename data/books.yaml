@@ -20,14 +20,18 @@ books:
     subtitle: "A Scientist's Journey Through Death and Life"
     year: 2026
     format: "Kindle edition"
+    publisher: "Pothi.com"
+    asin: "B0H982HBB7"
     cover: "images/books/manikarnika.png"
     # Tagline is set on the cover artwork itself.
     tagline: "Not all journeys change the place. Some journeys change you."
     credits: "Edited by Shruti Rao"
     description: ""
-    links: []
-    # NEEDED: retailer link, and a one-line description if you want more than
-    # the cover tagline. Nothing here is inferred from the title.
+    links:
+      - label: "Amazon"
+        url: "https://www.amazon.in/dp/B0H982HBB7"
+    # NEEDED: the Pothi.com product link, and a one-line description if you want
+    # more than the cover tagline. Nothing here is inferred from the title.
 
   - key: indian-traffic
     status: "published"
@@ -47,7 +51,7 @@ books:
       daily observation on the commute.
     links:
       - label: "Amazon"
-        url: "https://www.amazon.in/How-Not-Die-Indian-Traffic-ebook/dp/B0GT7D2NMN"
+        url: "https://www.amazon.in/dp/B0GT7D2NMN"
     # NOTE: the CV lists Pothi.com + ISBN while the old site listed an Amazon
     # Kindle ASIN — confirm whether both editions exist.
 
